@@ -520,7 +520,7 @@
             <mxPoint x="5460" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x4m-5yklGs7zG8ywSub8-9" value="Takes" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+        <mxCell id="x4m-5yklGs7zG8ywSub8-9" value="Takes" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="5370" y="420" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="wiE0NPPO3OjRs8KHjFVt-2" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" parent="1" source="wmDvbTXlGFTgHskODQBr-71" target="x4m-5yklGs7zG8ywSub8-1" edge="1">
