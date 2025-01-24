@@ -549,7 +549,7 @@
             <mxPoint x="5160" y="-430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5avUV3QA9wweFLRJ3ZoK-6" value="Date" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" vertex="1">
+        <mxCell id="5avUV3QA9wweFLRJ3ZoK-6" value="Course_Date" style="ellipse;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="4980" y="-720" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="5avUV3QA9wweFLRJ3ZoK-7" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="0iq-7-bF7IzyFGE6YVm_-30" target="5avUV3QA9wweFLRJ3ZoK-6" edge="1">
