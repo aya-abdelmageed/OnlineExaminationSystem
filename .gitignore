@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs
+
+/OnlineExaminationSystem/OnlineExaminationSystem/bin
+/OnlineExaminationSystem/OnlineExaminationSystem/obj
+/OnlineExaminationSystem/BusinessLogic/bin
+/OnlineExaminationSystem/BusinessLogic/obj
+/OnlineExaminationSystem/.vs
