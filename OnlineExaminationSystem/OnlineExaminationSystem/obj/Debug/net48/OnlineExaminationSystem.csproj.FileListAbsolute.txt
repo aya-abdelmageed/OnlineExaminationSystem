@@ -1,0 +1,11 @@
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.csproj.AssemblyReference.cache
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.csproj.SuggestedBindingRedirects.cache
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.exe.config
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.Form1.resources
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.Properties.Resources.resources
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.Teacher.resources
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.csproj.GenerateResource.cache
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.AssemblyInfoInputs.cache
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.AssemblyInfo.cs
+D:\iti 9 months\C#\Day2\Lab\OnlineExaminationSystem\OnlineExaminationSystem\obj\Debug\net48\OnlineExaminationSystem.csproj.CoreCompileInputs.cache
