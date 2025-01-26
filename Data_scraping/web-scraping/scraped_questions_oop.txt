@@ -1,0 +1,1113 @@
+Q1: Which principle of OOP allows for the same function to be used in different ways?
+Option 1: Inheritance
+Option 2: Polymorphism
+Option 3: Encapsulation
+Option 4: Abstraction
+Answer: Answer: Polymorphism
+##################################################
+
+Q2: What does OOP stand for?
+Option 1: Object-Oriented Programming
+Option 2: Objective Operation Procedure
+Option 3: Oriented Object Programming
+Option 4: Operational Object Programming
+Answer: Answer: Object-Oriented Programming
+##################################################
+
+Q3: Which of the following is NOT a basic concept of OOP?
+Option 1: Classes
+Option 2: Objects
+Option 3: Functions
+Option 4: Inheritance
+Answer: Answer: Functions
+##################################################
+
+Q4: OOP aims to make software development more:
+Option 1: Error-prone
+Option 2: Flexible
+Option 3: Complicated
+Option 4: Sequential
+Answer: Answer: Flexible
+##################################################
+
+Q5: Which concept of OOP encapsulates the properties (data) and behaviors (methods) of a real-world object into a single entity?
+Option 1: Polymorphism
+Option 2: Encapsulation
+Option 3: Inheritance
+Option 4: Abstraction
+Answer: Answer: Encapsulation
+##################################################
+
+Q6: The concept of hiding the internal implementation details of a class and showing only its functionality is known as:
+Option 1: Encapsulation
+Option 2: Abstraction
+Option 3: Polymorphism
+Option 4: Inheritance
+Answer: Answer: Abstraction
+##################################################
+
+Q7: In OOP, an "object" is:
+Option 1: An instance of a class
+Option 2: A type of data structure
+Option 3: A programming technique
+Option 4: A method definition
+Answer: Answer: An instance of a class
+##################################################
+
+Q8: What is the output of the following Python code?
+class Animal:
+def speak(self):
+return "makes a sound"
+class Dog(Animal):
+def speak(self):
+return "barks"
+print(Dog().speak())
+Option 1: makes a sound
+Option 2: barks
+Option 3: SyntaxError
+Option 4: None
+Answer: Answer: barks
+##################################################
+
+Q9: Which keyword is used to create a class in Java?
+Option 1: class
+Option 2: Class
+Option 3: object
+Option 4: Object
+Answer: Answer: class
+##################################################
+
+Q10: A programmer defines a class but fails to create an instance of that class. They try to call a method of the class directly.
+What type of error will occur?
+Option 1: Compilation error
+Option 2: Runtime error
+Option 3: Logical error
+Option 4: No error
+Answer: Answer: Compilation error
+##################################################
+
+Q11: If a class Car has a method drive() that requires no arguments, which of the following calls is correct after creating a Car object named myCar?
+Option 1: Car.drive()
+Option 2: myCar.drive()
+Option 3: drive(myCar)
+Option 4: Car().drive()
+Answer: Answer: myCar.drive()
+##################################################
+
+Q12: What is an object in programming?
+Option 1: A piece of data
+Option 2: A runtime entity
+Option 3: A template for creating objects
+Option 4: A function
+Answer: Answer: A runtime entity
+##################################################
+
+Q13: In the context of OOP, what does a class provide?
+Option 1: A blueprint for objects
+Option 2: A specific data type
+Option 3: A method implementation
+Option 4: A programming pattern
+Answer: Answer: A blueprint for objects
+##################################################
+
+Q14: Which of the following is a characteristic of an object?
+Option 1: Encapsulation
+Option 2: Inheritance
+Option 3: Polymorphism
+Option 4: Identity
+Answer: Answer: Identity
+##################################################
+
+Q15: The process of creating an object from a class is known as:
+Option 1: Encapsulation
+Option 2: Instantiation
+Option 3: Inheritance
+Option 4: Abstraction
+Answer: Answer: Instantiation
+##################################################
+
+Q16: Which of the following best describes the concept of "state" in an object?
+Option 1: The behavior the object exhibits
+Option 2: The methods the object can execute
+Option 3: The data stored within the object
+Option 4: The class from which the object is derived
+Answer: Answer: The data stored within the object
+##################################################
+
+Q17: Which term best describes an instance variable of a class?
+Option 1: A variable defined within a method
+Option 2: A variable accessible by all instances of a class and shared across them
+Option 3: A variable unique to each instance of a class
+Option 4: A constant value that cannot be changed
+Answer: Answer: A variable unique to each instance of a class
+##################################################
+
+Q18: What is the main difference between a class and an object?
+Option 1: A class is a blueprint, while an object is an instance of a class
+Option 2: A class is executable code, while an object is not
+Option 3: A class cannot exist without objects, while an object can exist without classes
+Option 4: A class is used only in object-oriented programming, while objects can be used in any programming paradigm
+Answer: Answer: A class is a blueprint, while an object is an instance of a class
+##################################################
+
+Q19: How do objects in OOP communicate with each other?
+Option 1: Through global functions
+Option 2: By calling methods on each other
+Option 3: Using special OOP communication operators
+Option 4: By accessing each other's memory directly
+Answer: Answer: By calling methods on each other
+##################################################
+
+Q20: Which keyword is used in Java to create a new object?
+Option 1: new
+Option 2: class
+Option 3: object
+Option 4: this
+Answer: Answer: new
+##################################################
+
+Q21: Given the following Java code, what is the output?
+class Box {
+int width;
+Box(int w) {
+width = w;
+}
+}
+public class Test {
+public static void main(String[] args) {
+Box myBox = new Box(5);
+System.out.println(myBox.width);
+}
+}
+Option 1: 5
+Option 2: 0
+Option 3: Error
+Option 4: None
+Answer: Answer: 5
+##################################################
+
+Q22: What is the result of compiling and running the following code in Java?
+class Counter {
+private int count = 0;
+void increment() {
+count++;
+}
+int getCount() {
+return count;
+}
+}
+Option 1: Compilation error
+Option 2: Runtime error
+Option 3: 0
+Option 4: None of the above
+Answer: Answer: None of the above
+##################################################
+
+Q23: Which of the following is the correct way to define a constructor in Java?
+Option 1: public void ClassName() {}
+Option 2: ClassName() {}
+Option 3: public ClassName() {}
+Option 4: constructor ClassName() {}
+Answer: Answer: public ClassName() {}
+##################################################
+
+Q24: Considering the principle of encapsulation, which option correctly makes age a private attribute and provides public getter and setter methods in a Java class?
+Option 1: private int age; public int getAge() { return age; } public void setAge(int a) { age = a; }
+Option 2: int age; public int readAge() { return age; } public void writeAge(int a) { age = a; }
+Option 3: private int age; public int age() { return age; } public void age(int a) { age = a; }
+Option 4: int age; public int getAge() { return age; } public void age(int a) { age = a; }
+Answer: Answer: private int age; public int getAge() { return age; } public void setAge(int a) { age = a; }
+##################################################
+
+Q25: Identify the mistake in the following Java code snippet:
+class Student {
+private int score;
+public static void setScore(int s) {
+score = s;
+}
+}
+Option 1: score should not be private
+Option 2: s is not correctly passed to score
+Option 3: setScore cannot be static as it accesses an instance variable
+Option 4: None of the above
+Answer: Answer: setScore cannot be static as it accesses an instance variable
+##################################################
+
+Q26: A programmer attempts to compile the following Java code but encounters an error:
+class MyClass { void MyClass() { } }.
+What is the mistake?
+Option 1: The constructor has a return type
+Option 2: The class name is incorrect
+Option 3: The constructor is defined as a method
+Option 4: None of the above
+Answer: Answer: The constructor is defined as a method
+##################################################
+
+Q27: In the context of Java, what does the following error indicate?
+java.lang.NullPointerException
+Option 1: An attempt to access a class file that does not exist
+Option 2: An attempt to use a reference that points to no location in memory
+Option 3: Incorrect syntax
+Option 4: None of the above
+Answer: Answer: An attempt to use a reference that points to no location in memory
+##################################################
+
+Q28: After adding a new feature to a class, a programmer notices that creating an object of that class now throws an error.
+What is the MOST likely cause?
+Option 1: The class does not have a constructor
+Option 2: The new feature conflicts with existing methods
+Option 3: There is a syntax error in the new feature
+Option 4: The class was not compiled after adding the new feature
+Answer: Answer: The class was not compiled after adding the new feature
+##################################################
+
+Q29: Which keyword is used in Java to inherit a class?
+Option 1: extends
+Option 2: implements
+Option 3: inherits
+Option 4: super
+Answer: Answer: extends
+##################################################
+
+Q30: Polymorphism in OOP allows for:
+Option 1: objects to take on multiple forms
+Option 2: methods to execute concurrently
+Option 3: classes to encapsulate data and methods
+Option 4: objects to be instantiated without classes
+Answer: Answer: objects to take on multiple forms
+##################################################
+
+Q31: In the context of OOP, what is "method overriding"?
+Option 1: Defining a method in a subclass that already exists in the parent class with a different implementation
+Option 2: Increasing the visibility of a method in a subclass
+Option 3: Changing the return type of a method in a subclass
+Option 4: None of the above
+Answer: Answer: Defining a method in a subclass that already exists in the parent class with a different implementation
+##################################################
+
+Q32: What does the super keyword in Java do?
+Option 1: It is used to call superclass methods
+Option 2: It defines a superclass
+Option 3: It overrides a method in the superclass
+Option 4: It creates an instance of a superclass
+Answer: Answer: It is used to call superclass methods
+##################################################
+
+Q33: Which of the following best describes "dynamic polymorphism"?
+Option 1: Compile-time method binding
+Option 2: The ability to create dynamic classes at runtime
+Option 3: Method overriding where method calls are resolved at runtime
+Option 4: The creation of objects at runtime
+Answer: Answer: Method overriding where method calls are resolved at runtime
+##################################################
+
+Q34: What is an "abstract class" in Java?
+Option 1: A class that cannot be instantiated and must be inherited
+Option 2: A class that can only contain abstract methods
+Option 3: A class without any implementation
+Option 4: A final class that cannot be extended
+Answer: Answer: A class that cannot be instantiated and must be inherited
+##################################################
+
+Q35: To achieve polymorphism in Java, one must use:
+Option 1: Interfaces only
+Option 2: Abstract classes only
+Option 3: Either interfaces or abstract classes
+Option 4: Direct class inheritance only
+Answer: Answer: Either interfaces or abstract classes
+##################################################
+
+Q36: Which concept describes the ability of different classes to respond to the same method call in their own unique ways?
+Option 1: Encapsulation
+Option 2: Inheritance
+Option 3: Polymorphism
+Option 4: Composition
+Answer: Answer: Polymorphism
+##################################################
+
+Q37: When does the "diamond problem" occur in programming?
+Option 1: When multiple interfaces are implemented
+Option 2: When a class inherits from two classes with the same method
+Option 3: When multiple classes inherit from a single class
+Option 4: None of the above
+Answer: Answer: When a class inherits from two classes with the same method
+##################################################
+
+Q38: Which feature distinguishes interfaces from abstract classes in Java?
+Option 1: Interfaces cannot have any method implementations
+Option 2: Interfaces can have only final static fields
+Option 3: Abstract classes can contain non-final methods
+Option 4: Interfaces support multiple inheritance
+Answer: Answer: Interfaces support multiple inheritance
+##################################################
+
+Q39: What is the output of the following code snippet in Java?
+class Animal {
+public void sound() {
+System.out.println("Animal sound");
+}
+}
+class Dog extends Animal {
+public void sound() {
+System.out.println("Bark");
+}
+}
+public class Test {
+public static void main(String[] args) {
+Animal myAnimal = new Dog();
+myAnimal.sound();
+}
+}
+Option 1: "Animal sound"
+Option 2: "Bark"
+Option 3: Compilation error
+Option 4: None of the above
+Answer: Answer: "Bark"
+##################################################
+
+Q40: Given the following Java code, which principle is demonstrated?
+interface Flyable {
+void fly();
+}
+class Bird implements Flyable {
+public void fly() {
+System.out.println("Bird flies");
+}
+}
+class Airplane implements Flyable {
+public void fly() {
+System.out.println("Airplane flies");
+}
+}
+Option 1: Inheritance
+Option 2: Encapsulation
+Option 3: Polymorphism
+Option 4: Abstraction
+Answer: Answer: Polymorphism
+##################################################
+
+Q41: In Java, which method signature indicates that a method is overriding a method from its superclass?
+Option 1: A method with the same name but a different return type
+Option 2: A method with the same name and parameter list as in the superclass
+Option 3: A static method with the same name as in the superclass
+Option 4: A method with the same name but different parameter types
+Answer: Answer: A method with the same name and parameter list as in the superclass
+##################################################
+
+Q42: What will happen if a subclass in Java tries to override a superclass method marked as final?
+Option 1: The subclass method will successfully override the superclass method
+Option 2: The compiler will generate an error
+Option 3: The superclass method will be hidden
+Option 4: None of the above
+Answer: Answer: The compiler will generate an error
+##################################################
+
+Q43: Given two classes, Base and Derived, where Derived extends Base and both classes have a method show() with different implementations.
+How is polymorphic behavior achieved when calling show() on a Derived object referenced by a Base type?
+Option 1: By marking show() in Base as final
+Option 2: By using the static keyword in Derived's show() method
+Option 3: By overriding show() in Derived
+Option 4: None of the above
+Answer: Answer: By overriding show() in Derived
+##################################################
+
+Q44: A programmer cannot access a superclass method from a subclass in Java.
+What is the most likely reason?
+Option 1: The subclass does not extend the superclass
+Option 2: The method in the superclass is marked as private
+Option 3: The method in the superclass is static
+Option 4: None of the above
+Answer: Answer: The method in the superclass is marked as private
+##################################################
+
+Q45: After refactoring a class hierarchy, a method call on a subclass object executes the superclass method instead of the overridden method.
+What is the likely cause?
+Option 1: The overridden method in the subclass is marked as private
+Option 2: The method call is statically bound
+Option 3: The subclass method does not correctly override the superclass method due to a signature mismatch
+Option 4: None of the above
+Answer: Answer: The subclass method does not correctly override the superclass method due to a signature mismatch
+##################################################
+
+Q46: A Java program throws a ClassCastException when casting an object of a superclass to a subclass.
+What is the most probable reason?
+Option 1: The object actually belongs to another unrelated class
+Option 2: The object is of the superclass type and cannot be cast down without an explicit check
+Option 3: The subclass is abstract
+Option 4: None of the above
+Answer: Answer: The object is of the superclass type and cannot be cast down without an explicit check
+##################################################
+
+Q47: In a Java application utilizing interfaces, a new class implements an interface but fails to provide implementations for all declared methods.
+What error will this cause?
+Option 1: NullPointerException
+Option 2: InstantiationException
+Option 3: CompilationError
+Option 4: ClassCastException
+Answer: Answer: CompilationError
+##################################################
+
+Q48: Which of the following best describes encapsulation?
+Option 1: Combining data and methods into a single unit
+Option 2: Breaking down a complex problem into smaller parts
+Option 3: Allowing an object to perform many forms of behavior
+Option 4: Hiding the internal state of an object from the outside world
+Answer: Answer: Combining data and methods into a single unit
+##################################################
+
+Q49: What is the primary purpose of abstraction in OOP?
+Option 1: To speed up the execution of programs
+Option 2: To reduce code complexity and increase reusability
+Option 3: To hide the internal implementation details and only show the features to the users
+Option 4: To ensure secure data manipulation without external interference
+Answer: Answer: To hide the internal implementation details and only show the features to the users
+##################################################
+
+Q50: Which keyword in Java is used to hide a class member from classes in other packages?
+Option 1: private
+Option 2: protected
+Option 3: public
+Option 4: transient
+Answer: Answer: protected
+##################################################
+
+Q51: In OOP, abstract methods are:
+Option 1: Methods that are fully implemented
+Option 2: Methods that are declared but not implemented
+Option 3: Methods that cannot be overridden
+Option 4: Methods that must be static
+Answer: Answer: Methods that are declared but not implemented
+##################################################
+
+Q52: What does it mean when a class is declared as abstract?
+Option 1: The class cannot be instantiated directly and must be subclassed
+Option 2: The class does not contain any methods
+Option 3: The class is a final class and cannot have any subclasses
+Option 4: The class can only contain static methods
+Answer: Answer: The class cannot be instantiated directly and must be subclassed
+##################################################
+
+Q53: How can encapsulation be achieved in a class?
+Option 1: By declaring all variables as static
+Option 2: By declaring all class methods as final
+Option 3: By making member variables private and providing public getter and setter methods
+Option 4: By using abstract classes only
+Answer: Answer: By making member variables private and providing public getter and setter methods
+##################################################
+
+Q54: The process of minimizing the exposure of details from one part of a program to another is known as:
+Option 1: Encapsulation
+Option 2: Abstraction
+Option 3: Polymorphism
+Option 4: Inheritance
+Answer: Answer: Encapsulation
+##################################################
+
+Q55: What is the difference between encapsulation and abstraction?
+Option 1: Encapsulation is about hiding the details, abstraction is about showing only essential features
+Option 2: Encapsulation is a design guideline, whereas abstraction is a programming concept
+Option 3: Encapsulation deals with data, and abstraction deals with classes
+Option 4: There is no significant difference
+Answer: Answer: Encapsulation is about hiding the details, abstraction is about showing only essential features
+##################################################
+
+Q56: Which OOP feature provides a way to protect objects from unintended direct field access?
+Option 1: Inheritance
+Option 2: Polymorphism
+Option 3: Encapsulation
+Option 4: Abstraction
+Answer: Answer: Encapsulation
+##################################################
+
+Q57: What will be the output of the following Java code snippet?
+class Encapsulate {
+private int num = 10;
+public int getNum() {
+return num;
+}
+} public class Test {
+public static void main(String[] args) {
+Encapsulate obj = new Encapsulate();
+System.out.println(obj.getNum());
+}
+}
+Option 1: 10
+Option 2: 0
+Option 3: Compilation error
+Option 4: Runtime error
+Answer: Answer: 10
+##################################################
+
+Q58: Given the following code, identify the abstraction technique used:
+abstract class Shape {
+abstract void draw();
+}
+class Rectangle extends Shape {
+void draw() {
+System.out.println("drawing rectangle");
+}
+}
+Option 1: Inheritance
+Option 2: Encapsulation
+Option 3: Polymorphism
+Option 4: Abstraction
+Answer: Answer: Abstraction
+##################################################
+
+Q59: Which of the following changes will make the code below correctly encapsulate the age property?
+class Person {
+int age; public int getAge() {
+return age;
+}
+public void setAge(int age) {
+this.age = age;
+}
+}
+Option 1: Change int age; to private int age;
+Option 2: Add static keyword to age
+Option 3: Remove the setter method
+Option 4: Change public methods to private
+Answer: Answer: Change int age; to private int age;
+##################################################
+
+Q60: How can you ensure that a class adheres to the abstraction principle by not allowing instantiation but permitting subclassing?
+Option 1: Declare the class as final
+Option 2: Declare the class as static
+Option 3: Declare the class with private constructors
+Option 4: Declare the class as abstract
+Answer: Answer: Declare the class as abstract
+##################################################
+
+Q61: A developer attempts to access a private field directly from outside its class and encounters a compilation error.
+What encapsulation feature is being violated?
+Option 1: Direct access to private fields
+Option 2: Using public accessor methods
+Option 3: Improper use of static fields
+Option 4: None of the above
+Answer: Answer: Direct access to private fields
+##################################################
+
+Q62: A Java class implements an interface but fails to provide concrete implementations for all interface methods, leading to a compilation error.
+Which principle is not being correctly applied?
+Option 1: Inheritance
+Option 2: Encapsulation
+Option 3: Abstraction
+Option 4: Polymorphism
+Answer: Answer: Abstraction
+##################################################
+
+Q63: In attempting to refactor code for better encapsulation, a developer accidentally makes all class fields public.
+What encapsulation best practice is being violated?
+Option 1: Hiding class implementation details
+Option 2: Exposing class fields directly
+Option 3: Encouraging the use of getter and setter methods
+Option 4: All of the above
+Answer: Answer: Exposing class fields directly
+##################################################
+
+Q64: A program crashes at runtime when trying to invoke a method on an object that was supposed to be fully initialized.
+The likely issue is a failure in applying which concept?
+Option 1: Encapsulation leading to improper initialization
+Option 2: Abstraction leading to missing method implementations
+Option 3: Inheritance leading to overridden method issues
+Option 4: Polymorphism leading to incorrect method calls
+Answer: Answer: Encapsulation leading to improper initialization
+##################################################
+
+Q65: What is an interface in Java?
+Option 1: A class that is used to implement inheritance
+Option 2: A collection of abstract methods and static constants
+Option 3: A template for creating objects
+Option 4: A method that interfaces with the user
+Answer: Answer: A collection of abstract methods and static constants
+##################################################
+
+Q66: What is the purpose of a package in Java?
+Option 1: To provide access control mechanisms
+Option 2: To group related classes and interfaces
+Option 3: To speed up the execution time of programs
+Option 4: To serve as containers for Java applets and applications
+Answer: Answer: To group related classes and interfaces
+##################################################
+
+Q67: Which of the following statements is true about interfaces in Java?
+Option 1: An interface can contain static methods that can have a body
+Option 2: An interface can contain default methods that have a body
+Option 3: Interfaces can have constructors like classes
+Option 4: All of the above
+Answer: Answer: An interface can contain default methods that have a body
+##################################################
+
+Q68: How can a class in one package access a class in another package?
+Option 1: By using the import keyword
+Option 2: By using the package keyword
+Option 3: By using the extends keyword
+Option 4: By using the implements keyword
+Answer: Answer: By using the import keyword
+##################################################
+
+Q69: What is a default method in an interface?
+Option 1: A method that is automatically invoked by default when an object is created
+Option 2: A method that provides a default implementation which can be overridden by implementing classes
+Option 3: A static method in an interface
+Option 4: A final method in an interface
+Answer: Answer: A method that provides a default implementation which can be overridden by implementing classes
+##################################################
+
+Q70: In Java, which keyword is used to inherit multiple interfaces?
+Option 1: extends
+Option 2: implements
+Option 3: inherits
+Option 4: uses
+Answer: Answer: implements
+##################################################
+
+Q71: What advantage do packages offer in a Java application?
+Option 1: They allow classes to be reused in multiple applications
+Option 2: They prevent naming conflicts and control access
+Option 3: They increase execution speed
+Option 4: They reduce the memory usage of applications
+Answer: Answer: They prevent naming conflicts and control access
+##################################################
+
+Q72: How does the protected access modifier work in the context of packages?
+Option 1: It allows access from any class within the same package or any subclass outside the package
+Option 2: It restricts access to classes within the same package only
+Option 3: It allows access from any class in any package
+Option 4: None of the above
+Answer: Answer: It allows access from any class within the same package or any subclass outside the package
+##################################################
+
+Q73: What will be the output of the following interface and class implementation in Java?
+interface Speakable {
+default void speak() {
+System.out.println("Hello, World!");
+}
+}
+class Speaker implements Speakable {
+public static void main(String[] args) {
+new Speaker().speak();
+}
+}
+Option 1: Hello, World!
+Option 2: No output, as interfaces cannot have default methods with a body
+Option 3: A compilation error as the method is not overridden in the class
+Option 4: None of the above
+Answer: Answer: Hello, World!
+##################################################
+
+Q74: Given an interface Animal and classes Dog and Cat that implement Animal, which Java feature allows a method in a different class to accept any Animal type?
+Option 1: Overriding
+Option 2: Overloading
+Option 3: Polymorphism
+Option 4: Encapsulation
+Answer: Answer: Polymorphism
+##################################################
+
+Q75: How do you make a class that is in a different package accessible to your code?
+Option 1: Declare the class as public and use the extends keyword
+Option 2: Declare the class as public and use the import statement
+Option 3: Use the package keyword
+Option 4: None of the above
+Answer: Answer: Declare the class as public and use the import statement
+##################################################
+
+Q76: Which of the following correctly declares a package in a Java file?
+Option 1: package com.example;
+Option 2: package:com.example;
+Option 3: Package com.example;
+Option 4: import com.example;
+Answer: Answer: package com.example;
+##################################################
+
+Q77: In the context of Java interfaces, what does it mean for a method to be implicitly public?
+Option 1: The method is public by default and does not need the public keyword specified
+Option 2: The method can only be accessed within its package
+Option 3: The method must be explicitly declared as public
+Option 4: None of the above
+Answer: Answer: The method is public by default and does not need the public keyword specified
+##################################################
+
+Q78: A developer mistakenly tries to instantiate an interface directly in Java.
+What type of error will this produce?
+Option 1: Syntax error
+Option 2: Runtime error
+Option 3: Compilation error
+Option 4: Logical error
+Answer: Answer: Compilation error
+##################################################
+
+Q79: A Java class fails to compile because it does not provide implementations for all methods of an implemented interface.
+What is the most direct solution to this problem?
+Option 1: Make the class abstract
+Option 2: Remove the interface
+Option 3: Implement all missing methods
+Option 4: Declare the methods as private
+Answer: Answer: Implement all missing methods
+##################################################
+
+Q80: If a package-private class is mistakenly accessed from outside its package, what error is generated?
+Option 1: Syntax error
+Option 2: Access control error
+Option 3: Compilation error
+Option 4: Runtime error
+Answer: Answer: Compilation error
+##################################################
+
+Q81: A class implements an interface but uses different method signatures than those declared in the interface.
+What must be corrected?
+Option 1: Change the class's method signatures to match the interface
+Option 2: Change the interface's method signatures to match the class
+Option 3: Make the class methods static
+Option 4: None of the above
+Answer: Answer: Change the class's method signatures to match the interface
+##################################################
+
+Q82: What is an exception in Java?
+Option 1: A type of error that terminates the program
+Option 2: A runtime error that can be handled by the program
+Option 3: A compile-time error
+Option 4: An error that can only occur in development environments
+Answer: Answer: A runtime error that can be handled by the program
+##################################################
+
+Q83: Which statement is true about the finally block in Java?
+Option 1: It runs only if an exception is thrown
+Option 2: It always runs, regardless of whether an exception is thrown
+Option 3: It is used to throw exceptions
+Option 4: It runs only if the exception is caught
+Answer: Answer: It always runs, regardless of whether an exception is thrown
+##################################################
+
+Q84: Which keyword is used to manually throw an exception in Java?
+Option 1: throw
+Option 2: throws
+Option 3: error
+Option 4: exception
+Answer: Answer: throw
+##################################################
+
+Q85: What is the difference between checked and unchecked exceptions in Java?
+Option 1: Checked exceptions are caught at compile time; unchecked exceptions are caught at runtime
+Option 2: Checked exceptions are errors; unchecked exceptions are runtime exceptions
+Option 3: Checked exceptions must be declared or handled; unchecked exceptions do not need to be declared or handled
+Option 4: Checked exceptions are fatal; unchecked exceptions are not fatal
+Answer: Answer: Checked exceptions must be declared or handled; unchecked exceptions do not need to be declared or handled
+##################################################
+
+Q86: How can a method signal to its caller that it might throw certain types of exceptions?
+Option 1: By using the Error keyword
+Option 2: By using the throw keyword in its body
+Option 3: By including an exception type in its throws clause
+Option 4: By catching the exception within the method
+Answer: Answer: By including an exception type in its throws clause
+##################################################
+
+Q87: In exception handling, which block is used to execute important code such as closing connections, whether an exception occurs or not?
+Option 1: try block
+Option 2: catch block
+Option 3: finally block
+Option 4: do block
+Answer: Answer: finally block
+##################################################
+
+Q88: What happens if a try block is followed by multiple catch blocks?
+Option 1: The first catch block executes regardless of the exception thrown
+Option 2: Only the catch block that matches the exception type is executed
+Option 3: All catch blocks are executed in the order they appear
+Option 4: None of the catch blocks are executed unless they all match the exception
+Answer: Answer: Only the catch block that matches the exception type is executed
+##################################################
+
+Q89: What will be the output of the following Java code?
+public class Main {
+public static void main(String[] args) {
+try { int divideByZero = 5 / 0;
+}
+catch (ArithmeticException e) {
+System.out.println("Arithmetic Exception caught");
+} finally {
+System.out.println("Finally block executed");
+}
+}
+}
+Option 1: Arithmetic Exception caught
+Option 2: Finally block executed
+Option 3: Arithmetic Exception caught\nFinally block executed
+Option 4: Compilation error
+Answer: Answer: Arithmetic Exception caught\nFinally block executed
+##################################################
+
+Q90: How do you handle multiple exceptions in a single catch block in Java?
+Option 1: By separating exceptions with a comma in the catch block
+Option 2: By using the | symbol between exception types in the catch block
+Option 3: By listing each exception type in its own catch block
+Option 4: By using the & symbol between exception types in the catch block
+Answer: Answer: By using the | symbol between exception types in the catch block
+##################################################
+
+Q91: Consider the following code snippet:
+try { // code that might throw an exception } catch (Exception e) { System.out.println(e.getMessage()); }.
+What does e.getMessage() return?
+Option 1: The type of exception thrown
+Option 2: A detailed message about the exception thrown
+Option 3: The name of the class where the exception occurred
+Option 4: The stack trace of where the exception occurred
+Answer: Answer: A detailed message about the exception thrown
+##################################################
+
+Q92: What is the result of attempting to compile and run the following code snippet?
+class MyException extends Exception {}
+public class Test {
+public static void main(String[] args) {
+try {
+throw new MyException();
+}
+catch (MyException me) {
+System.out.println("MyException caught");
+}
+catch (Exception e) {
+System.out.println("Exception caught"); }
+}
+}
+Option 1: MyException caught
+Option 2: Exception caught
+Option 3: Compilation error
+Option 4: Runtime error
+Answer: Answer: MyException caught
+##################################################
+
+Q93: A developer encounters a NullPointerException.
+What is a common cause for this exception?
+Option 1: Trying to access a method on a reference that points to null
+Option 2: Incorrect syntax in an if-statement
+Option 3: Accessing an out-of-bounds index in an array
+Option 4: Using an uninitialized variable
+Answer: Answer: Trying to access a method on a reference that points to null
+##################################################
+
+Q94: In debugging a Java program, you notice that an exception is caught, but there's no information about where it occurred.
+What is a good practice to follow in the catch block for better debugging?
+Option 1: Throw the exception again
+Option 2: Print the exception stack trace using e.printStackTrace()
+Option 3: Ignore the exception
+Option 4: Log the exception message without the stack trace
+Answer: Answer: Print the exception stack trace using e.printStackTrace()
+##################################################
+
+Q95: What must be corrected in a try block that compiles but doesn't catch an exception it was meant to handle?
+Option 1: Ensure the exception is of the correct type that the catch block can catch
+Option 2: Move the code that does not throw the expected exception outside the try block
+Option 3: Replace the try block with a finally block
+Option 4: None of the above
+Answer: Answer: Ensure the exception is of the correct type that the catch block can catch
+##################################################
+
+Q96: What is the Java Collections Framework?
+Option 1: A framework that provides an architecture to store and manipulate a group of objects
+Option 2: A framework for creating collection objects like arrays
+Option 3: A Java framework for threading and concurrency
+Option 4: A set of classes for date and time manipulation
+Answer: Answer: A framework that provides an architecture to store and manipulate a group of objects
+##################################################
+
+Q97: Which of the following is not part of the Java Collections Framework?
+Option 1: ArrayList
+Option 2: HashSet
+Option 3: HashMap
+Option 4: Array
+Answer: Answer: Array
+##################################################
+
+Q98: Which interface represents a collection of objects where duplicates are not allowed?
+Option 1: List
+Option 2: Set
+Option 3: Map
+Option 4: Queue
+Answer: Answer: Set
+##################################################
+
+Q99: What is the difference between List and Set interfaces in Java?
+Option 1: List allows duplicates and is ordered, while Set does not allow duplicates and is unordered
+Option 2: List is unordered and does not allow duplicates, while Set is ordered and allows duplicates
+Option 3: List and Set both allow duplicates and are ordered
+Option 4: List and Set neither allow duplicates nor are ordered
+Answer: Answer: List allows duplicates and is ordered, while Set does not allow duplicates and is unordered
+##################################################
+
+Q100: How does a HashMap in Java work internally?
+Option 1: By using arrays to store elements
+Option 2: By using a list to link keys to values
+Option 3: By hashing keys and storing entries in buckets based on hash codes
+Option 4: By organizing elements in a tree structure
+Answer: Answer: By hashing keys and storing entries in buckets based on hash codes
+##################################################
+
+Q101: In Java, which collection type should you use to ensure elements are sorted in natural order?
+Option 1: HashSet
+Option 2: LinkedHashSet
+Option 3: TreeSet
+Option 4: ArrayList
+Answer: Answer: TreeSet
+##################################################
+
+Q102: What is the primary advantage of using a LinkedHashMap over a HashMap?
+Option 1: LinkedHashMap is more efficient in terms of memory usage
+Option 2: LinkedHashMap allows lookup of values by their hash code
+Option 3: LinkedHashMap maintains insertion order of its elements
+Option 4: LinkedHashMap provides faster access and insertion times
+Answer: Answer: LinkedHashMap maintains insertion order of its elements
+##################################################
+
+Q103: What will the following Java code snippet print?
+List list = new ArrayList<>();
+list.add("Java");
+list.add("Python");
+list.add("Java");
+System.out.println(list.size());
+Option 1: 2
+Option 2: 3
+Option 3: 4
+Option 4: None of the above
+Answer: Answer: 3
+##################################################
+
+Q104: Which code snippet correctly iterates over a Map<String, Integer> and prints each key-value pair?
+Option 1: for (String key : map.keySet()) { System.out.println(key + " - " + map.get(key)); }
+Option 2: for (Map.Entry entry : map.entries()) { System.out.println(entry.getKey() + " - " + entry.getValue()); }
+Option 3: for (Map.Entry entry : map.entrySet()) { System.out.println(entry.getKey() + " - " + entry.getValue()); }
+Option 4: map.forEach((key, value) -> System.out.println(key + " - " + value));
+Answer: Answer: for (Map.Entry entry : map.entrySet()) { System.out.println(entry.getKey() + " - " + entry.getValue()); }
+##################################################
+
+Q105: How can you remove all null elements from a Java List?
+Option 1: list.removeAll(Collections.singleton(null));
+Option 2: while(list.contains(null)) { list.remove(null); }
+Option 3: list.filter(Objects::nonNull);
+Option 4: for (String s : list) { if (s == null) { list.remove(s); } }
+Answer: Answer: list.removeAll(Collections.singleton(null));
+##################################################
+
+Q106: Given a List containing {1, 2, 3, 4, 5}, which operation transforms the list into {1, 4, 9, 16, 25} (each element squared)?
+Option 1: list.replaceAll(i -> i * i);
+Option 2: list.stream().map(i -> i * i).collect(Collectors.toList());
+Option 3: for (int i = 0; i < list.size(); i++) { list.set(i, list.get(i) * list.get(i)); }
+Option 4: All of the above
+Answer: Answer: list.replaceAll(i -> i * i);
+##################################################
+
+Q107: A developer finds that modifications to a List are not reflected in an iterating loop, causing ConcurrentModificationException.
+What common mistake might cause this issue?
+Option 1: Modifying the list within a foreach loop iterating over it
+Option 2: Using an iterator to modify the list without calling iterator.remove()
+Option 3: Iterating over the list with a standard for loop
+Option 4: None of the above
+Answer: Answer: Modifying the list within a foreach loop iterating over it
+##################################################
+
+Q108: A NullPointerException is thrown when attempting to use a sort method on a List.
+What could be the cause?
+Option 1: The list is null
+Option 2: The list contains null elements
+Option 3: The comparator passed to the sort method is null
+Option 4: All of the above
+Answer: Answer: All of the above
+##################################################
+
+Q109: When using a HashSet, a developer notices that it contains duplicate elements.
+What is a possible explanation for this behavior?
+Option 1: The equals and hashCode methods are not overridden in the elements' class
+Option 2: The HashSet is incorrectly instantiated
+Option 3: A LinkedHashSet was used instead, which allows duplicates
+Option 4: The elements are of a type that does not support comparison
+Answer: Answer: The equals and hashCode methods are not overridden in the elements' class
+##################################################
+
+Q110: Why might adding elements to a HashMap result in those elements not being retrievable even with the correct key?
+Option 1: The keys used are mutable and were modified after insertion
+Option 2: The HashMap was not properly initialized
+Option 3: The get method is called with the wrong type of key
+Option 4: The HashMap is full
+Answer: Answer: The keys used are mutable and were modified after insertion
+##################################################
+
+Q111: Which design pattern is used to create a single instance of a class throughout the application?
+Option 1: Factory Method
+Option 2: Singleton
+Option 3: Prototype
+Option 4: Builder
+Answer: Answer: Singleton
+##################################################
+
+Q112: What is the main purpose of the Factory Method design pattern?
+Option 1: To create an instance of several derived classes
+Option 2: To ensure a class has only one instance
+Option 3: To construct complex objects step by step
+Option 4: To allow an object to alter its behavior when its internal state changes
+Answer: Answer: To create an instance of several derived classes
+##################################################
+
+Q113: What design pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation?
+Option 1: Observer
+Option 2: Visitor
+Option 3: Iterator
+Option 4: Composite
+Answer: Answer: Iterator
+##################################################
+
+Q114: Which design pattern is primarily concerned with reducing the coupling between loosely related interacting objects?
+Option 1: Mediator
+Option 2: Adapter
+Option 3: Facade
+Option 4: Bridge
+Answer: Answer: Mediator
+##################################################
+
+Q115: In which design pattern do objects represent operations to be performed on elements of another structure, and the visitor pattern allows new operations to be added without changing the elements on which it operates?
+Option 1: Observer
+Option 2: Strategy
+Option 3: Visitor
+Option 4: Chain of Responsibility
+Answer: Answer: Visitor
+##################################################
+
+Q116: What design pattern describes an object that encapsulates how a set of objects interact?
+Option 1: Observer
+Option 2: Mediator
+Option 3: Chain of Responsibility
+Option 4: Command
+Answer: Answer: Mediator
+##################################################
+
+Q117: Which pattern is best demonstrated by allowing different parsing strategies for an XML file and a JSON file, which can be switched at runtime?
+Option 1: Strategy
+Option 2: Observer
+Option 3: Decorator
+Option 4: Factory
+Answer: Answer: Strategy
+##################################################
+
+Q118: In which design pattern is a component wrapped by another component to add new behaviors and responsibilities dynamically?
+Option 1: Decorator
+Option 2: Composite
+Option 3: Adapter
+Option 4: Proxy
+Answer: Answer: Decorator
+##################################################
+
+Q119: What pattern can be recognized by a structure where objects are represented as tree structures to represent part-whole hierarchies, allowing clients to treat individual objects and compositions uniformly?
+Option 1: Composite
+Option 2: Flyweight
+Option 3: Bridge
+Option 4: Prototype
+Answer: Answer: Composite
+##################################################
+
+Q120: Which pattern involves a request being passed along a chain of objects until one of them handles the request?
+Option 1: Chain of Responsibility
+Option 2: Command
+Option 3: State
+Option 4: Observer
+Answer: Answer: Chain of Responsibility
+##################################################
+
