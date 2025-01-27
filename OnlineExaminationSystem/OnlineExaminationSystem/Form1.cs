@@ -8,7 +8,7 @@ namespace UI
 {
     public partial class Form1 : Form
     {
-           private readonly InstructorRepo _instructorRepo; // InstructorRepo instance
+        private readonly InstructorRepo _instructorRepo; // InstructorRepo instance
         private DataGridView dataGridView1;              // DataGridView instance
 
         // Injecting InstructorRepo into the form via constructor
@@ -18,9 +18,9 @@ namespace UI
             _instructorRepo = instructorRepo; // Store the injected InstructorRepo
             InitializeDataGridView(); // Initialize the DataGridView
         }
-       
 
-    
+
+
         private void InitializeDataGridView()
         {
             dataGridView1 = new DataGridView();
@@ -57,10 +57,18 @@ namespace UI
         {
             try
             {
+                dataGridView1.Location = new Point(400, 250);
 
-                //*var instructors = _instructorRepo*/.GetInstructors();
+                dataGridView1.Width = 580;  // Set the width to 500 pixels
+                dataGridView1.Height = 300; // Set the height to 300 pixels
+                dataGridView1.BorderStyle = BorderStyle.None;
 
-                //dataGridView1.DataSource = instructors;  // Bind data to DataGridView
+
+                var instructors = _instructorRepo.GetInstructors();
+                dataGridView1.BackgroundColor = Color.White;
+
+
+                dataGridView1.DataSource = instructors;  // Bind data to DataGridView
             }
             catch (Exception ex)
             {
@@ -113,6 +121,7 @@ namespace UI
 
         private void button3_Click(object sender, EventArgs e)
         {
+            button1.ForeColor = Color.Red;
             // First hide all controls except panel1 and dataGridView1
             foreach (Control control in this.Controls)
             {

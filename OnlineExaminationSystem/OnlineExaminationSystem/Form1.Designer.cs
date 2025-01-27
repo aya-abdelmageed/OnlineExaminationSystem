@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             Instructors = new Button();
             Reports = new Button();
@@ -87,21 +88,21 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(205, 657);
+            panel1.Size = new Size(212, 657);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
             // Instructors
             // 
-            Instructors.BackColor = Color.FromArgb(23, 23, 23);
+            Instructors.BackColor = Color.White;
             Instructors.BackgroundImageLayout = ImageLayout.Zoom;
             Instructors.FlatAppearance.BorderSize = 0;
             Instructors.FlatStyle = FlatStyle.Flat;
-            Instructors.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Instructors.ForeColor = Color.White;
-            Instructors.Image = Properties.Resources.icons8_teacher_48;
+            Instructors.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            Instructors.ForeColor = Color.Black;
+            Instructors.Image = (Image)resources.GetObject("Instructors.Image");
             Instructors.ImageAlign = ContentAlignment.MiddleLeft;
-            Instructors.Location = new Point(0, 434);
+            Instructors.Location = new Point(32, 433);
             Instructors.Margin = new Padding(3, 4, 3, 4);
             Instructors.Name = "Instructors";
             Instructors.Size = new Size(205, 59);
@@ -112,15 +113,15 @@
             // 
             // Reports
             // 
-            Reports.BackColor = Color.FromArgb(23, 23, 23);
+            Reports.BackColor = Color.White;
             Reports.BackgroundImageLayout = ImageLayout.Zoom;
             Reports.FlatAppearance.BorderSize = 0;
             Reports.FlatStyle = FlatStyle.Flat;
-            Reports.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Reports.ForeColor = Color.White;
-            Reports.Image = Properties.Resources.icons8_reports_48;
+            Reports.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            Reports.ForeColor = Color.Black;
+            Reports.Image = (Image)resources.GetObject("Reports.Image");
             Reports.ImageAlign = ContentAlignment.MiddleLeft;
-            Reports.Location = new Point(0, 566);
+            Reports.Location = new Point(26, 567);
             Reports.Margin = new Padding(3, 4, 3, 4);
             Reports.Name = "Reports";
             Reports.Size = new Size(205, 59);
@@ -132,8 +133,8 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.White;
-            pictureBox1.Image = Properties.Resources.b55b4840fe2ddd62b5239ac2c3374660;
-            pictureBox1.Location = new Point(-48, 1);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-29, 4);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(300, 133);
@@ -144,15 +145,15 @@
             // 
             // Students
             // 
-            Students.BackColor = Color.FromArgb(23, 23, 23);
+            Students.BackColor = Color.White;
             Students.BackgroundImageLayout = ImageLayout.Zoom;
             Students.FlatAppearance.BorderSize = 0;
             Students.FlatStyle = FlatStyle.Flat;
-            Students.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Students.ForeColor = Color.White;
-            Students.Image = Properties.Resources.icons8_students_48__1_;
+            Students.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            Students.ForeColor = Color.Black;
+            Students.Image = (Image)resources.GetObject("Students.Image");
             Students.ImageAlign = ContentAlignment.MiddleLeft;
-            Students.Location = new Point(-3, 500);
+            Students.Location = new Point(26, 500);
             Students.Margin = new Padding(3, 4, 3, 4);
             Students.Name = "Students";
             Students.Size = new Size(211, 59);
@@ -163,15 +164,15 @@
             // 
             // Dashboard
             // 
-            Dashboard.BackColor = Color.FromArgb(23, 23, 23);
+            Dashboard.BackColor = Color.White;
             Dashboard.BackgroundImageLayout = ImageLayout.Zoom;
             Dashboard.FlatAppearance.BorderSize = 0;
             Dashboard.FlatStyle = FlatStyle.Flat;
-            Dashboard.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Dashboard.ForeColor = Color.White;
-            Dashboard.Image = Properties.Resources.icons8_tear_off_calendar_48;
+            Dashboard.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            Dashboard.ForeColor = Color.Black;
+            Dashboard.Image = (Image)resources.GetObject("Dashboard.Image");
             Dashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            Dashboard.Location = new Point(0, 169);
+            Dashboard.Location = new Point(35, 168);
             Dashboard.Margin = new Padding(3, 4, 3, 4);
             Dashboard.Name = "Dashboard";
             Dashboard.Size = new Size(205, 59);
@@ -182,15 +183,15 @@
             // 
             // Courses
             // 
-            Courses.BackColor = Color.FromArgb(23, 23, 23);
+            Courses.BackColor = Color.White;
             Courses.BackgroundImageLayout = ImageLayout.Zoom;
             Courses.FlatAppearance.BorderSize = 0;
             Courses.FlatStyle = FlatStyle.Flat;
-            Courses.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Courses.ForeColor = Color.White;
-            Courses.Image = Properties.Resources.icons8_bank_account_48;
+            Courses.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            Courses.ForeColor = Color.Black;
+            Courses.Image = (Image)resources.GetObject("Courses.Image");
             Courses.ImageAlign = ContentAlignment.MiddleLeft;
-            Courses.Location = new Point(0, 368);
+            Courses.Location = new Point(35, 367);
             Courses.Margin = new Padding(3, 4, 3, 4);
             Courses.Name = "Courses";
             Courses.Size = new Size(205, 59);
@@ -201,15 +202,15 @@
             // 
             // Tracks
             // 
-            Tracks.BackColor = Color.FromArgb(23, 23, 23);
+            Tracks.BackColor = Color.White;
             Tracks.BackgroundImageLayout = ImageLayout.Zoom;
             Tracks.FlatAppearance.BorderSize = 0;
             Tracks.FlatStyle = FlatStyle.Flat;
-            Tracks.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Tracks.ForeColor = Color.White;
-            Tracks.Image = Properties.Resources.icons8_in_progress_48__1_;
+            Tracks.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            Tracks.ForeColor = Color.Black;
+            Tracks.Image = (Image)resources.GetObject("Tracks.Image");
             Tracks.ImageAlign = ContentAlignment.MiddleLeft;
-            Tracks.Location = new Point(0, 301);
+            Tracks.Location = new Point(32, 301);
             Tracks.Margin = new Padding(3, 4, 3, 4);
             Tracks.Name = "Tracks";
             Tracks.Size = new Size(205, 59);
@@ -220,15 +221,15 @@
             // 
             // Branches
             // 
-            Branches.BackColor = Color.FromArgb(23, 23, 23);
+            Branches.BackColor = Color.Transparent;
             Branches.BackgroundImageLayout = ImageLayout.Zoom;
             Branches.FlatAppearance.BorderSize = 0;
             Branches.FlatStyle = FlatStyle.Flat;
-            Branches.Font = new Font("Century Gothic", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Branches.ForeColor = Color.White;
-            Branches.Image = Properties.Resources.icons8_user_account_48;
+            Branches.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            Branches.ForeColor = Color.Black;
+            Branches.Image = (Image)resources.GetObject("Branches.Image");
             Branches.ImageAlign = ContentAlignment.MiddleLeft;
-            Branches.Location = new Point(0, 235);
+            Branches.Location = new Point(32, 235);
             Branches.Margin = new Padding(3, 4, 3, 4);
             Branches.Name = "Branches";
             Branches.Size = new Size(208, 59);
@@ -264,7 +265,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(204, 8, 8);
             label2.Location = new Point(185, 21);
             label2.Name = "label2";
@@ -277,7 +278,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(3, 98);
             label1.Name = "label1";
             label1.Size = new Size(219, 32);
@@ -312,7 +313,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(204, 8, 8);
             label3.Location = new Point(185, 21);
             label3.Name = "label3";
@@ -325,7 +326,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(3, 98);
             label4.Name = "label4";
             label4.Size = new Size(233, 32);
@@ -359,7 +360,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(204, 8, 8);
             label5.Location = new Point(185, 21);
             label5.Name = "label5";
@@ -372,7 +373,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(3, 98);
             label6.Name = "label6";
             label6.Size = new Size(212, 32);
@@ -413,7 +414,7 @@
             // 
             button1.BackColor = Color.FromArgb(204, 8, 8);
             button1.FlatAppearance.BorderSize = 0;
-            button1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.Location = new Point(211, 228);
             button1.Margin = new Padding(3, 4, 3, 4);
@@ -438,7 +439,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.FromArgb(204, 8, 8);
             label10.Location = new Point(144, 272);
             label10.Name = "label10";
@@ -458,7 +459,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label9.Location = new Point(222, 150);
             label9.Name = "label9";
             label9.Size = new Size(98, 25);
@@ -468,7 +469,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label8.Location = new Point(222, 61);
             label8.Name = "label8";
             label8.Size = new Size(102, 25);
@@ -479,7 +480,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label7.Location = new Point(18, 26);
             label7.Name = "label7";
             label7.Size = new Size(98, 32);
@@ -496,7 +497,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 247, 249);
+            BackColor = Color.White;
             ClientSize = new Size(1324, 657);
             Controls.Add(panel5);
             Controls.Add(panel4);
@@ -506,7 +507,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "a";
             Load += Form1_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -536,7 +537,6 @@
         private Button Instructors;
         private Button Students;
         private Button Reports;
-        private PictureBox pictureBox1;
         private Panel panel2;
         private Label label1;
         private Label label2;
@@ -559,5 +559,6 @@
         private Button button1;
         private CheckBox checkBox1;
         private NotifyIcon notifyIcon1;
+        private PictureBox pictureBox1;
     }
 }
