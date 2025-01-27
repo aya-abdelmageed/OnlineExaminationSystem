@@ -1,4 +1,4 @@
-﻿namespace OnlineExaminationSystem
+﻿namespace UI
 {
     partial class Teacher
     {
@@ -62,7 +62,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_students_48;
+            this.pictureBox4.Image = global::UI.Properties.Resources.icons8_students_48;
             this.pictureBox4.Location = new System.Drawing.Point(9, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(48, 48);
@@ -103,7 +103,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_teacher_50;
+            this.pictureBox3.Image = global::UI.Properties.Resources.icons8_teacher_50;
             this.pictureBox3.Location = new System.Drawing.Point(9, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
@@ -144,7 +144,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_user_account_48__1_;
+            this.pictureBox2.Image = global::UI.Properties.Resources.icons8_user_account_48__1_;
             this.pictureBox2.Location = new System.Drawing.Point(9, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
@@ -191,7 +191,7 @@
             this.Instructors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Instructors.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Instructors.ForeColor = System.Drawing.Color.White;
-            this.Instructors.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_teacher_48;
+            this.Instructors.Image = global::UI.Properties.Resources.icons8_teacher_48;
             this.Instructors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Instructors.Location = new System.Drawing.Point(0, 347);
             this.Instructors.Name = "Instructors";
@@ -208,7 +208,7 @@
             this.Reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reports.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reports.ForeColor = System.Drawing.Color.White;
-            this.Reports.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_reports_48;
+            this.Reports.Image = global::UI.Properties.Resources.icons8_reports_48;
             this.Reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Reports.Location = new System.Drawing.Point(0, 453);
             this.Reports.Name = "Reports";
@@ -220,7 +220,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::OnlineExaminationSystem.Properties.Resources.b55b4840fe2ddd62b5239ac2c3374660;
+            this.pictureBox1.Image = global::UI.Properties.Resources.b55b4840fe2ddd62b5239ac2c3374660;
             this.pictureBox1.Location = new System.Drawing.Point(-48, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(300, 133);
@@ -236,7 +236,7 @@
             this.Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Students.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Students.ForeColor = System.Drawing.Color.White;
-            this.Students.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_students_48__1_;
+            this.Students.Image = global::UI.Properties.Resources.icons8_students_48__1_;
             this.Students.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Students.Location = new System.Drawing.Point(-3, 400);
             this.Students.Name = "Students";
@@ -253,7 +253,7 @@
             this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Dashboard.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dashboard.ForeColor = System.Drawing.Color.White;
-            this.Dashboard.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_tear_off_calendar_48;
+            this.Dashboard.Image = global::UI.Properties.Resources.icons8_tear_off_calendar_48;
             this.Dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Dashboard.Location = new System.Drawing.Point(0, 135);
             this.Dashboard.Name = "Dashboard";
@@ -270,7 +270,7 @@
             this.Courses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Courses.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Courses.ForeColor = System.Drawing.Color.White;
-            this.Courses.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_bank_account_48;
+            this.Courses.Image = global::UI.Properties.Resources.icons8_bank_account_48;
             this.Courses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Courses.Location = new System.Drawing.Point(0, 294);
             this.Courses.Name = "Courses";
@@ -287,7 +287,7 @@
             this.Tracks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Tracks.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tracks.ForeColor = System.Drawing.Color.White;
-            this.Tracks.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_in_progress_48__1_;
+            this.Tracks.Image = global::UI.Properties.Resources.icons8_in_progress_48__1_;
             this.Tracks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Tracks.Location = new System.Drawing.Point(0, 241);
             this.Tracks.Name = "Tracks";
@@ -304,7 +304,7 @@
             this.Branches.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Branches.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Branches.ForeColor = System.Drawing.Color.White;
-            this.Branches.Image = global::OnlineExaminationSystem.Properties.Resources.icons8_user_account_48;
+            this.Branches.Image = global::UI.Properties.Resources.icons8_user_account_48;
             this.Branches.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Branches.Location = new System.Drawing.Point(0, 188);
             this.Branches.Name = "Branches";

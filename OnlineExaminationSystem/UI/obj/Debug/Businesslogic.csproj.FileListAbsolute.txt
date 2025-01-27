@@ -1,0 +1,15 @@
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\UI.dll
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\UI.pdb
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\AutoMapper.dll
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\DataAccess.dll
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\System.ValueTuple.dll
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\DataAccess.pdb
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\AutoMapper.xml
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\databaseproject\OnlineExaminationSystem\UI\bin\Debug\System.ValueTuple.xml
+D:\databaseproject\OnlineExaminationSystem\UI\obj\Debug\Businesslogic.csproj.AssemblyReference.cache
+D:\databaseproject\OnlineExaminationSystem\UI\obj\Debug\Businesslogic.csproj.CoreCompileInputs.cache
+D:\databaseproject\OnlineExaminationSystem\UI\obj\Debug\Businesslogic.csproj.CopyComplete
+D:\databaseproject\OnlineExaminationSystem\UI\obj\Debug\UI.dll
+D:\databaseproject\OnlineExaminationSystem\UI\obj\Debug\UI.pdb

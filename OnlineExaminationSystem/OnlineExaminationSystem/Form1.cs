@@ -1,10 +1,10 @@
 using AutoMapper;
-using OnlineExaminationSystem.Repositories;
+using BusinessLogic.Repositories;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace OnlineExaminationSystem
+namespace UI
 {
     public partial class Form1 : Form
     {
@@ -58,9 +58,9 @@ namespace OnlineExaminationSystem
             try
             {
 
-                var instructors = _instructorRepo.GetInstructors();
+                //*var instructors = _instructorRepo*/.GetInstructors();
 
-                dataGridView1.DataSource = instructors;  // Bind data to DataGridView
+                //dataGridView1.DataSource = instructors;  // Bind data to DataGridView
             }
             catch (Exception ex)
             {

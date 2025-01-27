@@ -1,12 +1,12 @@
 using DataAccess;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OnlineExaminationSystem.Mapping;
-using OnlineExaminationSystem.Repositories;
 using AutoMapper;
 using System;
 using System.Windows.Forms;
-using OnlineExaminationSystem;
+
+using BusinessLogic.Repositories;
+using UI;
 
 internal static class Program
 {
@@ -26,16 +26,10 @@ internal static class Program
             })
             .AddSingleton<DBManager>()  // DBManager registered as singleton
             .AddScoped<InstructorRepo>() // InstructorRepo registered as scoped
-            .AddAutoMapper(cfg =>
-            {
-                // Register AutoMapper profiles
-                cfg.AddProfile<InstructorProfile>(); // Add other profiles if needed
-            })
             .AddSingleton<Form1>() // Form1 registered as singleton
             .BuildServiceProvider();
 
         // Get IMapper instance from DI container
-        Mapper = serviceProvider.GetRequiredService<IMapper>();
 
         // Initialize the application
         ApplicationConfiguration.Initialize();

@@ -1,4 +1,4 @@
-﻿namespace OnlineExaminationSystem
+﻿namespace UI
 {
     partial class Form1
     {

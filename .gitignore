@@ -4,8 +4,10 @@
 
 /.vs
 
-/OnlineExaminationSystem/OnlineExaminationSystem/bin
-/OnlineExaminationSystem/OnlineExaminationSystem/obj
+/OnlineExaminationSystem/BusinessLogi/bin
+/OnlineExaminationSystem/BusinessLogic/obj
 /OnlineExaminationSystem/DataAccess/bin
 /OnlineExaminationSystem/DataAccess/obj
+/OnlineExaminationSystem/OnlineExaminationSystem/bin
+/OnlineExaminationSystem/OnlineExaminationSystem/obj
 /OnlineExaminationSystem/.vs
