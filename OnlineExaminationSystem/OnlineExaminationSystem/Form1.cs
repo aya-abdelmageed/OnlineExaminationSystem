@@ -8,35 +8,19 @@ namespace OnlineExaminationSystem
 {
     public partial class Form1 : Form
     {
-        InstructorRepo instructor; 
+           private readonly InstructorRepo _instructorRepo; // InstructorRepo instance
+        private DataGridView dataGridView1;              // DataGridView instance
 
-
-
-        public Form1(IMapper mapper)
+        // Injecting InstructorRepo into the form via constructor
+        public Form1(InstructorRepo instructorRepo)
         {
             InitializeComponent();
-            InitializeDatabaseConnection();
-        
-           instructor = new InstructorRepo(mapper);
-
-
+            _instructorRepo = instructorRepo; // Store the injected InstructorRepo
+            InitializeDataGridView(); // Initialize the DataGridView
         }
+       
 
-        private DataGridView dataGridView1;
-        private readonly IMapper mapper;
-
-        private void InitializeDatabaseConnection()
-        {
-            try
-            {
-                MessageBox.Show("Connection Successful!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Connection Failed: " + ex.Message);
-            }
-        }
-
+    
         private void InitializeDataGridView()
         {
             dataGridView1 = new DataGridView();
@@ -74,9 +58,9 @@ namespace OnlineExaminationSystem
             try
             {
 
-                var instructors = instructor.GetInstructors();
+                var instructors = _instructorRepo.GetInstructors();
 
-                dataGridView1.DataSource = instructor;  // Bind data to DataGridView
+                dataGridView1.DataSource = instructors;  // Bind data to DataGridView
             }
             catch (Exception ex)
             {
@@ -86,7 +70,6 @@ namespace OnlineExaminationSystem
 
         private void Branches_Click(object sender, EventArgs e)
         {
-            // First hide all controls except panel1 and dataGridView1
             foreach (Control control in this.Controls)
             {
                 if (control != panel1 && control != dataGridView1)

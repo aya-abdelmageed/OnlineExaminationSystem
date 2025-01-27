@@ -4,39 +4,54 @@ using OnlineExaminationSystem.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OnlineExaminationSystem.Repositories
 {
-    internal class InstructorRepo
+    public class InstructorRepo
     {
-
         private readonly DBManager _dbManager;
         private readonly IMapper _mapper;
 
-        public InstructorRepo( IMapper mapper)
+        // Constructor using Dependency Injection for DBManager and AutoMapper
+        public InstructorRepo(DBManager dbManager, IMapper mapper)
         {
-            _dbManager = new DBManager();
-            _mapper = mapper;
+            _dbManager = dbManager; // Injected DBManager instance
+            _mapper = mapper;       // Injected AutoMapper instance
         }
 
+        // Method to retrieve instructors using a stored procedure
         public List<InstructorDTO> GetInstructors()
         {
             string procedureName = "INSTRUCTOR_VIEW"; // Stored procedure name
-            DataTable dataTable = _dbManager.ExecuteStoredProcedure(procedureName, null);
+            DataTable dataTable;
 
-            List<InstructorDTO> instructors = new List<InstructorDTO>();
+            try
+            {
+                // Call the stored procedure using DBManager
+                dataTable = _dbManager.ExecuteStoredProcedure(procedureName, null);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving instructors from the database.", ex);
+            }
+
+            // Map the resulting DataTable to a list of InstructorDTO
+            var instructors = new List<InstructorDTO>();
             foreach (DataRow row in dataTable.Rows)
             {
-               instructors.Add(_mapper.Map<InstructorDTO>(row));
-
+                try
+                {
+                    // Use AutoMapper to map each DataRow to InstructorDTO
+                    var instructor = _mapper.Map<InstructorDTO>(row);
+                    instructors.Add(instructor);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error mapping DataRow to InstructorDTO.", ex);
+                }
             }
 
             return instructors;
         }
-
     }
 }

@@ -2,22 +2,22 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using Microsoft.Extensions.Configuration;
 
 
     namespace DataAccess
     {
         public class DBManager
         {
-            private readonly string _connectionString;
+        private readonly string _connectionString;
 
-            public DBManager()
-            {
-                // Correct the property name for accessing ConnectionStrings
-                _connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
-            }
+        public DBManager(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("MyDatabase");
+        }
 
-            // Method to execute a stored procedure and return a DataTable
-            public DataTable ExecuteStoredProcedure(string procedureName, SqlParameter[] parameters)
+        // Method to execute a stored procedure and return a DataTable
+        public DataTable ExecuteStoredProcedure(string procedureName, SqlParameter[] parameters)
             {
                 using (SqlConnection connection = new SqlConnection(_connectionString))
                 using (SqlCommand command = new SqlCommand(procedureName, connection))
