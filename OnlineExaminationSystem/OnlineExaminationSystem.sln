@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineExaminationSystem", "OnlineExaminationSystem\OnlineExaminationSystem.csproj", "{1D19A8CC-7609-4A8B-90DF-A65E941A371E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineExaminationSystem", "OnlineExaminationSystem\OnlineExaminationSystem.csproj", "{1D19A8CC-7609-4A8B-90DF-A65E941A371E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{7127D990-52B1-480A-8708-53D364CEFD5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{11814D89-99EE-4D10-BFD3-BB82F015DF91}"
+	ProjectSection(SolutionItems) = preProject
+		app.config = app.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +22,15 @@ Global
 		{1D19A8CC-7609-4A8B-90DF-A65E941A371E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D19A8CC-7609-4A8B-90DF-A65E941A371E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D19A8CC-7609-4A8B-90DF-A65E941A371E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7127D990-52B1-480A-8708-53D364CEFD5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7127D990-52B1-480A-8708-53D364CEFD5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7127D990-52B1-480A-8708-53D364CEFD5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7127D990-52B1-480A-8708-53D364CEFD5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79888455-65FC-4FB7-A475-E73ADC07C03B}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,6 @@
+D:\dbproject\OnlineExaminationSystem\DataAccess\bin\Debug\DataAccess.dll
+D:\dbproject\OnlineExaminationSystem\DataAccess\bin\Debug\DataAccess.pdb
+D:\dbproject\OnlineExaminationSystem\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\dbproject\OnlineExaminationSystem\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\dbproject\OnlineExaminationSystem\DataAccess\obj\Debug\DataAccess.dll
+D:\dbproject\OnlineExaminationSystem\DataAccess\obj\Debug\DataAccess.pdb

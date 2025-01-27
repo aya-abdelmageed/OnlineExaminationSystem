@@ -1,3 +1,5 @@
+using AutoMapper;
+using OnlineExaminationSystem.Repositories;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -6,21 +8,27 @@ namespace OnlineExaminationSystem
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        InstructorRepo instructor; 
+
+
+
+        public Form1(IMapper mapper)
         {
             InitializeComponent();
-            //this.Icon = new System.Drawing.Icon("iti-logo.ico");
             InitializeDatabaseConnection();
+        
+           instructor = new InstructorRepo(mapper);
+
+
         }
-        private SqlConnection conn;
-        private string connectionString = "Server=DESKTOP-S3ETNPJ;Database=Online_Examination_System;User Id=Exam;Password=123456;";
+
         private DataGridView dataGridView1;
+        private readonly IMapper mapper;
+
         private void InitializeDatabaseConnection()
         {
             try
             {
-                conn = new SqlConnection(connectionString);
-                conn.Open();
                 MessageBox.Show("Connection Successful!");
             }
             catch (Exception ex)
@@ -65,12 +73,10 @@ namespace OnlineExaminationSystem
         {
             try
             {
-                string query = "SELECT * FROM Branch";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
 
-                dataGridView1.DataSource = dt;  // Bind data to DataGridView
+                var instructors = instructor.GetInstructors();
+
+                dataGridView1.DataSource = instructor;  // Bind data to DataGridView
             }
             catch (Exception ex)
             {
@@ -103,11 +109,8 @@ namespace OnlineExaminationSystem
         private void label2_Paint(object sender, PaintEventArgs e)
         {
             string countQuery1 = "SELECT COUNT(*) FROM Branch";
-            SqlCommand countCommand1 = new SqlCommand(countQuery1, conn);
-            int branchCount = (int)countCommand1.ExecuteScalar();  // Get the count result
 
             // Update label2 with the total count of branches
-            label2.Text = branchCount.ToString();
         }
         //----------------------------------------------------------------------------------------
         private void LoadTrackData()
@@ -115,9 +118,7 @@ namespace OnlineExaminationSystem
             try
             {
                 string query = "SELECT * FROM Track";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
-                adapter.Fill(dt);
 
                 dataGridView1.DataSource = dt;  // Bind data to DataGridView
             }
@@ -155,12 +156,7 @@ namespace OnlineExaminationSystem
         {
             try
             {
-                string query = "SELECT * FROM Course";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
 
-                dataGridView1.DataSource = dt;  // Bind data to DataGridView
             }
             catch (Exception ex)
             {
@@ -194,12 +190,7 @@ namespace OnlineExaminationSystem
         {
             try
             {
-                string query = "SELECT * FROM Instructor";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
 
-                dataGridView1.DataSource = dt;  // Bind data to DataGridView
             }
             catch (Exception ex)
             {
@@ -231,11 +222,8 @@ namespace OnlineExaminationSystem
         private void label3_Paint_1(object sender, PaintEventArgs e)
         {
             string countQuery2 = "SELECT COUNT(*) FROM Instructor";
-            SqlCommand countCommand2 = new SqlCommand(countQuery2, conn);
-            int InstructorCount = (int)countCommand2.ExecuteScalar();  // Get the count result
 
             // Update label2 with the total count of branches
-            label3.Text = InstructorCount.ToString();
         }
         //------------------------------------------------------------------------------------------
         private void LoadStudentData()
@@ -243,9 +231,7 @@ namespace OnlineExaminationSystem
             try
             {
                 string query = "SELECT * FROM Student";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
-                adapter.Fill(dt);
 
                 dataGridView1.DataSource = dt;  // Bind data to DataGridView
             }
@@ -278,12 +264,8 @@ namespace OnlineExaminationSystem
 
         private void label5_Paint(object sender, PaintEventArgs e)
         {
-            string countQuery3 = "SELECT COUNT(*) FROM Student";
-            SqlCommand countCommand3 = new SqlCommand(countQuery3, conn);
-            int StudentCount = (int)countCommand3.ExecuteScalar();  // Get the count result
 
             // Update label2 with the total count of branches
-            label5.Text = StudentCount.ToString();
         }
         //------------------------------------------------------------------------------------------
         private void Form1_Load(object sender, EventArgs e)
