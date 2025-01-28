@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
 using System;
 using System.Windows.Forms;
-
 using BusinessLogic.Repositories;
 using UI;
+using UI.AdminDashboard;
 
 internal static class Program
 {
@@ -26,18 +26,48 @@ internal static class Program
             })
             .AddSingleton<DBManager>()  // DBManager registered as singleton
             .AddScoped<InstructorRepo>() // InstructorRepo registered as scoped
-            .AddSingleton<Form1>() // Form1 registered as singleton
+            .AddTransient<Form1>() // Form1 registered as transient
+            .AddTransient<Branches>() // Branches registered as transient
+            .AddTransient<Reports>()
+            .AddTransient<Courses>()
+            .AddTransient<Tracks>()
+            .AddTransient<Dashboard>()
             .BuildServiceProvider();
-
-        // Get IMapper instance from DI container
 
         // Initialize the application
         ApplicationConfiguration.Initialize();
 
-        // Injecting InstructorRepo and other dependencies into Form1 via DI
-        var form1 = serviceProvider.GetRequiredService<Form1>();
+        // Create a custom ApplicationContext to manage form lifetime
+        var context = new MyApplicationContext(serviceProvider);
+        Application.Run(context);
+    }
+}
 
-        // Run the form (Application entry point)
-        Application.Run(form1);
+public class MyApplicationContext : ApplicationContext
+{
+    private readonly IServiceProvider _serviceProvider;
+
+    public MyApplicationContext(IServiceProvider serviceProvider)
+    {
+        _serviceProvider = serviceProvider;
+
+        // Start with Form1
+        ShowForm<Form1>();
+    }
+
+    public void ShowForm<TForm>() where TForm : Form
+    {
+        var form = _serviceProvider.GetRequiredService<TForm>();
+        form.FormClosed += OnFormClosed; // Handle form closing
+        form.Show();
+    }
+
+    private void OnFormClosed(object sender, FormClosedEventArgs e)
+    {
+        // When a form is closed, check if there are any other open forms
+        if (Application.OpenForms.Count == 0)
+        {
+            ExitThread(); // Exit the application only if no forms are open
+        }
     }
 }
