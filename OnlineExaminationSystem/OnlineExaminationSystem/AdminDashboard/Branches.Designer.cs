@@ -37,7 +37,6 @@
             ClientSize = new Size(1324, 657);
             Name = "Branches";
             Text = "Branches";
-            Load += Branches_Load;
             ResumeLayout(false);
         }
 

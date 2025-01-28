@@ -41,8 +41,8 @@
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             label1 = new Label();
             label2 = new Label();
-            pictureBox2 = new PictureBox();
             panel2 = new Panel();
+            pictureBox2 = new PictureBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
@@ -56,8 +56,8 @@
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel5.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.icons8_students_48;
-            pictureBox4.Location = new Point(9, 5);
+            pictureBox4.Location = new Point(19, 16);
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(48, 48);
@@ -80,11 +80,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(204, 8, 8);
             label5.Location = new Point(185, 21);
             label5.Name = "label5";
-            label5.Size = new Size(68, 37);
+            label5.Size = new Size(69, 34);
             label5.TabIndex = 1;
             label5.Text = "534";
             label5.Click += label5_Click;
@@ -93,7 +93,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(3, 98);
+            label6.Location = new Point(30, 68);
             label6.Name = "label6";
             label6.Size = new Size(212, 32);
             label6.TabIndex = 0;
@@ -105,17 +105,17 @@
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label6);
-            panel4.Location = new Point(985, 102);
+            panel4.Location = new Point(978, 102);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(270, 150);
+            panel4.Size = new Size(279, 117);
             panel4.TabIndex = 8;
             panel4.Paint += panel4_Paint;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.icons8_teacher_50;
-            pictureBox3.Location = new Point(9, 5);
+            pictureBox3.Location = new Point(21, 14);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(50, 50);
@@ -131,18 +131,18 @@
             panel3.Location = new Point(644, 102);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(270, 150);
+            panel3.Size = new Size(279, 117);
             panel3.TabIndex = 7;
             panel3.Paint += panel3_Paint;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(204, 8, 8);
             label3.Location = new Point(185, 21);
             label3.Name = "label3";
-            label3.Size = new Size(68, 37);
+            label3.Size = new Size(69, 34);
             label3.TabIndex = 1;
             label3.Text = "534";
             label3.Click += label3_Click;
@@ -151,7 +151,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(3, 98);
+            label4.Location = new Point(33, 68);
             label4.Name = "label4";
             label4.Size = new Size(233, 32);
             label4.TabIndex = 0;
@@ -162,7 +162,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(3, 98);
+            label1.Location = new Point(21, 68);
             label1.Name = "label1";
             label1.Size = new Size(219, 32);
             label1.TabIndex = 0;
@@ -171,24 +171,14 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(204, 8, 8);
             label2.Location = new Point(185, 21);
             label2.Name = "label2";
-            label2.Size = new Size(68, 37);
+            label2.Size = new Size(69, 34);
             label2.TabIndex = 1;
             label2.Text = "534";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.icons8_user_account_48__1_;
-            pictureBox2.Location = new Point(9, 5);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(48, 48);
-            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
+            label2.Click += label2_Click;
             // 
             // panel2
             // 
@@ -198,9 +188,20 @@
             panel2.Location = new Point(297, 102);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(270, 150);
+            panel2.Size = new Size(279, 117);
             panel2.TabIndex = 6;
             panel2.Paint += panel2_Paint;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.icons8_user_account_48__1_;
+            pictureBox2.Location = new Point(9, 16);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(48, 48);
+            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
             // 
             // label7
             // 
@@ -286,7 +287,6 @@
             // 
             // panel5
             // 
-            panel5.BorderStyle = BorderStyle.FixedSingle;
             panel5.Controls.Add(checkBox1);
             panel5.Controls.Add(button1);
             panel5.Controls.Add(textBox2);
@@ -300,11 +300,13 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(606, 315);
             panel5.TabIndex = 9;
+            panel5.Paint += panel5_Paint;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(1324, 657);
             Controls.Add(panel5);
             Controls.Add(panel4);
@@ -323,9 +325,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ResumeLayout(false);
@@ -345,7 +347,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Label label1;
         private Label label2;
-        private PictureBox pictureBox2;
         private Panel panel2;
         private Label label7;
         private Label label8;
@@ -356,5 +357,6 @@
         private Button button1;
         private CheckBox checkBox1;
         private Panel panel5;
+        private PictureBox pictureBox2;
     }
 }

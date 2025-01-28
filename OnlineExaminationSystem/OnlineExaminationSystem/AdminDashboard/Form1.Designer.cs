@@ -41,6 +41,7 @@
             Branches = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             notifyIcon1 = new NotifyIcon(components);
+            sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -60,7 +61,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(212, 657);
+            panel1.Size = new Size(228, 657);
             panel1.TabIndex = 0;
             // 
             // Instructors
@@ -76,7 +77,7 @@
             Instructors.Location = new Point(32, 433);
             Instructors.Margin = new Padding(3, 4, 3, 4);
             Instructors.Name = "Instructors";
-            Instructors.Size = new Size(205, 59);
+            Instructors.Size = new Size(177, 59);
             Instructors.TabIndex = 6;
             Instructors.Text = "Instructors";
             Instructors.UseVisualStyleBackColor = false;
@@ -92,10 +93,10 @@
             Reports.ForeColor = Color.Black;
             Reports.Image = (Image)resources.GetObject("Reports.Image");
             Reports.ImageAlign = ContentAlignment.MiddleLeft;
-            Reports.Location = new Point(26, 567);
+            Reports.Location = new Point(32, 567);
             Reports.Margin = new Padding(3, 4, 3, 4);
             Reports.Name = "Reports";
-            Reports.Size = new Size(205, 59);
+            Reports.Size = new Size(159, 59);
             Reports.TabIndex = 8;
             Reports.Text = "Reports";
             Reports.UseVisualStyleBackColor = false;
@@ -123,10 +124,10 @@
             Students.ForeColor = Color.Black;
             Students.Image = (Image)resources.GetObject("Students.Image");
             Students.ImageAlign = ContentAlignment.MiddleLeft;
-            Students.Location = new Point(26, 500);
+            Students.Location = new Point(32, 500);
             Students.Margin = new Padding(3, 4, 3, 4);
             Students.Name = "Students";
-            Students.Size = new Size(211, 59);
+            Students.Size = new Size(159, 59);
             Students.TabIndex = 7;
             Students.Text = "Students";
             Students.UseVisualStyleBackColor = false;
@@ -142,10 +143,10 @@
             Dashboard.ForeColor = Color.Black;
             Dashboard.Image = (Image)resources.GetObject("Dashboard.Image");
             Dashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            Dashboard.Location = new Point(35, 168);
+            Dashboard.Location = new Point(32, 168);
             Dashboard.Margin = new Padding(3, 4, 3, 4);
             Dashboard.Name = "Dashboard";
-            Dashboard.Size = new Size(205, 59);
+            Dashboard.Size = new Size(177, 59);
             Dashboard.TabIndex = 2;
             Dashboard.Text = "Dashboard";
             Dashboard.UseVisualStyleBackColor = false;
@@ -161,10 +162,10 @@
             Courses.ForeColor = Color.Black;
             Courses.Image = (Image)resources.GetObject("Courses.Image");
             Courses.ImageAlign = ContentAlignment.MiddleLeft;
-            Courses.Location = new Point(35, 367);
+            Courses.Location = new Point(32, 366);
             Courses.Margin = new Padding(3, 4, 3, 4);
             Courses.Name = "Courses";
-            Courses.Size = new Size(205, 59);
+            Courses.Size = new Size(159, 59);
             Courses.TabIndex = 5;
             Courses.Text = "Courses";
             Courses.UseVisualStyleBackColor = false;
@@ -183,7 +184,7 @@
             Tracks.Location = new Point(32, 301);
             Tracks.Margin = new Padding(3, 4, 3, 4);
             Tracks.Name = "Tracks";
-            Tracks.Size = new Size(205, 59);
+            Tracks.Size = new Size(142, 59);
             Tracks.TabIndex = 4;
             Tracks.Text = "Tracks";
             Tracks.UseVisualStyleBackColor = false;
@@ -202,7 +203,7 @@
             Branches.Location = new Point(32, 235);
             Branches.Margin = new Padding(3, 4, 3, 4);
             Branches.Name = "Branches";
-            Branches.Size = new Size(208, 59);
+            Branches.Size = new Size(165, 59);
             Branches.TabIndex = 3;
             Branches.Text = "Branches";
             Branches.UseVisualStyleBackColor = false;
@@ -212,6 +213,12 @@
             // 
             notifyIcon1.Text = "notifyIcon1";
             notifyIcon1.Visible = true;
+            // 
+            // sqlCommandBuilder1
+            // 
+            sqlCommandBuilder1.DataAdapter = null;
+            sqlCommandBuilder1.QuotePrefix = "[";
+            sqlCommandBuilder1.QuoteSuffix = "]";
             // 
             // Form1
             // 
@@ -243,5 +250,6 @@
         private Button Reports;
         private NotifyIcon notifyIcon1;
         private PictureBox pictureBox1;
+        private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
     }
 }

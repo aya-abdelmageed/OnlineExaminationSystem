@@ -1,11 +1,15 @@
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows.Forms;
+using Microsoft.Extensions.Configuration;
+using DataAccess;
 
 namespace UI.AdminDashboard
 {
     public partial class Form1 : Form
     {
-        public Form1()
+
+        public Form1() 
         {
             InitializeComponent();
         }
@@ -28,6 +32,8 @@ namespace UI.AdminDashboard
 
         private void Branches_Click(object sender, EventArgs e)
         {
+
+
             ShowFormAndCloseCurrent(new Branches());
         }
 
