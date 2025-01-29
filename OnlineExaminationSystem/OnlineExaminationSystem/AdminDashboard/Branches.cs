@@ -11,13 +11,13 @@ namespace UI.AdminDashboard
     public partial class Branches : Form1
     {
         private readonly IServiceProvider _serviceProvider;
-        private ExamRepo ExamRepo;
+        private InstructorRepo instructorRepo;
 
 
         public Branches(IServiceProvider serviceProvider) :base(serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            ExamRepo = _serviceProvider.GetRequiredService<ExamRepo>(); 
+            instructorRepo = _serviceProvider.GetRequiredService<InstructorRepo>(); 
 
             InitializeComponent();
             InitializeCustomGrid();
@@ -29,7 +29,7 @@ namespace UI.AdminDashboard
             DataGridView customGrid = new DataGridView
             {
                 Location = new Point(500, 300), // Set position: X = 50, Y = 50
-                Size = new Size(700, 400),   // Set size: Width = 700, Height = 400
+                Size = new Size(3000, 100),   // Set size: Width = 700, Height = 400
                 BackgroundColor = Color.White,
                 BorderStyle = BorderStyle.None,
                 ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None,
@@ -88,10 +88,22 @@ namespace UI.AdminDashboard
                     customGrid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
                 }
             };
+            customGrid.Width = this.ClientSize.Width - 50;
+            customGrid.ColumnCount = 3;  // Example: 3 columns
+            customGrid.Columns[0].Name = "ID";
+            customGrid.Columns[1].Name = "Name";
+            customGrid.Columns[2].Name = "Score";
 
-            var data = ExamRepo.GetExams(3);   
-            customGrid.DataSource = data;   
-
+            // Add data manually
+            customGrid.Rows.Add(1, "Alice", 90);
+            customGrid.Rows.Add(2, "Bob", 85);
+            customGrid.Rows.Add(3    , "Charlie", 78);
+            customGrid.Rows.Add(1, "Alice", 90);
+            customGrid.Rows.Add(2, "Bob", 85);
+            customGrid.Rows.Add(3, "Charlie", 78);
+            customGrid.Rows.Add(1, "Alice", 90);
+            customGrid.Rows.Add(2, "Bob", 85);
+            customGrid.Rows.Add(3, "Charlie", 78);
             // Hide the first column (ID)
             // Add grid to the form
             this.Controls.Add(customGrid);

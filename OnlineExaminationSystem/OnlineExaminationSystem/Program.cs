@@ -1,7 +1,6 @@
 using DataAccess;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using AutoMapper;
 using System;
 using System.Windows.Forms;
 using BusinessLogic.Repositories;
@@ -11,7 +10,6 @@ using BusinessLogi.Repositories;
 
 internal static class Program
 {
-    public static IMapper Mapper { get; private set; }
 
     [STAThread]
     static void Main()

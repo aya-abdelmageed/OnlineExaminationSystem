@@ -16,11 +16,6 @@
 		<CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="AutoMapper" Version="13.0.1" />
-		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-		<PackageReference Include="Bunifu.Dataviz.WinForms" Version="2.2.1" />
-		<PackageReference Include="Bunifu.UI.WinForms" Version="7.2.0" />
-		<PackageReference Include="Bunifu.UI.WinForms.1.5.3" Version="2.0.0" />
 		<PackageReference Include="HIC.System.Windows.Forms.DataVisualization" Version="1.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />

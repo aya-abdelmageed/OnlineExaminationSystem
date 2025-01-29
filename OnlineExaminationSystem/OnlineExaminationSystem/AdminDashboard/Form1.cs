@@ -21,7 +21,7 @@ namespace UI.AdminDashboard
             var form = _serviceProvider.GetRequiredService<T>();
             form.StartPosition = FormStartPosition.Manual;
             form.Location = this.Location;
-            form.Size = new Size(2324, 1657);
+             form.Size = new Size(1324, 657);
             form.Show();
             this.Close();
         }
