@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using BusinessLogic.Repositories;
 using UI;
 using UI.AdminDashboard;
+using BusinessLogi.Repositories;
 
 internal static class Program
 {
@@ -42,6 +43,7 @@ internal static class Program
         // Register application services
         services.AddSingleton<DBManager>();   // Database manager as singleton
         services.AddScoped<InstructorRepo>();
+        services.AddScoped<ExamRepo>();
         // Repository for instructors
 
         // Register forms with Dependency Injection

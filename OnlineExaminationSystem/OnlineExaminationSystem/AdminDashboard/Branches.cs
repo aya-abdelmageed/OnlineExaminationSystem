@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Repositories;
+﻿using BusinessLogi.Repositories;
+using BusinessLogic.Repositories;
 using DataAccess;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -10,13 +11,13 @@ namespace UI.AdminDashboard
     public partial class Branches : Form1
     {
         private readonly IServiceProvider _serviceProvider;
-        private InstructorRepo _instructorRepo;
+        private ExamRepo ExamRepo;
 
 
         public Branches(IServiceProvider serviceProvider) :base(serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            _instructorRepo = _serviceProvider.GetRequiredService<InstructorRepo>(); 
+            ExamRepo = _serviceProvider.GetRequiredService<ExamRepo>(); 
 
             InitializeComponent();
             InitializeCustomGrid();
@@ -88,7 +89,7 @@ namespace UI.AdminDashboard
                 }
             };
 
-            var data = _instructorRepo.GetInstructors();   
+            var data = ExamRepo.GetExams(3);   
             customGrid.DataSource = data;   
 
             // Hide the first column (ID)
