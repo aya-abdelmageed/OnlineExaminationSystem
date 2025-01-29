@@ -15,34 +15,51 @@ internal static class Program
     [STAThread]
     static void Main()
     {
-        // Set up the DI container
-        var serviceProvider = new ServiceCollection()
-            .AddSingleton<IConfiguration>(provider =>
-            {
-                var configurationBuilder = new ConfigurationBuilder()
-                    .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);  // Ensure it's required
-                return configurationBuilder.Build();
-            })
-            .AddSingleton<DBManager>()  // DBManager registered as singleton
-            .AddScoped<InstructorRepo>() // InstructorRepo registered as scoped
-            .AddTransient<Form1>() // Form1 registered as transient
-            .AddTransient<Branches>() // Branches registered as transient
-            .AddTransient<Reports>()
-            .AddTransient<Courses>()
-            .AddTransient<Tracks>()
-            .AddTransient<Dashboard>()
-            .BuildServiceProvider();
+        // Set up Dependency Injection (DI) container
+        var serviceProvider = ConfigureServices();
 
         // Initialize the application
         ApplicationConfiguration.Initialize();
 
-        // Create a custom ApplicationContext to manage form lifetime
+        // Run the application using a custom ApplicationContext
         var context = new MyApplicationContext(serviceProvider);
         Application.Run(context);
     }
+
+    private static IServiceProvider ConfigureServices()
+    {
+        var services = new ServiceCollection();
+
+        // Load configuration from appsettings.json
+        services.AddSingleton<IConfiguration>(provider =>
+        {
+            var configurationBuilder = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            return configurationBuilder.Build();
+        });
+
+        // Register application services
+        services.AddSingleton<DBManager>();   // Database manager as singleton
+        services.AddScoped<InstructorRepo>();
+        // Repository for instructors
+
+        // Register forms with Dependency Injection
+        services.AddTransient<Form1>(provider => new Form1(provider));
+        services.AddTransient<Form1>();
+        services.AddTransient<Branches>();
+        services.AddTransient<Reports>();
+        services.AddTransient<Courses>();
+        services.AddTransient<Tracks>();
+        services.AddTransient<Dashboard>();
+
+        return services.BuildServiceProvider();
+    }
 }
 
+/// <summary>
+/// Custom Application Context to manage form lifetime.
+/// </summary>
 public class MyApplicationContext : ApplicationContext
 {
     private readonly IServiceProvider _serviceProvider;
@@ -51,23 +68,26 @@ public class MyApplicationContext : ApplicationContext
     {
         _serviceProvider = serviceProvider;
 
-        // Start with Form1
+        // Start with the main form (Form1)
         ShowForm<Form1>();
     }
 
+    /// <summary>
+    /// Generic method to show forms and handle their lifecycle.
+    /// </summary>
     public void ShowForm<TForm>() where TForm : Form
     {
         var form = _serviceProvider.GetRequiredService<TForm>();
-        form.FormClosed += OnFormClosed; // Handle form closing
+        form.FormClosed += OnFormClosed;
         form.Show();
     }
 
     private void OnFormClosed(object sender, FormClosedEventArgs e)
     {
-        // When a form is closed, check if there are any other open forms
+        // Close application only if all forms are closed
         if (Application.OpenForms.Count == 0)
         {
-            ExitThread(); // Exit the application only if no forms are open
+            ExitThread();
         }
     }
 }

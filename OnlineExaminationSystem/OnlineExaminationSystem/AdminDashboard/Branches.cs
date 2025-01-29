@@ -1,4 +1,6 @@
 ﻿using BusinessLogic.Repositories;
+using DataAccess;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,8 +9,15 @@ namespace UI.AdminDashboard
 {
     public partial class Branches : Form1
     {
-        public Branches() 
+        private readonly IServiceProvider _serviceProvider;
+        private InstructorRepo _instructorRepo;
+
+
+        public Branches(IServiceProvider serviceProvider) :base(serviceProvider)
         {
+            _serviceProvider = serviceProvider;
+            _instructorRepo = _serviceProvider.GetRequiredService<InstructorRepo>(); 
+
             InitializeComponent();
             InitializeCustomGrid();
         }
@@ -79,14 +88,8 @@ namespace UI.AdminDashboard
                 }
             };
 
-            // Add sample data
-            customGrid.Columns.Add("ID", "ID");
-            customGrid.Columns.Add("Name", "Name");
-            customGrid.Columns.Add("Age", "Age");
-
-            customGrid.Rows.Add("1", "John Doe", "29");
-            customGrid.Rows.Add("2", "Jane Smith", "32");
-            customGrid.Rows.Add("3", "Samuel Jackson", "41");
+            var data = _instructorRepo.GetInstructors();   
+            customGrid.DataSource = data;   
 
             // Hide the first column (ID)
             // Add grid to the form

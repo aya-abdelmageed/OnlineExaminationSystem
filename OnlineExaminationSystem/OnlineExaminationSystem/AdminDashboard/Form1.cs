@@ -8,58 +8,53 @@ namespace UI.AdminDashboard
 {
     public partial class Form1 : Form
     {
+        private readonly IServiceProvider _serviceProvider;
 
-        public Form1() 
+        public Form1(IServiceProvider serviceProvider)
         {
+            _serviceProvider = serviceProvider;
             InitializeComponent();
         }
 
-        private void ShowFormAndCloseCurrent(Form newForm)
+        private void ShowForm<T>() where T : Form
         {
-            newForm.StartPosition = FormStartPosition.Manual;
-            newForm.Location = this.Location;
-            newForm.Size = new Size(1324, 657);
-
-            newForm.Show();
-
+            var form = _serviceProvider.GetRequiredService<T>();
+            form.StartPosition = FormStartPosition.Manual;
+            form.Location = this.Location;
+            form.Size = new Size(1324, 657);
+            form.Show();
             this.Close();
         }
 
         private void Dashboard_Click(object sender, EventArgs e)
         {
-            ShowFormAndCloseCurrent(new Dashboard());
         }
 
         private void Branches_Click(object sender, EventArgs e)
         {
 
+            ShowForm<Branches>();
 
-            ShowFormAndCloseCurrent(new Branches());
         }
 
         private void Tracks_Click(object sender, EventArgs e)
         {
-            ShowFormAndCloseCurrent(new Tracks());
         }
 
         private void Courses_Click(object sender, EventArgs e)
         {
-            ShowFormAndCloseCurrent(new Courses());
         }
 
         private void Instructors_Click(object sender, EventArgs e)
         {
-            ShowFormAndCloseCurrent(new Instructors());
         }
 
         private void Students_Click(object sender, EventArgs e)
         {
-            ShowFormAndCloseCurrent(new Students());
         }
 
         private void Reports_Click(object sender, EventArgs e)
         {
-            ShowFormAndCloseCurrent(new Reports());
         }
     }
 }

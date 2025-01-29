@@ -12,7 +12,7 @@ namespace UI.AdminDashboard
 {
     public partial class Instructors : Form1
     {
-        public Instructors()
+        public Instructors(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             InitializeComponent();
         }
