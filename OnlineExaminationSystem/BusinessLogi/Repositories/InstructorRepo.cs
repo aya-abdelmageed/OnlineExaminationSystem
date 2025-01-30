@@ -3,6 +3,8 @@ using BusinessLogic.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
+using BusinessLogi.DTO;
 
 namespace BusinessLogic.Repositories
 {
@@ -17,7 +19,7 @@ namespace BusinessLogic.Repositories
 
         public List<InstructorDTO> GetInstructors()
         {
-            string procedureName = "INSTRUCTOR_VIEW"; 
+            string procedureName = "INSTRUCTOR_VIEW";
             DataTable dataTable;
 
             try
@@ -29,21 +31,46 @@ namespace BusinessLogic.Repositories
                 throw new Exception("Error retrieving instructors from the database.", ex);
             }
 
-            var instructors = new List<InstructorDTO>();
+            List<InstructorDTO> instructors = new List<InstructorDTO>();
             foreach (DataRow row in dataTable.Rows)
             {
-                var instructor = new InstructorDTO
+                InstructorDTO instructor = new InstructorDTO
                 {
-                    InstructorId = row.Field<int>("INS_ID"), 
-                    FirstName = row.Field<string>("FName"),   
-                    LastName = row.Field<string>("LName"),   
-                    Email = row.Field<string>("Email"),          
+                    InstructorId = row.Field<int>("INS_ID"),
+                    FirstName = row.Field<string>("FName"),
+                    LastName = row.Field<string>("LName"),
+                    Email = row.Field<string>("Email"),
+                    MName = row.Field<string>("MName"),
+                    age = row.Field<int>("Age"),
+                    Gender = row.Field<string>("gender")
                 };
-
-                instructors.Add(instructor); 
+                    instructors.Add(instructor);
             }
-
             return instructors;
+        }
+        public void InsertInstructor(InstructorDTO instructor)
+        {
+            string procedureName = "INSTRUCTOR_INSERT";
+            DataTable result;
+            try
+            {
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@FName", SqlDbType.VarChar) { Value = instructor.FirstName },
+                    new SqlParameter("@MName", SqlDbType.VarChar) { Value = instructor.MName },
+                    new SqlParameter("@LName", SqlDbType.VarChar) { Value = instructor.LastName },
+                    new SqlParameter("@Email", SqlDbType.VarChar) { Value = instructor.Email },
+                    new SqlParameter("@Gender", SqlDbType.VarChar) { Value = instructor.Gender },
+                    new SqlParameter("@Salary", SqlDbType.Int) { Value = instructor.Salary },
+                    new SqlParameter("@Age", SqlDbType.Int) { Value = instructor.age }
+
+                };
+                result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error inserting instructor into the database.", ex);
+            }
         }
     }
 }

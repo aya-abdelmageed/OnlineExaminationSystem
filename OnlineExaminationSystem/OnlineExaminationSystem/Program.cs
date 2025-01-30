@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using BusinessLogic.Repositories;
 using UI;
 using UI.AdminDashboard;
+using BusinessLogi.Repositories;
 
 internal static class Program
 {
@@ -26,8 +27,24 @@ internal static class Program
             })
             .AddSingleton<DBManager>()  // DBManager registered as singleton
             .AddScoped<InstructorRepo>() // InstructorRepo registered as scoped
-            .AddTransient<Form1>() // Form1 registered as transient
-            .AddTransient<Branches>() // Branches registered as transient
+            .AddScoped<BranchRepo>() // BranchRepo registered as scoped
+            .AddScoped<TrackRepo>() // TrackRepo registered as scoped
+            .AddScoped<CourseRepo>() // CourseRepo registered as scoped
+            .AddScoped<StudentRepo>() // StudentRepo registered as scoped
+            .AddScoped<ExamRepo>() // ExamRepo registered as scoped
+            .AddScoped<ExamQuestionRepo>() 
+            .AddScoped<ExamQuestionStudentRepo>()
+            .AddScoped<ExamTrackRepo>()
+            .AddScoped<InstructorTrackCourseRepo>()
+            .AddScoped<QuestionsRepo>()
+            .AddScoped<QuestionChoiceRepo>()
+            .AddScoped<StudentExamRepo>()
+            .AddScoped<TopicRepo>()
+            .AddScoped<TrackBranchRepo>()
+            .AddScoped<TrackRepo>() 
+            .AddScoped<StudentRepo>() 
+            .AddTransient<Form1>() 
+            .AddTransient<Branches>() 
             .AddTransient<Reports>()
             .AddTransient<Courses>()
             .AddTransient<Tracks>()
