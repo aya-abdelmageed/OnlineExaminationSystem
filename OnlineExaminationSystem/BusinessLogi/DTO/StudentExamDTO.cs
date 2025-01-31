@@ -10,6 +10,6 @@ namespace BusinessLogi.DTO
     {
         public int StudentId { get; set; }
         public int ExamID { get; set; }
-        public int Grade { get; set; }
+        public int? Grade { get; set; }
     }
 }

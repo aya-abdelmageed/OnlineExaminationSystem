@@ -58,12 +58,16 @@ namespace BusinessLogi.Repositories
                 throw new Exception("Error inserting Courses from the database.", ex);
             }
         }
-        public void DeleteCourses() { 
+        public void DeleteCourses(int id) { 
             string procdureName = "COURSE_DELETE";
             DataTable reslut;
             try
             {
-                reslut = _dbManager.ExecuteStoredProcedure(procdureName, null);
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@Course_ID",SqlDbType.Int) { Value = id }
+                };
+                reslut = _dbManager.ExecuteStoredProcedure(procdureName, parameters);
             }
             catch (Exception ex)
             {

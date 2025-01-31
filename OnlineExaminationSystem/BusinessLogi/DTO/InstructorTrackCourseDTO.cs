@@ -13,4 +13,5 @@ namespace BusinessLogi.DTO
         public int CourseID { get; set; }
         public DateTime CourseDate { get; set; }
     }
+
 }
