@@ -13,6 +13,7 @@ namespace Front
         [STAThread]
         static void Main()
         {
+
             if (Environment.OSVersion.Version.Major >= 6)
                 SetProcessDPIAware();  // Forces DPI awareness
 

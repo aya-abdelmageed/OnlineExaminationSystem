@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace UI.AdminDashboard
@@ -14,7 +7,11 @@ namespace UI.AdminDashboard
     {
         public Reports()
         {
-            InitializeComponent();
+
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
+            this.ClientSize = new Size(1324, 657); // Set exact size (same as in the Designer)
+
         }
     }
 }

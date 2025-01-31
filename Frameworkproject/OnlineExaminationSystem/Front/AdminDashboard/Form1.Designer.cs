@@ -183,6 +183,7 @@ namespace UI.AdminDashboard
             this.Tracks.TabIndex = 4;
             this.Tracks.Text = "Tracks";
             this.Tracks.UseVisualStyleBackColor = false;
+            this.Tracks.Click += new System.EventHandler(this.Tracks_Click_1);
             // 
             // Branches
             // 

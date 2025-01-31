@@ -15,13 +15,27 @@ namespace UI.AdminDashboard
     {
         private InstructorRepo instructorRepo;
         private DataGridView customGrid;
+        private Button addbutton;
 
         public Branches()
         {
-            InitializeComponent();
+
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
+            this.ClientSize = new Size(1324, 657); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
+            GenerateCustomSearch();     
             customGrid.CellClick += CustomGrid_CellClick;
-          
+            addbutton = GenerateCustomButton();  
+            addbutton.Text = "Add";
+            addbutton.Click += (s, e) =>
+            {
+                ShowForm(new BranchForm());
+            };
+
+
+
+
         }
 
 

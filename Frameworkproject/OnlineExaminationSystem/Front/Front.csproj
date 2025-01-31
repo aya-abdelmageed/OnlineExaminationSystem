@@ -169,8 +169,38 @@
     <Compile Include="popUpForms\BranchForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="popUpForms\CoursesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpForms\CoursesForm.Designer.cs">
+      <DependentUpon>CoursesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="popUpForms\Form1.Designer.cs">
       <DependentUpon>BranchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popUpForms\InstructorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpForms\InstructorForm.Designer.cs">
+      <DependentUpon>InstructorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popUpForms\QuestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpForms\QuestionForm.Designer.cs">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popUpForms\StudentesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpForms\StudentesForm.Designer.cs">
+      <DependentUpon>StudentesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popUpForms\TrackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpForms\TrackForm.Designer.cs">
+      <DependentUpon>TrackForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
