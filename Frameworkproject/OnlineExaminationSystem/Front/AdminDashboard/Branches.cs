@@ -22,7 +22,7 @@ namespace UI.AdminDashboard
 
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
-            this.ClientSize = new Size(1324, 657); // Set exact size (same as in the Designer
+            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();     
             customGrid.CellClick += CustomGrid_CellClick;
@@ -30,7 +30,9 @@ namespace UI.AdminDashboard
             addbutton.Text = "Add";
             addbutton.Click += (s, e) =>
             {
-                ShowForm(new BranchForm());
+                var newForm = new BranchForm();
+                newForm.Show();
+
             };
 
 
