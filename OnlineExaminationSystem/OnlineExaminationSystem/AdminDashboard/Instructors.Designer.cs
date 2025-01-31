@@ -1,4 +1,5 @@
-﻿namespace UI.AdminDashboard
+﻿
+namespace UI.AdminDashboard
 {
     partial class Instructors
     {
@@ -36,6 +37,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1324, 657);
             Name = "Instructors";
+            Load += Instructors_Load;
             Text = "Instructors";
             ResumeLayout(false);
         }

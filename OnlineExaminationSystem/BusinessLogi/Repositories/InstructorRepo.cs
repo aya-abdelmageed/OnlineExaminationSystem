@@ -14,7 +14,7 @@ namespace BusinessLogic.Repositories
 
         public InstructorRepo(DBManager dbManager)
         {
-            _dbManager = dbManager; 
+            _dbManager = dbManager;
         }
 
         public List<InstructorDTO> GetInstructors()
@@ -44,7 +44,7 @@ namespace BusinessLogic.Repositories
                     age = row.Field<int>("Age"),
                     Gender = row.Field<string>("gender")
                 };
-                    instructors.Add(instructor);
+                instructors.Add(instructor);
             }
             return instructors;
         }
@@ -61,7 +61,7 @@ namespace BusinessLogic.Repositories
                     new SqlParameter("@LName", SqlDbType.VarChar) { Value = instructor.LastName },
                     new SqlParameter("@Email", SqlDbType.VarChar) { Value = instructor.Email },
                     new SqlParameter("@Gender", SqlDbType.VarChar) { Value = instructor.Gender },
-                    new SqlParameter("@Salary", SqlDbType.Int) { Value = instructor.Salary },
+                    new SqlParameter("@Salary", SqlDbType.Decimal) { Value = instructor.Salary },
                     new SqlParameter("@Age", SqlDbType.Int) { Value = instructor.age }
 
                 };
@@ -71,6 +71,48 @@ namespace BusinessLogic.Repositories
             {
                 throw new Exception("Error inserting instructor into the database.", ex);
             }
+        }
+        public void DeleteInstructor(int id)
+        {
+            string procedureName = "INSTRUCTOR_DELETE";
+            DataTable result;
+            try
+            {
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@INS_ID", SqlDbType.Int) { Value = id }
+                };
+                result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error deleting instructor from the database.", ex);
+            }
+        }
+        public void UpdateInstructor(InstructorDTO instructor)
+        {
+            string procedureName = "INSTRUCTOR_UPDATE";
+            DataTable result;
+            try
+            {
+                var parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@INS_ID", SqlDbType.Int) { Value = instructor.InstructorId },
+                    new SqlParameter("@FName", SqlDbType.VarChar) { Value = instructor.FirstName },
+                    new SqlParameter("@MName", SqlDbType.VarChar) { Value = instructor.MName },
+                    new SqlParameter("@LName", SqlDbType.VarChar) { Value = instructor.LastName },
+                    new SqlParameter("@Email", SqlDbType.VarChar) { Value = instructor.Email },
+                    new SqlParameter("@Gender", SqlDbType.VarChar) { Value = instructor.Gender },
+                    new SqlParameter("@Salary", SqlDbType.Decimal) { Value = instructor.Salary },
+                    new SqlParameter("@Age", SqlDbType.Int) { Value = instructor.age }
+                };
+                result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error updating instructor in the database.", ex);
+            }
+
         }
     }
 }

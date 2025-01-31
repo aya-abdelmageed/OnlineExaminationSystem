@@ -32,11 +32,14 @@
             // 
             // Courses
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1324, 657);
+            ClientSize = new Size(2814, 1347);
+            Location = new Point(0, 0);
+            Margin = new Padding(13, 8, 13, 8);
             Name = "Courses";
             Text = "Courses";
+            Load += Courses_Load;
             ResumeLayout(false);
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace UI.AdminDashboard
 {
-    partial class Branches
+    public partial class Branches : Form1
     {
         /// <summary>
         /// Required designer variable.

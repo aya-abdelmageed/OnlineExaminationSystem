@@ -19,13 +19,20 @@ namespace BusinessLogi.Repositories
             _dbManager = dbManager;
         }
         // take string with accept null
-        public List<BranchDTO> GetBranches()
+        public List<BranchDTO> GetBranches(string branchName = null)
         {
             string procedureName = "SelectAllFromBranch";
+            var parameters = new[]
+            {
+             new SqlParameter("@BranchName", SqlDbType.VarChar)
+            {
+            Value = (object)branchName ?? DBNull.Value
+            }
+            };
             DataTable result;
             try
             {
-                result = _dbManager.ExecuteStoredProcedure(procedureName, null); 
+                result = _dbManager.ExecuteStoredProcedure(procedureName, parameters); 
             }
             catch (Exception ex)
             {

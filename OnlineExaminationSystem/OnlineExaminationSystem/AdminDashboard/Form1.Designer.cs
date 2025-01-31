@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.WindowState = FormWindowState.Maximized;
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
@@ -228,6 +229,7 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+
         }
 
         #endregion
