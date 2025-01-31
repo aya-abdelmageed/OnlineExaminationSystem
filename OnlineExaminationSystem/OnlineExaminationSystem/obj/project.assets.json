@@ -2532,6 +2532,7 @@
       "Microsoft.Extensions.Configuration.Json >= 6.0.0",
       "Microsoft.Extensions.DependencyInjection >= 9.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.0",
+      "Microsoft.Extensions.Primitives >= 9.0.0",
       "System.Data.SqlClient >= 4.9.0",
       "System.Reactive.Windows.Forms >= 6.0.1",
       "System.Windows.Forms.Ribbon35 >= 3.5.8"
@@ -2543,11 +2544,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\databaseproject\\OnlineExaminationSystem\\OnlineExaminationSystem\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\OnlineExaminationSystem\\OnlineExaminationSystem\\OnlineExaminationSystem\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "D:\\databaseproject\\OnlineExaminationSystem\\OnlineExaminationSystem\\UI.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\OnlineExaminationSystem\\OnlineExaminationSystem\\OnlineExaminationSystem\\UI.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\databaseproject\\OnlineExaminationSystem\\OnlineExaminationSystem\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Source\\Repos\\OnlineExaminationSystem\\OnlineExaminationSystem\\OnlineExaminationSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2564,8 +2565,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "D:\\databaseproject\\OnlineExaminationSystem\\BusinessLogi\\BusinessLogic.csproj": {
-              "projectPath": "D:\\databaseproject\\OnlineExaminationSystem\\BusinessLogi\\BusinessLogic.csproj"
+            "C:\\Users\\Lenovo\\source\\repos\\OnlineExaminationSystem\\OnlineExaminationSystem\\BusinessLogi\\BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\source\\repos\\OnlineExaminationSystem\\OnlineExaminationSystem\\BusinessLogi\\BusinessLogic.csproj"
             }
           }
         }
@@ -2601,6 +2602,10 @@
             "version": "[9.0.0, )"
           },
           "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Microsoft.Extensions.Primitives": {
             "target": "Package",
             "version": "[9.0.0, )"
           },
