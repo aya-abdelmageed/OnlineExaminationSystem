@@ -169,8 +169,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\BranchDTO.cs" />
+    <Compile Include="DTO\CourseDTO.cs" />
     <Compile Include="DTO\ExamDTO.cs" />
+    <Compile Include="DTO\ExamQuestionsDTO.cs" />
+    <Compile Include="DTO\ExamQuestionsStudentDTO.cs" />
+    <Compile Include="DTO\ExamTrackDTO.cs" />
     <Compile Include="DTO\InstructorDTO.cs" />
+    <Compile Include="DTO\InstructorTrackCourseDTO.cs" />
+    <Compile Include="DTO\QuestionsChoicesDTO.cs" />
+    <Compile Include="DTO\QuestionsDTO.cs" />
+    <Compile Include="DTO\StudentDTO.cs" />
+    <Compile Include="DTO\StudentExamDTO.cs" />
+    <Compile Include="DTO\TopicDTO.cs" />
+    <Compile Include="DTO\TrackBranchDTO.cs" />
+    <Compile Include="DTO\TrackDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BranchRepo.cs" />
     <Compile Include="Repositories\CourseRepo.cs" />
