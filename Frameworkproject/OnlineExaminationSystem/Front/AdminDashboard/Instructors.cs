@@ -73,6 +73,8 @@ namespace UI.AdminDashboard
         // **Functions to Perform Actions**
         private void EditRow(DataGridViewRow row)
         {
+            var Form = new InstructorForm();
+            Form.Show();
             MessageBox.Show($"Edit clicked for row {row.Index}");
             // Add edit logic here
         }
