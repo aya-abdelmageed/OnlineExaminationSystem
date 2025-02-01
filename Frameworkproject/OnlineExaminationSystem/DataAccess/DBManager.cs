@@ -1,19 +1,20 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using Microsoft.Extensions.Configuration;
 
 
     namespace DataAccess
     {
         public class DBManager
         {
-        private readonly string _connectionString;
+        
+        string _connectionString = "Data Source=DESKTOP-OGJ98U8\\TEW_SQLEXPRESS;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
 
-        public DBManager(IConfiguration configuration)
+        // Constructor that takes the connection string as a parameter
+        public DBManager()
         {
-            _connectionString = configuration.GetConnectionString("MyDatabase");
+
         }
 
         // Method to execute a stored procedure and return a DataTable

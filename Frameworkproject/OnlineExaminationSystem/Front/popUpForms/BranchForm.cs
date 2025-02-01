@@ -148,8 +148,8 @@ namespace UI.AdminDashboard
 
             // Close the form after saving
             this.DialogResult = DialogResult.OK;
-            Branches branch = new Branches();
-                branch.Show();
+            //Branches branch = new Branches();
+              //  branch.Show();
             this.Hide();  // Hide Form1 instead of closing it
         }
     }

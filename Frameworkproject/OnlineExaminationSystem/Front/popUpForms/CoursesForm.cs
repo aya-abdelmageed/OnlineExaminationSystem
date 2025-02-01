@@ -110,8 +110,8 @@ namespace UI.AdminDashboard
 
             // Close the form after saving
             this.DialogResult = DialogResult.OK;
-            Courses courses = new Courses();
-            courses.Show();
+            //Courses courses = new Courses();
+            //courses.Show();
             this.Hide();  // Hide Form1 instead of closing it
         }
     }

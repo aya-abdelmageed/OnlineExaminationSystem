@@ -18,7 +18,7 @@ namespace UI.AdminDashboard
         private DataGridView customGrid;
         private Button addbutton;
 
-        public Instructors()
+        public Instructors ()
         {
 
             this.AutoScaleMode = AutoScaleMode.Dpi;

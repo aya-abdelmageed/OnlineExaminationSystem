@@ -3,7 +3,7 @@
 ################################################################################
 
 /.vs
-
+/Frameworkproject/OnlineExaminationSystem/.vs
 /OnlineExaminationSystem/BusinessLogi/bin
 /OnlineExaminationSystem/BusinessLogi/obj
 /OnlineExaminationSystem/DataAccess/bin

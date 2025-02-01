@@ -12,25 +12,20 @@ namespace UI.AdminDashboard
 {
     public partial class Form1 : Form
     {
-   
+
+
         public Form1()
         {
-            // Set AutoScaleMode toa DPI
-
-           
             InitializeComponent();
         }
-
         public void ShowForm(Form form)
         {
             form.StartPosition = FormStartPosition.Manual;
             form.Location = this.Location;
-
-         
+            this.Hide(); // Hide Form1 instead of closing it
 
             form.FormClosed += (sender, e) => this.Close(); // Close Form1 when the new form is closed
             form.Show();
-            this.Hide();  // Hide Form1 instead of closing it
         }
 
         public GraphicsPath GetRoundedRectanglePath(Rectangle rect, int radius)
@@ -55,7 +50,7 @@ namespace UI.AdminDashboard
             return path;
         }
 
-      
+
         public void DrawRoundedPanelBorder(PaintEventArgs e, Panel panel, int radius, Color borderColor, int borderWidth)
         {
             Graphics graphics = e.Graphics;
@@ -80,13 +75,13 @@ namespace UI.AdminDashboard
 
         private void Dashboard_Click(object sender, EventArgs e)
         {
-            ShowForm(new Dashboard());  
+            ShowForm(new Dashboard());
         }
 
         private void Branches_Click(object sender, EventArgs e)
         {
 
-           ShowForm(new Branches());    
+            ShowForm(new Branches());
 
         }
 
@@ -112,6 +107,42 @@ namespace UI.AdminDashboard
         {
             ShowForm(new Reports());
 
+        }
+        public void AddActions(DataGridView customGrid)
+        {
+            // **Create Actions Column**
+            var ActionsColumn = new DataGridViewImageColumn
+            {
+                Name = "Actions",
+                HeaderText = "Actions",
+                ImageLayout = DataGridViewImageCellLayout.Zoom, // Resize to fit
+                Width = 130  // Ensure column is wide enough to hold the combined image
+            };
+
+            // Add the Actions column
+            customGrid.Columns.Add(ActionsColumn);
+
+            // Load icons
+            Image editIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\1.png"));
+            Image viewIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\edit.png"));
+            Image deleteIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\trash.png"));
+
+            Bitmap combinedImage = new Bitmap(130, 30);
+            using (Graphics g = Graphics.FromImage(combinedImage))
+            {
+                g.Clear(Color.Transparent);
+                g.DrawImage(editIcon, new Rectangle(0, 5, 20, 20));   // Edit icon
+                g.DrawImage(viewIcon, new Rectangle(40, 5, 20, 20));  // View icon
+                g.DrawImage(deleteIcon, new Rectangle(80, 5, 20, 20)); // Delete icon
+            }
+            // **Handle Row Population (Existing & Future Rows)**
+            customGrid.CellFormatting += (s, e) =>
+            {
+                if (customGrid.Columns[e.ColumnIndex].Name == "Actions" && e.RowIndex >= 0)
+                {
+                    e.Value = combinedImage;
+                }
+            };
         }
 
         public Button GenerateCustomButton()
@@ -282,61 +313,13 @@ namespace UI.AdminDashboard
             // Set alternating rows style
 
 
-            // Add Columns
-            customGrid.Columns.Add("ID", "ID");
-            customGrid.Columns.Add("Name", "Name");
-            customGrid.Columns.Add("Score", "Score");
+         
             customGrid.RowTemplate.Height = 40;
             customGrid.DefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
 
-            // **Create Actions Column**
-            DataGridViewImageColumn actionColumn = new DataGridViewImageColumn
-            {
-                Name = "Actions",
-                HeaderText = "Actions",
-                ImageLayout = DataGridViewImageCellLayout.Zoom, // Resize to fit
-                Width = 100
-            };
-            customGrid.Columns.Add(actionColumn);
-
-            // Load icons
-            Image editIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\1.png"));
-            Image viewIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\edit.png"));
-            Image deleteIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\trash.png"));
-
-            // Add rows with images
-            customGrid.Rows.Add(1, "Alice", 90);
-            customGrid.Rows.Add(2, "Bob", 85);
-            customGrid.Rows.Add(3, "Charlie", 78);
-            customGrid.Rows.Add(1, "Alice", 90);
-            customGrid.Rows.Add(2, "Bob", 85);
-            customGrid.Rows.Add(3, "Charlie", 78);
-            customGrid.Rows.Add(1, "Alice", 90);
-            customGrid.Rows.Add(2, "Bob", 85);
-            customGrid.Rows.Add(3, "Charlie", 78);
-            customGrid.Rows.Add(1, "Alice", 90);
-            customGrid.Rows.Add(2, "Bob", 85);
-            customGrid.Rows.Add(3, "Charlie", 78);
-            customGrid.Rows.Add(1, "Alice", 90);
-            customGrid.Rows.Add(2, "Bob", 85);
-            customGrid.Rows.Add(3, "Charlie", 78);
-            customGrid.Rows.Add(1, "Alice", 90);
-            customGrid.Rows.Add(2, "Bob", 85);
-            customGrid.Rows.Add(3, "Charlie", 78);
-
-            foreach (DataGridViewRow row in customGrid.Rows)
-            {
-                // Create a combined image
-                Bitmap combinedImage = new Bitmap(130, 30);
-                using (Graphics g = Graphics.FromImage(combinedImage))
-                {
-                    g.DrawImage(editIcon, new Rectangle(0, 0, 20, 20));
-                    g.DrawImage(viewIcon, new Rectangle(40, 0, 20, 20));
-                    g.DrawImage(deleteIcon, new Rectangle(80, 0, 20, 20));
-                }
-
-                row.Cells["Actions"].Value = combinedImage;
-            }
+          
+          
+         
 
 
 

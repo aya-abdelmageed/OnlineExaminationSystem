@@ -229,8 +229,8 @@ namespace Front.popUpForms
 
             // Close the form after saving
             this.DialogResult = DialogResult.OK;
-            Students students = new Students(); 
-            students.Show();    
+            //Students students = new Students(); 
+            //students.Show();    
             this.Hide();    
         }
     }
