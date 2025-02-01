@@ -117,6 +117,46 @@ namespace BusinessLogi.Repositories
             {
                 throw new Exception("Udate Error, Cann't update Exam info.", ex);
             }
+
+        }
+        public void Exam_Generation(String CRS_NAME, int TF_NUM, int MCQ_NUM, DateTime DATE, TimeSpan ST, TimeSpan ET, int? INS_ID)
+        {
+            string procedureName = "EXAM_GENERATION";
+            var parameters = new[]
+            {
+                new SqlParameter("@CRS_NAME", SqlDbType.VarChar) { Value = CRS_NAME },
+                new SqlParameter("@TF_NUM", SqlDbType.Int) { Value = TF_NUM },
+                new SqlParameter("@MCQ_NUM", SqlDbType.Int) { Value = MCQ_NUM },
+                new SqlParameter("@DTE", SqlDbType.Date) { Value = DATE },
+                new SqlParameter("@ST", SqlDbType.Time) { Value = ST },
+                new SqlParameter("@ET", SqlDbType.Time) { Value = ET },
+                new SqlParameter("@INS_ID", SqlDbType.Int) { Value = INS_ID }
+            };
+            try
+            {
+                _dbManager.ExecuteNonQuery(procedureName, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Generation Error, Cann't generate Exam.", ex);
+            }
+        }
+        public void Exam_Correction(int Exam_ID,string studentName)
+        {
+            string procedureName = "EXAM_CORRECTION";
+            var parameters = new[]
+            {
+                new SqlParameter("@Exam_ID", SqlDbType.Int) { Value = Exam_ID },
+                new SqlParameter("@Student_Name", SqlDbType.VarChar) { Value = studentName }
+            };
+            try
+            {
+                _dbManager.ExecuteNonQuery(procedureName, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Correction Error, Cann't correct Exam.", ex);
+            }
         }
     }
 }
