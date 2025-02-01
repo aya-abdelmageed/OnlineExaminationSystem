@@ -142,3 +142,5 @@ C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExam
 C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.CopyComplete
 C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.exe
 C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.pdb
+C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\appsettings.json
+C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.dll.config

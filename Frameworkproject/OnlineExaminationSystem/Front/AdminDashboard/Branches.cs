@@ -93,7 +93,7 @@ namespace UI.AdminDashboard
       
         private void LoadData() // load viewing data 
         {
-            var data = branch.GetBranches(null);
+           var data = branch.GetBranches(null);
           customGrid.DataSource = data;
         }
 

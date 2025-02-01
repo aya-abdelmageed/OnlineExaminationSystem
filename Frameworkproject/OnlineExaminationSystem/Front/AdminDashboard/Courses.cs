@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace UI.AdminDashboard
 {
@@ -22,8 +23,7 @@ namespace UI.AdminDashboard
         public Courses()
         {
 
-            CourseRepo = new CourseRepo();      
-
+            CourseRepo = new CourseRepo();
 
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
@@ -31,10 +31,10 @@ namespace UI.AdminDashboard
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();
             addbutton = GenerateCustomButton();
-            addbutton.Text = "Add Course";
+            addbutton.Text = "Add Branch";
             addbutton.Click += (s, e) =>
             {
-                var newForm = new InstructorForm();
+                var newForm = new BranchForm();
                 newForm.Show();
 
             };

@@ -116,7 +116,7 @@ namespace UI.AdminDashboard
                 Name = "Actions",
                 HeaderText = "Actions",
                 ImageLayout = DataGridViewImageCellLayout.Zoom, // Resize to fit
-                Width = 200  // Ensure column is wide enough to hold the combined image
+                Width = 100 // Ensure column is wide enough to hold the combined image
             };
 
             // Add the Actions column
@@ -131,9 +131,9 @@ namespace UI.AdminDashboard
             using (Graphics g = Graphics.FromImage(combinedImage))
             {
                 g.Clear(Color.Transparent);
-                g.DrawImage(editIcon, new Rectangle(0, 5, 30, 30));   // Edit icon
-                g.DrawImage(viewIcon, new Rectangle(40, 5, 30, 30));  // View icon
-                g.DrawImage(deleteIcon, new Rectangle(80, 5, 30, 30)); // Delete icon
+                g.DrawImage(editIcon, new Rectangle(0, 5, 20, 20));   // Edit icon
+                g.DrawImage(viewIcon, new Rectangle(40, 5, 20, 20));  // View icon
+                g.DrawImage(deleteIcon, new Rectangle(80, 5, 20, 20)); // Delete icon
             }
             // **Handle Row Population (Existing & Future Rows)**
             customGrid.CellFormatting += (s, e) =>
