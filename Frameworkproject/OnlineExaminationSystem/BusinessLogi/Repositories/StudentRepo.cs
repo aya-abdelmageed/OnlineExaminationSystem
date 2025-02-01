@@ -17,7 +17,7 @@ namespace BusinessLogi.Repositories
         {
             _dbManager = new DBManager();   
         }
-        public List<StudentDTO> GetStudents(int id)
+        public List<StudentDTO> GetStudents(int? id)
         {
             string procedureName = "STUDENT_SELECTION";
             DataTable dt;

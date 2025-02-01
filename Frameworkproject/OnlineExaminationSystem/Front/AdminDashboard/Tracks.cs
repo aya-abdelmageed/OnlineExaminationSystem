@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Repositories;
+﻿using BusinessLogi.Repositories;
+using BusinessLogic.Repositories;
 using Front.popUpForms;
 using System;
 using System.Collections.Generic;
@@ -9,68 +10,94 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace UI.AdminDashboard
 {
     public partial class Tracks : Form1
     {
-        private InstructorRepo instructorRepo;
+        private TrackRepo Track;
         private DataGridView customGrid;
         private Button addbutton;
 
         public Tracks()
         {
+            Track = new TrackRepo();
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
-            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer)
+            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();
-            customGrid.CellClick += CustomGrid_CellClick;
             addbutton = GenerateCustomButton();
-            addbutton.Text = "Add";
+            addbutton.Text = "Add Branch";
             addbutton.Click += (s, e) =>
             {
-                var form = new TrackForm();
-                form.Show();
+                var newForm = new BranchForm();
+                newForm.Show();
+
             };
-
-
-
-        }
-
-
-        // Handle button click events
-        private void CustomGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.ColumnIndex == 3 && e.RowIndex >= 0) // Action column
-            {
-                int clickX = ((DataGridView)sender).GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false).X;
-                if (clickX < 30)
-                {
-                    MessageBox.Show("Edit clicked!");
-                }
-                else if (clickX < 65)
-                {
-                    MessageBox.Show("View clicked!");
-                }
-                else
-                {
-                    MessageBox.Show("Delete clicked!");
-                }
-            }
-            DataGridViewRow clickedRow = customGrid.Rows[e.RowIndex];
-            //clickedRow.DefaultCellStyle.BackColor = Color.Yellow; // Set the color to whatever you prefer
-        }
-        private void Tracks_Load(object sender, EventArgs e)
-        {
             LoadData();
+            AddActions(customGrid);
+            customGrid.CellClick += (s, e) => HandleActionClick(customGrid, e);
+
+
+        }
+
+
+
+        private void HandleActionClick(DataGridView customGrid, DataGridViewCellEventArgs e)
+        {
+            // Ensure the clicked column is "Actions" and row is valid
+            if (customGrid.Columns[e.ColumnIndex].Name != "Actions" || e.RowIndex < 0)
+                return;
+
+            // Get the click position inside the cell
+            int clickX = customGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false).X;
+            int mouseX = customGrid.PointToClient(Cursor.Position).X;
+            int relativeX = mouseX - clickX;
+
+            // Identify which icon was clicked
+            if (relativeX >= 0 && relativeX < 30)
+            {
+                EditRow(customGrid.Rows[e.RowIndex]);
+            }
+            else if (relativeX >= 40 && relativeX < 70)
+            {
+                ViewRow(customGrid.Rows[e.RowIndex]);
+            }
+            else if (relativeX >= 80 && relativeX < 110)
+            {
+                DeleteRow(customGrid, e.RowIndex);
+            }
+        }
+
+        // **Functions to Perform Actions**
+        private void EditRow(DataGridViewRow row)
+        {
+            MessageBox.Show($"Edit clicked for row {row.Index}");
+            // Add edit logic here
+        }
+
+        private void ViewRow(DataGridViewRow row)
+        {
+            MessageBox.Show($"View clicked for row {row.Index}");
+            // Add view logic here
+        }
+
+        private void DeleteRow(DataGridView grid, int rowIndex)
+        {
+            if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                grid.Rows.RemoveAt(rowIndex);
+                MessageBox.Show($"Row {rowIndex} deleted.");
+            }
         }
 
         private void LoadData() // load viewing data 
         {
-            // var data = _instructorRepo.GetInstructors();
-            //  customGrid.DataSource = data;
+            var data = Track.GetTracks();   
+            customGrid.DataSource = data;
         }
+
     }
 }

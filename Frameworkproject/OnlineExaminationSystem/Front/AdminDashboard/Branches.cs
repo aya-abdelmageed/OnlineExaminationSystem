@@ -13,22 +13,21 @@ namespace UI.AdminDashboard
 
     public partial class Branches : Form1
     {
-        private InstructorRepo instructorRepo;
+        private BranchRepo branch;
         private DataGridView customGrid;
         private Button addbutton;
 
         public Branches() 
          {
-            instructorRepo = new InstructorRepo();
 
-
+            branch = new BranchRepo();  
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
             this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();     
             addbutton = GenerateCustomButton();  
-            addbutton.Text = "Add";
+            addbutton.Text = "Add Branch";
             addbutton.Click += (s, e) =>
             {
                 var newForm = new BranchForm();
@@ -38,10 +37,6 @@ namespace UI.AdminDashboard
             LoadData();
             AddActions(customGrid);
             customGrid.CellClick += (s, e) => HandleActionClick(customGrid, e);
-
-
-
-
 
         }
 
@@ -98,7 +93,7 @@ namespace UI.AdminDashboard
       
         private void LoadData() // load viewing data 
         {
-           var data = instructorRepo.GetInstructors();
+            var data = branch.GetBranches(null);
           customGrid.DataSource = data;
         }
 
