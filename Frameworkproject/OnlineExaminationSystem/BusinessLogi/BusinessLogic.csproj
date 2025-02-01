@@ -172,8 +172,21 @@
     <Compile Include="DTO\ExamDTO.cs" />
     <Compile Include="DTO\InstructorDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BranchRepo.cs" />
+    <Compile Include="Repositories\CourseRepo.cs" />
+    <Compile Include="Repositories\ExamQuestionRepo.cs" />
+    <Compile Include="Repositories\ExamQuestionStudentRepo.cs" />
     <Compile Include="Repositories\ExamRepo.cs" />
+    <Compile Include="Repositories\ExamTrackRepo.cs" />
     <Compile Include="Repositories\InstructorRepo.cs" />
+    <Compile Include="Repositories\InstructorTrackCourseRepo.cs" />
+    <Compile Include="Repositories\QuestionChoiceRepo.cs" />
+    <Compile Include="Repositories\QuestionsRepo.cs" />
+    <Compile Include="Repositories\StudentExamRepo.cs" />
+    <Compile Include="Repositories\StudentRepo.cs" />
+    <Compile Include="Repositories\TopicRepo.cs" />
+    <Compile Include="Repositories\TrackBranchRepo.cs" />
+    <Compile Include="Repositories\TrackRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
