@@ -14,9 +14,9 @@ namespace BusinessLogi.Repositories
     {
         private readonly DBManager _dbManager;
 
-        public TopicRepo(DBManager dbManager)
+        public TopicRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();
         }
         public List<TopicDTO> GetTopics()
         {

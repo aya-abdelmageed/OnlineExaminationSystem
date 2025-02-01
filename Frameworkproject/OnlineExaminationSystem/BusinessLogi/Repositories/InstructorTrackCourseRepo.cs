@@ -13,9 +13,9 @@ namespace BusinessLogi.Repositories
     public class InstructorTrackCourseRepo
     {
         private readonly DBManager _dbManager;
-        public InstructorTrackCourseRepo(DBManager dbManager)
+        public InstructorTrackCourseRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();
         }
         public List<InstructorTrackCourseDTO> GetInstructorTrackCourses()
         {

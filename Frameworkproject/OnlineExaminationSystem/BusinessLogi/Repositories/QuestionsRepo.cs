@@ -14,9 +14,9 @@ namespace BusinessLogi.Repositories
     {
         private readonly DBManager _dbManager;
 
-        public QuestionsRepo(DBManager dbManager)
+        public QuestionsRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();
         }
         public List<QuestionsDTO> GetQuestionsByID(int Q_id,int Crs_id)
         {

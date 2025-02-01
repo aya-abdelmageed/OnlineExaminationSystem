@@ -13,9 +13,9 @@ namespace BusinessLogi.Repositories
     public class QuestionChoiceRepo
     {
         private readonly DBManager _dbManager;
-        public QuestionChoiceRepo(DBManager dbManager)
+        public QuestionChoiceRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new  DBManager();
         }
         public List<QuestionsChoicesDTO> GetQuestionChoices(int questionID)
         {

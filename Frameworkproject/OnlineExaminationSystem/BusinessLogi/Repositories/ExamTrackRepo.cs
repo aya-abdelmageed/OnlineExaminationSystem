@@ -13,9 +13,9 @@ namespace BusinessLogi.Repositories
     public class ExamTrackRepo
     {
         private readonly DBManager _dbManager;
-        public ExamTrackRepo(DBManager dbManager)
+        public ExamTrackRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();
         }
         public List<ExamTrackDTO> GetExamTracks(int? E_ID, int? T_ID)
         {

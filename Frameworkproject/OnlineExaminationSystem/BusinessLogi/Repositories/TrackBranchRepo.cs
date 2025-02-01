@@ -13,9 +13,9 @@ namespace BusinessLogi.Repositories
     public class TrackBranchRepo
     {
         private readonly DBManager _dbManager;
-        public TrackBranchRepo(DBManager dbManager)
+        public TrackBranchRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();
         }
         public List<TrackBranchDTO> GetTrackBranches()
         {

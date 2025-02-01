@@ -12,9 +12,9 @@ namespace BusinessLogic.Repositories
     {
         private readonly DBManager _dbManager;
 
-        public InstructorRepo(DBManager dbManager)
+        public InstructorRepo()
         {
-            _dbManager = dbManager;
+            _dbManager =  new DBManager();
         }
 
         public List<InstructorDTO> GetInstructors()

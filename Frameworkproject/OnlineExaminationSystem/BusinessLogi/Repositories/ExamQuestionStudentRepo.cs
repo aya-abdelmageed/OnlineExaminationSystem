@@ -14,9 +14,9 @@ namespace BusinessLogi.Repositories
     {
         private readonly DBManager _dbManager;
 
-        public ExamQuestionStudentRepo(DBManager dbManager)
+        public ExamQuestionStudentRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();   
         }
         public List<ExamQuestionsStudentDTO> GetQuestionsStudents(int? E_ID,int? S_ID,int? Q_ID)
         {

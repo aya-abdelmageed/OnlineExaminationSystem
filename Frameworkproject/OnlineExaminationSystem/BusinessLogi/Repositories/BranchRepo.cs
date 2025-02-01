@@ -14,9 +14,9 @@ namespace BusinessLogi.Repositories
     {
         private readonly DBManager _dbManager;
 
-        public BranchRepo(DBManager dbManager)
+        public BranchRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();
         }
         // take string with accept null
         public List<BranchDTO> GetBranches(int? Branch_ID)

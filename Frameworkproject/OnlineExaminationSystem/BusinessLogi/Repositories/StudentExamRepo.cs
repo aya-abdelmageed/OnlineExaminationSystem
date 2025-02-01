@@ -13,9 +13,9 @@ namespace BusinessLogi.Repositories
     public class StudentExamRepo
     {
         private readonly DBManager _dbManager;
-        public StudentExamRepo(DBManager dbManager)
+        public StudentExamRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();
         }
         public List<StudentExamDTO> GetStudentExams(int? student_id,int? exam_id)
         {

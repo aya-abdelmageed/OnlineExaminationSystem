@@ -13,9 +13,9 @@ namespace BusinessLogi.Repositories
     public class ExamQuestionRepo
     {
         private readonly DBManager _dbManager;
-        public ExamQuestionRepo(DBManager dbManager)
+        public ExamQuestionRepo()
         {
-            _dbManager = dbManager;
+            _dbManager = new DBManager();
         }
         public void AddExamQuestion(int examId, int questionId,int? points)
         {
