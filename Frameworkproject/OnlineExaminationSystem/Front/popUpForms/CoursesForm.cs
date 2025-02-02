@@ -1,5 +1,9 @@
-﻿using System;
+﻿using BusinessLogi.DTO;
+using BusinessLogi.Repositories;
+using System;
+using System.ComponentModel;
 using System.Windows.Forms;
+using static UI.AdminDashboard.Form1;
 
 namespace UI.AdminDashboard
 {
@@ -8,28 +12,42 @@ namespace UI.AdminDashboard
         // Properties to expose the input data
         public string CourseName { get; private set; }
         public int? CourseId { get; private set; }
-
+        public int mode;
+        private CourseRepo courseRepo;
         private TextBox courseIdTextBox;
         private TextBox courseNameTextBox;
         private Button submitButton;
-
-        public CoursesForm(int? courseId = null, string courseName = "")
+        private DataGridView customGrid;
+        public CoursesForm(int mode,CourseDTO course = null,DataGridView data = null)
         {
             InitializeComponent2();
-
+            this.mode = mode;
+            courseRepo = new CourseRepo();
+            customGrid = data;
             // Set the CourseId if provided (for edit mode)
-            CourseId = courseId;
+            if(course != null)
+            {
+                CourseId = course.ID;
+            }
 
             // Pre-fill the form with the passed values if it's in edit mode
-            if (CourseId.HasValue)
+            switch(mode)
             {
-                courseIdTextBox.Text = CourseId.ToString();
-                courseNameTextBox.Text = courseName;
-                submitButton.Text = "Save Changes";
-            }
-            else
-            {
-                submitButton.Text = "Add Course";
+                case (int)FormMode.Edit:
+                    courseIdTextBox.Text = CourseId.ToString();
+                    courseNameTextBox.Text = course.Name;
+                    submitButton.Text = "Save Changes";
+                    break;
+                case (int)FormMode.Add:
+                    submitButton.Text = "Add Course";
+                    break;
+                case (int)FormMode.View:
+                    courseIdTextBox.Text = CourseId.ToString();
+                    courseNameTextBox.Text = course.Name;
+                    courseIdTextBox.ReadOnly = true;
+                    courseNameTextBox.ReadOnly = true;
+                    submitButton.Text = "Close";
+                    break;
             }
         }
 
@@ -97,14 +115,20 @@ namespace UI.AdminDashboard
             }
 
             // If the ID exists, this is an edit, otherwise it is an insert
-            if (CourseId.HasValue)
+            if (mode == (int)FormMode.Edit)
             {
                 // Code to update the course in the database or collection
+                courseRepo.updateCourses(new CourseDTO { ID = CourseId.Value, Name = CourseName });
+                BindingList<CourseDTO> courses = new BindingList<CourseDTO>(courseRepo.GetCourses());
+                customGrid.DataSource = courses;
                 MessageBox.Show($"Course {CourseId.Value} updated: {CourseName}");
             }
-            else
+            else if (mode == (int)FormMode.Add)
             {
                 // Code to add a new course (insert logic)
+                courseRepo.InsertCourses(new CourseDTO { Name = CourseName });
+                BindingList<CourseDTO> courses = new BindingList<CourseDTO>(courseRepo.GetCourses());
+                customGrid.DataSource = courses;
                 MessageBox.Show($"New course added: {CourseName}");
             }
 

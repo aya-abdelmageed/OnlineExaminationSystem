@@ -1,6 +1,10 @@
-﻿using System;
+﻿using BusinessLogi.DTO;
+using BusinessLogi.Repositories;
+using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 using UI.AdminDashboard;
+using static UI.AdminDashboard.Form1;
 
 namespace Front.popUpForms
 {
@@ -15,7 +19,9 @@ namespace Front.popUpForms
         public string Phone { get; private set; }
         public DateTime Birthdate { get; private set; }
         public int TrackId { get; private set; }
-
+        public int mode;
+        private StudentRepo studentRepo;
+        private DataGridView data;
         private TextBox studentIdTextBox;
         private ComboBox genderComboBox;
         private TextBox firstNameTextBox;
@@ -26,30 +32,53 @@ namespace Front.popUpForms
         private TextBox trackIdTextBox;
         private Button submitButton;
 
-        public StudentesForm(int? studentId = null, string gender = "", string fName = "", string mName = "", string lName = "", string phone = "", DateTime? birthdate = null, int trackId = 0)
+        public StudentesForm(int mode,StudentDTO student = null,DataGridView data = null)
         {
             InitializeComponent2();
-
+            studentRepo = new StudentRepo();
+            this.data = data;
+            this.mode = (int)mode;
             // Set the StudentId if provided (for edit mode)
-            StudentId = studentId;
-
+            if(student != null)
+                StudentId = student.StudentID;
+              
             // Pre-fill the form with the passed values if it's in edit mode
-            if (StudentId.HasValue)
+            if (mode == (int)FormMode.Edit)
             {
                 studentIdTextBox.Text = StudentId.ToString();
-                genderComboBox.SelectedItem = gender;
-                firstNameTextBox.Text = fName;
-                middleNameTextBox.Text = mName;
-                lastNameTextBox.Text = lName;
-                phoneTextBox.Text = phone;
-                birthdatePicker.Value = birthdate ?? DateTime.Now;
-                trackIdTextBox.Text = trackId.ToString();
+                genderComboBox.SelectedItem = student.Gender == "M" ? "Male" :
+                                              student.Gender == "F" ? "Female" : "Other"; firstNameTextBox.Text = FirstName;
+                middleNameTextBox.Text = student.MName;
+                lastNameTextBox.Text = student.LName;
+                phoneTextBox.Text = student.Phone;
+                birthdatePicker.Value = student.Birthdate;
+                trackIdTextBox.Text = student.trackID.ToString();
                 submitButton.Text = "Save Changes";
             }
-            else
+            else if(mode == (int)FormMode.Add)
             {
                 submitButton.Text = "Add Student";
             }
+            else
+            {
+                studentIdTextBox.Text = StudentId.ToString();
+                genderComboBox.SelectedItem = student.Gender == "M" ? "Male" :
+                                              student.Gender == "F" ? "Female" : "Other"; firstNameTextBox.Text = FirstName;
+                middleNameTextBox.Text = student.MName;
+                lastNameTextBox.Text = student.LName;
+                phoneTextBox.Text = student.Phone;
+                birthdatePicker.Value = student.Birthdate;
+                trackIdTextBox.Text = student.trackID.ToString();
+                studentIdTextBox.ReadOnly  = true;
+                genderComboBox.Enabled = false;
+                firstNameTextBox.ReadOnly = true;
+                middleNameTextBox.ReadOnly = true;
+                lastNameTextBox.ReadOnly = true;
+                phoneTextBox.ReadOnly = true;
+                birthdatePicker.Value = student.Birthdate;
+                submitButton.Text = "Close";
+            }
+
         }
 
         private void InitializeComponent2()
@@ -207,7 +236,11 @@ namespace Front.popUpForms
             Birthdate = birthdatePicker.Value;
             int.TryParse(trackIdTextBox.Text, out int trackId);
             TrackId = trackId;
-
+            if(mode == (int)FormMode.View)
+            {
+                this.Close();
+                return;
+            }
             // Handle validation
             if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Phone) || string.IsNullOrEmpty(Gender) || TrackId <= 0)
             {
@@ -216,14 +249,39 @@ namespace Front.popUpForms
             }
 
             // If the ID exists, this is an edit, otherwise it is an insert
-            if (StudentId.HasValue)
+            if (mode == (int)FormMode.Edit)
             {
                 // Code to update the student in the database
+                studentRepo.UpdateStudent(new StudentDTO
+                {
+                    StudentID = StudentId.Value,
+                    FName = FirstName,
+                    MName = MiddleName,
+                    LName = LastName,
+                    Phone = Phone,
+                    Gender = Gender,
+                    Birthdate = Birthdate,
+                    trackID = TrackId
+                });
+                BindingList<StudentDTO> students = new BindingList<StudentDTO> (studentRepo.GetStudents(null));
+                data.DataSource = students;
                 MessageBox.Show($"Student {StudentId.Value} updated: {FirstName} {LastName}");
             }
             else
             {
                 // Code to add a new student (insert logic)
+                studentRepo.InsertStudent(new StudentDTO
+                {
+                    FName = FirstName,
+                    MName = MiddleName,
+                    LName = LastName,
+                    Phone = Phone,
+                    Gender = Gender,
+                    Birthdate = Birthdate,
+                    trackID = TrackId,
+                });
+                BindingList<StudentDTO> students = new BindingList<StudentDTO>(studentRepo.GetStudents(null));
+                data.DataSource = students;
                 MessageBox.Show($"New student added: {FirstName} {LastName}");
             }
 

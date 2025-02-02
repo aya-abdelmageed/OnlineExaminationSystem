@@ -13,9 +13,10 @@ namespace UI.AdminDashboard
     public partial class Form1 : Form
     {
 
-
+        public enum FormMode { View, Edit, Add }
         public Form1()
         {
+
             InitializeComponent();
         }
         public void ShowForm(Form form)
@@ -44,7 +45,7 @@ namespace UI.AdminDashboard
 
             // Bottom-left arc
             path.AddArc(rect.X, rect.Bottom - diameter, diameter, diameter, 90, 90);
-
+           
             // Close the path
             path.CloseFigure();
             return path;
@@ -106,44 +107,73 @@ namespace UI.AdminDashboard
         private void Reports_Click(object sender, EventArgs e)
         {
             ShowForm(new Reports());
-
         }
+
         public void AddActions(DataGridView customGrid)
         {
-            // **Create Actions Column**
-            var ActionsColumn = new DataGridViewImageColumn
+            //Load icons once for performance optimization
+            var editIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\1.png"));
+            var viewIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\edit.png"));
+            var deleteIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\trash.png"));
+
+            // *Create Edit Action Column*
+            var editColumn = new DataGridViewImageColumn
             {
-                Name = "Actions",
-                HeaderText = "Actions",
-                ImageLayout = DataGridViewImageCellLayout.Zoom, // Resize to fit
-                Width = 100 // Ensure column is wide enough to hold the combined image
+                Name = "EditAction",
+                HeaderText = "Edit",
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 20 // Adjust based on icon size
             };
 
-            // Add the Actions column
-            customGrid.Columns.Add(ActionsColumn);
-
-            // Load icons
-            Image editIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\1.png"));
-            Image viewIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\edit.png"));
-            Image deleteIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\trash.png"));
-
-            Bitmap combinedImage = new Bitmap(130, 30);
-            using (Graphics g = Graphics.FromImage(combinedImage))
+            // *Create View Action Column*
+            var viewColumn = new DataGridViewImageColumn
             {
-                g.Clear(Color.Transparent);
-                g.DrawImage(editIcon, new Rectangle(0, 5, 20, 20));   // Edit icon
-                g.DrawImage(viewIcon, new Rectangle(40, 5, 20, 20));  // View icon
-                g.DrawImage(deleteIcon, new Rectangle(80, 5, 20, 20)); // Delete icon
-            }
-            // **Handle Row Population (Existing & Future Rows)**
+                Name = "ViewAction",
+                HeaderText = "View",
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 20 // Adjust based on icon size
+            };
+
+            // *Create Delete Action Column*
+            var deleteColumn = new DataGridViewImageColumn
+            {
+                Name = "DeleteAction",
+                HeaderText = "Delete",
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 20 // Adjust based on icon size
+            };
+
+            // Add the columns to the grid
+            customGrid.Columns.Add(editColumn);
+            customGrid.Columns.Add(viewColumn);
+            customGrid.Columns.Add(deleteColumn);
+
+            // *Set Cell Formatting to Display Icons*
             customGrid.CellFormatting += (s, e) =>
             {
-                if (customGrid.Columns[e.ColumnIndex].Name == "Actions" && e.RowIndex >= 0)
+                if (e.RowIndex >= 0)
                 {
-                    e.Value = combinedImage;
+                    if (e.ColumnIndex == customGrid.Columns["ViewAction"].Index)
+                    {
+                        e.Value = viewIcon;
+                    }
+                    else if (e.ColumnIndex == customGrid.Columns["EditAction"].Index)
+                    {
+                        e.Value = editIcon;
+                    }
+                    else if (e.ColumnIndex == customGrid.Columns["DeleteAction"].Index)
+                    {
+                        e.Value = deleteIcon;
+                    }
                 }
             };
+
+            // *Set Column Width and Minimum Width*
+            customGrid.Columns["EditAction"].MinimumWidth = 20;
+            customGrid.Columns["ViewAction"].MinimumWidth = 20;
+            customGrid.Columns["DeleteAction"].MinimumWidth = 20;
         }
+
 
         public Button GenerateCustomButton()
         {
@@ -181,14 +211,14 @@ namespace UI.AdminDashboard
 
                 e.Graphics.DrawString(addButton.Text, addButton.Font, new SolidBrush(addButton.ForeColor), textX, textY);
             };
-           
+
 
             // Add the add new item button to the form
             this.Controls.Add(addButton);
             return addButton;
 
         }
-        public   void GenerateCustomSearch()
+        public void GenerateCustomSearch()
         {
 
             // Create the Panel for search
@@ -299,8 +329,11 @@ namespace UI.AdminDashboard
                 AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill, // Adjust columns to fit width
                 ScrollBars = ScrollBars.Vertical,
 
+
             };
             customGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(128, 128, 128);  // Custom color instead of blue
+            customGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
 
             // Set column headers style
             customGrid.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle
@@ -313,13 +346,13 @@ namespace UI.AdminDashboard
             // Set alternating rows style
 
 
-         
-            customGrid.RowTemplate.Height = 50;
+
+            customGrid.RowTemplate.Height = 20;
             customGrid.DefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
 
-          
-          
-         
+
+
+
 
 
 
@@ -345,7 +378,6 @@ namespace UI.AdminDashboard
 
 
 
-
             this.Controls.Add(customGrid);
             return customGrid;
         }
@@ -353,7 +385,7 @@ namespace UI.AdminDashboard
         private void Tracks_Click_1(object sender, EventArgs e)
         {
 
-            ShowForm(new Tracks());
+            ShowForm(new Tracks(0));
 
         }
     }

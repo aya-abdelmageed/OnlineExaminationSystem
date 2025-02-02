@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Repositories;
+﻿using BusinessLogic.DTO;
+using BusinessLogic.Repositories;
 using Front.popUpForms;
 using System;
 using System.Collections.Generic;
@@ -23,8 +24,8 @@ namespace UI.AdminDashboard
 
             instructorRepo = new InstructorRepo();
 
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
+            //this.AutoScaleMode = AutoScaleMode.Dpi;
+            //this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
             this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();
@@ -32,39 +33,33 @@ namespace UI.AdminDashboard
             addbutton.Text = "Add Instructor";
             addbutton.Click += (s, e) =>
             {
-                var newForm = new BranchForm();
+                var newForm = new InstructorForm((int)FormMode.Add,data:customGrid);
                 newForm.Show();
-
             };
             LoadData();
             AddActions(customGrid);
-            customGrid.CellClick += (s, e) => HandleActionClick(customGrid, e);
-
-
+            // Handle Click Events with Dynamic Detection
+            customGrid.CellMouseClick += (s, e) =>
+            {
+                HandleActionClick(customGrid, e);
+            };
         }
 
 
-        private void HandleActionClick(DataGridView customGrid, DataGridViewCellEventArgs e)
+        private void HandleActionClick(DataGridView customGrid, DataGridViewCellMouseEventArgs e)
         {
-            // Ensure the clicked column is "Actions" and row is valid
-            if (customGrid.Columns[e.ColumnIndex].Name != "Actions" || e.RowIndex < 0)
+            if (e.RowIndex < 0)
                 return;
 
-            // Get the click position inside the cell
-            int clickX = customGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false).X;
-            int mouseX = customGrid.PointToClient(Cursor.Position).X;
-            int relativeX = mouseX - clickX;
-
-            // Identify which icon was clicked
-            if (relativeX >= 0 && relativeX < 30)
+            if (e.ColumnIndex == customGrid.Columns["EditAction"].Index)
             {
                 EditRow(customGrid.Rows[e.RowIndex]);
             }
-            else if (relativeX >= 40 && relativeX < 70)
+            else if (e.ColumnIndex == customGrid.Columns["ViewAction"].Index)
             {
                 ViewRow(customGrid.Rows[e.RowIndex]);
             }
-            else if (relativeX >= 80 && relativeX < 110)
+            else if (e.ColumnIndex == customGrid.Columns["DeleteAction"].Index)
             {
                 DeleteRow(customGrid, e.RowIndex);
             }
@@ -73,24 +68,45 @@ namespace UI.AdminDashboard
         // **Functions to Perform Actions**
         private void EditRow(DataGridViewRow row)
         {
-            var Form = new InstructorForm();
+            InstructorDTO instructor = new InstructorDTO
+            {
+                age = (int)row.Cells["Age"].Value,
+                Email = (string)row.Cells["Email"].Value,
+                FirstName = (string)row.Cells["FirstName"].Value,
+                Gender = (string)row.Cells["Gender"].Value,
+                InstructorId = (int)row.Cells["InstructorID"].Value,
+                LastName = (string)row.Cells["LastName"].Value,
+                MName = (string)row.Cells["MName"].Value,
+                Salary = (double)row.Cells["Salary"].Value,
+            };
+            var Form = new InstructorForm((int)FormMode.Edit,instructor,customGrid);
             Form.Show();
-            MessageBox.Show($"Edit clicked for row {row.Index}");
-            // Add edit logic here
         }
 
         private void ViewRow(DataGridViewRow row)
         {
-            MessageBox.Show($"View clicked for row {row.Index}");
-            // Add view logic here
+            InstructorDTO instructor = new InstructorDTO { 
+                age = (int)row.Cells["Age"].Value,
+                Email = (string)row.Cells["Email"].Value,
+                FirstName = (string)row.Cells["FirstName"].Value,
+                Gender = (string)row.Cells["Gender"].Value,
+                InstructorId = (int)row.Cells["InstructorID"].Value,
+                LastName = (string)row.Cells["LastName"].Value,
+                MName = (string)row.Cells["MName"].Value,
+                Salary = (double)row.Cells["Salary"].Value,
+            };
+            var Form = new InstructorForm((int)FormMode.View, instructor,customGrid);
+            Form.Show();
         }
 
         private void DeleteRow(DataGridView grid, int rowIndex)
         {
+            int ins_id = (int)grid.Rows[rowIndex].Cells["InstructorID"].Value;
+            instructorRepo.DeleteInstructor(ins_id);
             if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                grid.Rows.RemoveAt(rowIndex);
-                MessageBox.Show($"Row {rowIndex} deleted.");
+                BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors());
+                customGrid.DataSource = instructors;
             }
         }
 

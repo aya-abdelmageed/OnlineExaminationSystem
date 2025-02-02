@@ -1,6 +1,12 @@
-﻿using System;
+﻿using BusinessLogi.DTO;
+using BusinessLogic.DTO;
+using BusinessLogic.Repositories;
+using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 using UI.AdminDashboard;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
+using static UI.AdminDashboard.Form1;
 
 namespace Front.popUpForms
 {
@@ -15,7 +21,9 @@ namespace Front.popUpForms
         public string Gender { get; private set; }
         public int Age { get; private set; }
         public decimal Salary { get; private set; }
-
+        public int mode;
+        private InstructorRepo instructorRepo;
+        private DataGridView data;
         private TextBox instructorIdTextBox;
         private TextBox firstNameTextBox;
         private TextBox middleNameTextBox;
@@ -26,30 +34,58 @@ namespace Front.popUpForms
         private TextBox salaryTextBox;
         private Button submitButton;
 
-        public InstructorForm(int? insId = null, string fName = "", string mName = "", string lName = "", string email = "", string gender = "", int age = 0, decimal salary = 0)
+        public InstructorForm(int mode, InstructorDTO instructor = null, DataGridView data = null)
         {
             InitializeComponent2();
 
             // Set the InstructorId if provided (for edit mode)
-            InstructorId = insId;
-
+            if (instructor != null)
+                InstructorId = instructor.InstructorId;
+            instructorRepo = new InstructorRepo();
+            this.data = data;
+            this.mode = mode;
             // Pre-fill the form with the passed values if it's in edit mode
-            if (InstructorId.HasValue)
+            switch (mode)
             {
-                instructorIdTextBox.Text = InstructorId.ToString();
-                firstNameTextBox.Text = fName;
-                middleNameTextBox.Text = mName;
-                lastNameTextBox.Text = lName;
-                emailTextBox.Text = email;
-                genderComboBox.SelectedItem = gender;
-                ageTextBox.Text = age.ToString();
-                salaryTextBox.Text = salary.ToString();
-                submitButton.Text = "Save Changes";
+                case (int)FormMode.Edit:
+                    instructorIdTextBox.Text = InstructorId.ToString();
+                    firstNameTextBox.Text = instructor.FirstName;
+                    middleNameTextBox.Text = instructor.MName;
+                    lastNameTextBox.Text = instructor.LastName;
+                    emailTextBox.Text = instructor.Email;
+                    genderComboBox.SelectedItem = instructor.Gender == "M" ? "Male" :
+                                                  instructor.Gender == "F" ? "Female" : "Other";
+                    ageTextBox.Text = instructor.age.ToString();
+                    salaryTextBox.Text = instructor.Salary.ToString();
+                    submitButton.Text = "Save Changes";
+                    break;
+                case (int)FormMode.Add:
+                    submitButton.Text = "Add Instructor";
+                    break;
+                case (int)FormMode.View:
+                    instructorIdTextBox.Text = InstructorId.ToString();
+                    firstNameTextBox.Text = instructor.FirstName;
+                    middleNameTextBox.Text = instructor.MName;
+                    lastNameTextBox.Text = instructor.LastName;
+                    emailTextBox.Text = instructor.Email;
+                    genderComboBox.SelectedItem = instructor.Gender == "M" ? "Male" :
+                                                                      instructor.Gender == "F" ? "Female" : "Other"; ageTextBox.Text = instructor.age.ToString();
+                    salaryTextBox.Text = instructor.Salary.ToString();
+                    instructorIdTextBox.ReadOnly = true;
+                    firstNameTextBox.ReadOnly = true;
+                    ageTextBox.ReadOnly = true;
+                    salaryTextBox.ReadOnly = true;
+                    middleNameTextBox.ReadOnly = true;
+                    lastNameTextBox.ReadOnly = true;
+                    emailTextBox.ReadOnly = true;
+                    genderComboBox.Enabled = false;
+                    ageTextBox.Enabled = false;
+                    salaryTextBox.Enabled = false;
+                    submitButton.Text = "Close";
+                    break;
+
             }
-            else
-            {
-                submitButton.Text = "Add Instructor";
-            }
+
         }
 
         private void InitializeComponent2()
@@ -208,6 +244,17 @@ namespace Front.popUpForms
             decimal.TryParse(salaryTextBox.Text, out decimal salary);
             Salary = salary;
 
+            if (mode == (int)FormMode.View)
+            {
+                this.Close();
+                return;
+            }
+            if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Gender) || Age <= 0 || Salary <= 0)
+            {
+                MessageBox.Show("Please fill in all fields correctly.");
+                return;
+            }
+
             // Handle validation
             if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Gender) || Age <= 0 || Salary <= 0)
             {
@@ -216,22 +263,46 @@ namespace Front.popUpForms
             }
 
             // If the ID exists, this is an edit, otherwise it is an insert
-            if (InstructorId.HasValue)
+            if (mode == (int)FormMode.Edit)
             {
-                // Code to update the instructor in the database
-                MessageBox.Show($"Instructor {InstructorId.Value} updated: {FirstName} {LastName}");
-            }
-            else
-            {
-                // Code to add a new instructor (insert logic)
-                MessageBox.Show($"New instructor added: {FirstName} {LastName}");
-            }
+                instructorRepo.UpdateInstructor(new InstructorDTO
+                {
+                    InstructorId = InstructorId.Value,
+                    FirstName = FirstName,
+                    MName = MiddleName,
+                    LastName = LastName,
+                    Email = Email,
+                    Gender = Gender,
+                    age = Age,
+                    Salary = (double)salary
+                });
+                BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors());
+                data.DataSource = instructors;
+                MessageBox.Show($"Instructor {InstructorId.Value} updated: {Name}, Phone: {Email}, Location: {Age}");
 
-            // Close the form after saving
-            this.DialogResult = DialogResult.OK;
-            //Instructors instructors = new Instructors();
-            //instructors.Show();
-            this.Hide();
+            }
+            else if (mode == (int)FormMode.Add)
+            {
+                instructorRepo.InsertInstructor(new InstructorDTO
+                {
+                    FirstName = FirstName,
+                    MName = MiddleName,
+                    LastName = LastName,
+                    Email = Email,
+                    Gender = Gender,
+                    age = Age,
+                    Salary = (double)(decimal)salary
+                });
+                BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors());
+                data.DataSource = instructors;
+                MessageBox.Show($"New instructor added: {FirstName}, {MiddleName}, {LastName}, {Email}");
+
+                // Close the form after saving
+                this.DialogResult = DialogResult.OK;
+                //Instructors instructors = new Instructors();
+                //instructors.Show();
+                this.Hide();
+            }
         }
     }
 }
