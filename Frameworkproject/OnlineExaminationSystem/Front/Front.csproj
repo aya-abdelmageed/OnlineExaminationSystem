@@ -226,6 +226,12 @@
     <Compile Include="popUpForms\StudentesForm.Designer.cs">
       <DependentUpon>StudentesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="popUpForms\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpForms\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="popUpForms\TrackForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -2,19 +2,38 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
     namespace DataAccess
     {
         public class DBManager
         {
+
+        private SqlConnection connect;
+
         
         string _connectionString = "Data Source=.;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
 
         // Constructor that takes the connection string as a parameter
         public DBManager()
         {
 
+        }
+        //Method to get connect with DataBase
+        public void InitializeDatabaseConnection()
+        {
+            try
+            {
+                connect = new SqlConnection(_connectionString);
+                connect.Open();
+                MessageBox.Show("Connection Successful!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Connection Failed: " + ex.Message);
+            }
         }
 
         // Method to execute a stored procedure and return a DataTable
@@ -101,5 +120,35 @@ using System.Data.SqlClient;
                     }
                 }
             }
+
+        public DataTable ExecuteQuery(string query, SqlParameter[] parameters)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+
+                DataTable resultTable = new DataTable();
+
+                try
+                {
+                    connection.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(resultTable);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Database Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                return resultTable;
+            }
         }
+
     }
+}

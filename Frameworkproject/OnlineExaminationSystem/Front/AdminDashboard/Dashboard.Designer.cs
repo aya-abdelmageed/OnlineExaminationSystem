@@ -52,11 +52,12 @@ namespace UI.AdminDashboard
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -74,7 +75,9 @@ namespace UI.AdminDashboard
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(23, 3);
+
+            this.pictureBox4.Location = new System.Drawing.Point(16, 6);
+
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(48, 48);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -87,7 +90,7 @@ namespace UI.AdminDashboard
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.label5.Location = new System.Drawing.Point(185, 17);
+            this.label5.Location = new System.Drawing.Point(183, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 34);
             this.label5.TabIndex = 1;
@@ -119,7 +122,8 @@ namespace UI.AdminDashboard
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(27, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 6);
+
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(48, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -143,7 +147,7 @@ namespace UI.AdminDashboard
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.label3.Location = new System.Drawing.Point(185, 17);
+            this.label3.Location = new System.Drawing.Point(185, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 34);
             this.label3.TabIndex = 1;
@@ -174,7 +178,7 @@ namespace UI.AdminDashboard
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.label2.Location = new System.Drawing.Point(185, 17);
+            this.label2.Location = new System.Drawing.Point(189, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 34);
             this.label2.TabIndex = 1;
@@ -195,7 +199,9 @@ namespace UI.AdminDashboard
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(15, 6);
+
+            this.pictureBox2.Location = new System.Drawing.Point(13, 6);
+
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -207,7 +213,7 @@ namespace UI.AdminDashboard
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(18, 21);
+            this.label7.Location = new System.Drawing.Point(16, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 32);
             this.label7.TabIndex = 1;
@@ -217,7 +223,7 @@ namespace UI.AdminDashboard
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label8.Location = new System.Drawing.Point(222, 49);
+            this.label8.Location = new System.Drawing.Point(240, 105);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 25);
             this.label8.TabIndex = 2;
@@ -227,7 +233,7 @@ namespace UI.AdminDashboard
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.Location = new System.Drawing.Point(222, 120);
+            this.label9.Location = new System.Drawing.Point(240, 172);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 25);
             this.label9.TabIndex = 3;
@@ -235,29 +241,20 @@ namespace UI.AdminDashboard
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 77);
+            this.textBox1.Location = new System.Drawing.Point(110, 136);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(330, 22);
+            this.textBox1.Size = new System.Drawing.Size(341, 22);
             this.textBox1.TabIndex = 5;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.label10.Location = new System.Drawing.Point(144, 218);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(250, 22);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Wrong username or password";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 148);
+            this.textBox2.Location = new System.Drawing.Point(110, 204);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(330, 22);
+            this.textBox2.Size = new System.Drawing.Size(341, 22);
             this.textBox2.TabIndex = 7;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
@@ -265,40 +262,68 @@ namespace UI.AdminDashboard
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(211, 182);
+            this.button1.Location = new System.Drawing.Point(218, 244);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 32);
             this.button1.TabIndex = 8;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(459, 150);
+            this.checkBox1.Location = new System.Drawing.Point(485, 206);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(125, 20);
             this.checkBox1.TabIndex = 9;
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+
+            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.label10);
+
             this.panel5.Controls.Add(this.checkBox1);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.textBox1);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(350, 218);
+            this.panel5.Location = new System.Drawing.Point(350, 210);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(606, 252);
+            this.panel5.Size = new System.Drawing.Size(642, 299);
             this.panel5.TabIndex = 9;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Admin",
+            "Student",
+            "Instructor"});
+            this.comboBox1.Location = new System.Drawing.Point(110, 69);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(341, 24);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label10.Location = new System.Drawing.Point(240, 31);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 25);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "UserType";
+            this.label10.Click += new System.EventHandler(this.label10_Click_1);
             // 
             // Dashboard
             // 
@@ -328,6 +353,7 @@ namespace UI.AdminDashboard
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -350,11 +376,12 @@ namespace UI.AdminDashboard
         private Label label8;
         private Label label9;
         private TextBox textBox1;
-        private Label label10;
         private TextBox textBox2;
         private Button button1;
         private CheckBox checkBox1;
         private Panel panel5;
         private PictureBox pictureBox2;
+        private Label label10;
+        private ComboBox comboBox1;
     }
 }
