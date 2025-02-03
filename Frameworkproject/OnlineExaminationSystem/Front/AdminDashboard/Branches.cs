@@ -49,22 +49,31 @@ namespace UI.AdminDashboard
             if (customGrid.Columns[e.ColumnIndex].Name != "Actions" || e.RowIndex < 0)
                 return;
 
-            // Get the click position inside the cell
-            int clickX = customGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false).X;
+            // Ensure the clicked column is "Actions" and row is valid
+            if (customGrid.Columns[e.ColumnIndex].Name != "Actions" || e.RowIndex < 0)
+                return;
+
+            // Get the cell's display rectangle and calculate relative X position
+            Rectangle cellRect = customGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
             int mouseX = customGrid.PointToClient(Cursor.Position).X;
-            int relativeX = mouseX - clickX;
+            int relativeX = mouseX - cellRect.Left;
+
+            Console.WriteLine($"Click Position: {relativeX}"); // Debugging click position
 
             // Identify which icon was clicked
             if (relativeX >= 0 && relativeX < 30)
             {
+                Console.WriteLine("Edit icon clicked!"); // Debugging
                 EditRow(customGrid.Rows[e.RowIndex]);
             }
             else if (relativeX >= 40 && relativeX < 70)
             {
+                Console.WriteLine("View icon clicked!"); // Debugging
                 ViewRow(customGrid.Rows[e.RowIndex]);
             }
-            else if (relativeX >= 80 && relativeX < 110)
+            else if (relativeX >= 80 && relativeX < 100) // Adjusted delete icon range
             {
+                Console.WriteLine("Delete icon clicked!"); // Debugging
                 DeleteRow(customGrid, e.RowIndex);
             }
         }
