@@ -9,8 +9,13 @@ using System.Windows.Forms;
     {
         public class DBManager
         {
+
         private SqlConnection connect;
-        string _connectionString = "Server=DESKTOP-S3ETNPJ;Database=Online_Examination_System;User Id=Exam;Password=123456;";
+
+        
+        string _connectionString = "Data Source=.;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+
         // Constructor that takes the connection string as a parameter
         public DBManager()
         {

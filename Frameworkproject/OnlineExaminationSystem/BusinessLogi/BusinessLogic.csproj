@@ -171,6 +171,7 @@
   <ItemGroup>
     <Compile Include="DTO\BranchDTO.cs" />
     <Compile Include="DTO\CourseDTO.cs" />
+    <Compile Include="DTO\ExamCardDTO.cs" />
     <Compile Include="DTO\ExamDTO.cs" />
     <Compile Include="DTO\ExamQuestionsDTO.cs" />
     <Compile Include="DTO\ExamQuestionsStudentDTO.cs" />

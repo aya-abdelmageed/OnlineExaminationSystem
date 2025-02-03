@@ -20,13 +20,9 @@ namespace BusinessLogi.Repositories
         public List<BranchDTO> GetBranches(int? Branch_ID)
         {
             string procedureName = "SelectAllFromBranch";
-            var parameters = new[]
-            {
-                new SqlParameter("@Branch_ID", SqlDbType.Int)
-                {
-                    Value = (object)Branch_ID ?? DBNull.Value
-                }
-            };
+
+            DataTable result;
+            var parameters = new[]{ new SqlParameter("@Branch_ID", SqlDbType.Int) {Value = Branch_ID} };
 
             try
             {
@@ -60,8 +56,7 @@ namespace BusinessLogi.Repositories
             }
         }
 
-        // Update an existing Branch
-        public int UpdateBranch(BranchDTO branch)
+        public void UpdateBranch(BranchDTO branch)
         {
             string procedureName = "UpdateBranch";
             var parameters = new[]
@@ -74,7 +69,7 @@ namespace BusinessLogi.Repositories
 
             try
             {
-                return _dbManager.ExecuteNonQuery(procedureName, parameters);
+                 _dbManager.ExecuteStoredProcedure(procedureName, parameters);
             }
             catch (Exception ex)
             {
@@ -82,18 +77,18 @@ namespace BusinessLogi.Repositories
             }
         }
 
-        // Delete a Branch by ID
-        public int DeleteBranch(int branchID)
+
+        public void DeleteBranch(int branchID)
         {
             string procedureName = "DeleteFromBranch";
             var parameters = new[]
             {
-                new SqlParameter("@branchID", SqlDbType.Int) { Value = branchID }
+                new SqlParameter("@branch_ID", SqlDbType.Int) { Value = branchID }
             };
 
             try
             {
-                return _dbManager.ExecuteNonQuery(procedureName, parameters);
+                 _dbManager.ExecuteStoredProcedure(procedureName, parameters);
             }
             catch (Exception ex)
             {

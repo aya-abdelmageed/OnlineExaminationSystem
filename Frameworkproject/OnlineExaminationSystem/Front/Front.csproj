@@ -166,6 +166,30 @@
     <Compile Include="AdminDashboard\Tracks.Designer.cs">
       <DependentUpon>Tracks.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorDashboard\CustomCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstructorDashboard\CustomCard.Designer.cs">
+      <DependentUpon>CustomCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorDashboard\Exams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorDashboard\Exams.Designer.cs">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorDashboard\ExamView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorDashboard\ExamView.Designer.cs">
+      <DependentUpon>ExamView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorDashboard\InstructorDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorDashboard\InstructorDashboard.Designer.cs">
+      <DependentUpon>InstructorDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="popUpForms\BranchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +201,12 @@
     </Compile>
     <Compile Include="popUpForms\Form1.Designer.cs">
       <DependentUpon>BranchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popUpForms\GenerateExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpForms\GenerateExam.Designer.cs">
+      <DependentUpon>GenerateExam.cs</DependentUpon>
     </Compile>
     <Compile Include="popUpForms\InstructorForm.cs">
       <SubType>Form</SubType>
@@ -210,6 +240,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentDashboard\StudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDashboard\StudentDashboard.Designer.cs">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminDashboard\Branches.resx">
       <DependentUpon>Branches.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,8 +270,8 @@
     <EmbeddedResource Include="AdminDashboard\Tracks.resx">
       <DependentUpon>Tracks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="popUpForms\InstructorForm.resx">
-      <DependentUpon>InstructorForm.cs</DependentUpon>
+    <EmbeddedResource Include="InstructorDashboard\InstructorDashboard.resx">
+      <DependentUpon>InstructorDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -246,6 +282,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentDashboard\StudentDashboard.resx">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -267,14 +306,19 @@
   <ItemGroup>
     <Content Include="Resources\1.png" />
     <Content Include="Resources\b55b4840fe2ddd62b5239ac2c3374660.png" />
+    <Content Include="Resources\calendar.png" />
     <Content Include="Resources\draw.png" />
     <Content Include="Resources\edit.png" />
+    <Content Include="Resources\employee.png" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\eye1.png" />
     <Content Include="Resources\icons8-bank-account-48.png" />
     <Content Include="Resources\icons8-book-48.png" />
     <Content Include="Resources\icons8-calender-64.png" />
     <Content Include="Resources\icons8-clock-128.png" />
+    <Content Include="Resources\icons8-date-24.png" />
+    <Content Include="Resources\icons8-file-24.png" />
+    <Content Include="Resources\icons8-folder-50.png" />
     <Content Include="Resources\icons8-in-progress-30.png" />
     <Content Include="Resources\icons8-in-progress-48 %281%29.png" />
     <Content Include="Resources\icons8-in-progress-50.png" />
@@ -285,11 +329,16 @@
     <Content Include="Resources\icons8-teacher-481.png" />
     <Content Include="Resources\icons8-teacher-50.png" />
     <Content Include="Resources\icons8-tear-off-calendar-48.png" />
+    <Content Include="Resources\icons8-time-50 %281%29.png" />
     <Content Include="Resources\icons8-user-account-48 %281%29.png" />
     <Content Include="Resources\icons8-user-account-48.png" />
     <Content Include="Resources\iti-logo.png" />
+    <Content Include="Resources\opportunities.png" />
     <Content Include="Resources\pen.png" />
+    <Content Include="Resources\profile.png" />
+    <Content Include="Resources\registration.png" />
     <Content Include="Resources\trash.png" />
+    <Content Include="Resources\user-account.png" />
     <Content Include="Resources\writing.png" />
   </ItemGroup>
   <ItemGroup>

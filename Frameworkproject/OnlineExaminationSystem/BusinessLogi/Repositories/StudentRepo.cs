@@ -25,7 +25,7 @@ namespace BusinessLogi.Repositories
             {
                 SqlParameter[] parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@Student_ID", SqlDbType.Int) { Value = id }
+                    new SqlParameter("@student_id", SqlDbType.Int) { Value = (object)id ?? DBNull.Value }
                 };
                 dt = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
             }
@@ -38,14 +38,14 @@ namespace BusinessLogi.Repositories
             {
                 var student = new StudentDTO
                 {
-                    StudentID = dataRow.Field<int>("Student ID"),
+                    StudentID = dataRow.Field<int>("Student_ID"),
                     Gender = dataRow.Field<string>("Gender"),
-                    FName = dataRow.Field<string>("First Name"),
-                    MName = dataRow.Field<string>("Middle Name"),
-                    LName = dataRow.Field<string>("Last Name"),
-                    Phone = dataRow.Field<string>("Phone Number"),
-                    Birthdate = dataRow.Field<DateTime>("Date of Birth"),
-                    trackID = dataRow.Field<int>("Track")
+                    FName = dataRow.Field<string>("FName"),
+                    MName = dataRow.Field<string>("MName"),
+                    LName = dataRow.Field<string>("LName"),
+                    Phone = dataRow.Field<string>("Phone"),
+                    Birthdate = dataRow.Field<DateTime>("Birthdate"),
+                    trackID = dataRow.Field<int>("Track_ID")
                 };
                 students.Add(student);
             }
@@ -83,13 +83,13 @@ namespace BusinessLogi.Repositories
                 var parameters = new SqlParameter[]
                 {
                     new SqlParameter("@Student_ID", SqlDbType.Int) { Value = student.StudentID },
-                    new SqlParameter("@Gender", SqlDbType.VarChar) { Value = student.Gender },
-                    new SqlParameter("@F_Name", SqlDbType.VarChar) { Value = student.FName },
-                    new SqlParameter("@M_Name", SqlDbType.VarChar) { Value = student.MName },
-                    new SqlParameter("@L_Name", SqlDbType.VarChar) { Value = student.LName },
-                    new SqlParameter("@Student_Phone", SqlDbType.VarChar) { Value = student.Phone },
-                    new SqlParameter("@Student_birthdate", SqlDbType.DateTime) { Value = student.Birthdate },
-                    new SqlParameter("@Track_ID", SqlDbType.Int) { Value = student.trackID }
+                    new SqlParameter("@gender", SqlDbType.VarChar) { Value = student.Gender },
+                    new SqlParameter("@first_name", SqlDbType.VarChar) { Value = student.FName },
+                    new SqlParameter("@middle_name", SqlDbType.VarChar) { Value = student.MName },
+                    new SqlParameter("@last_name", SqlDbType.VarChar) { Value = student.LName },
+                    new SqlParameter("@phone_num", SqlDbType.VarChar) { Value = student.Phone },
+                    new SqlParameter("@birthday", SqlDbType.DateTime) { Value = student.Birthdate },
+                    new SqlParameter("@track_id", SqlDbType.Int) { Value = student.trackID }
                     };
                 reslut = _dbManager.ExecuteStoredProcedure(procdureName, parameters);
             }
@@ -100,7 +100,7 @@ namespace BusinessLogi.Repositories
         }
         public void DeleteStudent(int studentID)
         {
-            string procdureName = "STUDENT_DELETE";
+            string procdureName = "STUDENT_DELETION";
             DataTable reslut;
             try
             {

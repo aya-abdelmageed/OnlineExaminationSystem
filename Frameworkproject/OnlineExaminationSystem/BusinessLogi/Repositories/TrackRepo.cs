@@ -15,37 +15,33 @@ namespace BusinessLogi.Repositories
         {
             _dbManager = new DBManager();
         }
-
-        public List<TrackDTO> GetTracks(int? trackID = null, string trackName = null)
+        public List<TrackDTO> GetTracks(int? trackid)
         {
+            DataTable resultTable;
+            SqlParameter[] parameters = new[] {
+                new SqlParameter("@Track_ID", SqlDbType.Int) { Value = trackid } 
+            };
             try
             {
-                var parameters = new List<SqlParameter>();
+                resultTable = _dbManager.ExecuteStoredProcedure("SelectAllFromTrack", parameters);
 
-                if (trackID.HasValue)
-                    parameters.Add(new SqlParameter("@TrackID", SqlDbType.Int) { Value = trackID.Value });
-
-                if (!string.IsNullOrEmpty(trackName))
-                    parameters.Add(new SqlParameter("@Track_Name", SqlDbType.VarChar) { Value = trackName });
-
-                DataTable resultTable = _dbManager.ExecuteStoredProcedure("SearchTrack_Name", parameters.ToArray());
-
-                List<TrackDTO> tracks = new List<TrackDTO>();
-                foreach (DataRow row in resultTable.Rows)
-                {
-                    tracks.Add(new TrackDTO
-                    {
-                        TrackID = Convert.ToInt32(row["TrackID"]),
-                        Name = row["Track_Name"].ToString(),
-                        Department = row["Department"].ToString()
-                    });
-                }
-                return tracks;
             }
             catch (Exception ex)
             {
                 throw new Exception("Error fetching tracks", ex);
             }
+            List<TrackDTO> tracks = new List<TrackDTO>();
+            foreach (DataRow row in resultTable.Rows)
+            {
+                TrackDTO track = new TrackDTO
+                {
+                    TrackID = Convert.ToInt32(row["Track_ID"]),
+                    Name = row["Track_Name"].ToString(),
+                    Department = row["Department"].ToString()
+                };
+                tracks.Add(track);
+            }
+            return tracks;
         }
 
         public void InsertTrack(TrackDTO track)
@@ -54,7 +50,7 @@ namespace BusinessLogi.Repositories
             {
                 var parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@Name", SqlDbType.VarChar) { Value = track.Name },
+                    new SqlParameter("@Track_Name", SqlDbType.VarChar) { Value = track.Name },
                     new SqlParameter("@Department", SqlDbType.VarChar) { Value = track.Department }
                 };
                 _dbManager.ExecuteNonQuery("InsertTrack", parameters);
@@ -71,8 +67,8 @@ namespace BusinessLogi.Repositories
             {
                 var parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@TrackID", SqlDbType.Int) { Value = track.TrackID },
-                    new SqlParameter("@Name", SqlDbType.VarChar) { Value = track.Name },
+                    new SqlParameter("@Track_ID", SqlDbType.Int) { Value = track.TrackID },
+                    new SqlParameter("@Track_Name", SqlDbType.VarChar) { Value = track.Name },
                     new SqlParameter("@Department", SqlDbType.VarChar) { Value = track.Department }
                 };
                 _dbManager.ExecuteNonQuery("UpdateTrack", parameters);
@@ -89,9 +85,9 @@ namespace BusinessLogi.Repositories
             {
                 var parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@TrackID", SqlDbType.Int) { Value = trackID }
+                    new SqlParameter("@Track_ID", SqlDbType.Int) { Value = trackID }
                 };
-                _dbManager.ExecuteNonQuery("DeleteTrack", parameters);
+                _dbManager.ExecuteNonQuery("DeleteFromTrack", parameters);
             }
             catch (Exception ex)
             {
