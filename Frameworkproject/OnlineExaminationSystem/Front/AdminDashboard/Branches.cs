@@ -141,61 +141,72 @@ namespace UI.AdminDashboard
             {
                 Console.WriteLine("Delete icon clicked!"); // Debugging
                 DeleteRow(customGrid, e.RowIndex);
-            
+
             }
         }
-            private void EditRow(DataGridViewRow row)
+        private void EditRow(DataGridViewRow row)
+        {
+            var branchDTO = new BranchDTO
             {
-                var branchDTO = new BranchDTO
-                {
-                    BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
-                    Name = row.Cells["Name"].Value.ToString(),
-                    Location = row.Cells["Location"].Value.ToString(),
-                    Phone = row.Cells["Phone"].Value.ToString()
-                };
-                var Form = new BranchForm((int)FormMode.Edit, branchDTO, customGrid);
-                Form.Show();
+                BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
+                Name = row.Cells["Name"].Value.ToString(),
+                Location = row.Cells["Location"].Value.ToString(),
+                Phone = row.Cells["Phone"].Value.ToString()
+            };
+            var Form = new BranchForm((int)FormMode.Edit, branchDTO, customGrid);
+            Form.Show();
 
 
-            }
+        }
 
-            private void ViewRow(DataGridViewRow row)
+        private void ViewRow(DataGridViewRow row)
+        {
+
+            var branchDTO = new BranchDTO
             {
+                BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
+                Name = row.Cells["Name"].Value.ToString(),
+                Location = row.Cells["Location"].Value.ToString(),
+                Phone = row.Cells["Phone"].Value.ToString()
+            };
+            var Form = new BranchForm((int)FormMode.View, branchDTO, customGrid);
+            Form.Show();
 
-                var branchDTO = new BranchDTO
-                {
-                    BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
-                    Name = row.Cells["Name"].Value.ToString(),
-                    Location = row.Cells["Location"].Value.ToString(),
-                    Phone = row.Cells["Phone"].Value.ToString()
-                };
-                var Form = new BranchForm((int)FormMode.View, branchDTO, customGrid);
-                Form.Show();
+        }
 
-            }
+        private void DeleteRow(DataGridView grid, int rowIndex)
+        {
+            int branchID = Convert.ToInt32(grid.Rows[rowIndex].Cells["BranchID"].Value);
 
-            private void DeleteRow(DataGridView grid, int rowIndex)
+           
+            try
             {
-                int branchID = Convert.ToInt32(grid.Rows[rowIndex].Cells["BranchID"].Value);
-                branch.DeleteBranch(branchID);
                 if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
+                    branch.DeleteBranch(branchID);
                     BindingList<BranchDTO> branches = new BindingList<BranchDTO>(branch.GetBranches(null));
                     customGrid.DataSource = branches;
                 }
+               
+            }
+            catch  {
+                
+                MessageBox.Show("Sorry, you can't delete this row because it has dependent relationships.", "Failed");
+
+                
             }
 
+        }
 
-            internal void LoadData() // load viewing data 
-            {
-                var data = branch.GetBranches(null);
-                customGrid.DataSource = data;
-                customGrid.Refresh();
-            }
+        internal void LoadData() // load viewing data 
+        {
+            var data = branch.GetBranches(null);
+            customGrid.DataSource = data;
+            customGrid.Refresh();
+        }
+
 
     }
-
-
- }
+}
 
 

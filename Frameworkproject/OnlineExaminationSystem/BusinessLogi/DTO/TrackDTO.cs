@@ -11,6 +11,5 @@ namespace BusinessLogi.DTO
         public int TrackID { get; set; }
         public string Name { get; set; }
         public string Department { get; set; }
-        public int Track_ID { get; internal set; }
     }
 }

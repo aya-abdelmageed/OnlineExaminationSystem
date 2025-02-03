@@ -113,12 +113,21 @@ namespace UI.AdminDashboard
         private void DeleteRow(DataGridView grid, int rowIndex)
         {
             int TrackID = Convert.ToInt32(grid.Rows[rowIndex].Cells["TrackID"].Value);
-            track.DeleteTrack(TrackID);
-            if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            try
             {
-                BindingList<TrackDTO> tracks = new BindingList<TrackDTO>(track.GetTracks(null));
-                customGrid.DataSource = tracks;
+                if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    track.DeleteTrack(TrackID);
+
+                    BindingList<TrackDTO> tracks = new BindingList<TrackDTO>(track.GetTracks(null));
+                    customGrid.DataSource = tracks;
+                }
             }
+            catch
+            {
+                MessageBox.Show("Sorry, you can't delete this row because it has dependent relationships.", "Failed");
+            }
+
         }
 
         private void LoadData() // load viewing data 

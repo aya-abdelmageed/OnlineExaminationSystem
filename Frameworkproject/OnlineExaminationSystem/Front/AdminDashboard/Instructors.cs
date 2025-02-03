@@ -102,12 +102,22 @@ namespace UI.AdminDashboard
         private void DeleteRow(DataGridView grid, int rowIndex)
         {
             int ins_id = (int)grid.Rows[rowIndex].Cells["InstructorID"].Value;
-            instructorRepo.DeleteInstructor(ins_id);
-            if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            try
             {
-                BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors());
-                customGrid.DataSource = instructors;
+                if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    instructorRepo.DeleteInstructor(ins_id);
+
+                    BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors());
+                    customGrid.DataSource = instructors;
+                }
             }
+            catch
+            {
+                MessageBox.Show("Sorry, you can't delete this row because it has dependent relationships.", "Failed");
+
+            }
+
         }
 
         private void LoadData() // load viewing data 

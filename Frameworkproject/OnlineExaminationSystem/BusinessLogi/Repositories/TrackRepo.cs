@@ -4,13 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLogi.Repositories
 {
     public class TrackRepo
     {
         private readonly DBManager _dbManager;
-
         public TrackRepo()
         {
             _dbManager = new DBManager();
@@ -19,16 +21,15 @@ namespace BusinessLogi.Repositories
         {
             DataTable resultTable;
             SqlParameter[] parameters = new[] {
-                new SqlParameter("@Track_ID", SqlDbType.Int) { Value = trackid } 
+                new SqlParameter("@Track_ID", SqlDbType.Int) { Value = trackid }
             };
             try
             {
                 resultTable = _dbManager.ExecuteStoredProcedure("SelectAllFromTrack", parameters);
-
             }
             catch (Exception ex)
             {
-                throw new Exception("Error fetching tracks", ex);
+                throw new Exception("Error getting tracks", ex);
             }
             List<TrackDTO> tracks = new List<TrackDTO>();
             foreach (DataRow row in resultTable.Rows)
@@ -43,7 +44,6 @@ namespace BusinessLogi.Repositories
             }
             return tracks;
         }
-
         public void InsertTrack(TrackDTO track)
         {
             try
@@ -60,7 +60,6 @@ namespace BusinessLogi.Repositories
                 throw new Exception("Error inserting track", ex);
             }
         }
-
         public void UpdateTrack(TrackDTO track)
         {
             try
@@ -78,7 +77,6 @@ namespace BusinessLogi.Repositories
                 throw new Exception("Error updating track", ex);
             }
         }
-
         public void DeleteTrack(int trackID)
         {
             try
