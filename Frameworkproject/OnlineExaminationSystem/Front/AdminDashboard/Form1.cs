@@ -16,7 +16,6 @@ namespace UI.AdminDashboard
         public enum FormMode { View, Edit, Add }
         public Form1()
         {
-
             InitializeComponent();
         }
         public void ShowForm(Form form)
@@ -109,6 +108,7 @@ namespace UI.AdminDashboard
             ShowForm(new Reports());
         }
 
+
         public void AddActions(DataGridView customGrid)
         {
             //Load icons once for performance optimization
@@ -117,6 +117,7 @@ namespace UI.AdminDashboard
             var deleteIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\trash.png"));
 
             // *Create Edit Action Column*
+
             var editColumn = new DataGridViewImageColumn
             {
                 Name = "EditAction",
@@ -126,6 +127,7 @@ namespace UI.AdminDashboard
             };
 
             // *Create View Action Column*
+
             var viewColumn = new DataGridViewImageColumn
             {
                 Name = "ViewAction",
@@ -135,6 +137,7 @@ namespace UI.AdminDashboard
             };
 
             // *Create Delete Action Column*
+
             var deleteColumn = new DataGridViewImageColumn
             {
                 Name = "DeleteAction",
@@ -144,11 +147,13 @@ namespace UI.AdminDashboard
             };
 
             // Add the columns to the grid
+
             customGrid.Columns.Add(viewColumn);
             customGrid.Columns.Add(editColumn);
             customGrid.Columns.Add(deleteColumn);
 
             // *Set Cell Formatting to Display Icons*
+
             customGrid.CellFormatting += (s, e) =>
             {
                 if (e.RowIndex >= 0)
@@ -168,7 +173,9 @@ namespace UI.AdminDashboard
                 }
             };
 
+
             // *Set Column Width and Minimum Width*
+
             customGrid.Columns["EditAction"].MinimumWidth = 20;
             customGrid.Columns["ViewAction"].MinimumWidth = 20;
             customGrid.Columns["DeleteAction"].MinimumWidth = 20;
@@ -224,7 +231,7 @@ namespace UI.AdminDashboard
             // Create the Panel for search
             Panel searchPanel = new Panel
             {
-                Location = new Point((this.ClientSize.Width - 600) / 2, 150), // Below the grid
+                Location = new Point((this.ClientSize.Width -600) / 2, 150), // Below the grid
                 Size = new Size(600, 30),
                 BackColor = Color.White,
                 BorderStyle = BorderStyle.None, // Remove default border
@@ -344,6 +351,7 @@ namespace UI.AdminDashboard
                 Alignment = DataGridViewContentAlignment.MiddleCenter
             };
             // Set alternating rows style
+
 
 
 

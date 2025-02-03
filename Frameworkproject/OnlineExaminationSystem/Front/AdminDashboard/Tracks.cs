@@ -2,6 +2,7 @@
 using BusinessLogi.Repositories;
 using BusinessLogic.Repositories;
 using Front.popUpForms;
+using Nest;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,8 +24,10 @@ namespace UI.AdminDashboard
         public Tracks(int _mode)
         {
             track = new TrackRepo();
+
             //this.AutoScaleMode = AutoScaleMode.Dpi;
             //this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
+
             this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();
@@ -32,19 +35,27 @@ namespace UI.AdminDashboard
             addbutton.Text = "Add Track";
             addbutton.Click += (s, e) =>
             {
+                var newForm = new TrackForm((int)FormMode.Add, data: customGrid);
+
                 var newForm = new TrackForm((int)FormMode.Add,data:customGrid);
+
                 newForm.Show();
 
             };
             LoadData();
             AddActions(customGrid);
+
+            // **Handle Click Events with Dynamic Detection**
+
             // Handle Click Events with Dynamic Detection
             customGrid.CellMouseClick += (s, e) =>
             {
                 HandleActionClick(customGrid, e);
             };
 
+
         }
+
 
 
 
@@ -67,7 +78,11 @@ namespace UI.AdminDashboard
             }
         }
 
-        // **Functions to Perform Actions**
+
+
+
+
+        // *Functions to Perform Actions*
         private void EditRow(DataGridViewRow row)
         {
             TrackDTO track = new TrackDTO
@@ -76,7 +91,9 @@ namespace UI.AdminDashboard
                 Name = row.Cells["Name"].Value.ToString(),
                 Department = row.Cells["Department"].Value.ToString()
             };
+
             var Form = new TrackForm((int)FormMode.Edit,track,customGrid);
+
             Form.Show();
         }
 
@@ -88,7 +105,9 @@ namespace UI.AdminDashboard
                 Name = row.Cells["Name"].Value.ToString(),
                 Department = row.Cells["Department"].Value.ToString()
             };
+
             var Form = new TrackForm((int)FormMode.View,track, customGrid);
+
             Form.Show();
         }
 
@@ -105,7 +124,9 @@ namespace UI.AdminDashboard
 
         private void LoadData() // load viewing data 
         {
+
             var data = track.GetTracks(null);   
+
             customGrid.DataSource = data;
         }
 

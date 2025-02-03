@@ -53,16 +53,21 @@ namespace UI.AdminDashboard
             if (e.RowIndex < 0)
                 return;
 
+
             if (e.ColumnIndex == customGrid.Columns["EditAction"].Index)
             {
+                Console.WriteLine("Edit icon clicked!"); // Debugging
                 EditRow(customGrid.Rows[e.RowIndex]);
             }
             else if (e.ColumnIndex == customGrid.Columns["ViewAction"].Index)
             {
+                Console.WriteLine("View icon clicked!"); // Debugging
                 ViewRow(customGrid.Rows[e.RowIndex]);
-            }
+ 
             else if (e.ColumnIndex == customGrid.Columns["DeleteAction"].Index)
+
             {
+                Console.WriteLine("Delete icon clicked!"); // Debugging
                 DeleteRow(customGrid, e.RowIndex);
             }
         }

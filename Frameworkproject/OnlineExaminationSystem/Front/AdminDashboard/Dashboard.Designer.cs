@@ -74,12 +74,13 @@ namespace UI.AdminDashboard
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(19, 13);
+            this.pictureBox4.Location = new System.Drawing.Point(23, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(48, 48);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label5
             // 
@@ -101,22 +102,24 @@ namespace UI.AdminDashboard
             this.label6.Size = new System.Drawing.Size(212, 32);
             this.label6.TabIndex = 0;
             this.label6.Text = "Total Students";
+            this.label6.Click += new System.EventHandler(this.label6_Click_1);
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(978, 82);
+            this.panel4.Location = new System.Drawing.Point(920, 82);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(279, 94);
             this.panel4.TabIndex = 8;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(21, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(27, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(48, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -125,10 +128,11 @@ namespace UI.AdminDashboard
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(644, 82);
+            this.panel3.Location = new System.Drawing.Point(600, 82);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(279, 94);
             this.panel3.TabIndex = 7;
@@ -178,10 +182,11 @@ namespace UI.AdminDashboard
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(297, 82);
+            this.panel2.Location = new System.Drawing.Point(285, 82);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(279, 94);
             this.panel2.TabIndex = 6;
@@ -190,7 +195,7 @@ namespace UI.AdminDashboard
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(9, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -280,6 +285,7 @@ namespace UI.AdminDashboard
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.panel5.Controls.Add(this.checkBox1);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.textBox2);
