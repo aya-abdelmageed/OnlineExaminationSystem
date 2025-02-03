@@ -4,13 +4,13 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-    namespace DataAccess
+namespace DataAccess
     {
         public class DBManager
         {
-        
-        string _connectionString = "Data Source=DESKTOP-OGJ98U8\\TEW_SQLEXPRESS;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
 
+        string _connectionString = "Data Source=DESKTOP-PAJ6AIB\\SQLEXPRESS;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"
+;
         // Constructor that takes the connection string as a parameter
         public DBManager()
         {
