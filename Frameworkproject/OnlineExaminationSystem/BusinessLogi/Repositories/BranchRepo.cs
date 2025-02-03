@@ -22,14 +22,8 @@ namespace BusinessLogi.Repositories
         public List<BranchDTO> GetBranches(int? Branch_ID)
         {
             string procedureName = "SelectAllFromBranch";
-            var parameters = new[]
-            {
-             new SqlParameter("@Branch_ID", SqlDbType.Int)
-            {
-            Value = (object)@Branch_ID ?? DBNull.Value
-            }
-            };
             DataTable result;
+            var parameters = new[]{ new SqlParameter("@Branch_ID", SqlDbType.Int) {Value = Branch_ID} };
             try
             {
                 result = _dbManager.ExecuteStoredProcedure(procedureName, parameters); 
@@ -70,7 +64,7 @@ namespace BusinessLogi.Repositories
                 throw new Exception("Error inserting Branch into the database.", ex);
             }
         }
-        public int UpdateBranch(BranchDTO branch)
+        public void UpdateBranch(BranchDTO branch)
         {
             string procedureName = "UpdateBranch";
             var parameters = new[]
@@ -82,23 +76,23 @@ namespace BusinessLogi.Repositories
             };
             try
             {
-                return _dbManager.ExecuteNonQuery(procedureName, parameters);
+                 _dbManager.ExecuteStoredProcedure(procedureName, parameters);
             }
             catch (Exception ex)
             {
                 throw new Exception("Error updating Branch in the database.", ex);
             }
         }
-        public int DeleteBranch(int branchID)
+        public void DeleteBranch(int branchID)
         {
             string procedureName = "DeleteFromBranch";
             var parameters = new[]
             {
-                new SqlParameter("@branchID", SqlDbType.Int) { Value = branchID }
+                new SqlParameter("@branch_ID", SqlDbType.Int) { Value = branchID }
             };
             try
             {
-                return _dbManager.ExecuteNonQuery(procedureName, parameters);
+                 _dbManager.ExecuteStoredProcedure(procedureName, parameters);
             }
             catch (Exception ex)
             {

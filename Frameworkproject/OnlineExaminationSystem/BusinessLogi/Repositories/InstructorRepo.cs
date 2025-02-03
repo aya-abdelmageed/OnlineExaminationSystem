@@ -42,7 +42,8 @@ namespace BusinessLogic.Repositories
                     Email = row.Field<string>("Email"),
                     MName = row.Field<string>("MName"),
                     age = row.Field<int>("Age"),
-                    Gender = row.Field<string>("gender")
+                    Gender = row.Field<string>("gender"),
+                    Salary = (double)row.Field<decimal>("Salary")
                 };
                 instructors.Add(instructor);
             }

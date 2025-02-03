@@ -85,7 +85,7 @@ namespace BusinessLogi.Repositories
                     new SqlParameter("@Course_ID", SqlDbType.Int) { Value = course.ID },
                     new SqlParameter("@Course_Name", SqlDbType.VarChar) { Value = course.Name }
                 };
-                reslut = _dbManager.ExecuteStoredProcedure(procdureName, null);
+                reslut = _dbManager.ExecuteStoredProcedure(procdureName, parameters);
             }
             catch (Exception ex)
             {
