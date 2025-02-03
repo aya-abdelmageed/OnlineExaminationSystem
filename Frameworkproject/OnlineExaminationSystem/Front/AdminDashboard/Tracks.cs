@@ -29,7 +29,7 @@ namespace UI.AdminDashboard
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();
             addbutton = GenerateCustomButton();
-            addbutton.Text = "Add Branch";
+            addbutton.Text = "Add Track";
             addbutton.Click += (s, e) =>
             {
                 var newForm = new TrackForm((int)FormMode.Add,data:customGrid);

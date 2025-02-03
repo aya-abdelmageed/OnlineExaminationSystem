@@ -33,7 +33,7 @@ namespace UI.AdminDashboard
             addbutton.Text = "Add Student";
             addbutton.Click += (s, e) =>
             {
-                var newForm = new StudentesForm((int)FormMode.View);
+                var newForm = new StudentesForm((int)FormMode.Add,data:customGrid);
                 newForm.Show();
 
             };
@@ -104,8 +104,6 @@ namespace UI.AdminDashboard
             };
             var Form = new  StudentesForm((int)FormMode.Edit,studentDTO,customGrid) ;
             Form.Show();
-            MessageBox.Show($"Edit clicked for row {row.Index}");
-            // Add edit logic here
         }
 
         private void ViewRow(DataGridViewRow row)
@@ -113,19 +111,16 @@ namespace UI.AdminDashboard
             StudentDTO studentDTO = (StudentDTO)row.DataBoundItem;
             var Form = new StudentesForm((int)FormMode.View, studentDTO, customGrid);
             Form.Show();
-            MessageBox.Show($"View clicked for row {row.Index}");
-            // Add view logic here
         }
 
         private void DeleteRow(DataGridView grid, int rowIndex)
         {
             int id = (int)grid.Rows[rowIndex].Cells["StudentID"].Value;
-            studentRepo.DeleteStudent(id);
             if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                studentRepo.DeleteStudent(id);
                 BindingList<StudentDTO> students = new BindingList<StudentDTO>(studentRepo.GetStudents(null));
                 customGrid.DataSource = students;
-                MessageBox.Show($"Row {rowIndex} deleted.");
             }
         }
 

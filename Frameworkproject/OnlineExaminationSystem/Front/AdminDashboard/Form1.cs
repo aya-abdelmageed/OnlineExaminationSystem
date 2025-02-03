@@ -112,8 +112,8 @@ namespace UI.AdminDashboard
         public void AddActions(DataGridView customGrid)
         {
             //Load icons once for performance optimization
-            var editIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\1.png"));
-            var viewIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\edit.png"));
+            var editIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\edit.png"));
+            var viewIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\1.png"));
             var deleteIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\trash.png"));
 
             // *Create Edit Action Column*
@@ -144,8 +144,8 @@ namespace UI.AdminDashboard
             };
 
             // Add the columns to the grid
-            customGrid.Columns.Add(editColumn);
             customGrid.Columns.Add(viewColumn);
+            customGrid.Columns.Add(editColumn);
             customGrid.Columns.Add(deleteColumn);
 
             // *Set Cell Formatting to Display Icons*

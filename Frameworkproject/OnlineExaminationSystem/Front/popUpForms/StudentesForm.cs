@@ -41,7 +41,7 @@ namespace Front.popUpForms
             // Set the StudentId if provided (for edit mode)
             if(student != null)
                 StudentId = student.StudentID;
-              
+            studentIdTextBox.Visible = false;
             // Pre-fill the form with the passed values if it's in edit mode
             if (mode == (int)FormMode.Edit)
             {
@@ -53,6 +53,7 @@ namespace Front.popUpForms
                 phoneTextBox.Text = student.Phone;
                 birthdatePicker.Value = student.Birthdate;
                 trackIdTextBox.Text = student.trackID.ToString();
+                firstNameTextBox.Text = student.FName;
                 submitButton.Text = "Save Changes";
             }
             else if(mode == (int)FormMode.Add)
@@ -62,8 +63,8 @@ namespace Front.popUpForms
             else
             {
                 studentIdTextBox.Text = StudentId.ToString();
-                genderComboBox.SelectedItem = student.Gender == "M" ? "Male" :
-                                              student.Gender == "F" ? "Female" : "Other"; firstNameTextBox.Text = FirstName;
+                genderComboBox.SelectedItem = student.Gender == "M" ? "Male" : student.Gender == "F" ? "Female" : "Other"; 
+                firstNameTextBox.Text = student.FName;
                 middleNameTextBox.Text = student.MName;
                 lastNameTextBox.Text = student.LName;
                 phoneTextBox.Text = student.Phone;
@@ -93,7 +94,7 @@ namespace Front.popUpForms
                 Location = new System.Drawing.Point(50, 20),
                 Size = new System.Drawing.Size(100, 20)
             };
-
+            studentIdLabel.Visible = false;
             Label genderLabel = new Label
             {
                 Text = "Gender:",

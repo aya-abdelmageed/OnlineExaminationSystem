@@ -29,7 +29,7 @@ namespace UI.AdminDashboard
             {
                 CourseId = course.ID;
             }
-
+            courseIdTextBox.Visible = false;
             // Pre-fill the form with the passed values if it's in edit mode
             switch(mode)
             {
@@ -63,7 +63,7 @@ namespace UI.AdminDashboard
                 Location = new System.Drawing.Point(50, 20),
                 Size = new System.Drawing.Size(100, 20)
             };
-
+            courseIdLabel.Visible = false;
             Label courseNameLabel = new Label
             {
                 Text = "Course Name:",

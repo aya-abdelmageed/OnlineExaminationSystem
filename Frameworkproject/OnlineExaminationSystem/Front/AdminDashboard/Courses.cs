@@ -32,7 +32,7 @@ namespace UI.AdminDashboard
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();
             addbutton = GenerateCustomButton();
-            addbutton.Text = "Add Branch";
+            addbutton.Text = "Add Course";
             addbutton.Click += (s, e) =>
             {
                 var newForm = new CoursesForm((int)FormMode.Add,data:customGrid);

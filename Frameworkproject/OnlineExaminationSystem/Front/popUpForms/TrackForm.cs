@@ -164,9 +164,7 @@ namespace Front.popUpForms
             }
             // Close the form after saving
             this.DialogResult = DialogResult.OK;
-
-            //Tracks tracks = new Tracks();   
-            //this.Hide();
+            this.Close();
         }
     }
 }

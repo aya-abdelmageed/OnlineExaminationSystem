@@ -44,6 +44,7 @@ namespace Front.popUpForms
             instructorRepo = new InstructorRepo();
             this.data = data;
             this.mode = mode;
+            instructorIdTextBox.Visible = false;
             // Pre-fill the form with the passed values if it's in edit mode
             switch (mode)
             {
@@ -100,7 +101,7 @@ namespace Front.popUpForms
                 Location = new System.Drawing.Point(50, 20),
                 Size = new System.Drawing.Size(100, 20)
             };
-
+            instructorIdLabel.Visible = false;
             Label firstNameLabel = new Label
             {
                 Text = "First Name:",
@@ -296,13 +297,12 @@ namespace Front.popUpForms
                 BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors());
                 data.DataSource = instructors;
                 MessageBox.Show($"New instructor added: {FirstName}, {MiddleName}, {LastName}, {Email}");
-
+            }
                 // Close the form after saving
                 this.DialogResult = DialogResult.OK;
                 //Instructors instructors = new Instructors();
                 //instructors.Show();
-                this.Hide();
+                this.Close();
             }
-        }
     }
 }
