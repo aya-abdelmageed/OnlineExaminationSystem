@@ -1,60 +1,106 @@
 ﻿using BusinessLogi.Repositories;
-using BusinessLogic.Repositories;
-
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
 namespace UI.AdminDashboard
 {
-
     public partial class Branches : Form1
     {
         private BranchRepo branch;
         private DataGridView customGrid;
         private Button addbutton;
+        private TextBox searchBox;
 
-        public Branches() 
-         {
-
-            branch = new BranchRepo();  
+        public Branches()
+        {
+            branch = new BranchRepo();
             this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
-            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
-            customGrid = InitializeCustomGrid();
-            GenerateCustomSearch();     
-            addbutton = GenerateCustomButton();  
-            addbutton.Text = "Add Branch";
-            addbutton.Click += (s, e) =>
-            {
-                var newForm = new BranchForm();
-                newForm.Show();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.ClientSize = new Size(1324, 600);
 
-            };
+            // Initialize UI elements
+            customGrid = InitializeCustomGrid();
+            addbutton = GenerateCustomButton();
+            searchBox = GenerateSearchBox();
+
+            // Add UI elements to form
+            this.Controls.Add(addbutton);
+            this.Controls.Add(searchBox);
+            this.Controls.Add(customGrid);
+
             LoadData();
             AddActions(customGrid);
             customGrid.CellClick += (s, e) => HandleActionClick(customGrid, e);
-
         }
 
+        private TextBox GenerateSearchBox()
+        {
+            TextBox searchBox = new TextBox
+            {
+                Location = new Point(addbutton.Location.X - 680, addbutton.Location.Y + 4),
+                Size = new Size(650, 100)
+            };
 
-        
+            // Placeholder text workaround
+            searchBox.Text = "Search by ID, Name, or Location...";
+            searchBox.ForeColor = Color.Gray;
+
+            searchBox.GotFocus += (s, e) =>
+            {
+                if (searchBox.Text == "Search by ID, Name, or Location...")
+                {
+                    searchBox.Text = "";
+                    searchBox.ForeColor = Color.Black;
+                }
+            };
+
+            searchBox.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(searchBox.Text))
+                {
+                    searchBox.Text = "Search by ID, Name, or Location...";
+                    searchBox.ForeColor = Color.Gray;
+                }
+            };
+
+            searchBox.TextChanged += (s, e) => SearchBranches(searchBox.Text);
+            return searchBox;
+        }
+
+        private void SearchBranches(string searchText)
+        {
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                LoadData();
+                return;
+            }
+
+            int? branchId = null;
+            if (int.TryParse(searchText, out int parsedId))
+            {
+                branchId = parsedId;
+                customGrid.DataSource = branch.GetBranches(branchId);
+                return;
+            }
+
+            var byName = branch.SearchBranchByName(searchText);
+            var byLocation = branch.SearchBranchByLocation(searchText);
+
+            var combinedResults = byName.Concat(byLocation).Distinct().ToList();
+            customGrid.DataSource = combinedResults;
+        }
 
         private void HandleActionClick(DataGridView customGrid, DataGridViewCellEventArgs e)
         {
-            // Ensure the clicked column is "Actions" and row is valid
             if (customGrid.Columns[e.ColumnIndex].Name != "Actions" || e.RowIndex < 0)
                 return;
 
-            // Get the click position inside the cell
             int clickX = customGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false).X;
             int mouseX = customGrid.PointToClient(Cursor.Position).X;
             int relativeX = mouseX - clickX;
 
-            // Identify which icon was clicked
             if (relativeX >= 0 && relativeX < 30)
             {
                 EditRow(customGrid.Rows[e.RowIndex]);
@@ -69,19 +115,16 @@ namespace UI.AdminDashboard
             }
         }
 
-        // **Functions to Perform Actions**
         private void EditRow(DataGridViewRow row)
         {
             var Form = new BranchForm();
             Form.Show();
             MessageBox.Show($"Edit clicked for row {row.Index}");
-            // Add edit logic here
         }
 
         private void ViewRow(DataGridViewRow row)
         {
             MessageBox.Show($"View clicked for row {row.Index}");
-            // Add view logic here
         }
 
         private void DeleteRow(DataGridView grid, int rowIndex)
@@ -92,12 +135,11 @@ namespace UI.AdminDashboard
                 MessageBox.Show($"Row {rowIndex} deleted.");
             }
         }
-      
-        private void LoadData() // load viewing data 
-        {
-           var data = branch.GetBranches(null);
-          customGrid.DataSource = data;
-        }
 
+        private void LoadData()
+        {
+            var data = branch.GetBranches(null);
+            customGrid.DataSource = data;
+        }
     }
 }

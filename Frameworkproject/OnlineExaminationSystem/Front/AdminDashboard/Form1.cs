@@ -16,6 +16,9 @@ namespace UI.AdminDashboard
 
         public Form1()
         {
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
+            this.ClientSize = new Size(1324, 657); // Set exact size (same as in the Designer)
             InitializeComponent();
         }
         public void ShowForm(Form form)
@@ -355,6 +358,11 @@ namespace UI.AdminDashboard
 
             ShowForm(new Tracks());
 
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
