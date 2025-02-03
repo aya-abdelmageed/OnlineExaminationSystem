@@ -17,12 +17,15 @@ namespace BusinessLogi.Repositories
         {
             _dbManager = new DBManager();
         }
-        public List<TrackDTO> GetTracks()
+        public List<TrackDTO> GetTracks(int? trackid)
         {
             DataTable resultTable;
+            SqlParameter[] parameters = new[] {
+                new SqlParameter("@Track_ID", SqlDbType.Int) { Value = trackid } 
+            };
             try
             {
-                resultTable = _dbManager.ExecuteStoredProcedure("GetTracks", null);
+                resultTable = _dbManager.ExecuteStoredProcedure("SelectAllFromTrack", parameters);
             }
             catch (Exception ex)
             {
@@ -33,8 +36,8 @@ namespace BusinessLogi.Repositories
             {
                 TrackDTO track = new TrackDTO
                 {
-                    TrackID = Convert.ToInt32(row["TrackID"]),
-                    Name = row["Name"].ToString(),
+                    TrackID = Convert.ToInt32(row["Track_ID"]),
+                    Name = row["Track_Name"].ToString(),
                     Department = row["Department"].ToString()
                 };
                 tracks.Add(track);
@@ -47,7 +50,7 @@ namespace BusinessLogi.Repositories
             {
                 var parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@Name", SqlDbType.VarChar) { Value = track.Name },
+                    new SqlParameter("@Track_Name", SqlDbType.VarChar) { Value = track.Name },
                     new SqlParameter("@Department", SqlDbType.VarChar) { Value = track.Department }
                 };
                 _dbManager.ExecuteNonQuery("InsertTrack", parameters);
@@ -63,8 +66,8 @@ namespace BusinessLogi.Repositories
             {
                 var parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@TrackID", SqlDbType.Int) { Value = track.TrackID },
-                    new SqlParameter("@Name", SqlDbType.VarChar) { Value = track.Name },
+                    new SqlParameter("@Track_ID", SqlDbType.Int) { Value = track.TrackID },
+                    new SqlParameter("@Track_Name", SqlDbType.VarChar) { Value = track.Name },
                     new SqlParameter("@Department", SqlDbType.VarChar) { Value = track.Department }
                 };
                 _dbManager.ExecuteNonQuery("UpdateTrack", parameters);
@@ -80,9 +83,9 @@ namespace BusinessLogi.Repositories
             {
                 var parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@TrackID", SqlDbType.Int) { Value = trackID }
+                    new SqlParameter("@Track_ID", SqlDbType.Int) { Value = trackID }
                 };
-                _dbManager.ExecuteNonQuery("DeleteTrack", parameters);
+                _dbManager.ExecuteNonQuery("DeleteFromTrack", parameters);
             }
             catch (Exception ex)
             {

@@ -12,25 +12,25 @@ namespace Front
 {
     internal static class Program
     {
-        [DllImport("user32.dll")]
-        private static extern bool SetProcessDPIAware();
+        //[DllImport("user32.dll")]
+        //private static extern bool SetProcessDPIAware();
 
         [STAThread]
         static void Main()
         {
-            if (Environment.OSVersion.Version.Major >= 6)
-                SetProcessDPIAware();  // Forces DPI awareness
+            //if (Environment.OSVersion.Version.Major >= 6)
+            //    SetProcessDPIAware();  // Forces DPI awareness
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
 
-            // Setup Dependency Injection
+            //// Setup Dependency Injection
             var serviceProvider = ConfigureServices();
 
-            // Resolve the main form from the DI container
+            //// Resolve the main form from the DI container
             var form1 = serviceProvider.GetRequiredService<Form1>();
 
-            // Run the application
+            //// Run the application
             Application.Run(form1);
         }
 

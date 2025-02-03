@@ -1,12 +1,15 @@
-﻿using BusinessLogi.Repositories;
+﻿using BusinessLogi.DTO;
+using BusinessLogi.Repositories;
 using BusinessLogic.Repositories;
 
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace UI.AdminDashboard
 {
@@ -21,8 +24,8 @@ namespace UI.AdminDashboard
          {
 
             branch = new BranchRepo();  
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
+            //this.AutoScaleMode = AutoScaleMode.Dpi;
+            //this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
             this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
             GenerateCustomSearch();     
@@ -30,48 +33,39 @@ namespace UI.AdminDashboard
             addbutton.Text = "Add Branch";
             addbutton.Click += (s, e) =>
             {
-                var newForm = new BranchForm();
+                var newForm = new BranchForm((int)FormMode.Add, null,customGrid);
                 newForm.Show();
 
             };
             LoadData();
             AddActions(customGrid);
-            customGrid.CellClick += (s, e) => HandleActionClick(customGrid, e);
-
+            // Handle Click Events with Dynamic Detection
+            customGrid.CellMouseClick += (s, e) =>
+            {
+                HandleActionClick(customGrid, e);
+            };
         }
 
 
-        
 
-        private void HandleActionClick(DataGridView customGrid, DataGridViewCellEventArgs e)
+        private void HandleActionClick(DataGridView customGrid, DataGridViewCellMouseEventArgs e)
         {
-            // Ensure the clicked column is "Actions" and row is valid
-            if (customGrid.Columns[e.ColumnIndex].Name != "Actions" || e.RowIndex < 0)
+            if (e.RowIndex < 0)
                 return;
 
-            // Ensure the clicked column is "Actions" and row is valid
-            if (customGrid.Columns[e.ColumnIndex].Name != "Actions" || e.RowIndex < 0)
-                return;
 
-            // Get the cell's display rectangle and calculate relative X position
-            Rectangle cellRect = customGrid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, false);
-            int mouseX = customGrid.PointToClient(Cursor.Position).X;
-            int relativeX = mouseX - cellRect.Left;
-
-            Console.WriteLine($"Click Position: {relativeX}"); // Debugging click position
-
-            // Identify which icon was clicked
-            if (relativeX >= 0 && relativeX < 30)
+            if (e.ColumnIndex == customGrid.Columns["EditAction"].Index)
             {
                 Console.WriteLine("Edit icon clicked!"); // Debugging
                 EditRow(customGrid.Rows[e.RowIndex]);
             }
-            else if (relativeX >= 40 && relativeX < 70)
+            else if (e.ColumnIndex == customGrid.Columns["ViewAction"].Index)
             {
                 Console.WriteLine("View icon clicked!"); // Debugging
                 ViewRow(customGrid.Rows[e.RowIndex]);
-            }
-            else if (relativeX >= 80 && relativeX < 100) // Adjusted delete icon range
+ 
+            else if (e.ColumnIndex == customGrid.Columns["DeleteAction"].Index)
+
             {
                 Console.WriteLine("Delete icon clicked!"); // Debugging
                 DeleteRow(customGrid, e.RowIndex);
@@ -81,32 +75,50 @@ namespace UI.AdminDashboard
         // **Functions to Perform Actions**
         private void EditRow(DataGridViewRow row)
         {
-            var Form = new BranchForm();
+            var branchDTO = new BranchDTO
+            {
+                BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
+                Name = row.Cells["Name"].Value.ToString(),
+                Location = row.Cells["Location"].Value.ToString(),
+                Phone = row.Cells["Phone"].Value.ToString()
+            };
+            var Form = new BranchForm((int)FormMode.Edit,branchDTO, customGrid);
             Form.Show();
-            MessageBox.Show($"Edit clicked for row {row.Index}");
-            // Add edit logic here
         }
 
         private void ViewRow(DataGridViewRow row)
         {
-            MessageBox.Show($"View clicked for row {row.Index}");
-            // Add view logic here
+            var branchDTO = new BranchDTO
+            {
+                BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
+                Name = row.Cells["Name"].Value.ToString(),
+                Location = row.Cells["Location"].Value.ToString(),
+                Phone = row.Cells["Phone"].Value.ToString()
+            };
+            var Form = new BranchForm((int)FormMode.View, branchDTO, customGrid);
+            Form.Show();
         }
 
         private void DeleteRow(DataGridView grid, int rowIndex)
         {
+            int branchID = Convert.ToInt32(grid.Rows[rowIndex].Cells["BranchID"].Value);
+            branch.DeleteBranch(branchID);
             if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                grid.Rows.RemoveAt(rowIndex);
-                MessageBox.Show($"Row {rowIndex} deleted.");
+                BindingList<BranchDTO> branches = new BindingList<BranchDTO>(branch.GetBranches(null));
+                customGrid.DataSource = branches;
             }
         }
       
-        private void LoadData() // load viewing data 
+        internal void LoadData() // load viewing data 
         {
            var data = branch.GetBranches(null);
-          customGrid.DataSource = data;
+           customGrid.DataSource = data;
+            customGrid.Refresh();
+        }
+       
         }
 
+
     }
-}
+

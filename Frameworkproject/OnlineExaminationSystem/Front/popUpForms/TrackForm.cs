@@ -1,6 +1,12 @@
-﻿using System;
+﻿using BusinessLogi.DTO;
+using BusinessLogi.Repositories;
+using Nest;
+using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 using UI.AdminDashboard;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
+using static UI.AdminDashboard.Form1;
 
 namespace Front.popUpForms
 {
@@ -10,30 +16,45 @@ namespace Front.popUpForms
         public int? TrackId { get; private set; }
         public string TrackName { get; private set; }
         public string Department { get; private set; }
-
+        private TrackRepo trackRepo;
         private TextBox trackIdTextBox;
         private TextBox trackNameTextBox;
         private TextBox departmentTextBox;
         private Button submitButton;
-
-        public TrackForm(int? trackId = null, string trackName = "", string department = "")
+        DataGridView data;
+        FormMode mode;
+        public TrackForm(int _mode,TrackDTO track = null,DataGridView data = null)
         {
             InitializeComponent2();
-
+            this.mode = (FormMode)_mode;
+            trackRepo = new TrackRepo();
+            this.data = data;
+            this.trackIdTextBox.Visible = false;
             // Set the TrackId if provided (for edit mode)
-            TrackId = trackId;
+            if (track != null)
+               TrackId = track.TrackID;
 
             // Pre-fill the form with the passed values if it's in edit mode
-            if (TrackId.HasValue)
+            switch (mode)
             {
-                trackIdTextBox.Text = TrackId.ToString();
-                trackNameTextBox.Text = trackName;
-                departmentTextBox.Text = department;
-                submitButton.Text = "Save Changes";
-            }
-            else
-            {
-                submitButton.Text = "Add Track";
+                case FormMode.Edit:
+                    trackIdTextBox.Text = TrackId.ToString();
+                    trackNameTextBox.Text = track.Name;
+                    departmentTextBox.Text = track.Department;
+                    submitButton.Text = "Save Changes";
+                    break;
+                case FormMode.Add:
+                    submitButton.Text = "Add Track";
+                    break;
+                default:
+                    trackIdTextBox.ReadOnly = true;
+                    trackNameTextBox.ReadOnly = true;
+                    departmentTextBox.ReadOnly = true;
+                    trackIdTextBox.Text = TrackId.ToString();
+                    trackNameTextBox.Text = track.Name;
+                    departmentTextBox.Text = track.Department;
+                    submitButton.Text = "Close";
+                    break;
             }
         }
 
@@ -49,7 +70,7 @@ namespace Front.popUpForms
                 Location = new System.Drawing.Point(50, 20),
                 Size = new System.Drawing.Size(100, 20)
             };
-
+            trackIdLabel.Visible = false;
             Label trackNameLabel = new Label
             {
                 Text = "Track Name:",
@@ -117,22 +138,33 @@ namespace Front.popUpForms
             }
 
             // If the ID exists, this is an edit, otherwise it is an insert
-            if (TrackId.HasValue)
+            if (mode == FormMode.Edit)
             {
                 // Code to update the track in the database
+                trackRepo.UpdateTrack(new TrackDTO
+                {
+                    TrackID = TrackId.Value,
+                    Name = TrackName,
+                    Department = Department
+                });
+                BindingList<TrackDTO> tracks = new BindingList<TrackDTO>(trackRepo.GetTracks(null));
+                data.DataSource = tracks;
                 MessageBox.Show($"Track {TrackId.Value} updated: {TrackName}, Department: {Department}");
             }
-            else
+            else if (mode == FormMode.Add)
             {
-                // Code to add a new track (insert logic)
+                trackRepo.InsertTrack(new TrackDTO
+                {
+                    Name = TrackName,
+                    Department = Department
+                });
+                BindingList<TrackDTO> tracks = new BindingList<TrackDTO>(trackRepo.GetTracks(null));
+                data.DataSource = tracks;
                 MessageBox.Show($"New track added: {TrackName}, Department: {Department}");
             }
-
             // Close the form after saving
             this.DialogResult = DialogResult.OK;
-
-            //Tracks tracks = new Tracks();   
-            //this.Hide();
+            this.Close();
         }
     }
 }
