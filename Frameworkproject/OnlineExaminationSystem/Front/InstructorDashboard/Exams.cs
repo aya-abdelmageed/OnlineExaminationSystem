@@ -29,8 +29,6 @@ namespace Front.InstructorDashboard
                 addbutton.Text = "Generate new Exam";
                 addbutton.Click += (s, e) =>
                 {
-                    var newForm = new BranchForm();
-                    newForm.Show();
 
                 };
                 GenerateCustomSearch();

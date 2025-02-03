@@ -21,7 +21,6 @@ namespace BusinessLogi.Repositories
         {
             string procedureName = "SelectAllFromBranch";
 
-            DataTable result;
             var parameters = new[]{ new SqlParameter("@Branch_ID", SqlDbType.Int) {Value = Branch_ID} };
 
             try

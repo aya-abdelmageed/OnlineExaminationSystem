@@ -37,7 +37,6 @@ namespace UI.AdminDashboard
             {
                 var newForm = new TrackForm((int)FormMode.Add, data: customGrid);
 
-                var newForm = new TrackForm((int)FormMode.Add,data:customGrid);
 
                 newForm.Show();
 

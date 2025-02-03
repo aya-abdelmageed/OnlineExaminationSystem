@@ -218,3 +218,5 @@ C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExamin
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.exe
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.pdb
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.popUpForms.InstructorForm.resources
+C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.InstructorDashboard.InstructorDashboard.resources
+C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.StudentDashboard.StudentDashboard.resources

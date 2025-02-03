@@ -40,19 +40,23 @@ namespace UI.AdminDashboard
             this.Controls.Add(searchBox);
             this.Controls.Add(customGrid);
 
-         
-     
+
+
             addbutton.Text = "Add Branch";
             addbutton.Click += (s, e) =>
             {
-                var newForm = new BranchForm((int)FormMode.Add, null,customGrid);
+                var newForm = new BranchForm((int)FormMode.Add, null, customGrid);
                 newForm.Show();
 
-
+            };
             LoadData();
             AddActions(customGrid);
 
-            customGrid.CellClick += (s, e) => HandleActionClick(customGrid, e);
+            // Handle Click Events with Dynamic Detection
+            customGrid.CellMouseClick += (s, e) =>
+            {
+                HandleActionClick(customGrid, e);
+            };
         }
 
         private TextBox GenerateSearchBox()
@@ -88,7 +92,7 @@ namespace UI.AdminDashboard
             searchBox.TextChanged += (s, e) => SearchBranches(searchBox.Text);
             return searchBox;
 
-          
+
         }
 
         private void SearchBranches(string searchText)
@@ -131,66 +135,67 @@ namespace UI.AdminDashboard
             {
                 Console.WriteLine("View icon clicked!"); // Debugging
                 ViewRow(customGrid.Rows[e.RowIndex]);
- 
-            else if (e.ColumnIndex == customGrid.Columns["DeleteAction"].Index)
 
+            }
+            else if (e.ColumnIndex == customGrid.Columns["DeleteAction"].Index)
             {
                 Console.WriteLine("Delete icon clicked!"); // Debugging
                 DeleteRow(customGrid, e.RowIndex);
+            
             }
         }
-
-        private void EditRow(DataGridViewRow row)
-        {
-            var branchDTO = new BranchDTO
+            private void EditRow(DataGridViewRow row)
             {
-                BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
-                Name = row.Cells["Name"].Value.ToString(),
-                Location = row.Cells["Location"].Value.ToString(),
-                Phone = row.Cells["Phone"].Value.ToString()
-            };
-            var Form = new BranchForm((int)FormMode.Edit,branchDTO, customGrid);
-            Form.Show();
+                var branchDTO = new BranchDTO
+                {
+                    BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
+                    Name = row.Cells["Name"].Value.ToString(),
+                    Location = row.Cells["Location"].Value.ToString(),
+                    Phone = row.Cells["Phone"].Value.ToString()
+                };
+                var Form = new BranchForm((int)FormMode.Edit, branchDTO, customGrid);
+                Form.Show();
 
 
-        }
-
-        private void ViewRow(DataGridViewRow row)
-        {
-
-            var branchDTO = new BranchDTO
-            {
-                BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
-                Name = row.Cells["Name"].Value.ToString(),
-                Location = row.Cells["Location"].Value.ToString(),
-                Phone = row.Cells["Phone"].Value.ToString()
-            };
-            var Form = new BranchForm((int)FormMode.View, branchDTO, customGrid);
-            Form.Show();
-
-        }
-
-        private void DeleteRow(DataGridView grid, int rowIndex)
-        {
-            int branchID = Convert.ToInt32(grid.Rows[rowIndex].Cells["BranchID"].Value);
-            branch.DeleteBranch(branchID);
-            if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                BindingList<BranchDTO> branches = new BindingList<BranchDTO>(branch.GetBranches(null));
-                customGrid.DataSource = branches;
             }
-        }
 
-      
-        internal void LoadData() // load viewing data 
-        {
-           var data = branch.GetBranches(null);
-           customGrid.DataSource = data;
-            customGrid.Refresh();
-        }
-       
-        }
+            private void ViewRow(DataGridViewRow row)
+            {
 
+                var branchDTO = new BranchDTO
+                {
+                    BranchID = Convert.ToInt32(row.Cells["BranchID"].Value),
+                    Name = row.Cells["Name"].Value.ToString(),
+                    Location = row.Cells["Location"].Value.ToString(),
+                    Phone = row.Cells["Phone"].Value.ToString()
+                };
+                var Form = new BranchForm((int)FormMode.View, branchDTO, customGrid);
+                Form.Show();
+
+            }
+
+            private void DeleteRow(DataGridView grid, int rowIndex)
+            {
+                int branchID = Convert.ToInt32(grid.Rows[rowIndex].Cells["BranchID"].Value);
+                branch.DeleteBranch(branchID);
+                if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    BindingList<BranchDTO> branches = new BindingList<BranchDTO>(branch.GetBranches(null));
+                    customGrid.DataSource = branches;
+                }
+            }
+
+
+            internal void LoadData() // load viewing data 
+            {
+                var data = branch.GetBranches(null);
+                customGrid.DataSource = data;
+                customGrid.Refresh();
+            }
 
     }
+
+
+ }
+
 
