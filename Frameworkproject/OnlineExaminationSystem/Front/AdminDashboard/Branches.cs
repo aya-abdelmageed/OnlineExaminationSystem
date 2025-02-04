@@ -73,6 +73,7 @@ namespace UI.AdminDashboard
                     LoadData();
 
                 }
+
             };
 
             customSearch.TextChanged += (s, e) => SearchBranches(customSearch.Text);

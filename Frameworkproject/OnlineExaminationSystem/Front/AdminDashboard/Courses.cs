@@ -28,7 +28,7 @@ namespace UI.AdminDashboard
             CourseRepo = new CourseRepo();
 
             //this.AutoScaleMode = AutoScaleMode.Dpi;
-            //this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
+            //this.AutoScaleDimensions = new SizeF(96F, 96F); // St it for 100% scaling
             this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
             customSearch = GenerateCustomSearch();

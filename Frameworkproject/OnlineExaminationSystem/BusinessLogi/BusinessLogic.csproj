@@ -176,6 +176,7 @@
     <Compile Include="DTO\CourseDTO.cs" />
     <Compile Include="DTO\ExamCardDTO.cs" />
     <Compile Include="DTO\ExamDTO.cs" />
+    <Compile Include="DTO\StudentExamDetialsDTO.cs" />
     <Compile Include="DTO\ExamQuestionsDTO.cs" />
     <Compile Include="DTO\ExamQuestionsStudentDTO.cs" />
     <Compile Include="DTO\ExamTrackDTO.cs" />
@@ -184,7 +185,10 @@
     <Compile Include="DTO\QuestionsChoicesDTO.cs" />
     <Compile Include="DTO\QuestionsDTO.cs" />
     <Compile Include="DTO\StudentDTO.cs" />
+    <Compile Include="DTO\StudentExamCardDTO.cs" />
     <Compile Include="DTO\StudentExamDTO.cs" />
+    <Compile Include="DTO\StudentExamQuestionDetailsDTO.cs" />
+    <Compile Include="DTO\StudentExamResultDTO.cs" />
     <Compile Include="DTO\TopicDTO.cs" />
     <Compile Include="DTO\TrackBranchDTO.cs" />
     <Compile Include="DTO\TrackDTO.cs" />

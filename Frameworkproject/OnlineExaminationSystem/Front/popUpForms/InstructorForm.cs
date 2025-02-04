@@ -1,6 +1,7 @@
 ﻿using BusinessLogi.DTO;
 using BusinessLogic.DTO;
 using BusinessLogic.Repositories;
+using Elasticsearch.Net;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -44,6 +45,7 @@ namespace Front.popUpForms
             instructorRepo = new InstructorRepo();
             this.data = data;
             this.mode = mode;
+            this.Size = new System.Drawing.Size(500, 400); // Width: 500px, Height: 400px
             instructorIdTextBox.Visible = false;
             // Pre-fill the form with the passed values if it's in edit mode
             switch (mode)

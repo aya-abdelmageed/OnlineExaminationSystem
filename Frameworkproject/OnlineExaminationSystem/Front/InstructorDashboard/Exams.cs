@@ -1,5 +1,6 @@
 ﻿using BusinessLogi.DTO;
 using BusinessLogi.Repositories;
+using Front.popUpForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,101 +30,79 @@ namespace Front.InstructorDashboard
                 addbutton.Text = "Generate new Exam";
                 addbutton.Click += (s, e) =>
                 {
-
+                    var form =  new GenerateExam();
+                    form.Show();
                 };
                 GenerateCustomSearch();
                 InitializeExamCards();
+                
             }
 
-      
-            private void InitializeExamCards()
+        private void InitializeExamCards()
+        {
+            // Create a scrollable panel
+            Panel scrollPanel = new Panel
             {
-            // Assuming the exams list is populated with data
-                List<ExamCardDTO> exams = new List<ExamCardDTO>
-                {
-                    new ExamCardDTO
-                    {
-                        Title = "Mathematics Exam",
-                        Description = "This is the Mathematics exam for 2025.",
-                        ExamDate = new DateTime(2025, 2, 2),
-                        StartTime = "9:00 AM",
-                        EndTime = "12:00 PM",
-                        NoTF = 10,
-                        NoMCQ = 20,
-                        MaxMarks = 100,
-                    },
-                    new ExamCardDTO
-                    {
-                        Title = "Physics Exam",
-                        Description = "This is the Physics exam for 2025.",
-                        ExamDate = new DateTime(2025, 2, 5),
-                        StartTime = "10:00 AM",
-                        EndTime = "1:00 PM",
-                        NoTF = 15,
-                        NoMCQ = 25,
-                        MaxMarks = 120,
-                    },
-                    new ExamCardDTO
-                    {
-                        Title = "Chemistry Exam",
-                        Description = "This is the Chemistry exam for 2025.",
-                        ExamDate = new DateTime(2025, 2, 7),
-                        StartTime = "8:00 AM",
-                        EndTime = "11:00 AM",
-                        NoTF = 12,
-                        NoMCQ = 18,
-                        MaxMarks = 90,
-                    },
-                    new ExamCardDTO
-                    {
-                        Title = "Biology Exam",
-                        Description = "This is the Biology exam for 2025.",
-                        ExamDate = new DateTime(2025, 2, 10),
-                        StartTime = "9:30 AM",
-                        EndTime = "12:30 PM",
-                        NoTF = 14,
-                        NoMCQ = 22,
-                        MaxMarks = 110,
-                    }
-                };
+                Location = new Point(230, 160), // Adjust position as needed
+                Size = new Size(750, 400), // Adjust size as needed
+                AutoScroll = true, // Enable scrolling
+                BorderStyle = BorderStyle.FixedSingle // Optional: Add a border
+            };
 
-              // Define the initial position for the first card
-                int xPosition, yPosition = 160;
-                int maxColumns = 2; // We want 2 cards per row
-                int padding = 10; // Padding between cards
-                int xOffset = 250;
+            this.Controls.Add(scrollPanel); // Add the panel to the form
 
-                // Loop through each exam and create a card
-                for (int i = 0; i < exams.Count; i++)
-                {
-                    CustomCard card = new CustomCard();
-                    card.SetCardData(
-                        title: exams[i].Title,
-                        description: exams[i].Description,
-                        examDate: exams[i].ExamDate,
-                        startTime: exams[i].StartTime,
-                        endTime: exams[i].EndTime,
-                        noTF: exams[i].NoTF,
-                        noMCQ: exams[i].NoMCQ,
-                        maxMarks: exams[i].MaxMarks
-                    );
+            List<ExamCardDTO> exams = new List<ExamCardDTO>
+            {
+                new ExamCardDTO { Title = "Mathematics Exam", Description = "Mathematics exam for 2025.", ExamDate = new DateTime(2025, 2, 2), StartTime = "9:00 AM", EndTime = "12:00 PM", NoTF = 10, NoMCQ = 20, MaxMarks = 100 },
+                new ExamCardDTO { Title = "Physics Exam", Description = "Physics exam for 2025.", ExamDate = new DateTime(2025, 2, 5), StartTime = "10:00 AM", EndTime = "1:00 PM", NoTF = 15, NoMCQ = 25, MaxMarks = 120 },
+                new ExamCardDTO { Title = "Chemistry Exam", Description = "Chemistry exam for 2025.", ExamDate = new DateTime(2025, 2, 7), StartTime = "8:00 AM", EndTime = "11:00 AM", NoTF = 12, NoMCQ = 18, MaxMarks = 90 },
+                new ExamCardDTO { Title = "Biology Exam", Description = "Biology exam for 2025.", ExamDate = new DateTime(2025, 2, 10), StartTime = "9:30 AM", EndTime = "12:30 PM", NoTF = 14, NoMCQ = 22, MaxMarks = 110 },
+                new ExamCardDTO { Title = "Mathematics Exam", Description = "Mathematics exam for 2025.", ExamDate = new DateTime(2025, 2, 2), StartTime = "9:00 AM", EndTime = "12:00 PM", NoTF = 10, NoMCQ = 20, MaxMarks = 100 },
+                new ExamCardDTO { Title = "Physics Exam", Description = "Physics exam for 2025.", ExamDate = new DateTime(2025, 2, 5), StartTime = "10:00 AM", EndTime = "1:00 PM", NoTF = 15, NoMCQ = 25, MaxMarks = 120 },
+                new ExamCardDTO { Title = "Chemistry Exam", Description = "Chemistry exam for 2025.", ExamDate = new DateTime(2025, 2, 7), StartTime = "8:00 AM", EndTime = "11:00 AM", NoTF = 12, NoMCQ = 18, MaxMarks = 90 },
+                new ExamCardDTO { Title = "Biology Exam", Description = "Biology exam for 2025.", ExamDate = new DateTime(2025, 2, 10), StartTime = "9:30 AM", EndTime = "12:30 PM", NoTF = 14, NoMCQ = 22, MaxMarks = 110 }
+            };
 
-                    // Calculate the horizontal position (first column or second column)
-                    xPosition = xOffset + ((i % maxColumns == 0)
-                        ? 0 // Position for the first card in a row (after xOffset)
-                        : card.Width + padding); // Position for the second card in a row (add some padding)
+            int xOffset = 20; // Offset for the initial position
+            int xPosition = xOffset, yPosition = 20; // Added offset to starting position
+            int maxColumns = 2;
+            int padding = 10;
+            int cardWidth = 350;
 
-                    // Adjust vertical position after every two cards
-                    if (i % maxColumns == 0 && i != 0)
-                    {
-                        yPosition += card.Height + padding; // Move down to the next row after 2 cards
-                    }
+            for (int i = 0; i < exams.Count; i++)
+            {
+                CustomCard card = new CustomCard();
+                card.SetCardData(
+                    title: exams[i].Title,
+                    description: exams[i].Description,
+                    examDate: exams[i].ExamDate,
+                    startTime: exams[i].StartTime,
+                    endTime: exams[i].EndTime,
+                    noTF: exams[i].NoTF,
+                    noMCQ: exams[i].NoMCQ,
+                    maxMarks: exams[i].MaxMarks
+                );
 
-                // Set the card's position on the form
+                card.Width = cardWidth;
+
+                card.BorderStyle = BorderStyle.Fixed3D;
+
                 card.Location = new Point(xPosition, yPosition);
-                    this.Controls.Add(card);
+
+                if ((i + 1) % maxColumns == 0)
+                {
+                    xPosition = xOffset; // Reset for the next row with offset
+                    yPosition += card.Height + padding; // Move to the next row
                 }
+                else
+                {
+                    xPosition += card.Width + padding; // Move to the right for the next card
+                }
+
+                scrollPanel.Controls.Add(card);
             }
+        }
+
 
 
         public Button GenerateCustomButton()
