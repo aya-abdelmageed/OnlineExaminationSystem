@@ -119,7 +119,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>student no</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -132,7 +134,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -151,7 +153,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>student name</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -164,7 +168,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -183,7 +187,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>phone no</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -196,7 +202,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -215,7 +221,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>gender</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -228,7 +236,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -247,7 +255,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>birthday</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -260,7 +270,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -493,7 +503,7 @@
                         <FontStyle>Normal</FontStyle>
                         <FontSize>20pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <Color>Red</Color>
+                        <Color>Firebrick</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -504,9 +514,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.28in</Top>
-              <Left>0.81125in</Left>
+              <Left>1.23209in</Left>
               <Height>0.39583in</Height>
-              <Width>5in</Width>
+              <Width>5.2in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -523,9 +533,9 @@
               <Value>itilogo</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.17583in</Top>
-              <Left>0.26958in</Left>
+              <Left>0.40847in</Left>
               <Height>0.5in</Height>
-              <Width>0.5in</Width>
+              <Width>0.33333in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>

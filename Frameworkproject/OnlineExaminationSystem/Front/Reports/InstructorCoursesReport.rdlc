@@ -78,10 +78,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>2.875in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.65625in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -98,10 +98,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Course</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -109,7 +113,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -128,10 +132,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Number of Students</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -139,7 +147,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -236,9 +244,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet</DataSetName>
             <Top>0.76958in</Top>
-            <Left>2.0925in</Left>
+            <Left>0.81125in</Left>
             <Height>0.5in</Height>
-            <Width>2in</Width>
+            <Width>4.53125in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -269,7 +277,7 @@
                         <FontStyle>Normal</FontStyle>
                         <FontSize>20pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <Color>Red</Color>
+                        <Color>Firebrick</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
