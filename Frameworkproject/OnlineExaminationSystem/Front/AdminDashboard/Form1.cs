@@ -228,7 +228,8 @@ namespace UI.AdminDashboard
             return addButton;
 
         }
-        public void GenerateCustomSearch()
+
+        public TextBox GenerateCustomSearch()
         {
 
             // Create the Panel for search
@@ -319,6 +320,7 @@ namespace UI.AdminDashboard
 
             // Add the search panel to the form
             this.Controls.Add(searchPanel);
+            return searchTextBox;
         }
         public DataGridView InitializeCustomGrid()
         {

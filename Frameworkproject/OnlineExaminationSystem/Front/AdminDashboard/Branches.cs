@@ -12,6 +12,8 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
+using System.IO;
+using Front.popUpForms;
 
 namespace UI.AdminDashboard
 {
@@ -20,79 +22,60 @@ namespace UI.AdminDashboard
         private BranchRepo branch;
         private DataGridView customGrid;
         private Button addbutton;
-        private TextBox searchBox;
+        private TextBox customSearch;
 
 
         public Branches()
         {
             branch = new BranchRepo();
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            this.AutoScaleDimensions = new SizeF(96F, 96F);
-            this.ClientSize = new Size(1324, 600);
-
-            // Initialize UI elements
+            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
+            customSearch = GenerateCustomSearch();
             addbutton = GenerateCustomButton();
-            searchBox = GenerateSearchBox();
-
-            // Add UI elements to form
-            this.Controls.Add(addbutton);
-            this.Controls.Add(searchBox);
-            this.Controls.Add(customGrid);
-
-
-
             addbutton.Text = "Add Branch";
             addbutton.Click += (s, e) =>
             {
-                var newForm = new BranchForm((int)FormMode.Add, null, customGrid);
+                var newForm = new TrackForm((int)FormMode.Add, data: customGrid);
+
+
                 newForm.Show();
 
             };
             LoadData();
             AddActions(customGrid);
 
+
             // Handle Click Events with Dynamic Detection
             customGrid.CellMouseClick += (s, e) =>
             {
                 HandleActionClick(customGrid, e);
             };
-        }
-
-        private TextBox GenerateSearchBox()
-        {
-            TextBox searchBox = new TextBox
-            {
-                Location = new Point(addbutton.Location.X - 680, addbutton.Location.Y + 4),
-                Size = new Size(650, 100)
-            };
 
             // Placeholder text workaround
-            searchBox.Text = "Search by ID, Name, or Location...";
-            searchBox.ForeColor = Color.Gray;
+            customSearch.Text = "Search by ID, Name, or Location...";
+            customSearch.ForeColor = Color.Gray;
 
-            searchBox.GotFocus += (s, e) =>
+            customSearch.GotFocus += (s, e) =>
             {
-                if (searchBox.Text == "Search by ID, Name, or Location...")
+                if (customSearch.Text == "Search by ID, Name, or Location...")
                 {
-                    searchBox.Text = "";
-                    searchBox.ForeColor = Color.Black;
+                    customSearch.Text = "";
+                    customSearch.ForeColor = Color.Black;
                 }
             };
 
-            searchBox.LostFocus += (s, e) =>
+            customSearch.LostFocus += (s, e) =>
             {
-                if (string.IsNullOrWhiteSpace(searchBox.Text))
+                if (string.IsNullOrWhiteSpace(customSearch.Text))
                 {
-                    searchBox.Text = "Search by ID, Name, or Location...";
-                    searchBox.ForeColor = Color.Gray;
+                    customSearch.Text = "Search by ID, Name, or Location...";
+                    customSearch.ForeColor = Color.Gray;
+                    LoadData();
+
                 }
             };
 
-            searchBox.TextChanged += (s, e) => SearchBranches(searchBox.Text);
-            return searchBox;
-
-
+            customSearch.TextChanged += (s, e) => SearchBranches(customSearch.Text);
         }
 
         private void SearchBranches(string searchText)
@@ -117,6 +100,7 @@ namespace UI.AdminDashboard
 
             var combinedResults = byName.Concat(byLocation).Distinct().ToList();
             customGrid.DataSource = combinedResults;
+            
         }
 
 

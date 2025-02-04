@@ -1,4 +1,5 @@
 ﻿using BusinessLogi.DTO;
+using BusinessLogic.DTO;
 using DataAccess;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace BusinessLogi.Repositories
 {
@@ -17,39 +19,48 @@ namespace BusinessLogi.Repositories
         {
             _dbManager = new DBManager();   
         }
-        public List<StudentDTO> GetStudents(int? id)
+        public List<StudentDTO> GetStudents(int? Student_ID)
         {
             string procedureName = "STUDENT_SELECTION";
-            DataTable dt;
+            var parameters = new[] { new SqlParameter("Student_ID", SqlDbType.Int) { Value = (object)Student_ID ?? DBNull.Value } };
+
             try
             {
-                SqlParameter[] parameters = new SqlParameter[]
+                DataTable dataTable = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                if (dataTable.Rows.Count == 0)
                 {
-                    new SqlParameter("@student_id", SqlDbType.Int) { Value = (object)id ?? DBNull.Value }
-                };
-                dt = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                    return new List<StudentDTO>(null); // Return empty list instead of null
+                }
+
+                return ConvertToStudentList(dataTable);
             }
             catch (Exception ex)
             {
-                throw new Exception("Error retrieving Students from the database.", ex);
+                throw new Exception("Error retrieving students from the database.", ex);
             }
-            var students = new List<StudentDTO>();
-            foreach (DataRow dataRow in dt.Rows)
+
+        }
+        // Search Branch by Name
+        public List<StudentDTO> SearchStudentByName(string studentName)
+        {
+            string procedureName = "SearchSTD_FName";
+            var parameters = new[]
             {
-                var student = new StudentDTO
+                new SqlParameter("@FName", SqlDbType.VarChar)
                 {
-                    StudentID = dataRow.Field<int>("Student_ID"),
-                    Gender = dataRow.Field<string>("Gender"),
-                    FName = dataRow.Field<string>("FName"),
-                    MName = dataRow.Field<string>("MName"),
-                    LName = dataRow.Field<string>("LName"),
-                    Phone = dataRow.Field<string>("Phone"),
-                    Birthdate = dataRow.Field<DateTime>("Birthdate"),
-                    trackID = dataRow.Field<int>("Track_ID")
-                };
-                students.Add(student);
+                    Value = string.IsNullOrEmpty(studentName) ? (object)DBNull.Value : studentName
+                }
+            };
+
+            try
+            {
+                DataTable result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                return ConvertToStudentList(result);
             }
-            return students;
+            catch (Exception ex)
+            {
+                throw new Exception("Error searching student by name.", ex);
+            }
         }
         public void InsertStudent(StudentDTO student)
         {
@@ -114,6 +125,29 @@ namespace BusinessLogi.Repositories
             {
                 throw new Exception("Error deleting Students from the database.", ex);
             }
+        }
+
+        // Convert DataTable to List of BranchDTO
+        private List<StudentDTO> ConvertToStudentList(DataTable table)
+        {
+            var students = new List<StudentDTO>();
+
+            foreach (DataRow row in table.Rows)
+            {
+                var student = new StudentDTO
+                {
+                    StudentID = row.Field<int>("Student_ID"),
+                    Gender = row.Field<string>("Gender"),
+                    FName = row.Field<string>("FName"),
+                    MName = row.Field<string>("MName"),
+                    LName = row.Field<string>("LName"),
+                    Phone = row.Field<string>("Phone"),
+                    Birthdate = row.Field<DateTime>("Birthdate"),
+                    trackID = row.Field<int>("Track_ID"),
+                };
+                students.Add(student);
+            }
+            return students;
         }
     }
 }

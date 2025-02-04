@@ -21,6 +21,7 @@ namespace UI.AdminDashboard
         private TrackRepo track;
         private DataGridView customGrid;
         private Button addbutton;
+        private TextBox customSearch;
         public Tracks(int _mode)
         {
             track = new TrackRepo();
@@ -30,7 +31,7 @@ namespace UI.AdminDashboard
 
             this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
-            GenerateCustomSearch();
+            customSearch = GenerateCustomSearch();
             addbutton = GenerateCustomButton();
             addbutton.Text = "Add Track";
             addbutton.Click += (s, e) =>
@@ -52,7 +53,55 @@ namespace UI.AdminDashboard
                 HandleActionClick(customGrid, e);
             };
 
+            // Placeholder text workaround
+            customSearch.Text = "Search by ID, or Name...";
+            customSearch.ForeColor = Color.Gray;
 
+            customSearch.GotFocus += (s, e) =>
+            {
+                if (customSearch.Text == "Search by ID, or Name...")
+                {
+                    customSearch.Text = "";
+                    customSearch.ForeColor = Color.Black;
+                }
+            };
+
+            customSearch.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(customSearch.Text))
+                {
+                    customSearch.Text = "Search by ID, or Location...";
+                    customSearch.ForeColor = Color.Gray;
+                    LoadData();
+
+                }
+            };
+
+            customSearch.TextChanged += (s, e) => SearchTracks(customSearch.Text);
+
+
+        }
+        //-------------------------------------------------------------------------------------
+        private void SearchTracks(string searchText)
+        {
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                LoadData();
+                return;
+            }
+
+            int? trackId = null;
+            if (int.TryParse(searchText, out int parsedId))
+            {
+                trackId = parsedId;
+                customGrid.DataSource = track.GetTracks(trackId); 
+                return;
+            }
+
+            var byName = track.SearchTrackByName(searchText);
+
+            customGrid.DataSource = byName; 
+            customGrid.Refresh();
         }
 
 
@@ -76,10 +125,6 @@ namespace UI.AdminDashboard
                 DeleteRow(customGrid, e.RowIndex);
             }
         }
-
-
-
-
 
         // *Functions to Perform Actions*
         private void EditRow(DataGridViewRow row)
@@ -136,7 +181,10 @@ namespace UI.AdminDashboard
             var data = track.GetTracks(null);   
 
             customGrid.DataSource = data;
+            customGrid.Refresh();
         }
+
+
 
     }
 }

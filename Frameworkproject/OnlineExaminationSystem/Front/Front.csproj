@@ -308,6 +308,36 @@
     <EmbeddedResource Include="AdminDashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstructorDashboard\Exams.resx">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorDashboard\ExamView.resx">
+      <DependentUpon>ExamView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpForms\BranchForm.resx">
+      <DependentUpon>BranchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpForms\CoursesForm.resx">
+      <DependentUpon>CoursesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpForms\GenerateExam.resx">
+      <DependentUpon>GenerateExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpForms\InstructorForm.resx">
+      <DependentUpon>InstructorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpForms\QuestionForm.resx">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpForms\StudentesForm.resx">
+      <DependentUpon>StudentesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpForms\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpForms\TrackForm.resx">
+      <DependentUpon>TrackForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\InstructorCoursesReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

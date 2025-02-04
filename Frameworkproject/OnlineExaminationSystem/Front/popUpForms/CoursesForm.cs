@@ -119,7 +119,7 @@ namespace UI.AdminDashboard
             {
                 // Code to update the course in the database or collection
                 courseRepo.updateCourses(new CourseDTO { ID = CourseId.Value, Name = CourseName });
-                BindingList<CourseDTO> courses = new BindingList<CourseDTO>(courseRepo.GetCourses());
+                BindingList<CourseDTO> courses = new BindingList<CourseDTO>(courseRepo.GetCourses(null));
                 customGrid.DataSource = courses;
                 MessageBox.Show($"Course {CourseId.Value} updated: {CourseName}");
             }
@@ -127,7 +127,7 @@ namespace UI.AdminDashboard
             {
                 // Code to add a new course (insert logic)
                 courseRepo.InsertCourses(new CourseDTO { Name = CourseName });
-                BindingList<CourseDTO> courses = new BindingList<CourseDTO>(courseRepo.GetCourses());
+                BindingList<CourseDTO> courses = new BindingList<CourseDTO>(courseRepo.GetCourses(null));
                 customGrid.DataSource = courses;
                 MessageBox.Show($"New course added: {CourseName}");
             }

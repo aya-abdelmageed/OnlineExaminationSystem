@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exams));
+            this.SuspendLayout();
+            // 
+            // Exams
+            // 
+            this.ClientSize = new System.Drawing.Size(1040, 511);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Exams";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
