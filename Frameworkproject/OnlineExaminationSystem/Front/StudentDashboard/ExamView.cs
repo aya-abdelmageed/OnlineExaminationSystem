@@ -59,7 +59,7 @@ namespace Front.StudentDashboard
             {
                 Text = "Exam Viewer",
                 Font = new Font("Arial", 20, FontStyle.Bold),
-                ForeColor = Color.White,
+                ForeColor = Color.Black,
                 AutoSize = true,
                 Location = new Point(60, 15)
             };
@@ -70,7 +70,7 @@ namespace Front.StudentDashboard
             {
                 Text = "Time Left: 30:00",
                 Font = new Font("Arial", 16, FontStyle.Bold),
-                ForeColor = Color.White,
+                ForeColor = Color.Black,
                 AutoSize = true,
                 Location = new Point(300, 18)
             };
@@ -172,7 +172,7 @@ namespace Front.StudentDashboard
                         Location = new Point(containerX, yOffset),
                         Width = containerWidth,
                         Height = containerHeight,
-                        BackColor = Color.FromArgb(248, 247, 253)
+                        BackColor = Color.LightGray
                     };
                     SetRoundedRegion(questionContainer, 15);
                     scrollPanel.Controls.Add(questionContainer);

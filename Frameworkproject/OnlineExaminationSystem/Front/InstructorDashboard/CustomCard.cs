@@ -140,7 +140,7 @@ namespace System.Windows.Forms
 
             // Set control size and styles
             this.Size = new Size(320, 170);  // Increased Height for Spacing
-            this.BackColor =  Color.FromArgb(248, 247, 253);
+            this.BackColor =  Color.LightGray;
            
             this.BorderStyle = BorderStyle.None;
 

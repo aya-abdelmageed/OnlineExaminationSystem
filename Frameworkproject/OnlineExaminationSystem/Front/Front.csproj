@@ -235,6 +235,12 @@
     <Compile Include="InstructorDashboard\InstructorDashboard.Designer.cs">
       <DependentUpon>InstructorDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="popUpForms\AssignToTrackcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpForms\AssignToTrackcs.Designer.cs">
+      <DependentUpon>AssignToTrackcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="popUpForms\StudentExamResult.cs">
       <SubType>Form</SubType>
     </Compile>

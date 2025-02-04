@@ -1,5 +1,6 @@
 ﻿using BusinessLogi.DTO;
 using BusinessLogi.Repositories;
+using Front.popUpForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,8 @@ namespace Front.InstructorDashboard
                 addbutton.Text = "Generate new Exam";
                 addbutton.Click += (s, e) =>
                 {
-
+                    var form =  new GenerateExam();
+                    form.Show();
                 };
                 GenerateCustomSearch();
                 InitializeExamCards();
