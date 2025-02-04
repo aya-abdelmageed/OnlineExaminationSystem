@@ -211,5 +211,50 @@ namespace BusinessLogi.Repositories
                 throw new Exception("Error updating student exam");
             }
         }
+        public List<StudentExamResultDTO> GetStudentExamResults(int studentId, int examId)
+        {
+            string procedureName = "GetStudentExamResults";
+
+            var parameters = new[]
+            {
+                new SqlParameter("@StudentID", SqlDbType.Int) { Value = studentId },
+                new SqlParameter("@ExamID", SqlDbType.Int) { Value = examId }
+           };
+
+            try
+            {
+                DataTable result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                return ConvertToStudentExamResultList(result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving student exam results from the database.", ex);
+            }
+        }
+
+        private List<StudentExamResultDTO> ConvertToStudentExamResultList(DataTable dataTable)
+        {
+            List<StudentExamResultDTO> results = new List<StudentExamResultDTO>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                StudentExamResultDTO result = new StudentExamResultDTO
+                {
+                    StudentID = row.Field<int>("Student_ID"),
+                    ExamID = row.Field<int>("Exam_ID"),
+                    Grade = row.Field<int>("Grade"),
+                    CourseName= row.Field<string>("Course_Name"),
+                    CorrectQuestions = row.Field<int>("Correct_Questions"),
+                    WrongQuestions = row.Field<int>("Wrong_Questions"),
+                    TotalMarks = row.Field<int>("Total_Marks")
+                };
+
+                results.Add(result);
+            }
+
+            return results;
+        }
+
+
     }
 }

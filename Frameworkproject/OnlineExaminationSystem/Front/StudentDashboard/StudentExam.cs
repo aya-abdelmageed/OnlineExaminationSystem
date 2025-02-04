@@ -168,7 +168,7 @@ namespace Front.StudentDashboard
 
         private void ViewResult(int studentId, int examId)
         {
-            var form = new StudentExamResult();
+            var form = new StudentExamResult(studentId, examId);
             form.Show();
         }
         void Soon()

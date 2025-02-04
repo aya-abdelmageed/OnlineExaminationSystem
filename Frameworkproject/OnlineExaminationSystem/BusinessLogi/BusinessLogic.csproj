@@ -188,6 +188,7 @@
     <Compile Include="DTO\StudentExamCardDTO.cs" />
     <Compile Include="DTO\StudentExamDTO.cs" />
     <Compile Include="DTO\StudentExamQuestionDetailsDTO.cs" />
+    <Compile Include="DTO\StudentExamResultDTO.cs" />
     <Compile Include="DTO\TopicDTO.cs" />
     <Compile Include="DTO\TrackBranchDTO.cs" />
     <Compile Include="DTO\TrackDTO.cs" />
