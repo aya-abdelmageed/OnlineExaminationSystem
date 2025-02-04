@@ -6,7 +6,7 @@ using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
 
 
-namespace Front.AdminDashboard
+namespace Front.ReportsControllers
 {
     public partial class ReportForm : Form
     {
@@ -45,9 +45,9 @@ namespace Front.AdminDashboard
 
                     // Prepare report parameters
                     List<ReportParameter> reportParams = new List<ReportParameter>
-            {
-                new ReportParameter("parameter1", _param1) // Always send parameter1
-            };
+                    {
+                        new ReportParameter("parameter1", _param1) // Always send parameter1
+                    };
 
                     if (!string.IsNullOrEmpty(_param2)) // Only add parameter2 if it's not null/empty
                     {
@@ -60,6 +60,7 @@ namespace Front.AdminDashboard
                 else
                 {
                     MessageBox.Show("No data found for the selected report.", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
             }
             catch (Exception ex)
@@ -84,7 +85,7 @@ namespace Front.AdminDashboard
             }
         }
 
-        private DataTable GetReportData()
+        public DataTable GetReportData()
         {
             string connectionString = "Data Source=DESKTOP-PAJ6AIB\\SQLEXPRESS;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -125,5 +126,6 @@ namespace Front.AdminDashboard
                 default: return string.Empty;
             }
         }
+    
     }
 }

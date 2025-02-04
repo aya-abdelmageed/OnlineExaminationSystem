@@ -1,4 +1,4 @@
-﻿namespace Front.AdminDashboard
+﻿namespace Front.ReportsControllers
 {
     partial class ReportForm
     {
