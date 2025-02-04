@@ -87,6 +87,7 @@ namespace UI.AdminDashboard
                     searchBox.Text = "Search by ID, Name, or Location...";
                     searchBox.ForeColor = Color.Gray;
                 }
+
             };
 
             searchBox.TextChanged += (s, e) => SearchBranches(searchBox.Text);

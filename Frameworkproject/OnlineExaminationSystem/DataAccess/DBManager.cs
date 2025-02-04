@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 
-    namespace DataAccess
+namespace DataAccess
     {
         public class DBManager
         {
@@ -13,7 +13,7 @@ using System.Windows.Forms;
         private SqlConnection connect;
 
         
-        string _connectionString = "Data Source=.;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string _connectionString = "Data Source=DESKTOP-OGJ98U8\\TEW_SQLEXPRESS;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
 
         // Constructor that takes the connection string as a parameter

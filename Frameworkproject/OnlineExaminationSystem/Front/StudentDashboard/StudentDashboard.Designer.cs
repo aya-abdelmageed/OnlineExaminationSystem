@@ -95,14 +95,14 @@
             this.Exams.Text = "Exams";
             this.Exams.UseVisualStyleBackColor = false;
             // 
-            // StudentDashboardcs
+            // StudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 511);
             this.Controls.Add(this.panel1);
-            this.Name = "StudentDashboardcs";
+            this.Name = "StudentDashboard";
             this.Text = "Dashboardcs";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

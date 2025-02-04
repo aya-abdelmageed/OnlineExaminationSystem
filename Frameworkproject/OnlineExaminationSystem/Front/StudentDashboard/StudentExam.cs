@@ -1,35 +1,181 @@
 ﻿using BusinessLogi.DTO;
+using BusinessLogi.Repositories;
 using Front.InstructorDashboard;
+using Front.popUpForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Front.StudentDashboard
 {
-    public partial class StudentDashboard: Form
+    public partial class StudentExam : Front.StudentDashboard.StudentDashboard
     {
+        private StudentExamRepo repo;   
         private DataGridView customGrid;
         private Button addbutton;
-        public StudentDashboard()
+
+
+        public StudentExam()
         {
-            this.Height = 600;
+            repo=  new StudentExamRepo();   
+            this.Height = 650;
 
             InitializeComponent();
-            this.Exams.Click += Exams_Click1;
-          
+            GenerateCustomSearch();
+            InitializeExamCards();
+        }
+        private void InitializeExamCards()
+        {
+            Panel scrollPanel = new Panel
+            {
+                Location = new Point(230, 160),
+                Size = new Size(750, 400),
+                AutoScroll = true,
+                BorderStyle = BorderStyle.FixedSingle
+            };
+
+            this.Controls.Add(scrollPanel);
+
+            List<StudentExamCardDTO> exams = repo.GetStudentExamsCard(1); // Assuming this gets exams dynamically
+
+            int xOffset = 20;
+            int xPosition = xOffset, yPosition = 20;
+            int maxColumns = 2;
+            int padding = 10;
+            int cardWidth = 350;
+            DateTime now = DateTime.Now;
+
+            for (int i = 0; i < exams.Count; i++)
+            {
+                CustomCard card = new CustomCard();
+                card.SetCardData(
+                    title: exams[i].Course_Name,
+                    description: exams[i].Track_Name,
+                    examDate: exams[i].Exam_Date,
+                    startTime: exams[i].StartTime,
+                    endTime: exams[i].EndTime,
+                    noTF: exams[i].No_TF,
+                    noMCQ: exams[i].No_MCQ,
+                    maxMarks: exams[i].Max_Marks
+                );
+
+                // Remove unnecessary buttons
+                Control buttonToRemove = card.Controls["Details"];
+                Control buttonToRemove2 = card.Controls["Assign"];
+
+                if (buttonToRemove != null)
+                {
+                    card.Controls.Remove(buttonToRemove);
+                }
+
+                if (buttonToRemove2 != null)
+                {
+                    card.Controls.Remove(buttonToRemove2);
+                }
+
+                card.Width = cardWidth;
+                card.BorderStyle = BorderStyle.FixedSingle;
+                card.Location = new Point(xPosition, yPosition);
+
+                // Convert StartTime and EndTime to DateTime
+                DateTime examStart, examEnd;
+
+                // Safely parse StartTime and EndTime
+                if (DateTime.TryParse(exams[i].StartTime, out var startTime) &&
+                    DateTime.TryParse(exams[i].EndTime, out var endTime))
+                {
+                    examStart = exams[i].Exam_Date.Date.Add(startTime.TimeOfDay);
+                    examEnd = exams[i].Exam_Date.Date.Add(endTime.TimeOfDay);
+                }
+                else
+                {
+                    // Handle invalid time format (e.g., log error, skip this exam, or show a message)
+                    MessageBox.Show("Invalid time format for exam.");
+                    return;
+                }
+
+                Button actionButton = null;
+
+                // Capture the current Exam_ID in a local variable
+                int currentExamId = exams[i].Exam_ID;
+
+                if (now > examEnd) // Exam has ended, show "View Result" button
+                {
+                    actionButton = new Button
+                    {
+                        Text = "View Result",
+                        Size = new Size(120, 30),
+                        BackColor = Color.Green,
+                        ForeColor = Color.White
+                    };
+                    actionButton.Click += (s, e) => ViewResult(1, currentExamId); // Use the captured value
+                }
+                else if (now >= examStart && now <= examEnd) // Exam is happening now, show "Join" button
+                {
+                    actionButton = new Button
+                    {
+                        Text = "Join",
+                        Size = new Size(120, 30),
+                        BackColor = Color.Red,
+                        ForeColor = Color.White
+                    };
+                    actionButton.Click += (s, e) => Join(1, currentExamId); // Use the captured value
+                }
+                else // Exam is in the future, show "Upcoming" button
+                {
+                    actionButton = new Button
+                    {
+                        Text = "Upcoming",
+                        Size = new Size(120, 30),
+                        BackColor = Color.Gray,
+                        ForeColor = Color.White
+                    };
+                    actionButton.Click += (s, e) => MessageBox.Show("Soon...");
+                }
+
+                if (actionButton != null)
+                {
+                    actionButton.Location = new Point(10, card.Height - 40);
+                    card.Controls.Add(actionButton);
+                }
+
+                // Adjust card positions
+                if ((i + 1) % maxColumns == 0)
+                {
+                    xPosition = xOffset;
+                    yPosition += card.Height + padding;
+                }
+                else
+                {
+                    xPosition += card.Width + padding;
+                }
+
+                scrollPanel.Controls.Add(card);
+            }
         }
 
-        private void Exams_Click1(object sender, EventArgs e)
+
+        private void Join(int studentId, int examId)
         {
-            ShowForm(new StudentExam());
+            var form = new ExamView( studentId ,examId);
+            form.Show();
         }
+
+        private void ViewResult(int studentId, int examId)
+        {
+            var form = new StudentExamResult();
+            form.Show();
+        }
+        void Soon()
+        {
+
+        }
+       
 
         public Button GenerateCustomButton()
         {
@@ -166,17 +312,5 @@ namespace Front.StudentDashboard
             // Add the search panel to the form
             this.Controls.Add(searchPanel);
         }
-
-        public void ShowForm(Form form)
-        {
-            form.StartPosition = FormStartPosition.Manual;
-            form.Location = this.Location;
-            this.Hide(); // Hide Form1 instead of closing it
-
-            form.FormClosed += (sender, e) => this.Close(); // Close Form1 when the new form is closed
-            form.Show();
-        }
-
-       
     }
 }

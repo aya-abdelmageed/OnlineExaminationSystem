@@ -107,7 +107,7 @@ namespace System.Windows.Forms
 
             // Buttons
             this.trackButton.Font = new Font("Segoe UI", 8);
-            this.trackButton.Text = "Assign to Track";
+            this.trackButton.Text = "Assign";
             this.trackButton.Size = new Size(70, 25);
             this.trackButton.BackColor = System.Drawing.Color.White;    
             this.trackButton.Location = new Point(10, 130);
@@ -119,6 +119,9 @@ namespace System.Windows.Forms
             this.viewDetailsButton.Location = new Point(90, 130);
             this.viewDetailsButton.BackColor= Color.FromArgb(204, 8, 8);
             this.viewDetailsButton.Click += ViewDetailsButton_Click;
+            this.viewDetailsButton.Name = "Details";
+            this.trackButton.Name = "Assign";
+
 
             // Add controls
             this.Controls.Add(this.iconPictureBox);
@@ -138,8 +141,8 @@ namespace System.Windows.Forms
             // Set control size and styles
             this.Size = new Size(320, 170);  // Increased Height for Spacing
             this.BackColor =  Color.FromArgb(248, 247, 253);
-            ;
-            this.BorderStyle = BorderStyle.FixedSingle;
+           
+            this.BorderStyle = BorderStyle.None;
 
             // Rounded Corners
             this.Region = new Region(new Rectangle(0, 0, this.Width, this.Height));

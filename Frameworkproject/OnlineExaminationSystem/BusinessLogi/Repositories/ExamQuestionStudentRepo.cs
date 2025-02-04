@@ -51,26 +51,32 @@ namespace BusinessLogi.Repositories
             }
             return examQuestionsStudents;
         }
-        public void InsertQuestionStudent(int StudentID, int ExamID, int QuestionID, string Answer, int? Score)
+        public void InsertQuestionStudent(int StudentID, int ExamID, int QuestionID, string Answer)
         {
             try
             {
                 string procedureName = "EXAM_QUESTION_STUDENT_INSERTION";
+
                 SqlParameter[] parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@StudentID", StudentID),
-                    new SqlParameter("@ExamID", ExamID),
-                    new SqlParameter("@QuestionID", QuestionID),
-                    new SqlParameter("@Answer", Answer),
-                    new SqlParameter("@Score", Score)
+                    new SqlParameter("@S_ID", StudentID),
+                    new SqlParameter("@E_ID", ExamID),
+                    new SqlParameter("@Q_ID", QuestionID),
+                    new SqlParameter("@ANS", (object)Answer ?? DBNull.Value), // Fix null handling
                 };
+
                 _dbManager.ExecuteNonQuery(procedureName, parameters);
             }
-            catch
+            catch (SqlException ex)
             {
-                throw new Exception("Error Inserting to database");
+                throw new Exception($"Database Error: {ex.Message}"); // Log actual SQL error
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Unexpected Error: {ex.Message}"); // Catch unexpected errors
             }
         }
+
         public void UpdateQuestionStudent(int StudentID, int ExamID, int QuestionID, string Answer, int? Score)
         {
             try
