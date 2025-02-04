@@ -40,18 +40,18 @@ namespace BusinessLogi.Repositories
             {
                 var question = new QuestionsDTO
                 {
-                    QuestionID = dataRow.Field<int>("QUESTION ID"),
+                    QuestionID = dataRow.Field<int>("QUESTION_ID"),
                     Question = dataRow.Field<string>("QUESTION"),
-                    Answer = dataRow.Field<string>("ANSWER"),
-                    Type = dataRow.Field<string>("QUESTION_TYPE"),
-                    Points = dataRow.Field<int>("QUESTION_POINTS"),
-                    CourseID = dataRow.Field<int>("COURSE ID")
+                    Answer = dataRow.Field<string>("Correct_Ans"),
+                    Type = dataRow.Field<string>("Type"),
+                    Points = dataRow.Field<int>("Points"),
+                    CourseID = dataRow.Field<int>("COURSE_ID")
                 };
                 questions.Add(question);
             }
             return questions;
         }
-        public List<QuestionsDTO> ALL_COURSE_QUESTION(int Crs_id)
+        public List<QuestionsDTO> ALL_COURSE_QUESTION(int? Crs_id)
         {
             string procedureName = "ALL_COURSE_QUESTION_SELECTION";
             DataTable result;
@@ -72,12 +72,12 @@ namespace BusinessLogi.Repositories
             {
                 var question = new QuestionsDTO
                 {
-                    QuestionID = dataRow.Field<int>("QUESTION ID"),
+                    QuestionID = dataRow.Field<int>("Question_ID"),
                     Question = dataRow.Field<string>("QUESTION"),
-                    Answer = dataRow.Field<string>("ANSWER"),
-                    Type = dataRow.Field<string>("QUESTION_TYPE"),
-                    Points = dataRow.Field<int>("QEUESTION_POINTS"),
-
+                    Answer = dataRow.Field<string>("Correct_Ans"),
+                    Type = dataRow.Field<string>("Type"),
+                    Points = dataRow.Field<int>("Points"),
+                    CourseID = dataRow.Field<int>("Course_ID")
                 };
                 questions.Add(question);
             }

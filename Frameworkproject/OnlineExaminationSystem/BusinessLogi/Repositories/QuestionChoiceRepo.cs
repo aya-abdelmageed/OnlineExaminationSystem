@@ -96,5 +96,10 @@ namespace BusinessLogi.Repositories
                 throw new Exception("Error updating question choice");
             }
         }
+
+        public void InsertQuestionChoice(object questionID, string text)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

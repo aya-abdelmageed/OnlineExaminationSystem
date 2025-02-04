@@ -35,7 +35,8 @@ namespace Front.InstructorDashboard
 
         private void Questions_Click(object sender, EventArgs e)
         {
-            
+            QuestionBank questionBank = new QuestionBank();
+            ShowForm(questionBank);
         }
 
         private void Exams_Click(object sender, EventArgs e)
@@ -179,6 +180,151 @@ namespace Front.InstructorDashboard
             // Add the search panel to the form
             this.Controls.Add(searchPanel);
         }
+        public DataGridView InitializeCustomGrid()
+        {
+            var customGrid = new DataGridView
+            {
+                Location = new Point((this.ClientSize.Width - 700) / 2, 200), // Center based on form width
+                Size = new Size(this.ClientSize.Width - 500, 300),  // Width = Form width - 10px
+                BackgroundColor = Color.White,
+                BorderStyle = BorderStyle.None,
+                ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None,
+                AllowUserToAddRows = false,
+                AllowUserToResizeColumns = false,
+                AllowUserToResizeRows = false,
+                EnableHeadersVisualStyles = false,
+                SelectionMode = DataGridViewSelectionMode.FullRowSelect,
+                CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal,
+                RowHeadersVisible = false,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill, // Adjust columns to fit width
+                ScrollBars = ScrollBars.Vertical,
+
+
+            };
+            customGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(128, 128, 128);  // Custom color instead of blue
+            customGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
+            // Set column headers style
+            customGrid.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle
+            {
+                BackColor = Color.FromArgb(204, 8, 8),
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                Alignment = DataGridViewContentAlignment.MiddleCenter
+            };
+            // Set alternating rows style
+
+
+
+
+            customGrid.RowTemplate.Height = 20;
+            customGrid.DefaultCellStyle.Padding = new Padding(0, 0, 0, 0);
+
+
+
+
+
+
+
+            // Hover effect (on mouse enter/leave)
+            customGrid.CellMouseEnter += (s, e) =>
+            {
+                if (e.RowIndex >= 0)
+                {
+                    customGrid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(211, 211, 211);  // Change hover color
+                }
+            };
+            customGrid.CellMouseLeave += (s, e) =>
+            {
+                if (e.RowIndex >= 0)
+                {
+
+                    customGrid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;  // Normal row color
+
+                }
+
+            };
+
+
+
+
+            this.Controls.Add(customGrid);
+            return customGrid;
+        }
+        public void AddActions(DataGridView customGrid)
+        {
+            //Load icons once for performance optimization
+            var editIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\edit.png"));
+            var viewIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\1.png"));
+            var deleteIcon = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\Resources\trash.png"));
+
+            // *Create Edit Action Column*
+
+            var editColumn = new DataGridViewImageColumn
+            {
+                Name = "EditAction",
+                HeaderText = "Edit",
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 20 // Adjust based on icon size
+            };
+
+            // *Create View Action Column*
+
+            var viewColumn = new DataGridViewImageColumn
+            {
+                Name = "ViewAction",
+                HeaderText = "View",
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 20 // Adjust based on icon size
+            };
+
+            // *Create Delete Action Column*
+
+            var deleteColumn = new DataGridViewImageColumn
+            {
+                Name = "DeleteAction",
+                HeaderText = "Delete",
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 20 // Adjust based on icon size
+            };
+
+            // Add the columns to the grid
+
+            customGrid.Columns.Add(viewColumn);
+            customGrid.Columns.Add(editColumn);
+            customGrid.Columns.Add(deleteColumn);
+
+            // *Set Cell Formatting to Display Icons*
+
+            customGrid.CellFormatting += (s, e) =>
+            {
+                if (e.RowIndex >= 0)
+                {
+                    if (e.ColumnIndex == customGrid.Columns["ViewAction"].Index)
+                    {
+                        e.Value = viewIcon;
+                    }
+                    else if (e.ColumnIndex == customGrid.Columns["EditAction"].Index)
+                    {
+                        e.Value = editIcon;
+                    }
+                    else if (e.ColumnIndex == customGrid.Columns["DeleteAction"].Index)
+                    {
+                        e.Value = deleteIcon;
+                    }
+                }
+            };
+
+
+            // *Set Column Width and Minimum Width*
+
+            customGrid.Columns["EditAction"].MinimumWidth = 20;
+            customGrid.Columns["ViewAction"].MinimumWidth = 20;
+            customGrid.Columns["DeleteAction"].MinimumWidth = 20;
+        }
+
+
 
     }
 }

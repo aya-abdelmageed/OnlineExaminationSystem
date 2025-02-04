@@ -1,4 +1,4 @@
-﻿namespace Front.popUpForms
+﻿namespace UI.AdminDashboard
 {
     partial class QuestionForm
     {
