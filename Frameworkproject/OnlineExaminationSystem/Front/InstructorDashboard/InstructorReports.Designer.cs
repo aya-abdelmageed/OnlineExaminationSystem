@@ -33,18 +33,20 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(265, 12);
+            this.panel2.Location = new System.Drawing.Point(321, 50);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(491, 346);
+            this.panel2.Size = new System.Drawing.Size(719, 450);
             this.panel2.TabIndex = 2;
             // 
-            // Reports
+            // InstructorReports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel2);
-            this.Name = "Reports";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "InstructorReports";
             this.Text = "Form1";
             this.Controls.SetChildIndex(this.panel2, 0);
             this.ResumeLayout(false);

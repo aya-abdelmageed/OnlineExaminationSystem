@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Front.ReportsControllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -180,5 +181,10 @@ namespace Front.InstructorDashboard
             this.Controls.Add(searchPanel);
         }
 
+        private void Reports_Click(object sender, EventArgs e)
+        {
+            ShowForm(new InstructorReports());
+            
+        }
     }
 }

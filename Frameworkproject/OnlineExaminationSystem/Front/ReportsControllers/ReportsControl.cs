@@ -36,7 +36,6 @@ namespace Front.ReportsControllers
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.Size = new Size(1324, 657); // ✅ Corrected (UserControl does not have ClientSize)
 
-            button2.Click += button2_Click;
             SelectionReports.SelectedIndexChanged += SelectionReports_SelectionChangeCommitted;
 
             param1.Enabled = false;

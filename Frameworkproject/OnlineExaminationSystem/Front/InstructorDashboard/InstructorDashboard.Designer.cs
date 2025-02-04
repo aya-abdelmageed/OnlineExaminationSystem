@@ -74,6 +74,7 @@
             this.Reports.TabIndex = 8;
             this.Reports.Text = "Reports";
             this.Reports.UseVisualStyleBackColor = false;
+            this.Reports.Click += new System.EventHandler(this.Reports_Click);
             // 
             // pictureBox1
             // 

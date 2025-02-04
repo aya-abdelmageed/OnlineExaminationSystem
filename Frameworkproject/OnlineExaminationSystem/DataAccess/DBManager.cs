@@ -12,8 +12,8 @@ using System.Windows.Forms;
 
         private SqlConnection connect;
 
-        
-        string _connectionString = "Data Source=.;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+        string _connectionString = "Data Source=DESKTOP-OGJ98U8\\TEW_SQLEXPRESS;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
 
         // Constructor that takes the connection string as a parameter
@@ -149,6 +149,34 @@ using System.Windows.Forms;
                 return resultTable;
             }
         }
+
+      
+        public DataTable GetReportData(string storedProc, string _param1, string _param2   )
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+             
+                using (SqlCommand cmd = new SqlCommand(storedProc, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Add required parameter1
+                    cmd.Parameters.AddWithValue("@parameter1", _param1);
+
+                    // Only add parameter2 if it's not empty/null and if the stored procedure expects it
+                    if (!string.IsNullOrEmpty(_param2))
+                    {
+                        cmd.Parameters.AddWithValue("@parameter2", _param2);
+                    }
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
 
     }
 }

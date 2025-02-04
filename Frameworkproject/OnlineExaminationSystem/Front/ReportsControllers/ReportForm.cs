@@ -4,7 +4,8 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
-
+using BusinessLogi.Repositories;
+using DataAccess;
 
 namespace Front.ReportsControllers
 {
@@ -13,13 +14,17 @@ namespace Front.ReportsControllers
         private string _reportType;
         private string _param1;
         private string _param2;
+        private ReportRepo reportRepo; 
+
 
         public ReportForm(string reportType, string param1, string param2)
         {
-            InitializeComponent();
             _reportType = reportType;
             _param1 = param1;
             _param2 = param2;
+            reportRepo = new ReportRepo();
+            InitializeComponent();
+            
         }
 
         private void ReportForm_Load(object sender, EventArgs e)
@@ -67,11 +72,15 @@ namespace Front.ReportsControllers
             {
                 MessageBox.Show($"Error loading report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        
+
 
         }
-
-        private string GetReportPath(string reportType)
+        public DataTable GetReportData()
+        {
+           return  reportRepo.GetReportData(_reportType , _param1 , _param2 );     
+           
+        }
+        public string GetReportPath(string reportType)
         {
             switch (reportType)
             {
@@ -85,47 +94,12 @@ namespace Front.ReportsControllers
             }
         }
 
-        public DataTable GetReportData()
-        {
-            string connectionString = "Data Source=DESKTOP-PAJ6AIB\\SQLEXPRESS;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string storedProc = GetStoredProcedureName(_reportType);
-                using (SqlCommand cmd = new SqlCommand(storedProc, conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    // Add required parameter1
-                    cmd.Parameters.AddWithValue("@parameter1", _param1);
-
-                    // Only add parameter2 if it's not empty/null and if the stored procedure expects it
-                    if (!string.IsNullOrEmpty(_param2))
-                    {
-                        cmd.Parameters.AddWithValue("@parameter2", _param2);
-                    }
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    return dt;
-                }
-            }
-        }
 
 
-        private string GetStoredProcedureName(string reportType)
-        {
-            switch (reportType)
-            {
-                case "Students info": return "DEPARTMENT_STUDENTS_REPORT";
-                case "Student's grades": return "STUDENT_GRADES";
-                case "Instructor's Courses": return "INSTRUCTOR_COURSE_STUDENTS_NO";
-                case "Course's Topics": return "COURSE_TOPICS";
-                case "Exam's Questions": return "EXAM_QUESTIONS_REPORT";
-                case "Student's Exam Answers": return "EXAM_STUDENT_ANSWERS_REPORT";
-                default: return string.Empty;
-            }
-        }
-    
+
+
+
+
+
     }
 }
