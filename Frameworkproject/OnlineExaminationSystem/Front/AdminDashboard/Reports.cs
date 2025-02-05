@@ -14,7 +14,7 @@ namespace UI.AdminDashboard
 
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
-            this.ClientSize = new Size(1324, 657); // Set exact size (same as in the Designer)
+            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer)
 
             InitializeComponent();
             button1.Click += button1_Click;

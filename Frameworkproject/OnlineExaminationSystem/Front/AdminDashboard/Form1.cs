@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Data;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using Front;
 
 namespace UI.AdminDashboard
 {
@@ -17,15 +18,18 @@ namespace UI.AdminDashboard
         public enum FormMode { View, Edit, Add }
         public Form1()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
             this.ClientSize = new Size(1324, 657); // Set exact size (same as in the Designer)
             InitializeComponent();
+           
         }
         public void ShowForm(Form form)
         {
-            form.StartPosition = FormStartPosition.Manual;
+           // form.StartPosition = FormStartPosition.Manual;
             form.Location = this.Location;
+            form.StartPosition = FormStartPosition.CenterScreen;
             this.Hide(); // Hide Form1 instead of closing it
 
             form.FormClosed += (sender, e) => this.Close(); // Close Form1 when the new form is closed
@@ -406,6 +410,13 @@ namespace UI.AdminDashboard
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+             this.Hide();
+            Login loginForm = new Login();
+            loginForm.ShowDialog();
         }
     }
 }

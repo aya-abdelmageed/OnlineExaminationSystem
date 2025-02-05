@@ -159,5 +159,25 @@ namespace BusinessLogi.Repositories
             }
             return branches;
         }
+
+        public int GetBranchCount()
+        {
+            string query = "SELECT COUNT(*) FROM Branch";
+           return _dbManager.GetConnect(query);
+        }
+
+        public int GetStudentCount()
+        {
+            string query = "SELECT COUNT(*) FROM Student";
+            return _dbManager.GetConnect(query);
+        }
+
+        public int GetInstructorCount()
+        {
+            string query = "SELECT COUNT(*) FROM Instructor";
+            return _dbManager.GetConnect(query);
+        }
+
+
     }
 }

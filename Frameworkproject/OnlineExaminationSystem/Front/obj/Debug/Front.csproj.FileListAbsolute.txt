@@ -1,3 +1,6 @@
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -36,6 +39,9 @@ C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExamin
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Diagnostics.DiagnosticSource.dll
@@ -70,6 +76,9 @@ C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExamin
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.pdb
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.xml
@@ -151,12 +160,3 @@ C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExamin
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.Up2Date
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.exe
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.pdb
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Core.dll
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Core.xml
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Wpf.xml

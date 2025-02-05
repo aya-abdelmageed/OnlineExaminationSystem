@@ -45,6 +45,7 @@ namespace UI.AdminDashboard
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.Exit = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@ namespace UI.AdminDashboard
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 523);
+            this.panel1.Size = new System.Drawing.Size(228, 526);
             this.panel1.TabIndex = 0;
             // 
             // Instructors
@@ -223,19 +224,35 @@ namespace UI.AdminDashboard
             this.Exit.Text = "X";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(1175, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "←";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1295, 523);
+            this.ClientSize = new System.Drawing.Size(1324, 526);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "a";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -259,5 +276,6 @@ namespace UI.AdminDashboard
         private NotifyIcon notifyIcon1;
         private PictureBox pictureBox1;
         private Label Exit;
+        private Label label1;
     }
 }

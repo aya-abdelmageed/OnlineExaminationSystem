@@ -30,15 +30,17 @@ namespace UI.AdminDashboard
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
+            this.SuspendLayout();
             // 
             // Branches
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            ClientSize = new Size(1324, 657);
-            Name = "Branches";
-            Text = "Branches";
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.ClientSize = new System.Drawing.Size(1324, 526);
+            this.Name = "Branches";
+            this.Text = "Branches";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

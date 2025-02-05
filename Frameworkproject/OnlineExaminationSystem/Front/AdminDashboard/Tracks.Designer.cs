@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
+            this.SuspendLayout();
             // 
             // Tracks
             // 
-            Name = "Tracks";
-            Text = "Tracks";
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.ClientSize = new System.Drawing.Size(1324, 526);
+            this.Name = "Tracks";
+            this.Text = "Tracks";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

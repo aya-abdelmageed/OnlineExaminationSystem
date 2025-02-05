@@ -178,5 +178,30 @@ namespace DataAccess
             }
         }
 
+        public int GetConnect(string query)
+        {
+            int count = 0;
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+               
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        count = (int)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error fetching branch count: " + ex.Message);
+                }
+            }
+            return count;
+
+        }
+       
     }
-}
+
+    }
+

@@ -48,14 +48,12 @@ namespace UI.AdminDashboard
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -89,7 +87,7 @@ namespace UI.AdminDashboard
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(30, 54);
+            this.label6.Location = new System.Drawing.Point(30, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(212, 32);
             this.label6.TabIndex = 0;
@@ -102,9 +100,9 @@ namespace UI.AdminDashboard
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(920, 82);
+            this.panel4.Location = new System.Drawing.Point(979, 223);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(279, 94);
+            this.panel4.Size = new System.Drawing.Size(279, 130);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -124,9 +122,9 @@ namespace UI.AdminDashboard
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(600, 82);
+            this.panel3.Location = new System.Drawing.Point(620, 223);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(279, 94);
+            this.panel3.Size = new System.Drawing.Size(279, 130);
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
             // 
@@ -140,22 +138,24 @@ namespace UI.AdminDashboard
             this.label3.Size = new System.Drawing.Size(69, 34);
             this.label3.TabIndex = 1;
             this.label3.Text = "534";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(33, 54);
+            this.label4.Location = new System.Drawing.Point(30, 74);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(233, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Total Instructors";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(21, 54);
+            this.label1.Location = new System.Drawing.Point(30, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 32);
             this.label1.TabIndex = 0;
@@ -166,11 +166,12 @@ namespace UI.AdminDashboard
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.label2.Location = new System.Drawing.Point(189, 13);
+            this.label2.Location = new System.Drawing.Point(185, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "534";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // panel2
             // 
@@ -178,16 +179,16 @@ namespace UI.AdminDashboard
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(285, 82);
+            this.panel2.Location = new System.Drawing.Point(271, 223);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(279, 94);
+            this.panel2.Size = new System.Drawing.Size(279, 130);
             this.panel2.TabIndex = 6;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -195,34 +196,21 @@ namespace UI.AdminDashboard
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // webView21
-            // 
-            this.webView21.AllowExternalDrop = true;
-            this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(375, 222);
-            this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(683, 303);
-            this.webView21.TabIndex = 10;
-            this.webView21.ZoomFactor = 1D;
-            this.webView21.Click += new System.EventHandler(this.webView21_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1302, 537);
-            this.Controls.Add(this.webView21);
+            this.ClientSize = new System.Drawing.Size(1324, 526);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
-            this.Controls.SetChildIndex(this.webView21, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -232,7 +220,6 @@ namespace UI.AdminDashboard
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,6 +241,5 @@ namespace UI.AdminDashboard
         private Label label2;
         private Panel panel2;
         private PictureBox pictureBox2;
-        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }

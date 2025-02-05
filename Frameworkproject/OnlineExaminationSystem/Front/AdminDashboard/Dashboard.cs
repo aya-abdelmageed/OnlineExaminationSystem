@@ -15,6 +15,7 @@ using DataAccess;
 using Front;
 using Nest;
 using Microsoft.Web.WebView2.WinForms;
+using BusinessLogi.Repositories;
 
 namespace UI.AdminDashboard
 {
@@ -23,16 +24,19 @@ namespace UI.AdminDashboard
         private DBManager dbManager;
         private int userId;
         private string userType;
+        private BranchRepo count; 
 
         public Dashboard(int userId, string userType)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
-            this.ClientSize = new Size(1324, 657); // Set exact size (same as in the Designer)
+            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer)
             InitializeComponent();
             dbManager = new DBManager();
             panel3.Click += panel3_click;
             panel4.Click += panel4_Paint_Click;
+            count = new BranchRepo();
 
         }
 
@@ -179,9 +183,46 @@ namespace UI.AdminDashboard
 
         }
 
-        // Import WebView2 namespace
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Paint(object sender, PaintEventArgs e)
+        {
+             int branchCount = count.GetBranchCount();
+            label2.Text = branchCount.ToString();
+
+        }
+
+        private void label3_Paint(object sender, PaintEventArgs e)
+        {
+            
+            int InstructorCount = count.GetInstructorCount();
+            label3.Text = InstructorCount.ToString();
+        }
+
+        private void label5_Paint(object sender, PaintEventArgs e)
+        {
+            int StudentCount = count.GetStudentCount();
+            label5.Text = StudentCount.ToString();
+
+        }
 
 
+        private void label3_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }
