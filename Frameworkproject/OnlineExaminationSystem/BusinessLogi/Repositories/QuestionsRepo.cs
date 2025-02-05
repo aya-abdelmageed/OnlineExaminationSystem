@@ -73,7 +73,7 @@ namespace BusinessLogi.Repositories
                 var question = new QuestionsDTO
                 {
                     QuestionID = dataRow.Field<int>("Question_ID"),
-                    Question = dataRow.Field<string>("QUESTION"),
+                    Question = dataRow.Field<string>("Question"),
                     Answer = dataRow.Field<string>("Correct_Ans"),
                     Type = dataRow.Field<string>("Type"),
                     Points = dataRow.Field<int>("Points"),
