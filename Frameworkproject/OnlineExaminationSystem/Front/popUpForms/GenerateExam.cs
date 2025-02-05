@@ -75,7 +75,7 @@ namespace Front.popUpForms
 
         private void LoadCourses()
         {
-            var courses = _courseRepo.GetCourses();
+            var courses = _courseRepo.GetCourses(null);
             var coursesNames = courses.Select(x => x.Name);
             cmbCourses.Items.Add(courses);
             cmbCourses.DisplayMember = "Course_Name";

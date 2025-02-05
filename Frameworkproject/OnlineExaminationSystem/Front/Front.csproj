@@ -103,6 +103,15 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2957.106, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2957.106\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.2957.106, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2957.106\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2957.106, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2957.106\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
       <HintPath>..\packages\NEST.7.17.5\lib\net461\Nest.dll</HintPath>
     </Reference>
@@ -235,6 +244,12 @@
     <Compile Include="InstructorDashboard\InstructorDashboard.Designer.cs">
       <DependentUpon>InstructorDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="popUpForms\AssignToTrackcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +353,9 @@
     <EmbeddedResource Include="InstructorDashboard\ExamView.resx">
       <DependentUpon>ExamView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="popUpForms\BranchForm.resx">
       <DependentUpon>BranchForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +429,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="StudentDashboard\StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
@@ -453,6 +472,7 @@
     <Content Include="Resources\employee.png" />
     <Content Include="Resources\eye.png" />
     <Content Include="Resources\eye1.png" />
+    <None Include="Resources\freepik__upload__69434.png" />
     <Content Include="Resources\icons8-bank-account-48.png" />
     <Content Include="Resources\icons8-book-48.png" />
     <Content Include="Resources\icons8-calender-64.png" />
@@ -478,6 +498,7 @@
     <Content Include="Resources\pen.png" />
     <Content Include="Resources\profile.png" />
     <Content Include="Resources\registration.png" />
+    <None Include="Resources\score.png" />
     <Content Include="Resources\trash.png" />
     <Content Include="Resources\user-account.png" />
     <Content Include="Resources\writing.png" />
@@ -512,6 +533,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.2957.106\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.2957.106\build\Microsoft.Web.WebView2.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2957.106\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2957.106\build\Microsoft.Web.WebView2.targets')" />
 </Project>

@@ -2,6 +2,7 @@
 using BusinessLogi.Repositories;
 using Front.InstructorDashboard;
 using Front.popUpForms;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace Front.StudentDashboard
         private Button addbutton;
 
 
-        public StudentExam()
+        public StudentExam(int userId, string userType) : base(userId, userType)
         {
             repo=  new StudentExamRepo();   
             this.Height = 650;

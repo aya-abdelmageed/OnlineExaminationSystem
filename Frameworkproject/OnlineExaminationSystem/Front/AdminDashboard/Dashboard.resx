@@ -123,7 +123,6 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAABhBJREFUaEPt2WeIbtUVxvGxxhY19hI1UYj9g72gqFEsH5KQoH6xxY4FFfVDIhLE
         3mvsFTGJmERsYC8Ru6CCBbEHYi8pauzl+Z15971ntmfmzrwzc+9F5oE/c959ztnl7LXXWnvPwJS+h/pB
@@ -256,4 +255,7 @@
         GxeX/wKL3Xrm9SgIyAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

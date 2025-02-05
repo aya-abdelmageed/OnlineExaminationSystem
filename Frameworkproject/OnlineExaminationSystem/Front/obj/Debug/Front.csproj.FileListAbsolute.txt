@@ -1,150 +1,13 @@
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.AssemblyReference.cache
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.SuggestedBindingRedirects.cache
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Branches.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Courses.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Dashboard.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Form1.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Instructors.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Reports.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Students.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Tracks.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\Front.Properties.Resources.resources
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.GenerateResource.cache
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.CoreCompileInputs.cache
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Front.exe.config
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Front.exe
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Front.pdb
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Primitives.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Nest.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.IO.Pipelines.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Memory.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Numerics.Vectors.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Text.Encodings.Web.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Text.Json.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Threading.Tasks.Extensions.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.ValueTuple.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\DataAccess.dll
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.pdb
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.dll.config
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.pdb
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Primitives.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Nest.pdb
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\Nest.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.IO.Pipelines.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Memory.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Numerics.Vectors.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Text.Encodings.Web.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Text.Json.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.Threading.Tasks.Extensions.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\System.ValueTuple.xml
-E:\books\last\OnlineExaminationSystem\Front\bin\Debug\DataAccess.pdb
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.CopyComplete
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\Front.exe
-E:\books\last\OnlineExaminationSystem\Front\obj\Debug\Front.pdb
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Front.exe.config
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Front.exe
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Front.pdb
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Primitives.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.IO.Pipelines.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Memory.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Encodings.Web.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Json.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.ValueTuple.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.pdb
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.dll.config
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.pdb
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Primitives.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.pdb
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.IO.Pipelines.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Memory.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Encodings.Web.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Json.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.ValueTuple.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.pdb
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.AssemblyReference.cache
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.SuggestedBindingRedirects.cache
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Branches.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Courses.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Dashboard.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Form1.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Instructors.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Reports.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Students.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Tracks.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.Properties.Resources.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.GenerateResource.cache
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.CoreCompileInputs.cache
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.CopyComplete
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.exe
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.pdb
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\appsettings.json
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.dll.config
-<<<<<<< HEAD
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\InstructorCoursesReport.rdlc
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\CourseTopicsReport.rdlc
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\ExamQuestionsReport.rdlc
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\ExamStudentAnswersReport.rdlc
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\StudentGradesReport.rdlc
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\DepartmentStudentsReport.rdlc
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\appsettings.json
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Front.exe.config
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Front.exe
@@ -152,7 +15,11 @@ C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExamin
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
@@ -163,6 +30,12 @@ C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExamin
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Diagnostics.DiagnosticSource.dll
@@ -174,13 +47,19 @@ C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExamin
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Json.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.ValueTuple.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EnvDTE.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\stdole.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.pdb
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.dll.config
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.pdb
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.dll.config
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.pdb
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
@@ -203,229 +82,81 @@ C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExamin
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Json.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.ValueTuple.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.AssemblyReference.cache
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Branches.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Courses.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Dashboard.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.InstructorDashboard.Exams.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.InstructorDashboard.ExamView.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.Login.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.BranchForm.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.CoursesForm.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.popUpForms.GenerateExam.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.popUpForms.InstructorForm.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.popUpForms.QuestionForm.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.popUpForms.StudentesForm.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.popUpForms.StudentForm.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.popUpForms.TrackForm.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Form1.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Instructors.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.AdminDashboard.ReportForm.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Reports.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Students.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Tracks.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.InstructorDashboard.InstructorDashboard.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.Properties.Resources.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.StudentDashboard.StudentDashboard.resources
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.GenerateResource.cache
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.Up2Date
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.exe
 C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.pdb
-C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.popUpForms.InstructorForm.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.InstructorDashboard.InstructorDashboard.resources
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.StudentDashboard.StudentDashboard.resources
-=======
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\appsettings.json
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Front.exe.config
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Front.exe
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Front.pdb
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.SqlServer.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.Base.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Primitives.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.Common.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.Design.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.SqlServer.Types.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.IO.Pipelines.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Memory.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Numerics.Vectors.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Encodings.Web.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Json.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.ValueTuple.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EnvDTE.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.pdb
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\BusinessLogi.dll.config
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.pdb
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\DataAccess.dll.config
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.pdb
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Elasticsearch.Net.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.SqlServer.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.Base.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Extensions.Primitives.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.pdb
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Nest.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Buffers.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.IO.Pipelines.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Memory.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Numerics.Vectors.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Encodings.Web.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Text.Json.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\System.ValueTuple.xml
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.AssemblyReference.cache
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Branches.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Courses.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Dashboard.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Form1.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Instructors.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.AdminDashboard.ReportForm.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Reports.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Students.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\UI.AdminDashboard.Tracks.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.Properties.Resources.resources
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.GenerateResource.cache
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.CoreCompileInputs.cache
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.csproj.Up2Date
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.exe
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.pdb
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\InstructorCoursesReport.rdlc
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\CourseTopicsReport.rdlc
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\ExamQuestionsReport.rdlc
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\ExamStudentAnswersReport.rdlc
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\StudentGradesReport.rdlc
-D:\New folder\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\DepartmentStudentsReport.rdlc
->>>>>>> origin/reports
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\InstructorCoursesReport.rdlc
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\CourseTopicsReport.rdlc
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\ExamQuestionsReport.rdlc
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\ExamStudentAnswersReport.rdlc
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\StudentGradesReport.rdlc
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Reports\DepartmentStudentsReport.rdlc
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.Base.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.Common.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.Design.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.SqlServer.Types.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EnvDTE.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\stdole.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.Base.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Lenovo\source\repos\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\obj\Debug\Front.AdminDashboard.ReportForm.resources
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\DELL\Desktop\Test\OnlineExaminationSystem\Frameworkproject\OnlineExaminationSystem\Front\bin\Debug\Microsoft.Web.WebView2.Wpf.xml

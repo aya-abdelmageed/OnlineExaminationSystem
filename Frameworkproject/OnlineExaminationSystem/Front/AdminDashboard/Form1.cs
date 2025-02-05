@@ -7,6 +7,7 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Data;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 
 namespace UI.AdminDashboard
 {
@@ -78,7 +79,7 @@ namespace UI.AdminDashboard
 
         private void Dashboard_Click(object sender, EventArgs e)
         {
-            ShowForm(new Dashboard());
+            ShowForm(new Dashboard(0,null));
         }
 
         private void Branches_Click(object sender, EventArgs e)
