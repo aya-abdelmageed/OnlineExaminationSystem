@@ -53,8 +53,8 @@ namespace BusinessLogi.Repositories
                 string procedureName = "EXAM_TRACK_INSERTION";
                 SqlParameter[] parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@ExamID", ExamID),
-                    new SqlParameter("@TrackID", TrackID)
+                    new SqlParameter("@E_ID", ExamID),
+                    new SqlParameter("@T_ID", TrackID)
                 };
                 _dbManager.ExecuteStoredProcedure(procedureName, parameters);
             }

@@ -31,7 +31,7 @@ namespace Front.popUpForms
             this.StartPosition = FormStartPosition.CenterParent;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Size = new System.Drawing.Size(450, 350);
+            this.Size = new System.Drawing.Size(450, 600);
         }
 
         private void InitializeComponent2()
@@ -95,8 +95,9 @@ namespace Front.popUpForms
                 TimeSpan endTime = dtpEndTime.Value.TimeOfDay;
                 int? instructorId = null;
 
-                _examRepo.Exam_Generation(course, tfNum, mcqNum, date, startTime, endTime, instructorId);
+                _examRepo.Exam_Generation(course, tfNum, mcqNum, date, startTime, endTime, 1);
                 MessageBox.Show("Exam generated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 this.Close();
             }
             catch (Exception ex)

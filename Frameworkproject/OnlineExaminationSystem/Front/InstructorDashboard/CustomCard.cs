@@ -1,4 +1,5 @@
 ﻿using Front.InstructorDashboard;
+using Front.popUpForms;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -12,6 +13,7 @@ namespace System.Windows.Forms
         private PictureBox iconPictureBox, dateIcon, timeIcon, mcqIcon, tfIcon;
         private Label titleLabel, descriptionLabel, dateLabel, timeLabel, mcqLabel, tfLabel;
         private Button trackButton, viewDetailsButton;
+        private int ExamId;
 
         public CustomCard()
         {
@@ -139,24 +141,30 @@ namespace System.Windows.Forms
             this.Controls.Add(this.viewDetailsButton);
 
             // Set control size and styles
-            this.Size = new Size(320, 170);  // Increased Height for Spacing
+            this.Size = new Size(250, 170);  // Increased Height for Spacing
             this.BackColor =  Color.LightGray;
            
             this.BorderStyle = BorderStyle.None;
 
             // Rounded Corners
-            this.Region = new Region(new Rectangle(0, 0, this.Width, this.Height));
-            GraphicsPath path = new GraphicsPath();
+            this.Region = new Region(new Rectangle(0, 0, this.Width, this.Height));           
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
             int radius = 10;
+            GraphicsPath path = new GraphicsPath();
             path.AddArc(0, 0, radius, radius, 180, 90);
             path.AddArc(this.Width - radius, 0, radius, radius, 270, 90);
             path.AddArc(this.Width - radius, this.Height - radius, radius, radius, 0, 90);
             path.AddArc(0, this.Height - radius, radius, radius, 90, 90);
             path.CloseFigure();
+
             this.Region = new Region(path);
         }
 
-        public void SetCardData(string title, string description, DateTime examDate, string startTime, string endTime, int noTF, int noMCQ, int maxMarks)
+        public void SetCardData(string title, string description, DateTime examDate, string startTime, string endTime, int noTF, int noMCQ, int maxMarks, int examId)
         {
             this.titleLabel.Text = title;
             this.descriptionLabel.Text = description;
@@ -164,6 +172,7 @@ namespace System.Windows.Forms
             this.timeLabel.Text = $"{startTime} - {endTime}";
             this.mcqLabel.Text = $"MCQs: {noMCQ}";
             this.tfLabel.Text = $"T/F: {noTF}";
+            this.ExamId = examId;
         }
         public void ShowForm(Form form)
         {
@@ -174,13 +183,14 @@ namespace System.Windows.Forms
 
         private void TrackButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tracking exam...");
+            ShowForm(new AssignToTrack());
         }
 
         private void ViewDetailsButton_Click(object sender, EventArgs e)
         {
 
-            ShowForm(new ExamView());
+
+            ShowForm(new ExamView(ExamId));
         }
     }
 }

@@ -97,8 +97,8 @@ namespace UI.AdminDashboard
       
         private void panel3_click(object sender, EventArgs e)
         {
-           // var form = new InstructorDashboard();
-          //  ShowForm(form);
+           var form = new InstructorDashboard(1 ,"Instructor" );
+           ShowForm(form);
 
         }
    
@@ -114,7 +114,7 @@ namespace UI.AdminDashboard
        
         private void panel4_Paint_Click(object sender, EventArgs e)
         {
-            //ShowForm(new StudentDashboard());
+            ShowForm(new StudentDashboard(1 ,"Student"));
 
 
         }

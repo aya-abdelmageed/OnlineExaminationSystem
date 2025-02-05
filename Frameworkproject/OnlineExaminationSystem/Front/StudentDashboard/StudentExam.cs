@@ -62,7 +62,8 @@ namespace Front.StudentDashboard
                     endTime: exams[i].EndTime,
                     noTF: exams[i].No_TF,
                     noMCQ: exams[i].No_MCQ,
-                    maxMarks: exams[i].Max_Marks
+                    maxMarks: exams[i].Max_Marks,
+                    examId: exams[i].Exam_ID
                 );
 
                 // Remove unnecessary buttons
@@ -170,7 +171,6 @@ namespace Front.StudentDashboard
         private void ViewResult(int studentId, int examId)
         {
             var form = new StudentExamResult(studentId, examId);
-            form.Show();
         }
         void Soon()
         {

@@ -1,6 +1,6 @@
 ﻿namespace Front.popUpForms
 {
-    partial class AssignToTrackcs
+    partial class AssignToTrack
     {
         /// <summary>
         /// Required designer variable.
