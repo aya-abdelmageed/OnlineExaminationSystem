@@ -78,10 +78,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.08854in</Width>
+                  <Width>3.21354in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.69271in</Width>
+                  <Width>1.81771in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -98,10 +98,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>question</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox6</rd:DefaultName>
@@ -109,7 +113,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -128,10 +132,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>answer</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox8</rd:DefaultName>
@@ -139,7 +147,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -238,7 +246,7 @@
             <Top>0.78in</Top>
             <Left>0.78in</Left>
             <Height>0.5in</Height>
-            <Width>4.78125in</Width>
+            <Width>5.03125in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -269,7 +277,7 @@
                         <FontStyle>Normal</FontStyle>
                         <FontSize>20pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <Color>Red</Color>
+                        <Color>Firebrick</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -299,9 +307,9 @@
               <Value>itilogo</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.17583in</Top>
-              <Left>0.10986in</Left>
+              <Left>0.31819in</Left>
               <Height>0.5in</Height>
-              <Width>0.5in</Width>
+              <Width>0.33333in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>

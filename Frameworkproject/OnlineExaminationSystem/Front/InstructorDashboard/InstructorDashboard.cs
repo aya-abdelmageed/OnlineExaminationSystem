@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Front.ReportsControllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -411,6 +412,13 @@ namespace Front.InstructorDashboard
         {
             DrawRoundedPanelBorder(e, panel4, 20, Color.Black, 2);
 
+        }
+    }
+}
+        private void Reports_Click(object sender, EventArgs e)
+        {
+            ShowForm(new InstructorReports());
+            
         }
     }
 }

@@ -214,6 +214,7 @@
     <Compile Include="Repositories\InstructorTrackCourseRepo.cs" />
     <Compile Include="Repositories\QuestionChoiceRepo.cs" />
     <Compile Include="Repositories\QuestionsRepo.cs" />
+    <Compile Include="Repositories\ReportRepo.cs" />
     <Compile Include="Repositories\StudentExamRepo.cs" />
     <Compile Include="Repositories\StudentRepo.cs" />
     <Compile Include="Repositories\TopicRepo.cs" />

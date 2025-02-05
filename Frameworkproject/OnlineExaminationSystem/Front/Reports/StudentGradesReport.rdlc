@@ -78,10 +78,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>2.68958in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.66667in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -98,7 +98,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Course</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -111,7 +113,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -130,7 +132,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Grade</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -143,7 +147,7 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Red</BackgroundColor>
+                            <BackgroundColor>Firebrick</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -244,9 +248,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet</DataSetName>
             <Top>0.66541in</Top>
-            <Left>2.07167in</Left>
+            <Left>1.04667in</Left>
             <Height>0.5in</Height>
-            <Width>2in</Width>
+            <Width>4.35625in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -277,7 +281,7 @@
                         <FontStyle>Normal</FontStyle>
                         <FontSize>20pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <Color>Red</Color>
+                        <Color>Firebrick</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -307,9 +311,9 @@
               <Value>itilogo</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.17583in</Top>
-              <Left>0.10986in</Left>
+              <Left>0.34319in</Left>
               <Height>0.5in</Height>
-              <Width>0.5in</Width>
+              <Width>0.35in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
