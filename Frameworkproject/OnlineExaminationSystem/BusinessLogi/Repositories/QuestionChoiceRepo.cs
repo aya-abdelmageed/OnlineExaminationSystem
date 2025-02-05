@@ -37,7 +37,6 @@ namespace BusinessLogi.Repositories
             {
                 QuestionsChoicesDTO questionChoice = new QuestionsChoicesDTO
                 {
-                    QuestionID = Convert.ToInt32(dataRow["Question_ID"]),
                     Choice = dataRow["QUESTION_CHOICE"].ToString(),
                 };
                 questionChoices.Add(questionChoice);
@@ -51,7 +50,7 @@ namespace BusinessLogi.Repositories
                 DataTable dataTable;
                 SqlParameter[] parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@QuestionID",questionID),
+                    new SqlParameter("@question_id",questionID),
                     new SqlParameter("@Choice",choice)
                 };
                 dataTable = _dbManager.ExecuteStoredProcedure("CHOICE_INSERTION", parameters);

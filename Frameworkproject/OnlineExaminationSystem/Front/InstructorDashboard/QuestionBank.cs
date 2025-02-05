@@ -84,6 +84,8 @@ namespace Front.InstructorDashboard
             this.Name = "QuestionBank";
             this.ResumeLayout(false);
             this.PerformLayout();
+            comboBoxQuestionsData.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
+
         }
 
         private void LoadComboBoxData()
@@ -126,16 +128,18 @@ namespace Front.InstructorDashboard
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxQuestionsData.SelectedValue != null)
+            if (comboBoxQuestionsData.SelectedValue != null && int.TryParse(comboBoxQuestionsData.SelectedValue.ToString(), out int courseID))
             {
-                int courseID = (int)comboBoxQuestionsData.SelectedValue;
-                questions.ALL_COURSE_QUESTION(courseID);
+                // Call ALL_COURSE_QUESTION with selected course ID
+                customGrid.DataSource = questions.ALL_COURSE_QUESTION(courseID);
             }
             else
             {
-                LoadData(); // Default value
+                // Load all data if no valid course is selected
+                LoadData();
             }
         }
+
 
         private void HandleActionClick(DataGridView customGrid, DataGridViewCellMouseEventArgs e)
         {
@@ -164,11 +168,25 @@ namespace Front.InstructorDashboard
 
         private void DeleteRow(DataGridView customGrid, int rowIndex)
         {
+            // Get the question ID from the selected row
             int id = Convert.ToInt32(customGrid.Rows[rowIndex].Cells["QuestionID"].Value);
-            questions.DeleteQuestions(id);
-            BindingList<QuestionsDTO> qs = new BindingList<QuestionsDTO>(questions.ALL_COURSE_QUESTION(1));
-            customGrid.DataSource = qs;
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    // Delete the question using your repository
+                    questions.DeleteQuestions(id);
+                    BindingList<QuestionsDTO> question = new BindingList<QuestionsDTO>(questions.ALL_COURSE_QUESTION(null));
+                    customGrid.DataSource = question;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Sorry, you can't delete this row because it has dependent relationships.", "Failed");
+            }
+
         }
+
 
         private void ViewRow(DataGridViewRow dataGridViewRow)
         {

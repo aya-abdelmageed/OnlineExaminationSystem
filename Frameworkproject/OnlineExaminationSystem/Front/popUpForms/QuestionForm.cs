@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 using static UI.AdminDashboard.Form1;
 
 namespace UI.AdminDashboard
@@ -25,7 +26,8 @@ namespace UI.AdminDashboard
         private QuestionChoiceRepo questionChoiceRepo;
         private QuestionsRepo questionsRepo;
         private Button submitButton;
-        private ComboBox ChoicesComboBox;
+        // Removed ChoicesComboBox since we will use only textboxes.
+        // private ComboBox ChoicesComboBox;
 
         // Use a FlowLayoutPanel to host dynamic choice controls.
         private FlowLayoutPanel choicesPanel;
@@ -33,14 +35,14 @@ namespace UI.AdminDashboard
         private Button addChoiceButton;
         // Keep track of added choice textboxes (if needed for later use)
         private List<TextBox> choiceTextBoxes;
-
+        DataGridView customView;
         public QuestionForm(int mode, QuestionsDTO question = null, DataGridView data = null)
         {
             Mode = mode;
             questionsRepo = new QuestionsRepo();
             questionChoiceRepo = new QuestionChoiceRepo();
             choiceTextBoxes = new List<TextBox>();
-
+            customView = data;
             // Set the QuestionId if provided (for edit mode)
             if (question != null)
             {
@@ -147,7 +149,8 @@ namespace UI.AdminDashboard
             {
                 Location = new Point(150, 20),
                 Size = new Size(200, 20),
-                ReadOnly = true
+                ReadOnly = true,
+                Visible = false
             };
 
             QBankNameTextBox = new TextBox
@@ -180,17 +183,10 @@ namespace UI.AdminDashboard
                 Size = new Size(250, 20)
             };
 
-            // Create a ComboBox for editing/viewing existing choices if needed.
-            ChoicesComboBox = new ComboBox
-            {
-                Location = new Point(150, 260),
-                Size = new Size(250, 20)
-            };
-
             // Create a FlowLayoutPanel to hold dynamic choice controls.
             choicesPanel = new FlowLayoutPanel
             {
-                Location = new Point(50, 300),
+                Location = new Point(50, 260),
                 Size = new Size(400, 150),
                 AutoScroll = true,
                 FlowDirection = FlowDirection.TopDown,
@@ -202,7 +198,7 @@ namespace UI.AdminDashboard
             addChoiceButton = new Button
             {
                 Text = "Add Choice",
-                Location = new Point(50, 460),
+                Location = new Point(50, 420),
                 Size = new Size(100, 30)
             };
             addChoiceButton.Click += AddChoiceButton_Click;
@@ -230,9 +226,6 @@ namespace UI.AdminDashboard
             this.Controls.Add(TypeTextBox);
             this.Controls.Add(CrsIDTextBox);
 
-            // Add the ComboBox for choices (for edit/view if desired).
-            this.Controls.Add(ChoicesComboBox);
-
             // Add the FlowLayoutPanel for dynamic choices and the "Add Choice" button.
             this.Controls.Add(choicesPanel);
             this.Controls.Add(addChoiceButton);
@@ -242,6 +235,15 @@ namespace UI.AdminDashboard
 
         // Event handler for the "Add Choice" button.
         private void AddChoiceButton_Click(object sender, EventArgs e)
+        {
+            AddNewChoiceRow(string.Empty);
+        }
+
+        /// <summary>
+        /// Adds a new choice row (a Panel containing a label and a TextBox) to the FlowLayoutPanel.
+        /// </summary>
+        /// <param name="choiceText">Optional initial text for the choice.</param>
+        private void AddNewChoiceRow(string choiceText)
         {
             // Create a Panel for each choice row.
             Panel choiceRow = new Panel
@@ -258,9 +260,16 @@ namespace UI.AdminDashboard
 
             TextBox choiceTextBox = new TextBox
             {
+                Text = choiceText,
                 Location = new Point(70, 3),
                 Size = new Size(choiceRow.Width - 80, 20)
             };
+
+            // If in view mode, make the textbox read-only.
+            if (Mode == (int)FormMode.View)
+            {
+                choiceTextBox.ReadOnly = true;
+            }
 
             // Add controls to the panel.
             choiceRow.Controls.Add(choiceLabel);
@@ -319,13 +328,18 @@ namespace UI.AdminDashboard
                     CourseID = courseID
                 });
 
-                if (ChoicesComboBox.SelectedValue != null)
+                // If you want to update the choices based on the dynamic TextBoxes,
+                // you can loop through them and call your repository update methods.
+                // Example:
+                var q = questionChoiceRepo.GetQuestionChoices(questionID);
+                int i = 0;
+                foreach (TextBox tb in choiceTextBoxes)
                 {
-                    int oldChoiceId = Convert.ToInt32(ChoicesComboBox.SelectedValue);
-                    // Update logic for the choice. Adjust as necessary.
-                    string newChoiceText = ChoicesComboBox.Text;
-                    questionChoiceRepo.UpdateQuestionChoice(oldChoiceId, oldChoiceId, questionID);
+                    tb.Text = q[i++].Choice;
                 }
+                MessageBox.Show($"Question {questionID} updated: {questionText}, Points: {points}, Answer: {answer}");
+                BindingList<QuestionsDTO> qs = new BindingList<QuestionsDTO>(questionsRepo.ALL_COURSE_QUESTION(null));
+                customView.DataSource = qs;
             }
             // In Add mode, first insert the question and then its choices.
             else if (Mode == (int)FormMode.Add)
@@ -348,14 +362,13 @@ namespace UI.AdminDashboard
                         questionChoiceRepo.InsertQuestionChoice(newQuestionID, tb.Text);
                     }
                 }
+                BindingList<QuestionsDTO> qs = new BindingList<QuestionsDTO>(questionsRepo.ALL_COURSE_QUESTION(null));
+                customView.DataSource = qs;
+                MessageBox.Show($"New Question added: {questionText}, answer: {answer}, points: {points}");
             }
-
-            // Optionally, refresh any parent data grids here.
-            // (customGrid.Parent as QuestionBank)?.LoadData();
-
-            // Close the form after saving.
             this.DialogResult = DialogResult.OK;
-            this.Close();
+            this.Hide();
+
         }
 
         private void LoadChoices(int id)
@@ -365,38 +378,14 @@ namespace UI.AdminDashboard
 
             if (choices != null && choices.Count > 0)
             {
-                // Bind choices to the ComboBox.
-                ChoicesComboBox.DataSource = choices;
-                ChoicesComboBox.DisplayMember = "ChoiceText"; // Property to display
-                ChoicesComboBox.ValueMember = "ChoiceID";       // Property to use as value
-
-                // Optionally, also display the choices in the dynamic panel.
+                // Clear any existing controls and list.
                 choicesPanel.Controls.Clear();
+                choiceTextBoxes.Clear();
+
+                // For each fetched choice, add a new row with its text.
                 foreach (var choice in choices)
                 {
-                    Panel choiceRow = new Panel
-                    {
-                        Size = new Size(choicesPanel.Width - 25, 30)
-                    };
-
-                    Label choiceLabel = new Label
-                    {
-                        Text = "Choice:",
-                        Location = new Point(0, 5),
-                        Size = new Size(60, 20)
-                    };
-
-                    TextBox choiceTextBox = new TextBox
-                    {
-                        Text = choice.Choice,
-                        Location = new Point(70, 3),
-                        Size = new Size(choiceRow.Width - 80, 20),
-                        ReadOnly = (Mode == (int)FormMode.View)
-                    };
-
-                    choiceRow.Controls.Add(choiceLabel);
-                    choiceRow.Controls.Add(choiceTextBox);
-                    choicesPanel.Controls.Add(choiceRow);
+                    AddNewChoiceRow(choice.Choice);
                 }
             }
         }
