@@ -200,7 +200,7 @@ namespace UI.AdminDashboard
             this.webView21.AllowExternalDrop = true;
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(375, 222);
+            this.webView21.Location = new System.Drawing.Point(371, 208);
             this.webView21.Name = "webView21";
             this.webView21.Size = new System.Drawing.Size(683, 303);
             this.webView21.TabIndex = 10;
@@ -212,7 +212,7 @@ namespace UI.AdminDashboard
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1302, 537);
+            this.ClientSize = new System.Drawing.Size(1324, 526);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

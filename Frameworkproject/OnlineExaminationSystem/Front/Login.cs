@@ -28,8 +28,6 @@ namespace Front
         }
         public void ShowForm(Form form)
         {
-            form.StartPosition = FormStartPosition.Manual;
-            form.Location = this.Location;
             this.Hide(); // Hide Login form instead of closing it
 
             form.Show(); // Ensure the new form is shown

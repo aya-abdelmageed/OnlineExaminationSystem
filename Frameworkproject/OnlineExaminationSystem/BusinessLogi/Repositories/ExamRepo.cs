@@ -19,6 +19,62 @@ namespace BusinessLogi.Repositories
             _dbManager = new DBManager();
         }
 
+        public List<ExamQuestionDetials> GetExamQuestionsWithChoices(int examID)
+        {
+            string procedureName = "GetExamQuestionsWithChoices";
+
+            var parameters = new[]
+            {
+        new SqlParameter("@ExamID", SqlDbType.Int) { Value = examID }
+    };
+
+            try
+            {
+                // Execute the stored procedure using your database manager.
+                DataTable result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+
+                // Convert the DataTable to a list of ExamQuestion objects.
+                return ConvertToExamQuestionList(result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving exam questions from the database.", ex);
+            }
+        }
+        private List<ExamQuestionDetials> ConvertToExamQuestionList(DataTable dataTable)
+        {
+            var examQuestions = new List<ExamQuestionDetials>();
+
+            // Group rows by Question_ID to aggregate choices for each question.
+            var groupedRows = dataTable.AsEnumerable()
+                                       .GroupBy(row => row.Field<int>("Question_ID"));
+
+            foreach (var group in groupedRows)
+            {
+                DataRow firstRow = group.First();
+
+                var examQuestion = new ExamQuestionDetials
+                {
+                    ExamId= firstRow.Field<int?>("Exam_ID"),
+                    QuestionId = firstRow.Field<int?>("Question_ID"),
+                    Question = firstRow.Field<string>("Question"),
+                    CorrectAns = firstRow.Field<string>("Correct_Ans"),
+                    PointsEdit = firstRow.Field<int?>("Points_Edit"),
+                    Type = firstRow.Field<string>("Type"),
+                    Points = firstRow.Field<int?>("Points"),
+                    CourseId = firstRow.Field<int?>("Course_ID"),
+                    Choices = group
+                        .Where(r => r["Choice"] != DBNull.Value)
+                        .Select(r => r.Field<string>("Choice"))
+                        .ToList()
+                };
+
+                examQuestions.Add(examQuestion);
+            }
+
+            return examQuestions;
+        }
+
         public List<InstructorExamCard> GetInstructorExams(int instructorID)
         {
             string procedureName = "GetInstructorExams";

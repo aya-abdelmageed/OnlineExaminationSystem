@@ -31,13 +31,53 @@ namespace Front.InstructorDashboard
                 addbutton.Text = "Generate new Exam";
                 addbutton.Click += (s, e) =>
                 {
-                    var form =  new GenerateExam();
+                    var form = new GenerateExam();
+                    form.FormClosed += (s2, e2) => ReloadExams();
                     form.Show();
                 };
-                GenerateCustomSearch();
+
+
+
+
+               
+
+            // Remove unnecessary buttons
+            Control buttonToRemove = this.Controls["panel2"];
+            Control buttonToRemove2 = this.Controls["panel3"];
+            Control buttonToRemove3 = this.Controls["panel4"];
+
+            if (buttonToRemove != null)
+            {
+                this.Controls.Remove(buttonToRemove);
+            }
+
+            if (buttonToRemove2 != null)
+            {
+                this.Controls.Remove(buttonToRemove2);
+            }
+            if (buttonToRemove3 != null)
+                this.Controls.Remove(buttonToRemove3);
+            GenerateCustomSearch();
                 InitializeExamCards();
                 
             }
+
+        private void ReloadExams()
+        {
+            // Remove old exam cards
+            foreach (Control control in this.Controls)
+            {
+                if (control is Panel panel && panel.AutoScroll)  // Assuming this is your exam card container
+                {
+                    this.Controls.Remove(panel);
+                    panel.Dispose();  // Clean up resources
+                    break;
+                }
+            }
+
+            // Reinitialize exam cards
+            InitializeExamCards();
+        }
 
         private void InitializeExamCards()
         {
@@ -48,15 +88,15 @@ namespace Front.InstructorDashboard
                 Size = new Size(750, 400),
                 AutoScroll = true,
                 BorderStyle = BorderStyle.FixedSingle
-            };
+            }; 
 
             this.Controls.Add(scrollPanel);
 
             // Fetch exams from the database
-            List<InstructorExamCard> exams;
+            BindingList<InstructorExamCard> exams;
             try
             {
-                exams = exam.GetInstructorExams(1);
+                exams = new BindingList<InstructorExamCard>( exam.GetInstructorExams(1));
             }
             catch (Exception ex)
             {
@@ -81,7 +121,8 @@ namespace Front.InstructorDashboard
                     endTime: exams[i].EndTime.ToString(),
                     noTF: (int)exams[i].TFnum,  // Assuming equal distribution of questions
                     noMCQ: (int)(exams[i].MCQnum),
-                    maxMarks: (int)exams[i].MaxMarks
+                    maxMarks: (int)exams[i].MaxMarks,
+                    examId: (int)exams[i].ExamID // Send Exam ID
                 );
 
                 card.Width = cardWidth;

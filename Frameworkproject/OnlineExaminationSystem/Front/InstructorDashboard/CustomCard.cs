@@ -13,6 +13,7 @@ namespace System.Windows.Forms
         private PictureBox iconPictureBox, dateIcon, timeIcon, mcqIcon, tfIcon;
         private Label titleLabel, descriptionLabel, dateLabel, timeLabel, mcqLabel, tfLabel;
         private Button trackButton, viewDetailsButton;
+        private int ExamId;
 
         public CustomCard()
         {
@@ -163,7 +164,7 @@ namespace System.Windows.Forms
             this.Region = new Region(path);
         }
 
-        public void SetCardData(string title, string description, DateTime examDate, string startTime, string endTime, int noTF, int noMCQ, int maxMarks)
+        public void SetCardData(string title, string description, DateTime examDate, string startTime, string endTime, int noTF, int noMCQ, int maxMarks, int examId)
         {
             this.titleLabel.Text = title;
             this.descriptionLabel.Text = description;
@@ -171,6 +172,7 @@ namespace System.Windows.Forms
             this.timeLabel.Text = $"{startTime} - {endTime}";
             this.mcqLabel.Text = $"MCQs: {noMCQ}";
             this.tfLabel.Text = $"T/F: {noTF}";
+            this.ExamId = examId;
         }
         public void ShowForm(Form form)
         {
@@ -188,7 +190,7 @@ namespace System.Windows.Forms
         {
 
 
-            ShowForm(new ExamView());
+            ShowForm(new ExamView(ExamId));
         }
     }
 }
