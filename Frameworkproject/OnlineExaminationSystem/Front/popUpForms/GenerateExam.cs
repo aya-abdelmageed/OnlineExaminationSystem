@@ -31,7 +31,7 @@ namespace Front.popUpForms
             this.StartPosition = FormStartPosition.CenterParent;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Size = new System.Drawing.Size(450, 350);
+            this.Size = new System.Drawing.Size(450, 600);
         }
 
         private void InitializeComponent2()

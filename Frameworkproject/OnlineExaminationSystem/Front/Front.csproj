@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>Front.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
       <HintPath>..\packages\Elasticsearch.Net.7.17.5\lib\net461\Elasticsearch.Net.dll</HintPath>
@@ -235,11 +238,11 @@
     <Compile Include="InstructorDashboard\InstructorDashboard.Designer.cs">
       <DependentUpon>InstructorDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="popUpForms\AssignToTrackcs.cs">
+    <Compile Include="popUpForms\AssignToTrack.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="popUpForms\AssignToTrackcs.Designer.cs">
-      <DependentUpon>AssignToTrackcs.cs</DependentUpon>
+    <Compile Include="popUpForms\AssignToTrack.Designer.cs">
+      <DependentUpon>AssignToTrack.cs</DependentUpon>
     </Compile>
     <Compile Include="popUpForms\StudentExamResult.cs">
       <SubType>Form</SubType>
@@ -311,17 +314,17 @@
     <Compile Include="StudentDashboard\ExamView.Designer.cs">
       <DependentUpon>ExamView.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentDashboard\StudentExam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentDashboard\StudentExam.Designer.cs">
-      <DependentUpon>StudentExam.cs</DependentUpon>
-    </Compile>
     <Compile Include="StudentDashboard\StudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentDashboard\StudentDashboard.Designer.cs">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDashboard\StudentExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDashboard\StudentExam.Designer.cs">
+      <DependentUpon>StudentExam.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminDashboard\Branches.resx">
       <DependentUpon>Branches.cs</DependentUpon>
@@ -445,6 +448,7 @@
     <Content Include="Resources\icons8-user-account-48.png" />
     <Content Include="Resources\iti-logo.png" />
     <Content Include="Resources\opportunities.png" />
+    <Content Include="Resources\party_13140511.png" />
     <Content Include="Resources\pen.png" />
     <Content Include="Resources\profile.png" />
     <Content Include="Resources\registration.png" />
