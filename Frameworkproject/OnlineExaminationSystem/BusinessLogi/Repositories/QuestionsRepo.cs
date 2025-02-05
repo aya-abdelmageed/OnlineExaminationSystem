@@ -40,18 +40,18 @@ namespace BusinessLogi.Repositories
             {
                 var question = new QuestionsDTO
                 {
-                    QuestionID = dataRow.Field<int>("QUESTION ID"),
+                    QuestionID = dataRow.Field<int>("QUESTION_ID"),
                     Question = dataRow.Field<string>("QUESTION"),
-                    Answer = dataRow.Field<string>("ANSWER"),
-                    Type = dataRow.Field<string>("QUESTION_TYPE"),
-                    Points = dataRow.Field<int>("QUESTION_POINTS"),
-                    CourseID = dataRow.Field<int>("COURSE ID")
+                    Answer = dataRow.Field<string>("Correct_Ans"),
+                    Type = dataRow.Field<string>("Type"),
+                    Points = dataRow.Field<int>("Points"),
+                    CourseID = dataRow.Field<int>("COURSE_ID")
                 };
                 questions.Add(question);
             }
             return questions;
         }
-        public List<QuestionsDTO> ALL_COURSE_QUESTION(int Crs_id)
+        public List<QuestionsDTO> ALL_COURSE_QUESTION(int? Crs_id)
         {
             string procedureName = "ALL_COURSE_QUESTION_SELECTION";
             DataTable result;
@@ -72,49 +72,59 @@ namespace BusinessLogi.Repositories
             {
                 var question = new QuestionsDTO
                 {
-                    QuestionID = dataRow.Field<int>("QUESTION ID"),
-                    Question = dataRow.Field<string>("QUESTION"),
-                    Answer = dataRow.Field<string>("ANSWER"),
-                    Type = dataRow.Field<string>("QUESTION_TYPE"),
-                    Points = dataRow.Field<int>("QEUESTION_POINTS"),
-
+                    QuestionID = dataRow.Field<int>("Question_ID"),
+                    Question = dataRow.Field<string>("Question"),
+                    Answer = dataRow.Field<string>("Correct_Ans"),
+                    Type = dataRow.Field<string>("Type"),
+                    Points = dataRow.Field<int>("Points"),
+                    CourseID = dataRow.Field<int>("Course_ID")
                 };
                 questions.Add(question);
             }
             return questions;
         }
-        public void InsertQuestions(QuestionsDTO question)
+        public int InsertQuestions(QuestionsDTO question)
         {
-            string procdureName = "QUESTION_INSERTION";
-            DataTable reslut;
+            string procedureName = "QUESTION_INSERTION";
+
             try
             {
                 var parameters = new SqlParameter[]
                 {
-                    new SqlParameter("@Question", SqlDbType.VarChar) { Value = question.Question },
-                    new SqlParameter("@correct_ans", SqlDbType.VarChar) { Value = question.Answer },
-                    new SqlParameter("@Type", SqlDbType.VarChar) { Value = question.Type },
-                    new SqlParameter("@Points", SqlDbType.Int) { Value = question.Points },
-                    new SqlParameter("@Course_ID", SqlDbType.Int) { Value = question.CourseID }
+            new SqlParameter("@Question", SqlDbType.NVarChar) { Value = question.Question },
+            new SqlParameter("@correct_ans", SqlDbType.NVarChar) { Value = question.Answer },
+            new SqlParameter("@Type", SqlDbType.NVarChar) { Value = question.Type },
+            new SqlParameter("@Points", SqlDbType.Int) { Value = question.Points },
+            new SqlParameter("@Course_ID", SqlDbType.Int) { Value = question.CourseID },
+
+            // Output parameter for Question_ID
+            new SqlParameter("@new_question_id", SqlDbType.Int)
+            {
+                Direction = ParameterDirection.Output
+            }
                 };
-                reslut = _dbManager.ExecuteStoredProcedure(procdureName, parameters);
+
+                _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+
+                // Retrieve the output value
+                return Convert.ToInt32(parameters[5].Value);
             }
             catch (Exception ex)
             {
-                throw new Exception("Error inserting Questions from the database.", ex);
+                throw new Exception("Error inserting question into the database.", ex);
             }
         }
+
         public void DeleteQuestions(int id)
         {
             string procdureName = "QUESTION_DELETION";
-            DataTable reslut;
             try
             {
                 var parameters = new SqlParameter[]
                 {
                     new SqlParameter("@Question_ID", SqlDbType.Int) { Value = id }
                 };
-                reslut = _dbManager.ExecuteStoredProcedure(procdureName, parameters);
+                _dbManager.ExecuteStoredProcedure(procdureName, parameters);
             }
             catch (Exception ex)
             {
@@ -124,7 +134,6 @@ namespace BusinessLogi.Repositories
         public void UpdateQuestions(QuestionsDTO question)
         {
             string procdureName = "QUESTION_UPDATE";
-            DataTable reslut;
             try
             {
                 var parameters = new SqlParameter[]
@@ -136,7 +145,7 @@ namespace BusinessLogi.Repositories
                     new SqlParameter("@Points", SqlDbType.Int) { Value = question.Points },
                     new SqlParameter("@Course_ID", SqlDbType.Int) { Value = question.CourseID }
                 };
-                reslut = _dbManager.ExecuteStoredProcedure(procdureName, parameters);
+                _dbManager.ExecuteStoredProcedure(procdureName, parameters);
             }
             catch (Exception ex)
             {
