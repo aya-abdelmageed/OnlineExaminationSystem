@@ -182,6 +182,11 @@ namespace Front.StudentDashboard
             form.Show();
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login loginForm = new Login();
+            loginForm.ShowDialog();
+        }
     }
 }

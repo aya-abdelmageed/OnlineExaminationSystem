@@ -14,7 +14,6 @@ using System.Data.SqlClient;
 using DataAccess;
 using Front;
 using Nest;
-using Microsoft.Web.WebView2.WinForms;
 using BusinessLogi.Repositories;
 
 namespace UI.AdminDashboard
@@ -170,7 +169,7 @@ namespace UI.AdminDashboard
 
         private void label7_Click(object sender, EventArgs e)
         {
-            ShowForm(new Login());
+           // ShowForm(new Login());
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)

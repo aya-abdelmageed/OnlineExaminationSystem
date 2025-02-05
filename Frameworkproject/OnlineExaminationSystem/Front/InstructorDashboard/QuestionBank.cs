@@ -22,7 +22,7 @@ namespace Front.InstructorDashboard
         private CourseRepo coursesRepo;
         private Button addbutton;
 
-        public QuestionBank()
+        public QuestionBank(int userId , string userType):base(userId , userType) 
         {
             coursesRepo = new CourseRepo();
             questions = new QuestionsRepo();
@@ -30,6 +30,22 @@ namespace Front.InstructorDashboard
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.ClientSize = new Size(1324, 600);
             customGrid = InitializeCustomGrid();
+            // Remove unnecessary buttons
+            Control buttonToRemove = this.Controls["panel2"];
+            Control buttonToRemove2 = this.Controls["panel3"];
+            Control buttonToRemove3 = this.Controls["panel4"];
+
+            if (buttonToRemove != null)
+            {
+                this.Controls.Remove(buttonToRemove);
+            }
+
+            if (buttonToRemove2 != null)
+            {
+                this.Controls.Remove(buttonToRemove2);
+            }
+            if (buttonToRemove3 != null)
+                this.Controls.Remove(buttonToRemove3);
             InitializeComponent();
             addbutton = GenerateCustomButton();
 
@@ -54,6 +70,8 @@ namespace Front.InstructorDashboard
             {
                 HandleActionClick(customGrid, e);
             };
+
+
 
         }
         private void InitializeComponent()
@@ -91,7 +109,7 @@ namespace Front.InstructorDashboard
         private void LoadComboBoxData()
         {
             // Fetch data from the repository
-            var courses = coursesRepo.GetCourses();
+            var courses = coursesRepo.GetCourses(null);
 
             // Format the display text (if needed)
             foreach (var course in courses)

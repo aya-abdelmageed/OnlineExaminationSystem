@@ -38,25 +38,24 @@ namespace BusinessLogi.Repositories
             }
         }
 
-        private List<StudentExamDetialsDTO> ConvertToStudentExamDTO(DataTable table , int examId)
+        private List<StudentExamDetialsDTO> ConvertToStudentExamDTO(DataTable table, int examId)
         {
             var examDictionary = new Dictionary<int, StudentExamDetialsDTO>();
             var questionDictionary = new Dictionary<int, StudentExamQuestionDetialsDTO>();
 
             foreach (DataRow row in table.Rows)
             {
-                int examID = examId;
                 int questionID = Convert.ToInt32(row["Question_ID"]);
-                string choiceText = row["Choice_Text"].ToString();
+                string choiceText = row["Choice_Text"] as string;
                 string studentAnswer = row["Student_Answer"] != DBNull.Value ? row["Student_Answer"].ToString() : null;
                 bool? isCorrect = row["Is_Correct"] != DBNull.Value ? Convert.ToBoolean(row["Is_Correct"]) : (bool?)null;
 
                 // Ensure the Exam exists in dictionary
-                if (!examDictionary.ContainsKey(examID))
+                if (!examDictionary.ContainsKey(examId))
                 {
-                    examDictionary[examID] = new StudentExamDetialsDTO
+                    examDictionary[examId] = new StudentExamDetialsDTO
                     {
-                        ExamID = examID,
+                        ExamID = examId,
                         Questions = new List<StudentExamQuestionDetialsDTO>()
                     };
                 }
@@ -67,21 +66,24 @@ namespace BusinessLogi.Repositories
                     var questionDTO = new StudentExamQuestionDetialsDTO
                     {
                         QuestionID = questionID,
-                        QuestionText = row["Question"].ToString(),
-                        Type = row["Type"].ToString(),
-                        Points = Convert.ToInt32(row["Points"]),
-                        AdjustedPoints = Convert.ToInt32(row["Adjusted_Points"]),
+                        QuestionText = row["Question"] as string,
+                        Type = row["Type"] as string,
+                        Points = row["Points"] != DBNull.Value ? Convert.ToInt32(row["Points"]) : 0,
+                        AdjustedPoints = row["Adjusted_Points"] != DBNull.Value ? Convert.ToInt32(row["Adjusted_Points"]) : 0,
                         StudentAnswer = studentAnswer,
                         IsCorrect = isCorrect,
                         Choices = new List<string>() // Initialize Choices list
                     };
 
                     questionDictionary[questionID] = questionDTO;
-                    examDictionary[examID].Questions.Add(questionDTO); // Add question to exam
+                    examDictionary[examId].Questions.Add(questionDTO); // Add question to exam
                 }
 
                 // Add choice to the question
-                questionDictionary[questionID].Choices.Add(choiceText);
+                if (!string.IsNullOrEmpty(choiceText))
+                {
+                    questionDictionary[questionID].Choices.Add(choiceText);
+                }
             }
 
             return examDictionary.Values.ToList();
@@ -145,21 +147,22 @@ namespace BusinessLogi.Repositories
             {
                 exams.Add(new StudentExamCardDTO
                 {
-                    Exam_ID = Convert.ToInt32(row["Exam_ID"]),
-                    Exam_Date = Convert.ToDateTime(row["Exam_Date"]),
-                    StartTime = row["StartTime"].ToString(),
-                    EndTime = row["EndTime"].ToString(),
-                    No_TF = Convert.ToInt32(row["No_TF"]),
-                    No_MCQ = Convert.ToInt32(row["No_MCQ"]),
-                    Max_Marks = Convert.ToInt32(row["Max_Marks"]),
-                    Course_Name = row["Course_Name"].ToString(),
-                    Track_Name = row["Track_Name"].ToString(),
-                    Instructor_Name = row["Instructor_Name"].ToString()
+                    Exam_ID = row["Exam_ID"] != DBNull.Value ? Convert.ToInt32(row["Exam_ID"]) : 0,
+                    Exam_Date = row["Exam_Date"] != DBNull.Value ? Convert.ToDateTime(row["Exam_Date"]) : DateTime.MinValue,
+                    StartTime = row["StartTime"] != DBNull.Value ? row["StartTime"].ToString() : string.Empty,
+                    EndTime = row["EndTime"] != DBNull.Value ? row["EndTime"].ToString() : string.Empty,
+                    No_TF = row["No_TF"] != DBNull.Value ? Convert.ToInt32(row["No_TF"]) : 0,
+                    No_MCQ = row["No_MCQ"] != DBNull.Value ? Convert.ToInt32(row["No_MCQ"]) : 0,
+                    Max_Marks = row["Max_Marks"] != DBNull.Value ? Convert.ToInt32(row["Max_Marks"]) : 0,
+                    Course_Name = row["Course_Name"] != DBNull.Value ? row["Course_Name"].ToString() : string.Empty,
+                    Track_Name = row["Track_Name"] != DBNull.Value ? row["Track_Name"].ToString() : string.Empty,
+                    Instructor_Name = row["Instructor_Name"] != DBNull.Value ? row["Instructor_Name"].ToString() : string.Empty
                 });
             }
 
             return exams;
         }
+
 
         public void InsertStudentExam(StudentExamDTO studentExam)
         {

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using BusinessLogic.Repositories;
 using BusinessLogic.DTO;
 using BusinessLogi.Repositories;
+using Front.InstructorDashboard;
 
 namespace Front.popUpForms
 {
@@ -14,8 +15,8 @@ namespace Front.popUpForms
         private readonly TrackRepo _trackRepo;
         private ComboBox cmbTracks;
         private Button btnAssign;
-
-        public AssignToTrack()
+        private int ExamId;
+        public AssignToTrack(int examId)
         {
             InitializeComponent2();
             this.Show();
@@ -28,6 +29,7 @@ namespace Front.popUpForms
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Size = new System.Drawing.Size(450, 300);
+            this.ExamId = examId;   
         }
 
         private void InitializeComponent2()
@@ -94,8 +96,8 @@ namespace Front.popUpForms
                 int selectedTrackID = selectedTrackItem.Value;  // Get the TrackID
 
                 // Call the method to assign the exam to the selected track
-            
-                    _examTrackRepo.InsertExamTrack(1, selectedTrackID);  // Assuming 1 is the instructor ID
+
+                    _examTrackRepo.InsertExamTrack(ExamId, selectedTrackID);  // Assuming 1 is the instructor ID
 
             
                 MessageBox.Show("Exam assigned successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

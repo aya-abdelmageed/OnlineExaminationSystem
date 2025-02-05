@@ -85,7 +85,7 @@ namespace Front.InstructorDashboard
 
         private void Questions_Click(object sender, EventArgs e)
         {
-            QuestionBank questionBank = new QuestionBank();
+            QuestionBank questionBank = new QuestionBank(userId , userType);
             ShowForm(questionBank);
         }
 
@@ -381,10 +381,7 @@ namespace Front.InstructorDashboard
 
         }
 
-        private void Reports_Click(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -413,12 +410,18 @@ namespace Front.InstructorDashboard
             DrawRoundedPanelBorder(e, panel4, 20, Color.Black, 2);
 
         }
-    }
-}
         private void Reports_Click(object sender, EventArgs e)
         {
-            ShowForm(new InstructorReports());
-            
+            ShowForm(new InstructorReports(userId , userType));
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login loginForm = new Login();
+            loginForm.ShowDialog();
         }
     }
 }
+

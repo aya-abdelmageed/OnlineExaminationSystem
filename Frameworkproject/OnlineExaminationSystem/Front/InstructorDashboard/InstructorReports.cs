@@ -13,7 +13,7 @@ namespace Front.InstructorDashboard
 {
     public partial class InstructorReports : InstructorDashboard
     {
-        public InstructorReports()
+        public InstructorReports(int userId , string userType): base(userId, userType)  
         {
             InitializeComponent();
 

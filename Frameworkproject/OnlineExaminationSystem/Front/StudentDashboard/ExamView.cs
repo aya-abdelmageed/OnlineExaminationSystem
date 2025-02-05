@@ -209,8 +209,19 @@ namespace Front.StudentDashboard
                     };
                     questionContainer.Controls.Add(lblQuestion);
 
+                    string savedAnswer;
                     // Retrieve the saved answer for this question
-                    string savedAnswer = q.StudentAnswer.ToString();
+                    if (q != null && q.StudentAnswer != null)
+                    {
+                        savedAnswer = q.StudentAnswer.ToString();
+                        // Proceed with using savedAnswer
+                    }
+                    else
+                    {
+                        // Handle the case where q or q.StudentAnswer is null
+                        // For example, assign a default value or log a message
+                        savedAnswer = "Default Answer"; // or handle accordingly
+                    }
 
                     int answerYOffset = 50;
                     foreach (var choice in q.Choices)

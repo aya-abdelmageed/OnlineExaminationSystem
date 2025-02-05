@@ -19,12 +19,13 @@ namespace Front.StudentDashboard
         private StudentExamRepo repo;   
         private DataGridView customGrid;
         private Button addbutton;
-
+        private int userId;
 
         public StudentExam(int userId, string userType) : base(userId, userType)
         {
             repo=  new StudentExamRepo();   
             this.Height = 650;
+            this.userId = userId;
 
             InitializeComponent();
             GenerateCustomSearch();
@@ -115,7 +116,7 @@ namespace Front.StudentDashboard
                         BackColor = Color.Green,
                         ForeColor = Color.White
                     };
-                    actionButton.Click += (s, e) => ViewResult(1, currentExamId); // Use the captured value
+                    actionButton.Click += (s, e) => ViewResult(userId, currentExamId); // Use the captured value
                 }
                 else if (now >= examStart && now <= examEnd) // Exam is happening now, show "Join" button
                 {
@@ -171,6 +172,7 @@ namespace Front.StudentDashboard
         private void ViewResult(int studentId, int examId)
         {
             var form = new StudentExamResult(studentId, examId);
+            form.Show();
         }
         void Soon()
         {

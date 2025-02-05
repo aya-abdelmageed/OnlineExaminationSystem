@@ -34,7 +34,7 @@
             // Exams
             // 
             this.ClientSize = new System.Drawing.Size(1040, 511);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Exams";
             this.ResumeLayout(false);
 

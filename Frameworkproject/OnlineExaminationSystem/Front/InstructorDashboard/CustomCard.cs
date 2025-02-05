@@ -183,7 +183,7 @@ namespace System.Windows.Forms
 
         private void TrackButton_Click(object sender, EventArgs e)
         {
-            ShowForm(new AssignToTrack());
+            ShowForm(new AssignToTrack(ExamId));
         }
 
         private void ViewDetailsButton_Click(object sender, EventArgs e)
