@@ -11,9 +11,14 @@ namespace Front.InstructorDashboard
 {
     public partial class InstructorDashboard : Form 
     {
-        public InstructorDashboard()
+        private int userId;
+        private string userType;
+        public InstructorDashboard(int userId, string userType)
         {
             InitializeComponent();
+            this.userId = userId;
+            this.userType = userType;
+            MessageBox.Show($"Loading data for ID: {userId}");
         }
 
         public void ShowForm(Form form)
@@ -40,7 +45,7 @@ namespace Front.InstructorDashboard
 
         private void Exams_Click(object sender, EventArgs e)
         {
-            ShowForm(new Exams());
+            ShowForm(new Exams(userId,userType));
         }
 
 

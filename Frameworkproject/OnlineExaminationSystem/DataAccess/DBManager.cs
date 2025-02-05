@@ -13,7 +13,7 @@ namespace DataAccess
         private SqlConnection connect;
 
         
-        string _connectionString = "Data Source=DESKTOP-OGJ98U8\\TEW_SQLEXPRESS;Initial Catalog=Online_Examination_System;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string _connectionString = "Server=DESKTOP-S3ETNPJ;Database=Online_Examination_System;User Id=Exam;Password=123456;";
 
 
         // Constructor that takes the connection string as a parameter
@@ -34,6 +34,34 @@ namespace DataAccess
             {
                 MessageBox.Show("Connection Failed: " + ex.Message);
             }
+        }
+
+        public int AuthenticateUser(string username, string password, string userType)
+        {
+            string query = "";
+
+            if (userType == "Student")
+            {
+                query = "SELECT Student_ID FROM Student WHERE UserName COLLATE SQL_Latin1_General_CP1_CS_AS = @UserName AND Password COLLATE SQL_Latin1_General_CP1_CS_AS = @Password";
+            }
+            else if (userType == "Instructor")
+            {
+                query = "SELECT INS_ID FROM Instructor WHERE UserName COLLATE SQL_Latin1_General_CP1_CS_AS = @UserName AND Password COLLATE SQL_Latin1_General_CP1_CS_AS = @Password";
+            }
+
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@UserName", username),
+                new SqlParameter("@Password", password)
+            };
+
+            DataTable resultTable = ExecuteQuery(query, parameters);
+
+            if (resultTable.Rows.Count > 0)
+            {
+                return Convert.ToInt32(resultTable.Rows[0][0]); // Return user ID
+            }
+            return -1; // Return -1 if authentication fails
         }
 
         // Method to execute a stored procedure and return a DataTable

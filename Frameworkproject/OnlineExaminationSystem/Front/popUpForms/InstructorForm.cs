@@ -279,7 +279,7 @@ namespace Front.popUpForms
                     age = Age,
                     Salary = (double)salary
                 });
-                BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors());
+                BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors(null));
                 data.DataSource = instructors;
                 MessageBox.Show($"Instructor {InstructorId.Value} updated: {Name}, Phone: {Email}, Location: {Age}");
 
@@ -296,7 +296,7 @@ namespace Front.popUpForms
                     age = Age,
                     Salary = (double)(decimal)salary
                 });
-                BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors());
+                BindingList<InstructorDTO> instructors = new BindingList<InstructorDTO>(instructorRepo.GetInstructors(null));
                 data.DataSource = instructors;
                 MessageBox.Show($"New instructor added: {FirstName}, {MiddleName}, {LastName}, {Email}");
             }

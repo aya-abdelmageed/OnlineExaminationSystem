@@ -17,29 +17,49 @@ namespace BusinessLogi.Repositories
         {
             _dbManager = new DBManager();
         }
-        public List<CourseDTO> GetCourses()
+        public List<CourseDTO> GetCourses(int? Course_ID)
         {
             string procedureName = "COURSE_VIEW";
-            DataTable result;
+            var parameters = new[] { new SqlParameter("Course_ID", SqlDbType.Int) { Value = (object)Course_ID ?? DBNull.Value } };
+
             try
             {
-                result = _dbManager.ExecuteStoredProcedure(procedureName, null);
+                DataTable result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                if (result.Rows.Count == 0)
+                {
+                    return new List<CourseDTO>(null); // Return empty list instead of null
+                }
+
+                return ConvertToCourseList(result);
             }
             catch (Exception ex)
             {
                 throw new Exception("Error retrieving Courses from the database.", ex);
             }
-            var courses = new List<CourseDTO>();
-            foreach (DataRow dataRow in result.Rows)
+        }
+
+
+        // Search Course by Name
+        public List<CourseDTO> SearchCourseByName(string courseName)
+        {
+            string procedureName = "SearchCourse_Name";
+            var parameters = new[]
             {
-                var course = new CourseDTO
+                new SqlParameter("@Course_Name", SqlDbType.VarChar)
                 {
-                    ID = dataRow.Field<int>("Course_ID"),
-                    Name = dataRow.Field<string>("Course_Name"),
-                };
-                courses.Add(course);
+                    Value = string.IsNullOrEmpty(courseName) ? (object)DBNull.Value : courseName
+                }
+            };
+
+            try
+            {
+                DataTable result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                return ConvertToCourseList(result);
             }
-            return courses;
+            catch (Exception ex)
+            {
+                throw new Exception("Error searching course by name.", ex);
+            }
         }
         public void InsertCourses(CourseDTO course)
         {
@@ -92,6 +112,25 @@ namespace BusinessLogi.Repositories
                 throw new Exception("Error updating Courses from the database.", ex);
             }
             return 1;
+        }
+
+
+
+        // Convert DataTable to List of CourseDTO
+        private List<CourseDTO> ConvertToCourseList(DataTable table)
+        {
+            var courses = new List<CourseDTO>();
+
+            foreach (DataRow row in table.Rows)
+            {
+                var course = new CourseDTO
+                {
+                    ID = row.Field<int>("Course_ID"),
+                    Name = row.Field<string>("Course_Name"),
+                };
+                courses.Add(course);
+            }
+            return courses;
         }
     }
 }

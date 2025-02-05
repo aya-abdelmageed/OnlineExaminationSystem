@@ -15,20 +15,25 @@ namespace Front.StudentDashboard
 {
     public partial class StudentDashboard: Form
     {
+        private int userId;
+        private string userType;
         private DataGridView customGrid;
         private Button addbutton;
-        public StudentDashboard()
+        public StudentDashboard(int userId, string userType)
         {
             this.Height = 600;
 
             InitializeComponent();
+            this.userId = userId;
+            this.userType = userType;
+            MessageBox.Show($"Loading data for ID: {userId}");
             this.Exams.Click += Exams_Click1;
           
         }
 
         private void Exams_Click1(object sender, EventArgs e)
         {
-            ShowForm(new StudentExam());
+            ShowForm(new StudentExam(userId, userType));
         }
 
         public Button GenerateCustomButton()

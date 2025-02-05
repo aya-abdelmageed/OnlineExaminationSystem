@@ -17,6 +17,7 @@ namespace BusinessLogi.Repositories
         {
             _dbManager = new DBManager();
         }
+        //get tracks by ID
         public List<TrackDTO> GetTracks(int? trackid)
         {
             DataTable resultTable;
@@ -43,6 +44,47 @@ namespace BusinessLogi.Repositories
                 tracks.Add(track);
             }
             return tracks;
+        }
+        // Convert DataTable to List of TrackDTO
+        private List<TrackDTO> ConvertToTrackList(DataTable table)
+        {
+            var tracks = new List<TrackDTO>();
+
+            foreach (DataRow row in table.Rows)
+            {
+                var track = new TrackDTO
+                {
+                    TrackID = row.Field<int>("Track_ID"),
+                    Name = row.Field<string>("Track_Name"),
+                    Department = row.Field<string>("Department"),
+                };
+                tracks.Add(track);
+            }
+            return tracks;
+        }
+
+
+        // Search Track by Name
+        public List<TrackDTO> SearchTrackByName(string trackName)
+        {
+            string procedureName = "SearchTrack_Name";
+            var parameters = new[]
+            {
+                new SqlParameter("@Track_Name", SqlDbType.VarChar)
+                {
+                    Value = string.IsNullOrEmpty(trackName) ? (object)DBNull.Value : trackName
+                }
+            };
+
+            try
+            {
+                DataTable result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                return ConvertToTrackList(result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error searching branch by name.", ex);
+            }
         }
         public void InsertTrack(TrackDTO track)
         {

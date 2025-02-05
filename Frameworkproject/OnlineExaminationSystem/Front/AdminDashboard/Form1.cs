@@ -7,6 +7,7 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Data;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 
 namespace UI.AdminDashboard
 {
@@ -78,7 +79,7 @@ namespace UI.AdminDashboard
 
         private void Dashboard_Click(object sender, EventArgs e)
         {
-            ShowForm(new Dashboard());
+            ShowForm(new Dashboard(0,null));
         }
 
         private void Branches_Click(object sender, EventArgs e)
@@ -228,7 +229,8 @@ namespace UI.AdminDashboard
             return addButton;
 
         }
-        public void GenerateCustomSearch()
+
+        public TextBox GenerateCustomSearch()
         {
 
             // Create the Panel for search
@@ -319,6 +321,7 @@ namespace UI.AdminDashboard
 
             // Add the search panel to the form
             this.Controls.Add(searchPanel);
+            return searchTextBox;
         }
         public DataGridView InitializeCustomGrid()
         {

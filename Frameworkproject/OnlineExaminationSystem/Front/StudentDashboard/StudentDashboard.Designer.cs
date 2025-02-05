@@ -102,6 +102,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 511);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudentDashboard";
             this.Text = "Dashboardcs";
             this.panel1.ResumeLayout(false);

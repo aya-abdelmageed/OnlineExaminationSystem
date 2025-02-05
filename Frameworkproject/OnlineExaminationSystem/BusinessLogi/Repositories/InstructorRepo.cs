@@ -17,37 +17,26 @@ namespace BusinessLogic.Repositories
             _dbManager =  new DBManager();
         }
 
-        public List<InstructorDTO> GetInstructors()
+        public List<InstructorDTO> GetInstructors(int? INS_ID)
         {
             string procedureName = "INSTRUCTOR_VIEW";
-            DataTable dataTable;
+            var parameters = new[] { new SqlParameter("INS_ID", SqlDbType.Int) { Value = (object)INS_ID ?? DBNull.Value } };
 
             try
             {
-                dataTable = _dbManager.ExecuteStoredProcedure(procedureName, null);
+               DataTable dataTable = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                if (dataTable.Rows.Count == 0)
+                {
+                    return new List<InstructorDTO>(null); // Return empty list instead of null
+                }
+
+                return ConvertToInstructorList(dataTable);
             }
             catch (Exception ex)
             {
                 throw new Exception("Error retrieving instructors from the database.", ex);
             }
 
-            List<InstructorDTO> instructors = new List<InstructorDTO>();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                InstructorDTO instructor = new InstructorDTO
-                {
-                    InstructorId = row.Field<int>("INS_ID"),
-                    FirstName = row.Field<string>("FName"),
-                    LastName = row.Field<string>("LName"),
-                    Email = row.Field<string>("Email"),
-                    MName = row.Field<string>("MName"),
-                    age = row.Field<int>("Age"),
-                    Gender = row.Field<string>("gender"),
-                    Salary = (double)row.Field<decimal>("Salary")
-                };
-                instructors.Add(instructor);
-            }
-            return instructors;
         }
         public void InsertInstructor(InstructorDTO instructor)
         {
@@ -71,6 +60,29 @@ namespace BusinessLogic.Repositories
             catch (Exception ex)
             {
                 throw new Exception("Error inserting instructor into the database.", ex);
+            }
+        }
+
+        // Search Instructor by Name
+        public List<InstructorDTO> SearchInstructorByName(string InstructorName)
+        {
+            string procedureName = "SearchINS_FName";
+            var parameters = new[]
+            {
+                new SqlParameter("@FName", SqlDbType.VarChar)
+                {
+                    Value = string.IsNullOrEmpty(InstructorName) ? (object)DBNull.Value : InstructorName
+                }
+            };
+
+            try
+            {
+                DataTable result = _dbManager.ExecuteStoredProcedure(procedureName, parameters);
+                return ConvertToInstructorList(result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error searching instructor by name.", ex);
             }
         }
         public void DeleteInstructor(int id)
@@ -114,6 +126,28 @@ namespace BusinessLogic.Repositories
                 throw new Exception("Error updating instructor in the database.", ex);
             }
 
+        }
+
+        private List<InstructorDTO> ConvertToInstructorList(DataTable table)
+        {
+            var instructors = new List<InstructorDTO>();
+
+            foreach (DataRow row in table.Rows)
+            {
+                var instructor = new InstructorDTO
+                {
+                    InstructorId = row.Field<int>("INS_ID"),
+                    FirstName = row.Field<string>("FName"),
+                    LastName = row.Field<string>("LName"),
+                    Email = row.Field<string>("Email"),
+                    MName = row.Field<string>("MName"),
+                    age = row.Field<int>("Age"),
+                    Gender = row.Field<string>("gender"),
+                    Salary = (double)row.Field<decimal>("Salary")
+                };
+                instructors.Add(instructor);
+            }
+            return instructors;
         }
     }
 }

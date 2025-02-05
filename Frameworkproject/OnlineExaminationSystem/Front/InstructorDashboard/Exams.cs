@@ -1,6 +1,7 @@
 ﻿using BusinessLogi.DTO;
 using BusinessLogi.Repositories;
 using Front.popUpForms;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace Front.InstructorDashboard
         private DataGridView customGrid;
         private Button addbutton;
 
-            public Exams()
+            public Exams(int userId, string userType): base(userId, userType) 
             {
 
                 exam = new ExamRepo();
