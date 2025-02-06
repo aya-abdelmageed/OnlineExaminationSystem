@@ -48,9 +48,8 @@ To enhance **performance, scalability, and data management**, the Online Examina
 - 📂 **Student**: Stores student-related data.
 - 📂 **Instructor**: Contains instructor-related tables.
 - 📂 **Main**: Holds the remaining system tables.
-## ERD
-<img src="[https://github.com/your-username/your-repo-name/blob/main/image.png](https://github.com/aya-abdelmageed/OnlineExaminationSystem/blob/main/diagrams/OnlineExaminationSystem.drawio.png)" width="300">
-
+## 🗃 ERD
+![ERD](https://github.com/aya-abdelmageed/OnlineExaminationSystem/blob/main/diagrams/OnlineExaminationSystem.drawio.png)
 
 ### 🔄 Database Operations
 - 🔹 Perform **CRUD (Create, Read, Update, Delete)** operations on all tables.
