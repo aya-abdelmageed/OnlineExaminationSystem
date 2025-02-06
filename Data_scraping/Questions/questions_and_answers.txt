@@ -1,0 +1,350 @@
+Question 1: You are designing a website layout using CSS. You want to ensure that the container of a section takes up 50% of the screen width, regardless of the user's screen size. Which of the following is the correct CSS property to achieve this?
+Choice: A)width: 50px;
+Choice: B)width: 50%;
+Choice: C)max-width: 50%;
+Choice: D)min-width: 50%;
+Answer: Answer: B) width: 50%;
+
+Question 2: Which HTML element is used to create a hyperlink?
+Choice: A)<link>
+Choice: B)<a>
+Choice: C)<href>
+Choice: D)<button>
+Answer: Answer: B) <a>
+
+Question 3: What CSS property is used to change the text color of an element?
+Choice: A)font-size
+Choice: B)background-color
+Choice: C)color
+Choice: D)text-color
+Answer: Answer: C) color
+
+Question 4: You want to create a form in HTML. Which of the following tags is used to group together form controls such as inputs and labels?
+Choice: A)<div>
+Choice: B)<form>
+Choice: C)<fieldset>
+Choice: D)<section>
+Answer: Answer: C) <fieldset>
+
+Question 5: In CSS, how would you center a block-level element horizontally within its parent container?
+Choice: A)margin: auto;
+Choice: B)text-align: center;
+Choice: C)position: center;
+Choice: D)align: middle;
+Answer: Answer: A) margin: auto;
+
+Question 6: Which of the following CSS properties will remove the default bullet points from an unordered list?
+Choice: A)list-style: none;
+Choice: B)display: block;
+Choice: C)text-decoration: none;
+Choice: D)remove-bullets: true;
+Answer: Answer: A) list-style: none;
+
+Question 7: Which HTML tag is used for the largest heading?
+Choice: A)<heading>
+Choice: B)<h1>
+Choice: C)<h6>
+Choice: D)<head>
+Answer: Answer: B) <h1>
+
+Question 8: How do you add a comment in CSS?
+Choice: A)// This is a comment
+Choice: B)<!-- This is a comment -->
+Choice: C)/* This is a comment */
+Choice: D)# This is a comment
+Answer: Answer: C) /* This is a comment */
+
+Question 9: Which HTML attribute is used to define inline styles directly on an element?
+Choice: A)class
+Choice: B)id
+Choice: C)style
+Choice: D)css
+Answer: Answer: C) style
+
+Question 10: What is the correct syntax for including an external CSS file in an HTML document?
+Choice: A)<link rel="stylesheet" href="style.css">
+Choice: B)<css href="style.css">
+Choice: C)<style src="style.css">
+Choice: D)<stylesheet link="style.css">
+Answer: Answer: A) <link rel="stylesheet" href="style.css">
+
+Question 11: Which of the following is the correct HTML5 doctype declaration?
+Choice: A)<!DOCTYPE html>
+Choice: B)<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+Choice: C)<!DOCTYPE h5>
+Choice: D)<DOCTYPE html>
+Answer: Answer: A) <!DOCTYPE html>
+
+Question 12: What is the default value of the position property in CSS?
+Choice: A)relative
+Choice: B)absolute
+Choice: C)fixed
+Choice: D)static
+Answer: Answer: D) static
+
+Question 13: Which CSS property is used to control the space between lines of text?
+Choice: A)line-height
+Choice: B)text-indent
+Choice: C)font-spacing
+Choice: D)letter-spacing
+Answer: Answer: A) line-height
+
+Question 14: In HTML, which attribute is used to specify that an input field must be filled out before submitting the form?
+Choice: A)placeholder
+Choice: B)required
+Choice: C)value
+Choice: D)validate
+Answer: Answer: B) required
+
+Question 15: Which CSS property specifies whether an element should be visible or hidden?
+Choice: A)visibility
+Choice: B)display
+Choice: C)opacity
+Choice: D)hide
+Answer: Answer: A) visibility
+
+Question 16: What HTML attribute is used to define inline JavaScript?
+Choice: A)onclick
+Choice: B)onload
+Choice: C)script
+Choice: D)href
+Answer: Answer: A) onclick
+
+Question 17: In CSS, what does the z-index property control?
+Choice: A) The transparency of an element
+Choice: B) The horizontal position of an element
+Choice: C) The stacking order of elements
+Choice: D) The width of an element
+Answer: Answer: C) The stacking order of elements
+
+Question 18: Which of the following is NOT a valid HTML tag?
+Choice: A)<em>
+Choice: B)<strong>
+Choice: C)<break>
+Choice: D)<br>
+Answer: Answer: C) <break>
+
+Question 19: What is the default display value of an HTML <div> element?
+Choice: A)inline
+Choice: B)block
+Choice: C)inline-block
+Choice: D)flex
+Answer: Answer: B) block
+
+Question 20: Which property is used to specify the background color of an element in CSS?
+Choice: A)color
+Choice: B)background-color
+Choice: C)bg-color
+Choice: D)fill
+Answer: Answer: B) background-color
+
+Question 21: How can you include a comment in HTML?
+Choice: A)<!-- This is a comment -->
+Choice: B)// This is a comment
+Choice: C)/* This is a comment */
+Choice: D)# This is a comment
+Answer: Answer: A) <!-- This is a comment -->
+
+Question 22: Which CSS property is used to create space between the content of an element and its border?
+Choice: A)padding
+Choice: B)margin
+Choice: C)border-spacing
+Choice: D)spacing
+Answer: Answer: A) padding
+
+Question 23: What is the result of the following CSS: p { color: blue; }?
+Choice: A) It sets the background color of all paragraphs to blue.
+Choice: B) It sets the font color of all paragraphs to blue.
+Choice: C) It sets the border color of all paragraphs to blue.
+Choice: D) It changes the link color in paragraphs to blue.
+Answer: Answer: B) It sets the font color of all paragraphs to blue.
+
+Question 24: Which HTML element is used to define a division or a section in an HTML document?
+Choice: A)<section>
+Choice: B)<div>
+Choice: C)<article>
+Choice: D)<span>
+Answer: Answer: B) <div>
+
+Question 25: In CSS, what does opacity: 0.5; do to an element?
+Choice: A) It makes the element completely transparent.
+Choice: B) It makes the element 50% opaque.
+Choice: C) It makes the element 50% wider.
+Choice: D) It removes the element from the document flow.
+Answer: Answer: B) It makes the element 50% opaque.
+
+Question 26: Which HTML tag is used to embed an image in a web page?
+Choice: A)<img>
+Choice: B)<image>
+Choice: C)<picture>
+Choice: D)<src>
+Answer: Answer: A) <img>
+
+Question 27: In CSS, what does float: left; do to an element?
+Choice: A) It centers the element horizontally.
+Choice: B) It moves the element to the left of its container and allows text to wrap around it.
+Choice: C) It hides the element.
+Choice: D) It aligns the element to the top left corner of the page.
+Answer: Answer: B) It moves the element to the left of its container and allows text to wrap around it.
+
+Question 28: Which of the following units is relative to the size of the root element in CSS?
+Choice: A)em
+Choice: B)px
+Choice: C)rem
+Choice: D)%
+Answer: Answer: C) rem
+
+Question 29: Which CSS rule will select all elements with the class "header"?
+Choice: A)#header {}
+Choice: B).header {}
+Choice: C)header {}
+Choice: D)*header {}
+Answer: Answer: B) .header {}
+
+Question 30: Which HTML attribute is used to define the path of an image file in the <img> tag?
+Choice: A)href
+Choice: B)src
+Choice: C)alt
+Choice: D)link
+Answer: Answer: B) src
+
+Question 31: Which of the following CSS properties will make an element invisible but still take up space on the page?
+Choice: A)display: none;
+Choice: B)visibility: hidden;
+Choice: C)opacity: 0;
+Choice: D)float: none;
+Answer: Answer: B) visibility: hidden;
+
+Question 32: How do you create an ordered list in HTML?
+Choice: A)<ul>
+Choice: B)<ol>
+Choice: C)<li>
+Choice: D)<list>
+Answer: Answer: B) <ol>
+
+Question 33: Which of the following values of the position property will position an element relative to its nearest positioned ancestor?
+Choice: A)absolute
+Choice: B)relative
+Choice: C)fixed
+Choice: D)static
+Answer: Answer: A) absolute
+
+Question 34: What is the correct syntax for creating a table in HTML?
+Choice: A)<table><tr><td>Data</td></tr></table>
+Choice: B)<table><row><data>Data</data></row></table>
+Choice: C)<table><tr><th>Data</th></tr></table>
+Choice: D)<table><tr><td><td>Data</td></tr></table>
+Answer: Answer: A) <table><tr><td>Data</td></tr></table>
+
+Question 35: Which of the following properties is used to specify the thickness of a border?
+Choice: A)border-width
+Choice: B)border-height
+Choice: C)border-thickness
+Choice: D)border-style
+Answer: Answer: A) border-width
+
+Question 36: Which HTML element is used to define metadata about an HTML document?
+Choice: A)<meta>
+Choice: B)<head>
+Choice: C)<header>
+Choice: D)<info>
+Answer: Answer: A) <meta>
+
+Question 37: In CSS, how would you select all <p> elements inside a <div>?
+Choice: A)p div {}
+Choice: B)div p {}
+Choice: C).div p {}
+Choice: D)div + p {}
+Answer: Answer: B) div p {}
+
+Question 38: Which of the following CSS properties is used to control the order of flexible items in a flex container?
+Choice: A)flex-direction
+Choice: B)order
+Choice: C)align-items
+Choice: D)flex-grow
+Answer: Answer: B) order
+
+Question 39: Which of the following is a valid HTML5 semantic element?
+Choice: A)<span>
+Choice: B)<article>
+Choice: C)<div>
+Choice: D)<section>
+Answer: Answer: B) <article>
+
+Question 40: Which property in CSS is used to define the space between a border and the surrounding elements?
+Choice: A)padding
+Choice: B)border-spacing
+Choice: C)margin
+Choice: D)border-width
+Answer: Answer: C) margin
+
+Question 41: Which HTML tag is used to play a video file in a webpage?
+Choice: A)<media>
+Choice: B)<video>
+Choice: C)<embed>
+Choice: D)<movie>
+Answer: Answer: B) <video>
+
+Question 42: In CSS, what is the purpose of the calc() function?
+Choice: A) To apply dynamic styling based on user input.
+Choice: B) To calculate mathematical expressions for property values.
+Choice: C) To animate elements based on time values.
+Choice: D) To control the order of execution in the browser.
+Answer: Answer: B) To calculate mathematical expressions for property values.
+
+Question 43: What is the correct way to reference an external JavaScript file in an HTML document?
+Choice: A)<script src="script.js"></script>
+Choice: B)<js href="script.js"></js>
+Choice: C)<script link="script.js"></script>
+Choice: D)<link rel="javascript" href="script.js">
+Answer: Answer: A) <script src="script.js"></script>
+
+Question 44: What does the CSS box-shadow property do?
+Choice: A) Adds a shadow inside the border of an element.
+Choice: B) Adds a shadow outside the border of an element.
+Choice: C) Increases the width of the border.
+Choice: D) Controls the visibility of the element.
+Answer: Answer: B) Adds a shadow outside the border of an element.
+
+Question 45: Which tag is used in HTML5 to define a footer for a document or section?
+Choice: A)<footer>
+Choice: B)<bottom>
+Choice: C)<section>
+Choice: D)<end>
+Answer: Answer: A) <footer>
+
+Question 46: What CSS property allows an element to expand in proportion to its sibling elements in a flex container?
+Choice: A)flex-grow
+Choice: B)flex-wrap
+Choice: C)align-content
+Choice: D)justify-content
+Answer: Answer: A) flex-grow
+
+Question 47: Which attribute is used in the <a> tag to specify the destination URL of a link?
+Choice: A)target
+Choice: B)href
+Choice: C)rel
+Choice: D)src
+Answer: Answer: B) href
+
+Question 48: Which HTML element is used to display a clickable button?
+Choice: A)<input>
+Choice: B)<button>
+Choice: C)<a>
+Choice: D)<div>
+Answer: Answer: B) <button>
+
+Question 49: Which of the following properties is used to create rounded corners in CSS?
+Choice: A)border-radius
+Choice: B)border-corner
+Choice: C)corner-radius
+Choice: D)border-style
+Answer: Answer: A) border-radius
+
+Question 50: In HTML5, which tag is used to represent the navigation links of a website?
+Choice: A)<nav>
+Choice: B)<header>
+Choice: C)<aside>
+Choice: D)<menu>
+Answer: Answer: A) <nav>
+

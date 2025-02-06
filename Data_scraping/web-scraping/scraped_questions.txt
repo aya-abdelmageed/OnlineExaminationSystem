@@ -1,0 +1,1027 @@
+Q1: What type of database model organizes data in tables with rows and columns?
+Option 1: Hierarchical
+Option 2: Network
+Option 3: Relational
+Option 4: Object-Oriented
+Answer: Answer: Relational
+##################################################
+
+Q2: In a database, what is a unique identifier for each record in a table called?
+Option 1: Primary key
+Option 2: Secondary key
+Option 3: Foreign key
+Option 4: Index key
+Answer: Answer: Primary key
+##################################################
+
+Q3: Which SQL statement is used to retrieve data from a database?
+Option 1: UPDATE
+Option 2: DELETE
+Option 3: INSERT
+Option 4: SELECT
+Answer: Answer: SELECT
+##################################################
+
+Q4: What is the purpose of normalization in a database?
+Option 1: Increase data redundancy
+Option 2: Optimize query speed
+Option 3: Reduce data redundancy
+Option 4: Improve data security
+Answer: Answer: Reduce data redundancy
+##################################################
+
+Q5: Which of the following is not a characteristic of a good database design?
+Option 1: Data integrity
+Option 2: Data redundancy
+Option 3: Scalability
+Option 4: Efficiency
+Answer: Answer: Data redundancy
+##################################################
+
+Q6: Which data type is used in SQL to store true or false values?
+Option 1: INT
+Option 2: BOOLEAN
+Option 3: VARCHAR
+Option 4: FLOAT
+Answer: Answer: BOOLEAN
+##################################################
+
+Q7: In SQL, which data type is best suited for storing large texts such as articles or comments?
+Option 1: TEXT
+Option 2: VARCHAR
+Option 3: CHAR
+Option 4: BLOB
+Answer: Answer: TEXT
+##################################################
+
+Q8: Which SQL data type is used to store numerical values with fixed precision and scale?
+Option 1: DECIMAL
+Option 2: INTEGER
+Option 3: DATE
+Option 4: VARCHAR
+Answer: Answer: DECIMAL
+##################################################
+
+Q9: In SQL, what is the difference between CHAR and VARCHAR data types?
+Option 1: CHAR is fixed length, VARCHAR is variable length
+Option 2: CHAR is variable length, VARCHAR is fixed length
+Option 3: No difference
+Option 4: VARCHAR is used only for numeric data
+Answer: Answer: CHAR is fixed length, VARCHAR is variable length
+##################################################
+
+Q10: What data type would you use in SQL to store a date and time value together?
+Option 1: DATETIME
+Option 2: DATE
+Option 3: TIME
+Option 4: TIMESTAMP
+Answer: Answer: DATETIME
+##################################################
+
+Q11: Which SQL command is used to create a new table in a database?
+Option 1: CREATE
+Option 2: ALTER
+Option 3: DROP
+Option 4: TRUNCATE
+Answer: Answer: CREATE
+##################################################
+
+Q12: What does the DROP command do in SQL?
+Option 1: Adds a new row to a table
+Option 2: Deletes an existing table
+Option 3: Modifies a table
+Option 4: Creates a new table
+Answer: Answer: Deletes an existing table
+##################################################
+
+Q13: In SQL, what is the purpose of the TRUNCATE command?
+Option 1: Deletes specific rows from a table
+Option 2: Removes all rows from a table
+Option 3: Changes table structure
+Option 4: Creates a new table
+Answer: Answer: Removes all rows from a table
+##################################################
+
+Q14: Which command should be used to change the datatype of a column in an SQL table?
+Option 1: CREATE
+Option 2: ALTER
+Option 3: DROP
+Option 4: TRUNCATE
+Answer: Answer: ALTER
+##################################################
+
+Q15: What is the difference between the DROP and TRUNCATE commands in SQL?
+Option 1: DROP deletes the table, TRUNCATE deletes only the table data
+Option 2: TRUNCATE deletes the table, DROP deletes only the table data
+Option 3: No difference
+Option 4: Both commands modify table data
+Answer: Answer: DROP deletes the table, TRUNCATE deletes only the table data
+##################################################
+
+Q16: Which part of this statement is incorrect?
+
+"CREATE TABEL Students (ID int, Name varchar(50));"
+Option 1: TABEL
+Option 2: Students
+Option 3: ID int
+Option 4: Name varchar(50)
+Answer: Answer: TABEL
+##################################################
+
+Q17: Identify the error in
+"ALTER TABLE Students DROP COLUMN DateOfBirth date;"
+Option 1: ALTER TABLE
+Option 2: DROP COLUMN
+Option 3: DateOfBirth
+Option 4: date
+Answer: Answer: date
+##################################################
+
+Q18: What needs to be changed in
+"TRUNCATE Students;" to make it a valid SQL statement?
+Option 1: TRUNCATE
+Option 2: Students
+Option 3: All Correct
+Option 4: Add a WHERE clause
+Answer: Answer: All Correct
+##################################################
+
+Q19: Correct the syntax error in
+"CREATE TABLE Students (ID int PRIMARY, Name varchar(50));"
+Option 1: PRIMARY
+Option 2: ID int
+Option 3: Name varchar(50)
+Option 4: CREATE TABLE
+Answer: Answer: PRIMARY
+##################################################
+
+Q20: In "ALTER TABLE Students ADD COLUMN Email varchar(50),
+what is missing for this statement to be correct?
+Option 1: ADD COLUMN
+Option 2: Email
+Option 3: varchar(50)
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q21: Which SQL command is used to add a new record to a table?
+Option 1: SELECT
+Option 2: DELETE
+Option 3: UPDATE
+Option 4: INSERT
+Answer: Answer: INSERT
+##################################################
+
+Q22: What does the UPDATE command in SQL do?
+Option 1: Deletes a record
+Option 2: Modifies an existing record
+Option 3: Adds a new record
+Option 4: Retrieves data
+Answer: Answer: Modifies an existing record
+##################################################
+
+Q23: In SQL, what is the purpose of the WHERE clause in a DELETE statement?
+Option 1: Specifies which database to use
+Option 2: Specifies which table to delete from
+Option 3: Specifies which records to delete
+Option 4: Specifies how to order the records
+Answer: Answer: Specifies which records to delete
+##################################################
+
+Q24: Which command is used to remove a specific record from a table in SQL?
+Option 1: DELETE
+Option 2: UPDATE
+Option 3: INSERT
+Option 4: SELECT
+Answer: Answer: DELETE
+##################################################
+
+Q25: How does a transaction ensure data integrity in SQL?
+Option 1: By locking the database
+Option 2: By allowing multiple users to modify data simultaneously
+Option 3: By ensuring all operations within the transaction are completed before committing
+Option 4: By automatically updating all related tables
+Answer: Answer: By ensuring all operations within the transaction are completed before committing
+##################################################
+
+Q26: In the query "SELECT Name FROM Employees WHERE Age > 30 AND Department = 'HR';",
+what needs to be corrected?
+Option 1: All Correct
+Option 2: The SELECT keyword
+Option 3: The WHERE clause
+Option 4: The AND operator
+Answer: Answer: All Correct
+##################################################
+
+Q27: Identify the error in
+"UPDATE Employees SET Salary = Salary * 1.05 WHERE;"
+Option 1: UPDATE keyword
+Option 2: SET keyword
+Option 3: WHERE clause
+Option 4: No error
+Answer: Answer: WHERE clause
+##################################################
+
+Q28: What is missing in the following statement?
+
+"INSERT INTO Employees (Name, Department) VALUES ('John', 'Sales');"
+Option 1: All Correct
+Option 2: Employee ID
+Option 3: A WHERE clause
+Option 4: Additional column names
+Answer: Answer: All Correct
+##################################################
+
+Q29: Correct the syntax error in
+"DELETE FROM Employees HAVING Age < 25;"
+Option 1: DELETE keyword
+Option 2: FROM keyword
+Option 3: HAVING keyword
+Option 4: No syntax error
+Answer: Answer: HAVING keyword
+##################################################
+
+Q30: In "UPDATE Employees SET Age = Age + 1 WHERE Department IN ('Sales', 'HR') AND Age >= 30;",
+identify the error.
+Option 1: The IN operator
+Option 2: The AND operator
+Option 3: No error
+Option 4: The SET keyword
+Answer: Answer: No error
+##################################################
+
+Q31: What is the primary purpose of the GRANT command in SQL?
+Option 1: To create a new table
+Option 2: To delete data from a table
+Option 3: To give users access privileges
+Option 4: To update table data
+Answer: Answer: To give users access privileges
+##################################################
+
+Q32: What does the REVOKE command do in SQL?
+Option 1: Adds new user accounts
+Option 2: Removes specific access privileges from users
+Option 3: Deletes tables
+Option 4: Inserts data
+Answer: Answer: Removes specific access privileges from users
+##################################################
+
+Q33: Which part of this statement is incorrect?
+
+"GRANT SELECT ON Employees TO user123;"
+Option 1: GRANT
+Option 2: SELECT ON
+Option 3: Employees
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q34: Identify the error in
+"REVOKE INSERT, UPDATE ON Database FROM user123;"
+Option 1: REVOKE
+Option 2: INSERT, UPDATE
+Option 3: ON Database
+Option 4: FROM user123
+Answer: Answer: ON Database
+##################################################
+
+Q35: What is the purpose of the COMMIT command in SQL?
+Option 1: To start a transaction
+Option 2: To save changes made by a transaction
+Option 3: To undo changes made by a transaction
+Option 4: To revoke user permissions
+Answer: Answer: To save changes made by a transaction
+##################################################
+
+Q36: What does the ROLLBACK command do in a transaction?
+Option 1: Starts a new transaction
+Option 2: Saves the transaction changes
+Option 3: Restores the database to the state before the transaction started
+Option 4: Grants user permissions
+Answer: Answer: Restores the database to the state before the transaction started
+##################################################
+
+Q37: How does a transaction in SQL ensure data consistency?
+Option 1: By locking the entire database
+Option 2: By allowing only one transaction at a time
+Option 3: By maintaining a log of all operations
+Option 4: By saving changes at regular intervals
+Answer: Answer: By maintaining a log of all operations
+##################################################
+
+Q38: In the statement "BEGIN TRANSACTION; UPDATE Employees SET Age = Age + 1; COMMIT;",
+what needs correction?
+Option 1: BEGIN TRANSACTION
+Option 2: UPDATE Employees
+Option 3: SET Age = Age + 1
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q39: Identify the issue in
+"ROLLBACK TRANSACTION TO Savepoint1;"
+Option 1: ROLLBACK TRANSACTION
+Option 2: TO
+Option 3: Savepoint1
+Option 4: No issue
+Answer: Answer: No issue
+##################################################
+
+Q40: Correct the error in
+"COMMIT WORK;"
+Option 1: COMMIT
+Option 2: WORK
+Option 3: No error
+Option 4: Semicolon
+Answer: Answer: No error
+##################################################
+
+Q41: What is the primary role of a primary key in a database table?
+Option 1: To sort data
+Option 2: To identify unique records
+Option 3: To establish relationships with other tables
+Option 4: To check data integrity
+Answer: Answer: To identify unique records
+##################################################
+
+Q42: Which constraint ensures that a column cannot have a NULL value?
+Option 1: PRIMARY KEY
+Option 2: FOREIGN KEY
+Option 3: UNIQUE
+Option 4: NOT NULL
+Answer: Answer: NOT NULL
+##################################################
+
+Q43: What does the UNIQUE constraint in SQL do?
+Option 1: Prevents duplicate values in a column
+Option 2: Links two tables together
+Option 3: Automatically updates a column
+Option 4: Creates a new table
+Answer: Answer: Prevents duplicate values in a column
+##################################################
+
+Q44: What is the purpose of the FOREIGN KEY constraint?
+Option 1: To create a new table
+Option 2: To ensure unique values in a column
+Option 3: To establish a link between two tables
+Option 4: To validate data format
+Answer: Answer: To establish a link between two tables
+##################################################
+
+Q45: Which constraint is used to define a condition that each row must satisfy in a SQL table?
+Option 1: DEFAULT
+Option 2: CHECK
+Option 3: PRIMARY KEY
+Option 4: UNIQUE
+Answer: Answer: CHECK
+##################################################
+
+Q46: How does the DEFAULT constraint function in SQL?
+Option 1: It provides a default value for a column when no value is specified
+Option 2: It sets default permissions for users
+Option 3: It creates default tables
+Option 4: It sets default sorting for data
+Answer: Answer: It provides a default value for a column when no value is specified
+##################################################
+
+Q47: Identify the error in
+"CREATE TABLE Orders (OrderID int PRIMARY KEY, ProductID int FOREIGN);"
+Option 1: CREATE TABLE
+Option 2: PRIMARY KEY
+Option 3: FOREIGN
+Option 4: No error
+Answer: Answer: FOREIGN
+##################################################
+
+Q48: What needs to be corrected in
+"ALTER TABLE Employees ADD UNIQUE (EmployeeID, Name);"?
+Option 1: ALTER TABLE
+Option 2: ADD UNIQUE
+Option 3: (EmployeeID, Name)
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q49: Correct the syntax error in
+"CREATE TABLE Students (ID int NOT);"
+Option 1: CREATE TABLE
+Option 2: Students
+Option 3: ID int
+Option 4: NOT
+Answer: Answer: NOT
+##################################################
+
+Q50: In the statement
+"CREATE TABLE Employees (ID int, Salary decimal DEFAULT 10000);",
+identify the error.
+Option 1: CREATE TABLE
+Option 2: ID int
+Option 3: Salary decimal
+Option 4: No Error
+Answer: Answer: No Error
+##################################################
+
+Q51: Identify the issue in
+"CREATE TABLE Orders (OrderID int, CustomerID int REFERENCES Customers);"
+Option 1: CREATE TABLE
+Option 2: OrderID int
+Option 3: CustomerID int
+Option 4: REFERENCES Customers
+Answer: Answer: REFERENCES Customers
+##################################################
+
+Q52: What is missing in
+"ALTER TABLE Employees ADD CHECK (Age >= 18);"?
+Option 1: ALTER TABLE
+Option 2: ADD CHECK
+Option 3: (Age >= 18)
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q53: Correct the error in
+"CREATE TABLE Products (ProductID int, Price decimal CHECK Price > 0);"
+Option 1: CREATE TABLE
+Option 2: Price decimal
+Option 3: CHECK constraint usage
+Option 4: ProductID int
+Answer: Answer: CHECK constraint usage
+##################################################
+
+Q54: Which arithmetic operator is used for division in SQL?
+Option 1: "-"
+Option 2: "*"
+Option 3: "/"
+Option 4: "+"
+Answer: Answer: "/"
+##################################################
+
+Q55: In SQL, what does the logical operator AND do when used in a WHERE clause?
+Option 1: Selects a record if either condition is true
+Option 2: Selects a record if both conditions are true
+Option 3: Negates a condition
+Option 4: None of the above
+Answer: Answer: Selects a record if both conditions are true
+##################################################
+
+Q56: What does the comparison operator '<>' do in SQL?
+Option 1: Checks for equality
+Option 2: Checks for inequality
+Option 3: Checks if less than
+Option 4: Checks if greater than
+Answer: Answer: Checks for inequality
+##################################################
+
+Q57: Which bitwise operator performs a logical AND operation on two expressions?
+Option 1: & (AND)
+Option 2: | (OR)
+Option 3: ^ (XOR)
+Option 4: ~ (NOT)
+Answer: Answer: & (AND)
+##################################################
+
+Q58: In SQL, how does the compound operator '+=' function?
+Option 1: Adds two values
+Option 2: Adds a value to a column's existing value
+Option 3: Subtracts one value from another
+Option 4: Concatenates strings
+Answer: Answer: Adds a value to a column's existing value
+##################################################
+
+Q59: What needs correction in
+"SELECT * FROM Employees WHERE Salary = 5000 AND Department = 'HR';"?
+Option 1: All Correct
+Option 2: = in Salary
+Option 3: AND
+Option 4: = in Department
+Answer: Answer: All Correct
+##################################################
+
+Q60: Identify the error in
+"SELECT * FROM Orders WHERE OrderDate >= '2023-01-01' OR >= '2023-06-01';"
+Option 1: OR operator
+Option 2: >= '2023-06-01'
+Option 3: No error
+Option 4: The date format
+Answer: Answer: >= '2023-06-01'
+##################################################
+
+Q61: Correct the syntax error in
+"UPDATE Products SET Price = Price * 1.1 WHERE Price < 100 OR Price > 200;"
+Option 1: * 1.1
+Option 2: WHERE
+Option 3: OR
+Option 4: No syntax error
+Answer: Answer: No syntax error
+##################################################
+
+Q62: What is incorrect in
+"SELECT EmployeeID, Salary FROM Employees WHERE Salary BETWEEN 30000 AND 50000;"?
+Option 1: SELECT
+Option 2: EmployeeID, Salary
+Option 3: BETWEEN
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q63: In "SELECT Name FROM Employees WHERE NOT (Age < 30 AND Department = 'Sales');",
+identify the error.
+Option 1: NOT operator
+Option 2: < 30
+Option 3: AND
+Option 4: No error
+Answer: Answer: No error
+##################################################
+
+Q64: Identify the mistake in
+"SELECT * FROM Employees WHERE Department = 'HR' XOR Department = 'Finance';"
+Option 1: XOR operator
+Option 2: = 'HR'
+Option 3: = 'Finance'
+Option 4: No mistake, the statement is correct
+Answer: Answer: XOR operator
+##################################################
+
+Q65: What needs to be changed in
+"UPDATE Employees SET Salary *= 2 WHERE YearsOfExperience > 5;"?
+Option 1: *= 2
+Option 2: WHERE
+Option 3: YearsOfExperience > 5
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q66: What does the WHERE clause do in an SQL query?
+Option 1: Sorts the result set
+Option 2: Filters rows before grouping
+Option 3: Joins tables
+Option 4: Filters rows after grouping
+Answer: Answer: Filters rows before grouping
+##################################################
+
+Q67: What is the purpose of the ORDER BY clause in SQL?
+Option 1: Filters rows
+Option 2: Sorts the result set
+Option 3: Groups rows
+Option 4: Joins tables
+Answer: Answer: Sorts the result set
+##################################################
+
+Q68: In SQL, how does the GROUP BY clause function when combined with an aggregate function like SUM or COUNT?
+Option 1: It calculates the aggregate for the entire table
+Option 2: It groups rows based on unique values in a column and calculates the aggregate for each group
+Option 3: It filters the rows before aggregation
+Option 4: It sorts the result set
+Answer: Answer: It groups rows based on unique values in a column and calculates the aggregate for each group
+##################################################
+
+Q69: What is the main difference between WHERE and HAVING clauses in SQL?
+Option 1: WHERE filters rows before grouping, HAVING filters rows after grouping
+Option 2: HAVING filters rows before grouping, WHERE filters rows after grouping
+Option 3: No difference
+Option 4: WHERE is used with aggregate functions, HAVING is not
+Answer: Answer: WHERE filters rows before grouping, HAVING filters rows after grouping
+##################################################
+
+Q70: In an SQL query, what role does HAVING play without a GROUP BY clause?
+Option 1: It functions as a WHERE clause
+Option 2: It has no effect
+Option 3: It causes an error
+Option 4: It filters aggregated results
+Answer: Answer: It functions as a WHERE clause
+##################################################
+
+Q71: How does the ORDER BY clause treat NULL values by default?
+Option 1: It places them at the beginning of the result set
+Option 2: It places them at the end of the result set
+Option 3: It ignores them
+Option 4: It causes an error
+Answer: Answer: It places them at the end of the result set
+##################################################
+
+Q72: What happens if you use a column in the SELECT statement that is not in the GROUP BY clause?
+Option 1: The query fails
+Option 2: The query succeeds, and the column shows arbitrary values
+Option 3: The query is automatically corrected
+Option 4: The column is ignored
+Answer: Answer: The query fails
+##################################################
+
+Q73: Can the ORDER BY clause use column aliases defined in the SELECT statement?
+Option 1: Yes
+Option 2: No
+Option 3: Only if they are numerical
+Option 4: Only in subqueries
+Answer: Answer: Yes
+##################################################
+
+Q74: What is the effect of combining GROUP BY with ORDER BY in an SQL query?
+Option 1: GROUP BY overrides ORDER BY
+Option 2: ORDER BY overrides GROUP BY
+Option 3: They can be used together for organized grouping and sorting
+Option 4: They cannot be used together in the same query
+Answer: Answer: They can be used together for organized grouping and sorting
+##################################################
+
+Q75: In SQL, can the HAVING clause be used without an aggregate function?
+Option 1: Yes, it acts like a WHERE clause
+Option 2: No, it must be used with an aggregate function
+Option 3: Yes, but it has no effect
+Option 4: No, it causes an error
+Answer: Answer: Yes, it acts like a WHERE clause
+##################################################
+
+Q76: What is incorrect in
+"SELECT Name FROM Employees WHERE Department = 'Sales' ORDER BY Age;"?
+Option 1: SELECT Name
+Option 2: WHERE Department = 'Sales'
+Option 3: ORDER BY Age
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q77: Identify the error in
+"SELECT Department, COUNT(*) FROM Employees GROUP BY Salary;"
+Option 1: SELECT Department
+Option 2: COUNT(*)
+Option 3: GROUP BY Salary
+Option 4: No error
+Answer: Answer: GROUP BY Salary
+##################################################
+
+Q78: What needs to be corrected in
+"SELECT AVG(Salary) AS AverageSalary FROM Employees HAVING AverageSalary > 50000;"?
+Option 1: SELECT AVG(Salary)
+Option 2: AS AverageSalary
+Option 3: FROM Employees
+Option 4: HAVING AverageSalary > 50000
+Answer: Answer: HAVING AverageSalary > 50000
+##################################################
+
+Q79: Correct the syntax error in
+"SELECT Name, Department, COUNT(*) FROM Employees WHERE Department = 'Sales' GROUP BY Department;"
+Option 1: SELECT Name
+Option 2: Department
+Option 3: COUNT(*)
+Option 4: WHERE Department = 'Sales'
+Answer: Answer: SELECT Name
+##################################################
+
+Q80: In "SELECT Department, SUM(Salary) FROM Employees GROUP BY Department HAVING COUNT(*) > 5;",
+identify the error.
+Option 1: SELECT Department
+Option 2: SUM(Salary)
+Option 3: GROUP BY Department
+Option 4: No Error
+Answer: Answer: No Error
+##################################################
+
+Q81: What is incorrect in
+"SELECT * FROM Employees ORDER BY 3;"?
+Option 1: SELECT *
+Option 2: FROM Employees
+Option 3: ORDER BY 3
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q82: Identify the mistake in
+"SELECT Department, MAX(Salary) FROM Employees WHERE MAX(Salary) > 50000 GROUP BY Department;"
+Option 1: SELECT Department
+Option 2: MAX(Salary)
+Option 3: WHERE MAX(Salary) > 50000
+Option 4: GROUP BY Department
+Answer: Answer: WHERE MAX(Salary) > 50000
+##################################################
+
+Q83: In "SELECT Department, COUNT(EmployeeID) FROM Employees GROUP BY Department HAVING COUNT(EmployeeID) > ALL (SELECT COUNT(EmployeeID) FROM Employees GROUP BY Department);"
+what needs correction?
+Option 1: The ALL operator
+Option 2: COUNT(EmployeeID)
+Option 3: No error
+Option 4: The subquery
+Answer: Answer: No error
+##################################################
+
+Q84: Correct the error in
+"SELECT Name FROM Employees WHERE Department IN (SELECT Department FROM Departments WHERE Location = 'New York') ORDER BY Name GROUP BY Department;"
+Option 1: WHERE Department IN
+Option 2: ORDER BY Name
+Option 3: GROUP BY Department
+Option 4: No error
+Answer: Answer: GROUP BY Department
+##################################################
+
+Q85: What is wrong in
+"SELECT Department, COUNT(*) AS TotalEmployees FROM Employees GROUP BY Department HAVING TotalEmployees > 5 ORDER BY TotalEmployees;"?
+Option 1: SELECT Department
+Option 2: COUNT(*) AS TotalEmployees
+Option 3: HAVING clause misuse
+Option 4: ORDER BY TotalEmployees
+Answer: Answer: HAVING clause misuse
+##################################################
+
+Q86: What is the main difference between UNION and UNION ALL in SQL?
+Option 1: UNION removes duplicates, UNION ALL does not
+Option 2: UNION ALL removes duplicates, UNION does not
+Option 3: No difference
+Option 4: UNION is faster than UNION ALL
+Answer: Answer: UNION removes duplicates, UNION ALL does not
+##################################################
+
+Q87: What needs to be corrected in
+"SELECT Name FROM Employees UNION ALL SELECT Name FROM Managers;"?
+Option 1: All Correct
+Option 2: The UNION ALL keyword
+Option 3: The SELECT statement
+Option 4: The table names
+Answer: Answer: All Correct
+##################################################
+
+Q88: Identify the error in
+"SELECT Name, Department FROM Employees UNION SELECT Name FROM Managers;"
+Option 1: The UNION keyword
+Option 2: The number of columns in SELECT statements
+Option 3: The table names
+Option 4: No error
+Answer: Answer: The number of columns in SELECT statements
+##################################################
+
+Q89: What does an INNER JOIN do in SQL?
+Option 1: Joins rows that satisfy a condition in either table
+Option 2: Joins all rows from both tables
+Option 3: Joins rows with matching values in both tables
+Option 4: Joins rows that do not match in either table
+Answer: Answer: Joins rows with matching values in both tables
+##################################################
+
+Q90: What is the main characteristic of a FULL OUTER JOIN?
+Option 1: It combines all records from both tables when there are no matches
+Option 2: It only joins rows with matching values in both tables
+Option 3: It excludes all unmatched rows
+Option 4: It joins rows that satisfy a condition in either table
+Answer: Answer: It combines all records from both tables when there are no matches
+##################################################
+
+Q91: What is a LEFT JOIN in SQL?
+Option 1: A join that retrieves records from the left table only
+Option 2: A join that retrieves records from the right table only
+Option 3: A join that retrieves all records from the left table and matched records from the right table
+Option 4: A join that retrieves matched records from both tables
+Answer: Answer: A join that retrieves all records from the left table and matched records from the right table
+##################################################
+
+Q92: In SQL, what does a SELF JOIN refer to?
+Option 1: Joining a table with a different table
+Option 2: Joining a table with itself using a different alias
+Option 3: Joining a table with a copy of itself
+Option 4: Joining a table with its foreign key
+Answer: Answer: Joining a table with itself using a different alias
+##################################################
+
+Q93: What is an EQUI JOIN?
+Option 1: A join using an equality operator
+Option 2: A join using any comparison operator other than equality
+Option 3: A join based on the equidistant principle
+Option 4: A join that always produces an equal number of rows from both tables
+Answer: Answer: A join using an equality operator
+##################################################
+
+Q94: In a RIGHT JOIN, what happens to the rows from the right table that have no matches in the left table?
+Option 1: They are included in the result set with NULLs in the columns of the left table
+Option 2: They are excluded from the result set
+Option 3: They are included as duplicates
+Option 4: They are replaced with values from the left table
+Answer: Answer: They are included in the result set with NULLs in the columns of the left table
+##################################################
+
+Q95: How does a NON-EQUI JOIN differ from an EQUI JOIN?
+Option 1: NON-EQUI JOIN uses non-equality operators, EQUI JOIN uses equality operators
+Option 2: NON-EQUI JOIN is faster than EQUI JOIN
+Option 3: NON-EQUI JOIN cannot be used with WHERE clause, EQUI JOIN can
+Option 4: There is no difference
+Answer: Answer: NON-EQUI JOIN uses non-equality operators, EQUI JOIN uses equality operators
+##################################################
+
+Q96: What needs to be corrected in
+"SELECT * FROM Employees INNER JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;"?
+Option 1: All Correct
+Option 2: INNER JOIN
+Option 3: ON clause
+Option 4: Table names
+Answer: Answer: All Correct
+##################################################
+
+Q97: Identify the error in
+"SELECT Employees.Name, Departments.Name FROM Employees LEFT JOIN Departments USING (DepartmentID);"
+Option 1: The LEFT JOIN
+Option 2: USING (DepartmentID)
+Option 3: No error
+Option 4: The SELECT statement
+Answer: Answer: No error
+##################################################
+
+Q98: Correct the syntax error in
+"SELECT * FROM Orders RIGHT OUTER JOIN Customers ON Orders.CustomerID = Customers.ID WHERE Orders.OrderDate = '2023-01-01';"
+Option 1: RIGHT OUTER JOIN
+Option 2: ON clause
+Option 3: WHERE clause
+Option 4: No syntax error
+Answer: Answer: No syntax error
+##################################################
+
+Q99: What is incorrect in
+"SELECT A.Name, B.Name FROM Employees A, Employees B WHERE A.EmployeeID < B.EmployeeID;"?
+Option 1: The SELECT statement
+Option 2: The WHERE clause
+Option 3: No error, it is a SELF JOIN
+Option 4: The table aliases (A, B)
+Answer: Answer: No error, it is a SELF JOIN
+##################################################
+
+Q100: In "SELECT * FROM Orders FULL JOIN Customers ON Orders.CustomerID = Customers.ID;",
+identify the error.
+Option 1: The FULL JOIN keyword
+Option 2: ON clause
+Option 3: No error
+Option 4: The table names
+Answer: Answer: No error
+##################################################
+
+Q101: What needs to be changed in
+"SELECT * FROM Orders INNER JOIN Customers ON Orders.CustomerID <> Customers.ID;"?
+Option 1: INNER JOIN
+Option 2: <> operator
+Option 3: No change
+Option 4: The ON clause
+Answer: Answer: <> operator
+##################################################
+
+Q102: Correct the syntax error in
+"SELECT * FROM Employees A LEFT JOIN Departments B ON A.DepartmentID == B.DepartmentID;"
+Option 1: LEFT JOIN
+Option 2: ON clause
+Option 3: No syntax error
+Option 4: == operator
+Answer: Answer: == operator
+##################################################
+
+Q103: Identify the issue in
+"SELECT E.Name, D.Name FROM Employees E JOIN Departments D ON E.DepartmentID > D.DepartmentID;"
+Option 1: JOIN keyword
+Option 2: > operator
+Option 3: No error
+Option 4: The ON clause
+Answer: Answer: > operator
+##################################################
+
+Q104: In "SELECT * FROM Employees CROSS JOIN Departments;",
+what needs correction?
+Option 1: CROSS JOIN
+Option 2: No error
+Option 3: The SELECT statement
+Option 4: The table names
+Answer: Answer: No error
+##################################################
+
+Q105: What is wrong in
+"SELECT * FROM Employees FULL OUTER JOIN
+Departments ON Employees.
+DepartmentID = Departments.DepartmentID WHERE Departments.
+DepartmentName IS NULL;"?
+Option 1: FULL OUTER JOIN
+Option 2: ON clause
+Option 3: WHERE clause
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q106: What is the purpose of the ROUND function in SQL?
+Option 1: To round a number to the nearest integer
+Option 2: To round a number to a specified number of decimal places
+Option 3: To find the square root of a number
+Option 4: To return the value of PI
+Answer: Answer: To round a number to a specified number of decimal places
+##################################################
+
+Q107: What does the CEILING function do in SQL?
+Option 1: Returns the smallest integer greater than or equal to a given number
+Option 2: Returns the largest integer less than or equal to a given number
+Option 3: Calculates the square of a number
+Option 4: Calculates the square root of a number
+Answer: Answer: Returns the smallest integer greater than or equal to a given number
+##################################################
+
+Q108: In SQL, what is the result of the SQRT function when applied to a negative number?
+Option 1: A positive number
+Option 2: Zero
+Option 3: An error
+Option 4: A negative number
+Answer: Answer: An error
+##################################################
+
+Q109: What is the purpose of the PI function in SQL?
+Option 1: To return the value of PI
+Option 2: To calculate the perimeter of a circle
+Option 3: To calculate the area of a circle
+Option 4: To return the radius of a circle
+Answer: Answer: To return the value of PI
+##################################################
+
+Q110: How does the SQUARE function differ from the POWER function in SQL?
+Option 1: SQUARE calculates the square, POWER calculates any exponent
+Option 2: SQUARE and POWER are the same
+Option 3: SQUARE calculates the square root, POWER calculates the square
+Option 4: SQUARE calculates any exponent, POWER calculates the square
+Answer: Answer: SQUARE calculates the square, POWER calculates any exponent
+##################################################
+
+Q111: What needs to be corrected in
+"SELECT ROUND(Salary, 2) FROM Employees;"?
+Option 1: All Correct
+Option 2: ROUND
+Option 3: Salary
+Option 4: 2
+Answer: Answer: All Correct
+##################################################
+
+Q112: Identify the error in
+"SELECT Name, SQRT(Age) FROM Employees WHERE Age >= 0;"
+Option 1: SELECT Name
+Option 2: SQRT
+Option 3: Age >= 0
+Option 4: No error
+Answer: Answer: No error
+##################################################
+
+Q113: Correct the syntax error in
+"SELECT CEILING(Price) AS RoundedPrice FROM Products WHERE Price > 0;"
+Option 1: CEILING
+Option 2: RoundedPrice
+Option 3: FROM Products
+Option 4: No syntax error
+Answer: Answer: No syntax error
+##################################################
+
+Q114: What is incorrect in
+"SELECT Name, PI() * Radius * Radius AS Area FROM Circles;"?
+Option 1: PI()
+Option 2: Radius * Radius
+Option 3: AS Area
+Option 4: All Correct
+Answer: Answer: All Correct
+##################################################
+
+Q115: In "SELECT SQUARE(Length) FROM Rectangles;",
+what needs correction?
+Option 1: SQUARE
+Option 2: Length
+Option 3: No error
+Option 4: FROM Rectangles
+Answer: Answer: No error
+##################################################
+
+Q116: What needs to be corrected in
+"SELECT CAST(Salary AS INT) FROM Employees;"?
+Option 1: All Correct
+Option 2: CAST
+Option 3: Salary
+Option 4: AS INT
+Answer: Answer: All Correct
+##################################################
+
+Q117: Identify the error in
+"SELECT CONVERT(VARCHAR, StartDate, 103) FROM Projects WHERE StartDate IS NOT NULL;"
+Option 1: CONVERT function
+Option 2: VARCHAR keyword
+Option 3: StartDate column
+Option 4: No Error
+Answer: Answer: No Error
+##################################################
+
+Q118: Correct the syntax error in
+"SELECT Name, TRY_CONVERT(INT, Age) AS IntegerAge FROM Employees WHERE Age IS NOT NULL;"
+Option 1: TRY_CONVERT function
+Option 2: INT keyword
+Option 3: Age column
+Option 4: No Error
+Answer: Answer: No Error
+##################################################
+
+Q119: What does the COALESCE function do in SQL?
+Option 1: Returns the first non-null value in a list
+Option 2: Combines multiple rows into a single string
+Option 3: Duplicates a string
+Option 4: Compares two expressions and returns NULL if they are equal
+Answer: Answer: Returns the first non-null value in a list
+##################################################
+
+Q120: What needs to be corrected in
+"SELECT COALESCE(Salary, 0) FROM Employees;"?
+Option 1: All Correct
+Option 2: COALESCE
+Option 3: Salary
+Option 4: 0
+Answer: Answer: All Correct
+##################################################
+
