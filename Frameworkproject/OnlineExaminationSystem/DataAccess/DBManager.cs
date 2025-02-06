@@ -12,9 +12,9 @@ namespace DataAccess
 
         private SqlConnection connect;
 
-        
-        string _connectionString = "Server=DESKTOP-S3ETNPJ;Database=Online_Examination_System;User Id=Exam;Password=123456;";
 
+        string _connectionString = "Server=DESKTOP-S3ETNPJ;Database=Online_Examination_System;User Id=Exam;Password=123456;";
+        
 
         // Constructor that takes the connection string as a parameter
         public DBManager()
@@ -200,17 +200,12 @@ namespace DataAccess
             return count;
 
         }
-       
-    }
 
-    }
-
-      
-        public DataTable GetReportData(string storedProc, string _param1, string _param2   )
+        public DataTable GetReportData(string storedProc, string _param1, string _param2)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-             
+
                 using (SqlCommand cmd = new SqlCommand(storedProc, conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -234,4 +229,5 @@ namespace DataAccess
 
 
     }
-}
+} 
+      
