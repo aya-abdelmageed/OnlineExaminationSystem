@@ -141,8 +141,8 @@ namespace System.Windows.Forms
             this.Controls.Add(this.viewDetailsButton);
 
             // Set control size and styles
-            this.Size = new Size(250, 170);  // Increased Height for Spacing
-            this.BackColor =  Color.LightGray;
+            this.Size = new Size(200, 170);  // Increased Height for Spacing
+            this.BackColor = Color.LightGray;
            
             this.BorderStyle = BorderStyle.None;
 
@@ -183,7 +183,10 @@ namespace System.Windows.Forms
 
         private void TrackButton_Click(object sender, EventArgs e)
         {
-            ShowForm(new AssignToTrack(ExamId));
+            var form = new AssignToTrack(ExamId);
+            form.StartPosition = FormStartPosition.WindowsDefaultLocation;
+            form.Show();
+            //ShowForm(new AssignToTrack(ExamId));
         }
 
         private void ViewDetailsButton_Click(object sender, EventArgs e)

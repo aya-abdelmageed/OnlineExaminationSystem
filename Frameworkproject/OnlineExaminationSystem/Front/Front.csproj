@@ -427,6 +427,7 @@
     <None Include="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="ReportDataSet.xsc">
       <DependentUpon>ReportDataSet.xsd</DependentUpon>
     </None>
@@ -498,6 +499,7 @@
     <Content Include="Resources\registration3.png" />
     <Content Include="Resources\score.png" />
     <Content Include="Resources\search.png" />
+    <Content Include="Resources\technology2.png" />
     <Content Include="Resources\trash.png" />
     <Content Include="Resources\user-account.png" />
     <Content Include="Resources\writing.png" />

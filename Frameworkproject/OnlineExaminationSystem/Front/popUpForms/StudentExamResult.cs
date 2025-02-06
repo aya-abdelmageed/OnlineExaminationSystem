@@ -90,6 +90,8 @@ namespace Front.popUpForms
             this.Controls.Add(lblPercent);
             this.Controls.Add(picStudent);
             this.Controls.Add(closeButton);
+            this.BackColor = Color.FromArgb(247, 248, 253);
+
         }
 
         private void LoadStudentExamResults()

@@ -15,7 +15,21 @@ namespace Front.InstructorDashboard
     {
         public InstructorReports(int userId , string userType): base(userId, userType)  
         {
+            string[] controlsToRemove = { "label8", "pictureBox6" };
+
+            foreach (string controlName in controlsToRemove)
+            {
+                Control controlToRemove = this.Controls[controlName]; // Assuming they are on the main form
+                if (controlToRemove != null)
+                {
+                    this.Controls.Remove(controlToRemove);
+                    controlToRemove.Dispose(); // Free memory
+                }
+            }
             InitializeComponent();
+            // List of control names to remove
+           
+
 
             // ✅ Add ReportsControl dynamically
             //ReportsControl reportsControl = new ReportsControl();

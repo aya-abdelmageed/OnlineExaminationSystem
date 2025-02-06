@@ -24,21 +24,22 @@ namespace Front.StudentDashboard
         public StudentExam(int userId, string userType) : base(userId, userType)
         {
             repo=  new StudentExamRepo();   
-            this.Height = 650;
+         
             this.userId = userId;
 
             InitializeComponent();
             GenerateCustomSearch();
             InitializeExamCards();
+            this.Size = new Size(1150, 570);
         }
         private void InitializeExamCards()
         {
             Panel scrollPanel = new Panel
             {
                 Location = new Point(230, 160),
-                Size = new Size(750, 400),
+                Size = new Size(750, 300),
                 AutoScroll = true,
-                BorderStyle = BorderStyle.FixedSingle
+                BorderStyle = BorderStyle.None
             };
 
             this.Controls.Add(scrollPanel);
@@ -49,7 +50,7 @@ namespace Front.StudentDashboard
             int xPosition = xOffset, yPosition = 20;
             int maxColumns = 2;
             int padding = 10;
-            int cardWidth = 350;
+            int cardWidth = 300;
             DateTime now = DateTime.Now;
 
             for (int i = 0; i < exams.Count; i++)
@@ -229,7 +230,7 @@ namespace Front.StudentDashboard
             // Create the Panel for search
             Panel searchPanel = new Panel
             {
-                Location = new Point((this.ClientSize.Width - 800), 100), // Below the grid
+                Location = new Point((this.ClientSize.Width - 1000), 100), // Below the grid
                 Size = new Size(600, 30),
                 BackColor = Color.White,
                 BorderStyle = BorderStyle.None, // Remove default border

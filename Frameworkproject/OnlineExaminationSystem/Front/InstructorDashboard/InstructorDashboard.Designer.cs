@@ -48,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -56,11 +58,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.panel1.Controls.Add(this.Reports);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Dashboard);
@@ -93,7 +96,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-29, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -186,9 +189,10 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.label5.Location = new System.Drawing.Point(183, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 34);
+            this.label5.Size = new System.Drawing.Size(51, 34);
             this.label5.TabIndex = 1;
-            this.label5.Text = "534";
+            this.label5.Text = "13";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -229,9 +233,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.label3.Location = new System.Drawing.Point(185, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 34);
+            this.label3.Size = new System.Drawing.Size(51, 34);
             this.label3.TabIndex = 1;
-            this.label3.Text = "534";
+            this.label3.Text = "23";
             // 
             // label4
             // 
@@ -273,9 +277,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.label2.Location = new System.Drawing.Point(189, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 34);
+            this.label2.Size = new System.Drawing.Size(51, 34);
             this.label2.TabIndex = 1;
-            this.label2.Text = "534";
+            this.label2.Text = "15";
             // 
             // label1
             // 
@@ -301,11 +305,36 @@
             this.label7.Text = "←";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.label8.Location = new System.Drawing.Point(377, 193);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(731, 32);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "People Develop Countries , We Develop P.E.O.P.L.E";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(582, 251);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // InstructorDashboard
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1306, 479);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -326,6 +355,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +382,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

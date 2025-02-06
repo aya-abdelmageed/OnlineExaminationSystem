@@ -91,6 +91,11 @@ namespace UI.AdminDashboard
                     LoadChoices(QuestionId.Value);
                     break;
             }
+            this.BackColor = Color.White;
+            this.submitButton.BackColor = Color.FromArgb(204, 8, 8);
+            this.submitButton.ForeColor = Color.White;
+
+
         }
 
         private void InitializeComponent2()

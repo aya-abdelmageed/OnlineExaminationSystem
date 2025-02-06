@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using BusinessLogi.Repositories;
@@ -31,7 +32,10 @@ namespace Front.popUpForms
             this.StartPosition = FormStartPosition.CenterParent;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Size = new System.Drawing.Size(450, 600);
+            this.Size = new System.Drawing.Size(450, 400);
+            this.BackColor = Color.White;
+
+
         }
 
         private void InitializeComponent2()
@@ -57,6 +61,9 @@ namespace Front.popUpForms
 
             Button btnGenerate = new Button { Text = "Generate Exam", Location = new System.Drawing.Point(150, 300), Size = new System.Drawing.Size(100, 30) };
             btnGenerate.Click += BtnGenerate_Click;
+            btnGenerate.BackColor = Color.FromArgb(204, 8, 8);
+            btnGenerate.ForeColor = Color.White;
+
 
             this.Controls.Add(courseLabel);
             this.Controls.Add(cmbCourses);

@@ -2,6 +2,7 @@
 using BusinessLogi.Repositories;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using static UI.AdminDashboard.Form1;
 
@@ -49,6 +50,11 @@ namespace UI.AdminDashboard
                     submitButton.Text = "Close";
                     break;
             }
+            this.BackColor = Color.FromArgb(247, 248, 253);
+            this.submitButton.BackColor = Color.FromArgb(204, 8, 8);
+            this.submitButton.ForeColor = Color.White;
+
+
         }
 
         private void InitializeComponent2()

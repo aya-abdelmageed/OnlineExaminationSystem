@@ -12,8 +12,6 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
-using System.IO;
-using Front.popUpForms;
 
 namespace UI.AdminDashboard
 {
@@ -22,61 +20,79 @@ namespace UI.AdminDashboard
         private BranchRepo branch;
         private DataGridView customGrid;
         private Button addbutton;
-        private TextBox customSearch;
+        private TextBox searchBox;
 
 
         public Branches()
         {
             branch = new BranchRepo();
-            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.ClientSize = new Size(1324, 600);
+
+            // Initialize UI elements
             customGrid = InitializeCustomGrid();
-            customSearch = GenerateCustomSearch();
             addbutton = GenerateCustomButton();
+            searchBox = GenerateSearchBox();
+
+            // Add UI elements to form
+            this.Controls.Add(addbutton);
+            this.Controls.Add(searchBox);
+            this.Controls.Add(customGrid);
+
+
+
             addbutton.Text = "Add Branch";
             addbutton.Click += (s, e) =>
             {
-                var newForm = new TrackForm((int)FormMode.Add, data: customGrid);
-
-
+                var newForm = new BranchForm((int)FormMode.Add, null, customGrid);
                 newForm.Show();
 
             };
             LoadData();
             AddActions(customGrid);
 
-
             // Handle Click Events with Dynamic Detection
             customGrid.CellMouseClick += (s, e) =>
             {
                 HandleActionClick(customGrid, e);
             };
+        }
+
+        private TextBox GenerateSearchBox()
+        {
+            TextBox searchBox = new TextBox
+            {
+                Location = new Point(addbutton.Location.X - 680, addbutton.Location.Y + 4),
+                Size = new Size(650, 100)
+            };
 
             // Placeholder text workaround
-            customSearch.Text = "Search by ID, Name, or Location...";
-            customSearch.ForeColor = Color.Gray;
+            searchBox.Text = "Search by ID, Name, or Location...";
+            searchBox.ForeColor = Color.Gray;
 
-            customSearch.GotFocus += (s, e) =>
+            searchBox.GotFocus += (s, e) =>
             {
-                if (customSearch.Text == "Search by ID, Name, or Location...")
+                if (searchBox.Text == "Search by ID, Name, or Location...")
                 {
-                    customSearch.Text = "";
-                    customSearch.ForeColor = Color.Black;
+                    searchBox.Text = "";
+                    searchBox.ForeColor = Color.Black;
                 }
             };
 
-            customSearch.LostFocus += (s, e) =>
+            searchBox.LostFocus += (s, e) =>
             {
-                if (string.IsNullOrWhiteSpace(customSearch.Text))
+                if (string.IsNullOrWhiteSpace(searchBox.Text))
                 {
-                    customSearch.Text = "Search by ID, Name, or Location...";
-                    customSearch.ForeColor = Color.Gray;
-                    LoadData();
-
+                    searchBox.Text = "Search by ID, Name, or Location...";
+                    searchBox.ForeColor = Color.Gray;
                 }
-
             };
 
-            customSearch.TextChanged += (s, e) => SearchBranches(customSearch.Text);
+            searchBox.TextChanged += (s, e) => SearchBranches(searchBox.Text);
+            return searchBox;
+
+
         }
 
         private void SearchBranches(string searchText)
@@ -101,7 +117,6 @@ namespace UI.AdminDashboard
 
             var combinedResults = byName.Concat(byLocation).Distinct().ToList();
             customGrid.DataSource = combinedResults;
-            
         }
 
 
@@ -163,7 +178,7 @@ namespace UI.AdminDashboard
         {
             int branchID = Convert.ToInt32(grid.Rows[rowIndex].Cells["BranchID"].Value);
 
-           
+
             try
             {
                 if (MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -172,13 +187,14 @@ namespace UI.AdminDashboard
                     BindingList<BranchDTO> branches = new BindingList<BranchDTO>(branch.GetBranches(null));
                     customGrid.DataSource = branches;
                 }
-               
+
             }
-            catch  {
-                
+            catch
+            {
+
                 MessageBox.Show("Sorry, you can't delete this row because it has dependent relationships.", "Failed");
 
-                
+
             }
 
         }
@@ -193,5 +209,4 @@ namespace UI.AdminDashboard
 
     }
 }
-
 

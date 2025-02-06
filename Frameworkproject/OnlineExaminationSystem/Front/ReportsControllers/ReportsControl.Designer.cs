@@ -67,7 +67,7 @@
             "Course\'s Topics",
             "Exam\'s Questions",
             "Student\'s Exam Answers"});
-            this.SelectionReports.Location = new System.Drawing.Point(285, 103);
+            this.SelectionReports.Location = new System.Drawing.Point(234, 103);
             this.SelectionReports.Name = "SelectionReports";
             this.SelectionReports.Size = new System.Drawing.Size(268, 33);
             this.SelectionReports.TabIndex = 7;
@@ -76,11 +76,11 @@
             // paramLabel1
             // 
             this.paramLabel1.AutoSize = true;
-            this.paramLabel1.BackColor = System.Drawing.Color.White;
-            this.paramLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paramLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.paramLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paramLabel1.Location = new System.Drawing.Point(44, 175);
             this.paramLabel1.Name = "paramLabel1";
-            this.paramLabel1.Size = new System.Drawing.Size(123, 25);
+            this.paramLabel1.Size = new System.Drawing.Size(113, 25);
             this.paramLabel1.TabIndex = 8;
             this.paramLabel1.Text = "Parameter1";
             this.paramLabel1.Click += new System.EventHandler(this.label5_Click);
@@ -88,11 +88,11 @@
             // paramLabel2
             // 
             this.paramLabel2.AutoSize = true;
-            this.paramLabel2.BackColor = System.Drawing.Color.White;
-            this.paramLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paramLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.paramLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paramLabel2.Location = new System.Drawing.Point(44, 227);
             this.paramLabel2.Name = "paramLabel2";
-            this.paramLabel2.Size = new System.Drawing.Size(123, 25);
+            this.paramLabel2.Size = new System.Drawing.Size(113, 25);
             this.paramLabel2.TabIndex = 9;
             this.paramLabel2.Text = "Parameter2";
             this.paramLabel2.Click += new System.EventHandler(this.paramLabel2_Click);
@@ -115,9 +115,10 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkGray;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(205, 280);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(243, 286);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(185, 58);
             this.button2.TabIndex = 12;
@@ -128,20 +129,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(67, 28);
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(34, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(475, 36);
+            this.label5.Size = new System.Drawing.Size(507, 36);
             this.label5.TabIndex = 13;
             this.label5.Text = "Online Examination System Report";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 100);
+            this.label6.Location = new System.Drawing.Point(17, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(197, 31);
             this.label6.TabIndex = 14;
@@ -149,7 +150,7 @@
             // 
             // ReportsControl
             // 
-            this.BackColor = System.Drawing.Color.Firebrick;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);

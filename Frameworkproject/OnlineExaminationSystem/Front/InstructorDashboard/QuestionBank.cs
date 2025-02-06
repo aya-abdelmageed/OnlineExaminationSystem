@@ -28,7 +28,6 @@ namespace Front.InstructorDashboard
             questions = new QuestionsRepo();
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F);
-            this.ClientSize = new Size(1324, 600);
             customGrid = InitializeCustomGrid();
             // Remove unnecessary buttons
             Control buttonToRemove = this.Controls["panel2"];
@@ -46,6 +45,17 @@ namespace Front.InstructorDashboard
             }
             if (buttonToRemove3 != null)
                 this.Controls.Remove(buttonToRemove3);
+            string[] controlsToRemove = { "label8", "pictureBox6" };
+
+            foreach (string controlName in controlsToRemove)
+            {
+                Control controlToRemove = this.Controls[controlName]; // Assuming they are on the main form
+                if (controlToRemove != null)
+                {
+                    this.Controls.Remove(controlToRemove);
+                    controlToRemove.Dispose(); // Free memory
+                }
+            }
             InitializeComponent();
             addbutton = GenerateCustomButton();
 
@@ -70,6 +80,8 @@ namespace Front.InstructorDashboard
             {
                 HandleActionClick(customGrid, e);
             };
+            this.Size = new Size(1324, 570);
+
 
 
 

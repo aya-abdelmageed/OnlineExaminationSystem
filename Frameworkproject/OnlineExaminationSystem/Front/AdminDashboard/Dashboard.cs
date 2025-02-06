@@ -223,5 +223,15 @@ namespace UI.AdminDashboard
         {
 
         }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Resize(object sender, EventArgs e)
+        {
+
+        }
     }
 }

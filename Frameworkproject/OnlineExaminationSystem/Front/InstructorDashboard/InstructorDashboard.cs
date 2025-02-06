@@ -20,7 +20,7 @@ namespace Front.InstructorDashboard
             InitializeComponent();
             this.userId = userId;
             this.userType = userType;
-            MessageBox.Show($"Loading data for ID: {userId}");
+            //MessageBox.Show($"Loading data for ID: {userId}");
         }
 
         public GraphicsPath GetRoundedRectanglePath(Rectangle rect, int radius)
@@ -69,6 +69,7 @@ namespace Front.InstructorDashboard
         public void ShowForm(Form form)
         {
             form.StartPosition = FormStartPosition.Manual;
+            this.Size= form.Size;   
             form.Location = this.Location;
             this.Hide(); // Hide Form1 instead of closing it
 
@@ -421,6 +422,21 @@ namespace Front.InstructorDashboard
             this.Hide();
             Login loginForm = new Login();
             loginForm.ShowDialog();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

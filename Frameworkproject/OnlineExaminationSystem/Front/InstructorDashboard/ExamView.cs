@@ -98,7 +98,7 @@ namespace Front.InstructorDashboard
                     Location = new Point(containerX, yOffset),
                     Width = containerWidth,
                     Height = containerHeight,
-                    BackColor = Color.FromArgb(248, 247, 253) // Light background color
+                    BackColor = Color.FromArgb(245, 247, 249) // Light background color
                 };
                 SetRoundedRegion(questionContainer, 15);
                 questionContainer.Paint += (s, e) =>

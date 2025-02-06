@@ -2,6 +2,7 @@
 using BusinessLogi.Repositories;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 using static UI.AdminDashboard.Form1;
@@ -61,6 +62,12 @@ namespace UI.AdminDashboard
                 locationTextBox.ReadOnly = true;
                 submitButton.Text = "Close";
             }
+            this.BackColor = Color.White;
+            this.submitButton.BackColor = Color.FromArgb(204, 8, 8);
+            this.submitButton.ForeColor = Color.White;
+            this.Height = 300;
+
+
         }
 
         private void InitializeComponent2()

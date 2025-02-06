@@ -24,9 +24,18 @@ namespace Front.InstructorDashboard
             {
 
                 exam = new ExamRepo();
-                this.Height = 600;
-            
-                InitializeComponent();
+            string[] controlsToRemove = { "label8", "pictureBox6" };
+
+            foreach (string controlName in controlsToRemove)
+            {
+                Control controlToRemove = this.Controls[controlName]; // Assuming they are on the main form
+                if (controlToRemove != null)
+                {
+                    this.Controls.Remove(controlToRemove);
+                    controlToRemove.Dispose(); // Free memory
+                }
+            }
+            InitializeComponent();
                 addbutton = GenerateCustomButton();
                 addbutton.Text = "Generate new Exam";
                 addbutton.Click += (s, e) =>
@@ -59,8 +68,10 @@ namespace Front.InstructorDashboard
                 this.Controls.Remove(buttonToRemove3);
             GenerateCustomSearch();
                 InitializeExamCards();
-                
-            }
+            this.Size = new Size(1324, 570);
+
+
+        }
 
         private void ReloadExams()
         {
@@ -85,9 +96,9 @@ namespace Front.InstructorDashboard
             Panel scrollPanel = new Panel
             {
                 Location = new Point(230, 160),
-                Size = new Size(750, 400),
+                Size = new Size(750, 300),
                 AutoScroll = true,
-                BorderStyle = BorderStyle.FixedSingle
+                BorderStyle = BorderStyle.None
             }; 
 
             this.Controls.Add(scrollPanel);
@@ -106,9 +117,9 @@ namespace Front.InstructorDashboard
 
             int xOffset = 20;
             int xPosition = xOffset, yPosition = 20;
-            int maxColumns = 2;
+            int maxColumns = 3;
             int padding = 10;
-            int cardWidth = 350;
+            int cardWidth = 300;
 
             for (int i = 0; i < exams.Count; i++)
             {

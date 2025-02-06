@@ -4,6 +4,7 @@ using BusinessLogic.Repositories;
 using Elasticsearch.Net;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using UI.AdminDashboard;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
@@ -88,6 +89,12 @@ namespace Front.popUpForms
                     break;
 
             }
+            this.BackColor = Color.FromArgb(247, 248, 253);
+            this.submitButton.BackColor = Color.FromArgb(204, 8, 8);
+            this.submitButton.ForeColor = Color.White;
+            this.Height = 400;
+
+
 
         }
 

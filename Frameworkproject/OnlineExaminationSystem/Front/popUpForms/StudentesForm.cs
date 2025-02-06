@@ -2,6 +2,7 @@
 using BusinessLogi.Repositories;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using UI.AdminDashboard;
 using static UI.AdminDashboard.Form1;
@@ -79,6 +80,12 @@ namespace Front.popUpForms
                 birthdatePicker.Value = student.Birthdate;
                 submitButton.Text = "Close";
             }
+            this.BackColor = Color.White;
+            this.submitButton.BackColor = Color.FromArgb(204, 8, 8);
+            this.submitButton.ForeColor = Color.White;
+            this.Height = 500;
+
+
 
         }
 

@@ -52,7 +52,7 @@ namespace UI.AdminDashboard
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.panel1.Controls.Add(this.Instructors);
             this.panel1.Controls.Add(this.Reports);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -70,7 +70,7 @@ namespace UI.AdminDashboard
             // 
             // Instructors
             // 
-            this.Instructors.BackColor = System.Drawing.Color.White;
+            this.Instructors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.Instructors.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Instructors.FlatAppearance.BorderSize = 0;
             this.Instructors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -88,7 +88,7 @@ namespace UI.AdminDashboard
             // 
             // Reports
             // 
-            this.Reports.BackColor = System.Drawing.Color.White;
+            this.Reports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.Reports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Reports.FlatAppearance.BorderSize = 0;
             this.Reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -106,7 +106,7 @@ namespace UI.AdminDashboard
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-29, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -117,7 +117,7 @@ namespace UI.AdminDashboard
             // 
             // Students
             // 
-            this.Students.BackColor = System.Drawing.Color.White;
+            this.Students.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.Students.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Students.FlatAppearance.BorderSize = 0;
             this.Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -135,7 +135,7 @@ namespace UI.AdminDashboard
             // 
             // Dashboard
             // 
-            this.Dashboard.BackColor = System.Drawing.Color.White;
+            this.Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.Dashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Dashboard.FlatAppearance.BorderSize = 0;
             this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,7 +153,7 @@ namespace UI.AdminDashboard
             // 
             // Courses
             // 
-            this.Courses.BackColor = System.Drawing.Color.White;
+            this.Courses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.Courses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Courses.FlatAppearance.BorderSize = 0;
             this.Courses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -171,7 +171,7 @@ namespace UI.AdminDashboard
             // 
             // Tracks
             // 
-            this.Tracks.BackColor = System.Drawing.Color.White;
+            this.Tracks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.Tracks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Tracks.FlatAppearance.BorderSize = 0;
             this.Tracks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -243,7 +243,7 @@ namespace UI.AdminDashboard
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1324, 526);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Exit);

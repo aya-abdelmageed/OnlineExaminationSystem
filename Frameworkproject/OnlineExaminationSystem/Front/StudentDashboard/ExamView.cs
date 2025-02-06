@@ -50,7 +50,7 @@ namespace Front.StudentDashboard
             {
                 Height = 60,
                 Dock = DockStyle.Top,
-                BackColor = Color.LightBlue
+                BackColor = Color.FromArgb(245, 247, 249)
             };
             this.Controls.Add(titlePanel);
 
@@ -172,7 +172,7 @@ namespace Front.StudentDashboard
                         Location = new Point(containerX, yOffset),
                         Width = containerWidth,
                         Height = containerHeight,
-                        BackColor = Color.LightGray
+                        BackColor = Color.FromArgb(245, 247, 249)
                     };
                     SetRoundedRegion(questionContainer, 15);
                     scrollPanel.Controls.Add(questionContainer);
@@ -308,7 +308,7 @@ namespace Front.StudentDashboard
             }
 
             // Highlight selected answer
-            clickedPanel.BackColor = Color.LightBlue;
+            clickedPanel.BackColor = Color.LightGreen;
             SetRoundedRegion(clickedPanel, 10);
 
             // Get the selected answer text

@@ -20,88 +20,30 @@ namespace UI.AdminDashboard
         private StudentRepo studentRepo;
         private DataGridView customGrid;
         private Button addbutton;
-        private TextBox customSearch;
 
         public Students()
         {
-            studentRepo = new StudentRepo();    
+            studentRepo = new StudentRepo();
             //this.AutoScaleMode = AutoScaleMode.Dpi;
             //this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
             this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer
             customGrid = InitializeCustomGrid();
-            customSearch = GenerateCustomSearch();
+            GenerateCustomSearch();
             addbutton = GenerateCustomButton();
             addbutton.Text = "Add Student";
             addbutton.Click += (s, e) =>
             {
-                var newForm = new TrackForm((int)FormMode.Add, data: customGrid);
-
-
+                var newForm = new StudentesForm((int)FormMode.Add, data: customGrid);
                 newForm.Show();
 
             };
             LoadData();
             AddActions(customGrid);
+            customGrid.CellMouseClick += (s, e) => { HandleActionClick(customGrid, e); };
 
 
-            // Handle Click Events with Dynamic Detection
-            customGrid.CellMouseClick += (s, e) =>
-            {
-                HandleActionClick(customGrid, e);
-            };
 
-            // Placeholder text workaround
-            customSearch.Text = "Search by ID, or First Name...";
-            customSearch.ForeColor = Color.Gray;
-
-            customSearch.GotFocus += (s, e) =>
-            {
-                if (customSearch.Text == "Search by ID, or First Name...")
-                {
-                    customSearch.Text = "";
-                    customSearch.ForeColor = Color.Black;
-                }
-            };
-
-            customSearch.LostFocus += (s, e) =>
-            {
-                if (string.IsNullOrWhiteSpace(customSearch.Text))
-                {
-                    customSearch.Text = "Search by ID, Name, or First Name...";
-                    customSearch.ForeColor = Color.Gray;
-                    LoadData();
-
-                }
-            };
-
-            customSearch.TextChanged += (s, e) => SearchStudents(customSearch.Text);
         }
-
-        private void SearchStudents(string searchText)
-        {
-            if (string.IsNullOrWhiteSpace(searchText))
-            {
-                LoadData();
-                return;
-            }
-
-            int? Student_ID = null;
-
-            if (int.TryParse(searchText, out int parsedId))
-            {
-                Student_ID = parsedId;
-                customGrid.DataSource = studentRepo.GetStudents(Student_ID);
-                return;
-            }
-
-         
-
-            var byName = studentRepo.SearchStudentByName(searchText);
-            customGrid.DataSource = byName;
-            customGrid.Refresh();
-        }
-
-
 
 
         // Handle button click events
@@ -160,7 +102,7 @@ namespace UI.AdminDashboard
                 Gender = (string)row.Cells["Gender"].Value,
                 Phone = (string)row.Cells["Phone"].Value
             };
-            var Form = new  StudentesForm((int)FormMode.Edit,studentDTO,customGrid) ;
+            var Form = new StudentesForm((int)FormMode.Edit, studentDTO, customGrid);
             Form.Show();
         }
 
@@ -182,15 +124,15 @@ namespace UI.AdminDashboard
                     BindingList<StudentDTO> students = new BindingList<StudentDTO>(studentRepo.GetStudents(null));
                     customGrid.DataSource = students;
                 }
-            }catch { MessageBox.Show("Sorry, you can't delete this row because it has dependent relationships.", "Failed"); }
-           
+            }
+            catch { MessageBox.Show("Sorry, you can't delete this row because it has dependent relationships.", "Failed"); }
+
         }
 
         private void LoadData() // load viewing data 
         {
             var data = studentRepo.GetStudents(null);
             customGrid.DataSource = data;
-            customGrid.Refresh();
         }
     }
 }

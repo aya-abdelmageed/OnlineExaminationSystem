@@ -40,6 +40,7 @@ namespace Front.ReportsControllers
 
             param1.Enabled = false;
             param2.Enabled = false;
+            button2.BackColor = Color.FromArgb(204, 8, 8);
         }
         
 

@@ -6,6 +6,7 @@ using BusinessLogic.Repositories;
 using BusinessLogic.DTO;
 using BusinessLogi.Repositories;
 using Front.InstructorDashboard;
+using System.Drawing;
 
 namespace Front.popUpForms
 {
@@ -25,11 +26,15 @@ namespace Front.popUpForms
             LoadTracks();
 
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.StartPosition = FormStartPosition.CenterParent;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Size = new System.Drawing.Size(450, 300);
-            this.ExamId = examId;   
+            this.ExamId = examId;
+            this.btnAssign.BackColor = Color.FromArgb(204, 8, 8);
+            this.btnAssign.ForeColor = Color.White;
+
+            this.BackColor =Color.White;
+
         }
 
         private void InitializeComponent2()

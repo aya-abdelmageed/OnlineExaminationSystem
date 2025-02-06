@@ -15,9 +15,24 @@ namespace UI.AdminDashboard
 
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoScaleDimensions = new SizeF(96F, 96F); // Set it for 100% scaling
-            this.ClientSize = new Size(1324, 600); // Set exact size (same as in the Designer)
 
             InitializeComponent();
+            // Remove unnecessary buttons
+            Control buttonToRemove = this.Controls["panel2"];
+            Control buttonToRemove2 = this.Controls["panel3"];
+            Control buttonToRemove3 = this.Controls["panel4"];
+
+            if (buttonToRemove != null)
+            {
+                this.Controls.Remove(buttonToRemove);
+            }
+
+            if (buttonToRemove2 != null)
+            {
+                this.Controls.Remove(buttonToRemove2);
+            }
+            if (buttonToRemove3 != null)
+                this.Controls.Remove(buttonToRemove3);
             // ✅ Add ReportsControl dynamically
             //ReportsControl reportsControl = new ReportsControl();
             // Makes it fit the form
@@ -32,8 +47,9 @@ namespace UI.AdminDashboard
             var reportControl = new ReportsControl();
                 mypanel.Controls.Add(reportControl);
                 reportControl.Dock = DockStyle.Fill;
-                reportControl.BringToFront();
 
+                reportControl.BringToFront();
+              
             //}
             //ReportsControl.Instance.BringToFront();
 
@@ -50,8 +66,13 @@ namespace UI.AdminDashboard
 
             this.PerformLayout();
             this.Update();
+            this.Size = new Size(1324, 570);
+            mypanel.BorderStyle = BorderStyle.None;     
 
-        
+
+
+
+
         }
 
         private void Reports_Load(object sender, EventArgs e)

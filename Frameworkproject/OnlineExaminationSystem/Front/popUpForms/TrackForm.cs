@@ -3,6 +3,7 @@ using BusinessLogi.Repositories;
 using Nest;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using UI.AdminDashboard;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
@@ -56,6 +57,13 @@ namespace Front.popUpForms
                     submitButton.Text = "Close";
                     break;
             }
+            this.BackColor = Color.White;
+
+            this.submitButton.BackColor = Color.FromArgb(204, 8, 8);
+            this.submitButton.ForeColor = Color.White;
+            this.Height = 300;
+
+
         }
 
         private void InitializeComponent2()
