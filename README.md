@@ -54,15 +54,7 @@ To enhance **performance, scalability, and data management**, the Online Examina
 - 🔹 Use **stored procedures** for optimized data retrieval and encryption.
 
 ### :rocket: Demo
-[Watch the Demo Video](https://github.com/aya-abdelmageed/OnlineExaminationSystem/blob/main/Demo/ExaminationSystemDemo.mp4)
-
-### 🚀 :rocket: Demo
-
-<video width="600" controls>
-  <source src="https://github.com/aya-abdelmageed/OnlineExaminationSystem/blob/main/Demo/ExaminationSystemDemo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
+[🎥 Watch Demo Video](https://github.com/aya-abdelmageed/OnlineExaminationSystem/blob/main/Demo/ExaminationSystemDemo.mp4)
 
 ---
 This documentation provides an overview of the **database structure** and **functionalities** of the Online Examination System. For more details, refer to the **Demo**, **code**, and additional **documentation files** in this repository.
