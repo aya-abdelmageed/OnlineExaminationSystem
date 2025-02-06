@@ -53,9 +53,15 @@ To enhance **performance, scalability, and data management**, the Online Examina
 - 🔹 Perform **CRUD (Create, Read, Update, Delete)** operations on all tables.
 - 🔹 Use **stored procedures** for optimized data retrieval and encryption.
 
-### 🔄 Demo
+### :rocket: Demo
 [Watch the Demo Video](https://github.com/aya-abdelmageed/OnlineExaminationSystem/blob/main/Demo/ExaminationSystemDemo.mp4)
 
+### 🚀 :rocket: Demo
+
+<video width="600" controls>
+  <source src="https://github.com/aya-abdelmageed/OnlineExaminationSystem/blob/main/Demo/ExaminationSystemDemo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 ---
